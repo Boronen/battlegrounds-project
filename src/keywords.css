@@ -1,0 +1,7 @@
+.unit-keywords{position:absolute;right:3px;top:12px;display:flex;flex-direction:column;gap:3px;z-index:2}
+.keyword-badge{display:inline-flex;align-items:center;justify-content:center;gap:5px;border:1px solid #a99a75;border-radius:5px;background:#252b32;color:#eee2bc;padding:3px 6px;font-size:11px;line-height:1.2}
+.unit-keywords .keyword-badge{width:19px;height:19px;padding:1px;font-size:15px;box-shadow:0 2px 3px #0009}
+.keyword-stealth{border-color:#b3a0c7;color:#e3cdef}.keyword-windfury{border-color:#7fc8dc;color:#b7edff}.keyword-venomous{border-color:#8fbc67;color:#c2ee9b}.keyword-reborn{border-color:#e2bb64;color:#ffe0a1}
+.keyword-list{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0}
+.unit-tooltip .keyword-list{margin:5px 0}.unit-tooltip .keyword-badge{font-size:10px}
+.hand .unit-keywords .keyword-badge{width:15px;height:15px;font-size:12px}

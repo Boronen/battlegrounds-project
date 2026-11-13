@@ -1,0 +1,43 @@
+/* Shared card anatomy; only materials, geometry and accents vary by tribe. */
+[data-tribe=warriors]{--tribe-ink:#321d1b;--tribe-mid:#773b2d;--tribe-accent:#e7a575;--tribe-light:#f8e2c5;--tribe-radius:8px;--tribe-pattern:repeating-linear-gradient(135deg,transparent 0 15px,#e7a57516 16px 18px,transparent 19px 32px)}
+[data-tribe=guardians]{--tribe-ink:#162d3d;--tribe-mid:#325976;--tribe-accent:#a9cee0;--tribe-light:#e4eff4;--tribe-radius:24px 24px 10px 10px;--tribe-pattern:repeating-linear-gradient(90deg,transparent 0 22px,#c3e4f016 23px 24px,transparent 25px 46px)}
+[data-tribe=mystics]{--tribe-ink:#291d42;--tribe-mid:#5e3b7d;--tribe-accent:#ccb0f2;--tribe-light:#f1e6ff;--tribe-radius:24px 8px 24px 8px;--tribe-pattern:radial-gradient(circle at 50% 50%,transparent 24%,#ddc2ff22 25% 26%,transparent 27% 44%,#ddc2ff14 45% 46%,transparent 47%)}
+[data-tribe=technologists]{--tribe-ink:#132e32;--tribe-mid:#26616a;--tribe-accent:#87d5d2;--tribe-light:#dcf5eb;--tribe-radius:5px;--tribe-pattern:repeating-linear-gradient(0deg,transparent 0 20px,#a2e8dd17 21px 22px),repeating-linear-gradient(90deg,transparent 0 20px,#a2e8dd17 21px 22px)}
+[data-tribe=survivors]{--tribe-ink:#352b20;--tribe-mid:#746044;--tribe-accent:#d5bb87;--tribe-light:#f4ead3;--tribe-radius:10px;--tribe-pattern:repeating-linear-gradient(0deg,transparent 0 8px,#e4d4af0d 9px 10px)}
+[data-tribe=beasts]{--tribe-ink:#1f3022;--tribe-mid:#466447;--tribe-accent:#b8cf8f;--tribe-light:#eaf0d2;--tribe-radius:28px 10px 28px 10px;--tribe-pattern:repeating-linear-gradient(65deg,transparent 0 22px,#c7dfa318 23px 25px,transparent 26px 44px)}
+[data-tribe=undead]{--tribe-ink:#22272d;--tribe-mid:#4e6262;--tribe-accent:#afc9b8;--tribe-light:#e5ebd8;--tribe-radius:22px 22px 4px 4px;--tribe-pattern:repeating-linear-gradient(115deg,transparent 0 29px,#dce2cc15 30px 31px,transparent 32px 52px)}
+[data-tribe=tricksters]{--tribe-ink:#361d38;--tribe-mid:#763e67;--tribe-accent:#e5aed0;--tribe-light:#f9e2ea;--tribe-radius:8px 24px 8px 24px;--tribe-pattern:repeating-conic-gradient(from 45deg,#f2c3df0f 0% 25%,transparent 0% 50%) 0 0/38px 38px}
+.tribe-surface{display:block;position:relative;overflow:hidden;background:var(--tribe-pattern),radial-gradient(ellipse at 50% 35%,var(--tribe-mid),var(--tribe-ink) 85%);color:var(--tribe-accent);isolation:isolate}
+.surface-arch{position:absolute;inset:12% 18% -15%;border:1px solid currentColor;border-radius:50% 50% 4px 4px;opacity:.25;transform:rotate(-8deg)}
+.surface-orbit{position:absolute;inset:27% 27%;border:1px solid currentColor;transform:rotate(45deg);opacity:.4;box-shadow:0 0 0 9px #ffffff05,inset 0 0 25px #ffffff08}
+.surface-rule{position:absolute;left:16%;right:16%;top:50%;height:1px;background:currentColor;opacity:.25}
+[data-tribe=warriors]>.surface-orbit{border-width:3px;transform:rotate(45deg) scale(.75)}
+[data-tribe=guardians]>.surface-orbit{border-radius:0 0 50% 50%;transform:none;border-top-width:3px}
+[data-tribe=mystics]>.surface-orbit{border-radius:50%;transform:none;box-shadow:0 0 0 8px #ccb0f214,0 0 0 18px #ccb0f20c}
+[data-tribe=technologists]>.surface-arch{border-radius:0;transform:none;border-style:dashed}
+[data-tribe=survivors]>.surface-orbit{transform:rotate(-6deg);border-style:double;border-width:3px}
+[data-tribe=beasts]>.surface-orbit{border-radius:70% 0 70% 0;transform:rotate(-30deg)}
+[data-tribe=undead]>.surface-arch{border-radius:50% 50% 0 0;transform:none;border-width:3px}
+[data-tribe=tricksters]>.surface-orbit{transform:rotate(30deg);box-shadow:9px -9px 0 -1px var(--tribe-ink),9px -9px 0 0 currentColor}
+/* Full template in the catalog. */
+.pool-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:22px}
+.pool-card[data-tribe]{position:relative;display:flex;flex-direction:column;gap:0;align-items:stretch;padding:7px 7px 22px;min-height:370px;border:2px solid var(--tribe-accent);border-radius:var(--tribe-radius);background:linear-gradient(130deg,var(--tribe-mid),var(--tribe-ink) 65%);box-shadow:inset 0 0 0 2px #10151b99,0 5px 0 #11151bcc,0 9px 18px #0004;color:var(--tribe-light)}
+.template-tier{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:5px 8px;font-size:10px;letter-spacing:1px;color:var(--tribe-accent);text-transform:uppercase}.template-tier span:last-child{font-size:9px;letter-spacing:2px}
+.pool-card>.tribe-surface{height:116px;flex-shrink:0;border:1px solid var(--tribe-accent);border-radius:var(--tribe-radius);margin:3px 4px 0}
+.pool-card .pool-card-content{display:flex;flex-direction:column;flex:1;padding:0 10px}.pool-card h4{position:relative;margin:-9px -4px 9px;padding:9px 6px;min-height:48px;display:grid;place-items:center;border:1px solid var(--tribe-accent);border-radius:4px;background:var(--tribe-ink);color:var(--tribe-light);font-size:21px;text-align:center;line-height:1.05;box-shadow:0 3px 7px #0004}
+.pool-card .pool-franchise{color:var(--tribe-light);opacity:.65;text-align:center;font-size:9px;line-height:1.3;margin-bottom:10px}.pool-card .pool-ability{flex:1;background:#0a0d151f;border-top:1px solid #ffffff18;border-bottom:1px solid #ffffff18;padding:10px 0;line-height:1.5;font-size:12px;color:var(--tribe-light)}
+.pool-card .pool-tribe{order:1;text-align:center;margin:10px 28px 0;color:var(--tribe-accent);text-transform:uppercase;letter-spacing:1.3px;font-size:9px}
+.pool-card .pool-stats{position:absolute;left:-7px;right:-7px;bottom:-10px;justify-content:space-between;margin:0;pointer-events:none}.pool-card .pool-stats>div{display:grid;place-items:center;width:40px;height:40px;border:2px solid #e5c583;border-radius:9px;background:linear-gradient(#b78935,#65421b);box-shadow:0 3px 5px #0008}.pool-card .pool-stats>div+div{border-radius:50%;background:linear-gradient(#a54943,#57282e);border-color:#e1a89b}.pool-card .pool-stats dt{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.pool-card .pool-stats dd,.pool-card .pool-stats>div+div dd{font-size:25px;color:#fff0d0;font-family:'Alegreya',Georgia,serif;text-shadow:0 2px 1px #251c1a}
+/* Compact template for shop, board, combat and hand; state effects remain separate. */
+.unit[data-tribe]{border-color:var(--tribe-accent);border-radius:var(--tribe-radius);background:var(--tribe-ink);box-shadow:inset 0 0 0 2px var(--tribe-mid),0 4px 0 #211a22,0 6px 10px #0008}
+.unit[data-tribe]>.tribe-surface{position:absolute;inset:4px;border-radius:var(--tribe-radius);pointer-events:none}
+.unit[data-tribe]>.unit-name{bottom:16px;left:1px;right:1px;min-height:24px;display:grid;place-items:center;padding:3px;background:var(--tribe-ink);border-top:1px solid var(--tribe-accent);border-bottom:1px solid var(--tribe-accent);color:var(--tribe-light);text-shadow:0 1px #000;font-family:'Alegreya',Georgia,serif;font-weight:700;z-index:1}
+.unit-tribe{position:absolute;bottom:3px;left:7px;right:7px;text-align:center;font-size:6px;line-height:1.2;letter-spacing:.25px;color:var(--tribe-accent);z-index:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.unit[data-tribe]>.tier-stars{background:var(--tribe-ink);border-color:var(--tribe-accent);color:var(--tribe-light)}
+.unit[data-tribe].golden{border-color:#ffdb6f;box-shadow:inset 0 0 0 2px #b78e3b,0 0 0 2px #6d4f25,0 0 18px #f2cc5d66}.unit[data-tribe].golden>.unit-name{background:linear-gradient(#f4d781,#c19537);color:#37261c;border-color:#ffe6a4;text-shadow:none}
+.hand .unit[data-tribe]>.unit-name{bottom:12px;min-height:20px;font-size:9px}.hand .unit-tribe{font-size:5px;bottom:2px}
+@media(max-width:700px){.pool-grid{grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:24px}.pool-card[data-tribe]{max-width:350px;width:100%;justify-self:center}.pool-card>.tribe-surface{height:125px}}
+[data-tribe=neutral]{--tribe-ink:#292b30;--tribe-mid:#565b64;--tribe-accent:#c7c9ca;--tribe-light:#f1eee4;--tribe-radius:10px;--tribe-pattern:repeating-linear-gradient(0deg,transparent 0 12px,#ffffff0a 13px 14px)}
+[data-tribe=all]{--tribe-ink:#22283a;--tribe-mid:#505373;--tribe-accent:#dfd2aa;--tribe-light:#fff2db;--tribe-radius:18px;--tribe-pattern:conic-gradient(from 45deg at 50% 50%,#ce787233,#d5b95b33,#82b88d33,#79bfc833,#a69cd933,#ca8eb733,#ce787233)}
+[data-tribe=all]>.surface-orbit{border-radius:35%;box-shadow:0 0 0 9px #d9ca9d1a,0 0 0 18px #b7d0e014}
+.pool-type-help{font-size:11px;line-height:1.4;color:#c5bca7;margin:0 0 12px}

@@ -1,0 +1,33 @@
+/* Paper and graphite frames for the illustrated original hero roster. */
+.hero-selection .hero-offer {
+ background:linear-gradient(135deg,#fbf8f1,#e6dfd0);
+ border:2px solid #8c7b62;
+ border-radius:12px 12px 8px 8px;
+ box-shadow:inset 0 0 0 3px #f7f1e5,0 5px 14px #0006;
+ color:#322e29;
+}
+.hero-selection .hero-offer:hover {
+ border-color:#d3b16f;
+ box-shadow:inset 0 0 0 3px #fffaf0,0 7px 20px #0008;
+}
+.hero-selection .hero-offer .hero-art {
+ height:180px;
+ background:#f6f3ec;
+ border:1px solid #a99b85;
+ border-radius:7px 7px 38% 38%;
+ overflow:hidden;
+}
+.hero-selection .hero-art .hero-character-art {object-position:center 30%}
+.hero-selection .hero-art>i {display:none}
+.hero-selection .hero-offer h2 {color:#302c27;text-shadow:none}
+.hero-selection .hero-offer em {color:#746650}
+.hero-selection .hero-offer p {color:#554b3e}
+.hero-selection .hero-offer .hero-armor {color:#655744}
+.hero-selection .hero-offer .hero-select-label {
+ color:#fff4db;
+ background:linear-gradient(#605346,#3e3730);
+ border-color:#8c7b62;
+}
+@media(max-width:550px) {
+ .hero-selection .hero-offer .hero-art {height:120px}
+}

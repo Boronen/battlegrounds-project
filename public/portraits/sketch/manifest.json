@@ -1,0 +1,63 @@
+[
+  {
+    "start": 5,
+    "characters": [
+      "petite energetic young woman, high ponytail, long scarf, lively grin, rogue leather vest",
+      "quiet young female artist, beret, short bob, sketchbook held to chest",
+      "petite young female adventurer, dark blunt bob, hoop earrings, embroidered cape",
+      "handsome young male student leader, swept hair, elegant jacket, confident smile",
+      "young male musician, wavy shoulder-length hair, headphones, guitar neck",
+      "tall slim male programmer scholar, round glasses, long coat, geometric rune tablet"
+    ]
+  },
+  {
+    "start": 11,
+    "characters": [
+      "quiet compact young man, soft cap, high collar, thoughtful eyes",
+      "athletic young male martial artist, short spiky hair, headband, training jacket",
+      "young male musician, medium tousled hair, earphones, violin and bow",
+      "tall male technology mage, round spectacles, side-parted hair, high collar, circuit-pattern scroll",
+      "petite young female scout, long braid, large ribbon, light cloak, gentle smile",
+      "confident young male adventurer, broad grin, messy hair, open leather jacket, hand on hip"
+    ]
+  },
+  {
+    "start": 17,
+    "characters": [
+      "young female artist, wavy hair, dangling earrings, ink-stained smock, brushes",
+      "athletic young male ranger, cropped hair, cloth headband, fitted training tunic",
+      "quiet young female musician, straight long hair, headphones around neck, sheet music",
+      "young female council leader, swept-back hair, scarf, tailored jacket, clipboard",
+      "young male bard, short beard, cap, lute across shoulder",
+      "energetic young male gamer, sharp messy hair, bulky headphones, claw-shaped pendant"
+    ]
+  },
+  {
+    "start": 23,
+    "characters": [
+      "tall quiet young male scholar, neatly parted hair, tie, long coat, reserved expression",
+      "young female artist, voluminous curly hair, beret, freckled cheeks, palette and brush",
+      "tall mature male programming teacher, rectangular glasses, blazer, chalk and book",
+      "athletic mature female technology teacher, swept-back dark hair in a short ponytail, leather jacket, rolled sleeves, wristwatch, coding scroll",
+      "mature female sports and computing teacher, high ponytail, scarf, whistle, geometric tablet",
+      "quiet young male scholar, soft curly hair, round glasses, hooded robe, closed book"
+    ],
+    "overrides": {
+      "26.png": "Standalone corrected female portrait; the original atlas-23-28.png is historical and must not replace this portrait."
+    }
+  },
+  {
+    "start": 29,
+    "characters": [
+      "tall mature male database teacher, swept hair, bow tie, dignified face, stacked books",
+      "legendary tall male professor, neatly combed hair, tie, confident angular face, ornate academic coat",
+      "older wise male professor, silver hair, round glasses, kind lined face, heavy academic robe",
+      "mature female teacher, wavy swept-back hair, rectangular glasses, collared blouse, patterned waistcoat, tailored academic jacket",
+      "petite mature female teacher, curled bob, earrings, structured high-collar jacket, open book",
+      "young male card-game strategist, slicked hair, bowtie, sly friendly grin, fanned playing cards without markings"
+    ],
+    "overrides": {
+      "32.png": "Standalone corrected female portrait; the original atlas-29-34.png is historical and must not replace this portrait."
+    }
+  }
+]

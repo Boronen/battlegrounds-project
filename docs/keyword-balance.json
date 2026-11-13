@@ -1,0 +1,3397 @@
+{
+  "samplesPerScenario": 1000,
+  "seedOffset": 50000,
+  "cards": 24,
+  "combats": 576000,
+  "method": "Paired same-tier boards and combat seeds; score = win + half draw. Both baseline and updated peer pools are tested. All play buffs applied. Six scenarios; one changed card per board. Aim for a 50% peer score rather than preserving unusually strong old effects. This is a combat diagnostic, not match win rate.",
+  "reviewScoreBand": [
+    0.4,
+    0.6
+  ],
+  "rows": [
+    {
+      "name": "Selina Kyle / Catwoman",
+      "tier": 3,
+      "keyword": "stealth",
+      "stats": "4/8",
+      "teamScore": 0.49215,
+      "teamDelta": -0.054400000000000004,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.5035999999999999
+        },
+        {
+          "cohort": "updated",
+          "score": 0.48069999999999996
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 476,
+          "oldScore": 0.641,
+          "newScore": 0.5985,
+          "delta": -0.0425,
+          "changed": 487
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 547,
+          "oldScore": 0.5825,
+          "newScore": 0.5105,
+          "delta": -0.072,
+          "changed": 359
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 468,
+          "oldScore": 0.5385,
+          "newScore": 0.506,
+          "delta": -0.0325,
+          "changed": 310
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 468,
+          "oldScore": 0.5445,
+          "newScore": 0.4335,
+          "delta": -0.111,
+          "changed": 351
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 468,
+          "oldScore": 0.5385,
+          "newScore": 0.506,
+          "delta": -0.0325,
+          "changed": 310
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 468,
+          "oldScore": 0.578,
+          "newScore": 0.562,
+          "delta": -0.016,
+          "changed": 353
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 476,
+          "oldScore": 0.619,
+          "newScore": 0.574,
+          "delta": -0.045,
+          "changed": 462
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 547,
+          "oldScore": 0.566,
+          "newScore": 0.4945,
+          "delta": -0.0715,
+          "changed": 393
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 468,
+          "oldScore": 0.5115,
+          "newScore": 0.473,
+          "delta": -0.0385,
+          "changed": 333
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 468,
+          "oldScore": 0.523,
+          "newScore": 0.4075,
+          "delta": -0.1155,
+          "changed": 346
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 468,
+          "oldScore": 0.5115,
+          "newScore": 0.473,
+          "delta": -0.0385,
+          "changed": 333
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 468,
+          "oldScore": 0.5715,
+          "newScore": 0.5555,
+          "delta": -0.016,
+          "changed": 342
+        }
+      ]
+    },
+    {
+      "name": "Gollum",
+      "tier": 3,
+      "keyword": "stealth",
+      "stats": "3/11",
+      "teamScore": 0.505,
+      "teamDelta": -0.05235000000000001,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.5039
+        },
+        {
+          "cohort": "updated",
+          "score": 0.5061
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 482,
+          "oldScore": 0.6385,
+          "newScore": 0.794,
+          "delta": 0.1555,
+          "changed": 660
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 488,
+          "oldScore": 0.572,
+          "newScore": 0.5295,
+          "delta": -0.0425,
+          "changed": 463
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 495,
+          "oldScore": 0.55,
+          "newScore": 0.5285,
+          "delta": -0.0215,
+          "changed": 373
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 495,
+          "oldScore": 0.558,
+          "newScore": 0.344,
+          "delta": -0.214,
+          "changed": 435
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 495,
+          "oldScore": 0.55,
+          "newScore": 0.5285,
+          "delta": -0.0215,
+          "changed": 373
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 495,
+          "oldScore": 0.6015,
+          "newScore": 0.589,
+          "delta": -0.0125,
+          "changed": 341
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 482,
+          "oldScore": 0.6125,
+          "newScore": 0.774,
+          "delta": 0.1615,
+          "changed": 630
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 488,
+          "oldScore": 0.559,
+          "newScore": 0.5355,
+          "delta": -0.0235,
+          "changed": 506
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 495,
+          "oldScore": 0.5305,
+          "newScore": 0.526,
+          "delta": -0.0045,
+          "changed": 375
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 495,
+          "oldScore": 0.5415,
+          "newScore": 0.358,
+          "delta": -0.1835,
+          "changed": 400
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 495,
+          "oldScore": 0.5305,
+          "newScore": 0.526,
+          "delta": -0.0045,
+          "changed": 375
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 495,
+          "oldScore": 0.5805,
+          "newScore": 0.585,
+          "delta": 0.0045,
+          "changed": 343
+        }
+      ]
+    },
+    {
+      "name": "Frodo Baggins",
+      "tier": 3,
+      "keyword": "stealth",
+      "stats": "5/6",
+      "teamScore": 0.45934999999999987,
+      "teamDelta": -0.025050000000000006,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.46519999999999995
+        },
+        {
+          "cohort": "updated",
+          "score": 0.4535
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.4815,
+          "newScore": 0.4725,
+          "delta": -0.009,
+          "changed": 814
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 494,
+          "oldScore": 0.48,
+          "newScore": 0.415,
+          "delta": -0.065,
+          "changed": 475
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 481,
+          "oldScore": 0.511,
+          "newScore": 0.4705,
+          "delta": -0.0405,
+          "changed": 392
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 481,
+          "oldScore": 0.509,
+          "newScore": 0.452,
+          "delta": -0.057,
+          "changed": 398
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 481,
+          "oldScore": 0.511,
+          "newScore": 0.4705,
+          "delta": -0.0405,
+          "changed": 392
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 481,
+          "oldScore": 0.3915,
+          "newScore": 0.518,
+          "delta": 0.1265,
+          "changed": 306
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.4845,
+          "newScore": 0.4475,
+          "delta": -0.037,
+          "changed": 746
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 494,
+          "oldScore": 0.4795,
+          "newScore": 0.413,
+          "delta": -0.0665,
+          "changed": 466
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 481,
+          "oldScore": 0.505,
+          "newScore": 0.4445,
+          "delta": -0.0605,
+          "changed": 411
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 481,
+          "oldScore": 0.5395,
+          "newScore": 0.444,
+          "delta": -0.0955,
+          "changed": 411
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 481,
+          "oldScore": 0.505,
+          "newScore": 0.4445,
+          "delta": -0.0605,
+          "changed": 411
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 481,
+          "oldScore": 0.4125,
+          "newScore": 0.5215,
+          "delta": 0.109,
+          "changed": 287
+        }
+      ]
+    },
+    {
+      "name": "Haze",
+      "tier": 3,
+      "keyword": "stealth",
+      "stats": "3/11",
+      "teamScore": 0.49124999999999996,
+      "teamDelta": 0.01635,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.4851
+        },
+        {
+          "cohort": "updated",
+          "score": 0.4974
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 483,
+          "oldScore": 0.481,
+          "newScore": 0.799,
+          "delta": 0.318,
+          "changed": 636
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 489,
+          "oldScore": 0.4835,
+          "newScore": 0.527,
+          "delta": 0.0435,
+          "changed": 270
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 515,
+          "oldScore": 0.477,
+          "newScore": 0.501,
+          "delta": 0.024,
+          "changed": 236
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 515,
+          "oldScore": 0.4875,
+          "newScore": 0.343,
+          "delta": -0.1445,
+          "changed": 352
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 515,
+          "oldScore": 0.477,
+          "newScore": 0.501,
+          "delta": 0.024,
+          "changed": 236
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 515,
+          "oldScore": 0.425,
+          "newScore": 0.5535,
+          "delta": 0.1285,
+          "changed": 338
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 483,
+          "oldScore": 0.5025,
+          "newScore": 0.7895,
+          "delta": 0.287,
+          "changed": 602
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 489,
+          "oldScore": 0.489,
+          "newScore": 0.545,
+          "delta": 0.056,
+          "changed": 286
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 515,
+          "oldScore": 0.4885,
+          "newScore": 0.5195,
+          "delta": 0.031,
+          "changed": 271
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 515,
+          "oldScore": 0.515,
+          "newScore": 0.357,
+          "delta": -0.158,
+          "changed": 362
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 515,
+          "oldScore": 0.4885,
+          "newScore": 0.5195,
+          "delta": 0.031,
+          "changed": 271
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 515,
+          "oldScore": 0.418,
+          "newScore": 0.546,
+          "delta": 0.128,
+          "changed": 336
+        }
+      ]
+    },
+    {
+      "name": "Greirat",
+      "tier": 3,
+      "keyword": "stealth",
+      "stats": "4/7",
+      "teamScore": 0.4736000000000001,
+      "teamDelta": 0.0013500000000000012,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.476
+        },
+        {
+          "cohort": "updated",
+          "score": 0.47119999999999995
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 517,
+          "oldScore": 0.4815,
+          "newScore": 0.6195,
+          "delta": 0.138,
+          "changed": 516
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 495,
+          "oldScore": 0.4665,
+          "newScore": 0.466,
+          "delta": -0.0005,
+          "changed": 366
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.4725,
+          "newScore": 0.474,
+          "delta": 0.0015,
+          "changed": 330
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.4845,
+          "newScore": 0.4215,
+          "delta": -0.063,
+          "changed": 365
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.4725,
+          "newScore": 0.474,
+          "delta": 0.0015,
+          "changed": 330
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.423,
+          "newScore": 0.5445,
+          "delta": 0.1215,
+          "changed": 302
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 517,
+          "oldScore": 0.502,
+          "newScore": 0.586,
+          "delta": 0.084,
+          "changed": 528
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 495,
+          "oldScore": 0.468,
+          "newScore": 0.454,
+          "delta": -0.014,
+          "changed": 377
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.49,
+          "newScore": 0.4635,
+          "delta": -0.0265,
+          "changed": 326
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.511,
+          "newScore": 0.423,
+          "delta": -0.088,
+          "changed": 369
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.49,
+          "newScore": 0.4635,
+          "delta": -0.0265,
+          "changed": 326
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.4445,
+          "newScore": 0.552,
+          "delta": 0.1075,
+          "changed": 298
+        }
+      ]
+    },
+    {
+      "name": "Klein Moretti",
+      "tier": 3,
+      "keyword": "stealth",
+      "stats": "5/6",
+      "teamScore": 0.44820000000000004,
+      "teamDelta": -0.0875,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.44830000000000003
+        },
+        {
+          "cohort": "updated",
+          "score": 0.4481
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 489,
+          "oldScore": 0.6575,
+          "newScore": 0.4535,
+          "delta": -0.204,
+          "changed": 661
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 485,
+          "oldScore": 0.5725,
+          "newScore": 0.4205,
+          "delta": -0.152,
+          "changed": 428
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 519,
+          "oldScore": 0.5365,
+          "newScore": 0.4295,
+          "delta": -0.107,
+          "changed": 364
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 519,
+          "oldScore": 0.5395,
+          "newScore": 0.4255,
+          "delta": -0.114,
+          "changed": 370
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 519,
+          "oldScore": 0.5365,
+          "newScore": 0.4295,
+          "delta": -0.107,
+          "changed": 364
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 519,
+          "oldScore": 0.561,
+          "newScore": 0.5365,
+          "delta": -0.0245,
+          "changed": 362
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 489,
+          "oldScore": 0.631,
+          "newScore": 0.4405,
+          "delta": -0.1905,
+          "changed": 640
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 485,
+          "oldScore": 0.556,
+          "newScore": 0.4215,
+          "delta": -0.1345,
+          "changed": 433
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 519,
+          "oldScore": 0.5,
+          "newScore": 0.4375,
+          "delta": -0.0625,
+          "changed": 341
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 519,
+          "oldScore": 0.506,
+          "newScore": 0.435,
+          "delta": -0.071,
+          "changed": 334
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 519,
+          "oldScore": 0.5,
+          "newScore": 0.4375,
+          "delta": -0.0625,
+          "changed": 341
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 519,
+          "oldScore": 0.549,
+          "newScore": 0.509,
+          "delta": -0.04,
+          "changed": 347
+        }
+      ]
+    },
+    {
+      "name": "General Grievous",
+      "tier": 2,
+      "keyword": "windfury",
+      "stats": "3/5",
+      "teamScore": 0.4939499999999999,
+      "teamDelta": 0.05315000000000001,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.48419999999999996
+        },
+        {
+          "cohort": "updated",
+          "score": 0.5036999999999999
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 490,
+          "oldScore": 0.4075,
+          "newScore": 0.6615,
+          "delta": 0.254,
+          "changed": 508
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 538,
+          "oldScore": 0.417,
+          "newScore": 0.5195,
+          "delta": 0.1025,
+          "changed": 429
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 491,
+          "oldScore": 0.435,
+          "newScore": 0.514,
+          "delta": 0.079,
+          "changed": 459
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 491,
+          "oldScore": 0.4685,
+          "newScore": 0.4145,
+          "delta": -0.054,
+          "changed": 410
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 491,
+          "oldScore": 0.435,
+          "newScore": 0.514,
+          "delta": 0.079,
+          "changed": 459
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 491,
+          "oldScore": 0.4295,
+          "newScore": 0.459,
+          "delta": 0.0295,
+          "changed": 424
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 490,
+          "oldScore": 0.4085,
+          "newScore": 0.68,
+          "delta": 0.2715,
+          "changed": 543
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 538,
+          "oldScore": 0.426,
+          "newScore": 0.53,
+          "delta": 0.104,
+          "changed": 435
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 491,
+          "oldScore": 0.4425,
+          "newScore": 0.5375,
+          "delta": 0.095,
+          "changed": 498
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 491,
+          "oldScore": 0.467,
+          "newScore": 0.4355,
+          "delta": -0.0315,
+          "changed": 419
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 491,
+          "oldScore": 0.4425,
+          "newScore": 0.5375,
+          "delta": 0.095,
+          "changed": 498
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 491,
+          "oldScore": 0.445,
+          "newScore": 0.478,
+          "delta": 0.033,
+          "changed": 417
+        }
+      ]
+    },
+    {
+      "name": "Abyss Watcher",
+      "tier": 2,
+      "keyword": "windfury",
+      "stats": "3/5",
+      "teamScore": 0.47509999999999997,
+      "teamDelta": -0.11149999999999997,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.4654
+        },
+        {
+          "cohort": "updated",
+          "score": 0.4848
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 500,
+          "oldScore": 0.6315,
+          "newScore": 0.661,
+          "delta": 0.0295,
+          "changed": 487
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 534,
+          "oldScore": 0.599,
+          "newScore": 0.5015,
+          "delta": -0.0975,
+          "changed": 373
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 509,
+          "oldScore": 0.574,
+          "newScore": 0.4865,
+          "delta": -0.0875,
+          "changed": 345
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 509,
+          "oldScore": 0.5755,
+          "newScore": 0.4145,
+          "delta": -0.161,
+          "changed": 368
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 509,
+          "oldScore": 0.574,
+          "newScore": 0.4865,
+          "delta": -0.0875,
+          "changed": 345
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 509,
+          "oldScore": 0.604,
+          "newScore": 0.438,
+          "delta": -0.166,
+          "changed": 435
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 500,
+          "oldScore": 0.635,
+          "newScore": 0.672,
+          "delta": 0.037,
+          "changed": 508
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 534,
+          "oldScore": 0.6015,
+          "newScore": 0.5095,
+          "delta": -0.092,
+          "changed": 349
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 509,
+          "oldScore": 0.5685,
+          "newScore": 0.5055,
+          "delta": -0.063,
+          "changed": 346
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 509,
+          "oldScore": 0.5875,
+          "newScore": 0.446,
+          "delta": -0.1415,
+          "changed": 373
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 509,
+          "oldScore": 0.5685,
+          "newScore": 0.5055,
+          "delta": -0.063,
+          "changed": 346
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 509,
+          "oldScore": 0.6135,
+          "newScore": 0.4575,
+          "delta": -0.156,
+          "changed": 438
+        }
+      ]
+    },
+    {
+      "name": "Gwen Stacy / Ghost-Spider",
+      "tier": 2,
+      "keyword": "windfury",
+      "stats": "4/4",
+      "teamScore": 0.51285,
+      "teamDelta": -0.06794999999999998,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.5103
+        },
+        {
+          "cohort": "updated",
+          "score": 0.5154
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 526,
+          "oldScore": 0.6645,
+          "newScore": 0.663,
+          "delta": -0.0015,
+          "changed": 465
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 494,
+          "oldScore": 0.601,
+          "newScore": 0.512,
+          "delta": -0.089,
+          "changed": 422
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 482,
+          "oldScore": 0.5675,
+          "newScore": 0.5075,
+          "delta": -0.06,
+          "changed": 382
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 482,
+          "oldScore": 0.5685,
+          "newScore": 0.4825,
+          "delta": -0.086,
+          "changed": 384
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 482,
+          "oldScore": 0.5675,
+          "newScore": 0.5075,
+          "delta": -0.06,
+          "changed": 382
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 482,
+          "oldScore": 0.5805,
+          "newScore": 0.542,
+          "delta": -0.0385,
+          "changed": 405
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 526,
+          "oldScore": 0.6705,
+          "newScore": 0.6545,
+          "delta": -0.016,
+          "changed": 456
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 494,
+          "oldScore": 0.5975,
+          "newScore": 0.52,
+          "delta": -0.0775,
+          "changed": 425
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 482,
+          "oldScore": 0.5765,
+          "newScore": 0.5035,
+          "delta": -0.073,
+          "changed": 368
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 482,
+          "oldScore": 0.582,
+          "newScore": 0.488,
+          "delta": -0.094,
+          "changed": 377
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 482,
+          "oldScore": 0.5765,
+          "newScore": 0.5035,
+          "delta": -0.073,
+          "changed": 368
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 482,
+          "oldScore": 0.5905,
+          "newScore": 0.562,
+          "delta": -0.0285,
+          "changed": 405
+        }
+      ]
+    },
+    {
+      "name": "Flying Snow",
+      "tier": 2,
+      "keyword": "windfury",
+      "stats": "3/6",
+      "teamScore": 0.49245,
+      "teamDelta": -0.08875000000000001,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.4824
+        },
+        {
+          "cohort": "updated",
+          "score": 0.5025
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 524,
+          "oldScore": 0.6605,
+          "newScore": 0.697,
+          "delta": 0.0365,
+          "changed": 507
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.5765,
+          "newScore": 0.537,
+          "delta": -0.0395,
+          "changed": 334
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.561,
+          "newScore": 0.5005,
+          "delta": -0.0605,
+          "changed": 377
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.572,
+          "newScore": 0.414,
+          "delta": -0.158,
+          "changed": 398
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.561,
+          "newScore": 0.5005,
+          "delta": -0.0605,
+          "changed": 377
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.603,
+          "newScore": 0.46,
+          "delta": -0.143,
+          "changed": 388
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 524,
+          "oldScore": 0.6605,
+          "newScore": 0.7045,
+          "delta": 0.044,
+          "changed": 512
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.5795,
+          "newScore": 0.551,
+          "delta": -0.0285,
+          "changed": 331
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.574,
+          "newScore": 0.5225,
+          "delta": -0.0515,
+          "changed": 396
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.59,
+          "newScore": 0.4235,
+          "delta": -0.1665,
+          "changed": 396
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.574,
+          "newScore": 0.5225,
+          "delta": -0.0515,
+          "changed": 396
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.621,
+          "newScore": 0.493,
+          "delta": -0.128,
+          "changed": 379
+        }
+      ]
+    },
+    {
+      "name": "Pontiff Sulyvahn",
+      "tier": 3,
+      "keyword": "windfury",
+      "stats": "3/10",
+      "teamScore": 0.4791999999999999,
+      "teamDelta": -0.05955000000000001,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.48069999999999996
+        },
+        {
+          "cohort": "updated",
+          "score": 0.4777
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 508,
+          "oldScore": 0.665,
+          "newScore": 0.6975,
+          "delta": 0.0325,
+          "changed": 427
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 521,
+          "oldScore": 0.557,
+          "newScore": 0.5105,
+          "delta": -0.0465,
+          "changed": 467
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 479,
+          "oldScore": 0.518,
+          "newScore": 0.5025,
+          "delta": -0.0155,
+          "changed": 440
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 479,
+          "oldScore": 0.5275,
+          "newScore": 0.349,
+          "delta": -0.1785,
+          "changed": 449
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 479,
+          "oldScore": 0.518,
+          "newScore": 0.5025,
+          "delta": -0.0155,
+          "changed": 440
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 479,
+          "oldScore": 0.5585,
+          "newScore": 0.539,
+          "delta": -0.0195,
+          "changed": 365
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 508,
+          "oldScore": 0.6295,
+          "newScore": 0.684,
+          "delta": 0.0545,
+          "changed": 405
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 521,
+          "oldScore": 0.5455,
+          "newScore": 0.521,
+          "delta": -0.0245,
+          "changed": 482
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 479,
+          "oldScore": 0.531,
+          "newScore": 0.483,
+          "delta": -0.048,
+          "changed": 420
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 479,
+          "oldScore": 0.5405,
+          "newScore": 0.372,
+          "delta": -0.1685,
+          "changed": 429
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 479,
+          "oldScore": 0.531,
+          "newScore": 0.483,
+          "delta": -0.048,
+          "changed": 420
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 479,
+          "oldScore": 0.5605,
+          "newScore": 0.5295,
+          "delta": -0.031,
+          "changed": 359
+        }
+      ]
+    },
+    {
+      "name": "Darth Maul",
+      "tier": 6,
+      "keyword": "windfury",
+      "stats": "12/15",
+      "teamScore": 0.5236499999999998,
+      "teamDelta": 0.039950000000000006,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.5191999999999999
+        },
+        {
+          "cohort": "updated",
+          "score": 0.5281
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 525,
+          "oldScore": 0.4165,
+          "newScore": 1,
+          "delta": 0.5835,
+          "changed": 742
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 517,
+          "oldScore": 0.5465,
+          "newScore": 0.6465,
+          "delta": 0.1,
+          "changed": 484
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 478,
+          "oldScore": 0.439,
+          "newScore": 0.4665,
+          "delta": 0.0275,
+          "changed": 110
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 478,
+          "oldScore": 0.4785,
+          "newScore": 0.5235,
+          "delta": 0.045,
+          "changed": 224
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 478,
+          "oldScore": 0.439,
+          "newScore": 0.4665,
+          "delta": 0.0275,
+          "changed": 110
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 478,
+          "oldScore": 0.467,
+          "newScore": 0.493,
+          "delta": 0.026,
+          "changed": 144
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 525,
+          "oldScore": 0.3965,
+          "newScore": 0.925,
+          "delta": 0.5285,
+          "changed": 667
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 517,
+          "oldScore": 0.564,
+          "newScore": 0.6475,
+          "delta": 0.0835,
+          "changed": 470
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 478,
+          "oldScore": 0.458,
+          "newScore": 0.4795,
+          "delta": 0.0215,
+          "changed": 140
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 478,
+          "oldScore": 0.5005,
+          "newScore": 0.5285,
+          "delta": 0.028,
+          "changed": 243
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 478,
+          "oldScore": 0.458,
+          "newScore": 0.4795,
+          "delta": 0.0215,
+          "changed": 140
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 478,
+          "oldScore": 0.4865,
+          "newScore": 0.5055,
+          "delta": 0.019,
+          "changed": 174
+        }
+      ]
+    },
+    {
+      "name": "Nameless",
+      "tier": 3,
+      "keyword": "venomous",
+      "stats": "3/6",
+      "teamScore": 0.4755999999999999,
+      "teamDelta": -0.06305,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.4708
+        },
+        {
+          "cohort": "updated",
+          "score": 0.48040000000000005
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 519,
+          "oldScore": 0.677,
+          "newScore": 0.6775,
+          "delta": 0.0005,
+          "changed": 450
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 521,
+          "oldScore": 0.568,
+          "newScore": 0.472,
+          "delta": -0.096,
+          "changed": 423
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.5175,
+          "newScore": 0.457,
+          "delta": -0.0605,
+          "changed": 319
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.5265,
+          "newScore": 0.456,
+          "delta": -0.0705,
+          "changed": 319
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.5175,
+          "newScore": 0.457,
+          "delta": -0.0605,
+          "changed": 319
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.545,
+          "newScore": 0.512,
+          "delta": -0.033,
+          "changed": 290
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 519,
+          "oldScore": 0.6545,
+          "newScore": 0.716,
+          "delta": 0.0615,
+          "changed": 497
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 521,
+          "oldScore": 0.568,
+          "newScore": 0.504,
+          "delta": -0.064,
+          "changed": 439
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.536,
+          "newScore": 0.457,
+          "delta": -0.079,
+          "changed": 319
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.5365,
+          "newScore": 0.4755,
+          "delta": -0.061,
+          "changed": 313
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.536,
+          "newScore": 0.457,
+          "delta": -0.079,
+          "changed": 319
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.5355,
+          "newScore": 0.5085,
+          "delta": -0.027,
+          "changed": 290
+        }
+      ]
+    },
+    {
+      "name": "Jim Moriarty",
+      "tier": 5,
+      "keyword": "venomous",
+      "stats": "4/12",
+      "teamScore": 0.5036,
+      "teamDelta": -0.0081,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.5045
+        },
+        {
+          "cohort": "updated",
+          "score": 0.5027
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 487,
+          "oldScore": 0.7855,
+          "newScore": 1,
+          "delta": 0.2145,
+          "changed": 429
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 496,
+          "oldScore": 0.5235,
+          "newScore": 0.5845,
+          "delta": 0.061,
+          "changed": 552
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.5095,
+          "newScore": 0.4905,
+          "delta": -0.019,
+          "changed": 383
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.4615,
+          "newScore": 0.511,
+          "delta": 0.0495,
+          "changed": 265
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.5095,
+          "newScore": 0.4905,
+          "delta": -0.019,
+          "changed": 383
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.587,
+          "newScore": 0.446,
+          "delta": -0.141,
+          "changed": 391
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 487,
+          "oldScore": 0.773,
+          "newScore": 0.977,
+          "delta": 0.204,
+          "changed": 408
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 496,
+          "oldScore": 0.5115,
+          "newScore": 0.5875,
+          "delta": 0.076,
+          "changed": 558
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.487,
+          "newScore": 0.4885,
+          "delta": 0.0015,
+          "changed": 359
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.451,
+          "newScore": 0.504,
+          "delta": 0.053,
+          "changed": 277
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.487,
+          "newScore": 0.4885,
+          "delta": 0.0015,
+          "changed": 359
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 498,
+          "oldScore": 0.5895,
+          "newScore": 0.445,
+          "delta": -0.1445,
+          "changed": 398
+        }
+      ]
+    },
+    {
+      "name": "Hazmat Scientist",
+      "tier": 5,
+      "keyword": "venomous",
+      "stats": "1/12",
+      "teamScore": 0.49234999999999995,
+      "teamDelta": -0.029300000000000003,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.4951999999999999
+        },
+        {
+          "cohort": "updated",
+          "score": 0.48950000000000005
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 502,
+          "oldScore": 0.7885,
+          "newScore": 1,
+          "delta": 0.2115,
+          "changed": 423
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 482,
+          "oldScore": 0.4885,
+          "newScore": 0.513,
+          "delta": 0.0245,
+          "changed": 498
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 508,
+          "oldScore": 0.5195,
+          "newScore": 0.504,
+          "delta": -0.0155,
+          "changed": 341
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 508,
+          "oldScore": 0.485,
+          "newScore": 0.518,
+          "delta": 0.033,
+          "changed": 241
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 508,
+          "oldScore": 0.5195,
+          "newScore": 0.504,
+          "delta": -0.0155,
+          "changed": 341
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 508,
+          "oldScore": 0.6055,
+          "newScore": 0.437,
+          "delta": -0.1685,
+          "changed": 405
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 502,
+          "oldScore": 0.7775,
+          "newScore": 0.9815,
+          "delta": 0.204,
+          "changed": 408
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 482,
+          "oldScore": 0.4905,
+          "newScore": 0.496,
+          "delta": 0.0055,
+          "changed": 506
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 508,
+          "oldScore": 0.512,
+          "newScore": 0.4965,
+          "delta": -0.0155,
+          "changed": 339
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 508,
+          "oldScore": 0.475,
+          "newScore": 0.513,
+          "delta": 0.038,
+          "changed": 261
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 508,
+          "oldScore": 0.512,
+          "newScore": 0.4965,
+          "delta": -0.0155,
+          "changed": 339
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 508,
+          "oldScore": 0.609,
+          "newScore": 0.4455,
+          "delta": -0.1635,
+          "changed": 424
+        }
+      ]
+    },
+    {
+      "name": "Green Goblin",
+      "tier": 5,
+      "keyword": "venomous",
+      "stats": "8/11",
+      "teamScore": 0.4918499999999999,
+      "teamDelta": -0.011550000000000001,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.4911999999999999
+        },
+        {
+          "cohort": "updated",
+          "score": 0.4925
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 525,
+          "oldScore": 0.808,
+          "newScore": 0.838,
+          "delta": 0.03,
+          "changed": 60
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 469,
+          "oldScore": 0.4985,
+          "newScore": 0.593,
+          "delta": 0.0945,
+          "changed": 538
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 479,
+          "oldScore": 0.5085,
+          "newScore": 0.473,
+          "delta": -0.0355,
+          "changed": 361
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 479,
+          "oldScore": 0.456,
+          "newScore": 0.492,
+          "delta": 0.036,
+          "changed": 265
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 479,
+          "oldScore": 0.5085,
+          "newScore": 0.473,
+          "delta": -0.0355,
+          "changed": 361
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 479,
+          "oldScore": 0.556,
+          "newScore": 0.425,
+          "delta": -0.131,
+          "changed": 399
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 525,
+          "oldScore": 0.794,
+          "newScore": 0.838,
+          "delta": 0.044,
+          "changed": 88
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 469,
+          "oldScore": 0.494,
+          "newScore": 0.599,
+          "delta": 0.105,
+          "changed": 534
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 479,
+          "oldScore": 0.498,
+          "newScore": 0.47,
+          "delta": -0.028,
+          "changed": 351
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 479,
+          "oldScore": 0.453,
+          "newScore": 0.487,
+          "delta": 0.034,
+          "changed": 253
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 479,
+          "oldScore": 0.498,
+          "newScore": 0.47,
+          "delta": -0.028,
+          "changed": 351
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 479,
+          "oldScore": 0.5635,
+          "newScore": 0.4365,
+          "delta": -0.127,
+          "changed": 411
+        }
+      ]
+    },
+    {
+      "name": "Venom",
+      "tier": 6,
+      "keyword": "venomous",
+      "stats": "9/13",
+      "teamScore": 0.47645,
+      "teamDelta": -0.14245,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.47380000000000005
+        },
+        {
+          "cohort": "updated",
+          "score": 0.4791
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 517,
+          "oldScore": 0.758,
+          "newScore": 1,
+          "delta": 0.242,
+          "changed": 484
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.6175,
+          "newScore": 0.503,
+          "delta": -0.1145,
+          "changed": 403
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 492,
+          "oldScore": 0.619,
+          "newScore": 0.466,
+          "delta": -0.153,
+          "changed": 216
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 492,
+          "oldScore": 0.56,
+          "newScore": 0.477,
+          "delta": -0.083,
+          "changed": 259
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 492,
+          "oldScore": 0.619,
+          "newScore": 0.466,
+          "delta": -0.153,
+          "changed": 216
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 492,
+          "oldScore": 0.639,
+          "newScore": 0.457,
+          "delta": -0.182,
+          "changed": 299
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 517,
+          "oldScore": 0.687,
+          "newScore": 0.9825,
+          "delta": 0.2955,
+          "changed": 555
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.611,
+          "newScore": 0.529,
+          "delta": -0.082,
+          "changed": 382
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 492,
+          "oldScore": 0.644,
+          "newScore": 0.4675,
+          "delta": -0.1765,
+          "changed": 242
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 492,
+          "oldScore": 0.593,
+          "newScore": 0.4745,
+          "delta": -0.1185,
+          "changed": 275
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 492,
+          "oldScore": 0.644,
+          "newScore": 0.4675,
+          "delta": -0.1765,
+          "changed": 242
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 492,
+          "oldScore": 0.6425,
+          "newScore": 0.457,
+          "delta": -0.1855,
+          "changed": 302
+        }
+      ]
+    },
+    {
+      "name": "Yuria of Londor",
+      "tier": 6,
+      "keyword": "venomous",
+      "stats": "8/13",
+      "teamScore": 0.48435000000000006,
+      "teamDelta": -0.00375,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.47190000000000004
+        },
+        {
+          "cohort": "updated",
+          "score": 0.4968
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 509,
+          "oldScore": 0.4315,
+          "newScore": 1,
+          "delta": 0.5685,
+          "changed": 731
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 506,
+          "oldScore": 0.516,
+          "newScore": 0.4865,
+          "delta": -0.0295,
+          "changed": 383
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 515,
+          "oldScore": 0.454,
+          "newScore": 0.4585,
+          "delta": 0.0045,
+          "changed": 85
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 515,
+          "oldScore": 0.491,
+          "newScore": 0.4875,
+          "delta": -0.0035,
+          "changed": 164
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 515,
+          "oldScore": 0.454,
+          "newScore": 0.4585,
+          "delta": 0.0045,
+          "changed": 85
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 515,
+          "oldScore": 0.4735,
+          "newScore": 0.4685,
+          "delta": -0.005,
+          "changed": 141
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 509,
+          "oldScore": 0.413,
+          "newScore": 0.984,
+          "delta": 0.571,
+          "changed": 731
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 506,
+          "oldScore": 0.5275,
+          "newScore": 0.525,
+          "delta": -0.0025,
+          "changed": 414
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 515,
+          "oldScore": 0.4845,
+          "newScore": 0.4855,
+          "delta": 0.001,
+          "changed": 139
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 515,
+          "oldScore": 0.5055,
+          "newScore": 0.495,
+          "delta": -0.0105,
+          "changed": 215
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 515,
+          "oldScore": 0.4845,
+          "newScore": 0.4855,
+          "delta": 0.001,
+          "changed": 139
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 515,
+          "oldScore": 0.4905,
+          "newScore": 0.493,
+          "delta": 0.0025,
+          "changed": 160
+        }
+      ]
+    },
+    {
+      "name": "Ashen One",
+      "tier": 1,
+      "keyword": "reborn",
+      "stats": "1/4",
+      "teamScore": 0.5234,
+      "teamDelta": -0.08059999999999999,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.5223000000000001
+        },
+        {
+          "cohort": "updated",
+          "score": 0.5245
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 512,
+          "oldScore": 0.815,
+          "newScore": 0.5675,
+          "delta": -0.2475,
+          "changed": 495
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 545,
+          "oldScore": 0.6535,
+          "newScore": 0.544,
+          "delta": -0.1095,
+          "changed": 370
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.588,
+          "newScore": 0.5015,
+          "delta": -0.0865,
+          "changed": 288
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.5825,
+          "newScore": 0.559,
+          "delta": -0.0235,
+          "changed": 282
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.588,
+          "newScore": 0.5015,
+          "delta": -0.0865,
+          "changed": 288
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.5975,
+          "newScore": 0.5055,
+          "delta": -0.092,
+          "changed": 312
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 512,
+          "oldScore": 0.822,
+          "newScore": 0.5815,
+          "delta": -0.2405,
+          "changed": 481
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 545,
+          "oldScore": 0.6515,
+          "newScore": 0.537,
+          "delta": -0.1145,
+          "changed": 379
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.5945,
+          "newScore": 0.5055,
+          "delta": -0.089,
+          "changed": 292
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.5905,
+          "newScore": 0.562,
+          "delta": -0.0285,
+          "changed": 276
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.5945,
+          "newScore": 0.5055,
+          "delta": -0.089,
+          "changed": 292
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.5995,
+          "newScore": 0.5125,
+          "delta": -0.087,
+          "changed": 317
+        }
+      ]
+    },
+    {
+      "name": "Seraph",
+      "tier": 1,
+      "keyword": "reborn",
+      "stats": "1/3",
+      "teamScore": 0.46320000000000006,
+      "teamDelta": -0.13865,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.4617
+        },
+        {
+          "cohort": "updated",
+          "score": 0.4647
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 516,
+          "oldScore": 0.8235,
+          "newScore": 0.552,
+          "delta": -0.2715,
+          "changed": 543
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.64,
+          "newScore": 0.45,
+          "delta": -0.19,
+          "changed": 473
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 500,
+          "oldScore": 0.594,
+          "newScore": 0.455,
+          "delta": -0.139,
+          "changed": 330
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 500,
+          "oldScore": 0.591,
+          "newScore": 0.484,
+          "delta": -0.107,
+          "changed": 308
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 500,
+          "oldScore": 0.594,
+          "newScore": 0.455,
+          "delta": -0.139,
+          "changed": 330
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 500,
+          "oldScore": 0.5875,
+          "newScore": 0.4645,
+          "delta": -0.123,
+          "changed": 334
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 516,
+          "oldScore": 0.8315,
+          "newScore": 0.552,
+          "delta": -0.2795,
+          "changed": 543
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.6455,
+          "newScore": 0.4495,
+          "delta": -0.196,
+          "changed": 464
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 500,
+          "oldScore": 0.594,
+          "newScore": 0.4605,
+          "delta": -0.1335,
+          "changed": 317
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 500,
+          "oldScore": 0.5885,
+          "newScore": 0.492,
+          "delta": -0.0965,
+          "changed": 294
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 500,
+          "oldScore": 0.594,
+          "newScore": 0.4605,
+          "delta": -0.1335,
+          "changed": 317
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 500,
+          "oldScore": 0.59,
+          "newScore": 0.461,
+          "delta": -0.129,
+          "changed": 333
+        }
+      ]
+    },
+    {
+      "name": "Kimiko",
+      "tier": 2,
+      "keyword": "reborn",
+      "stats": "2/3",
+      "teamScore": 0.5476500000000001,
+      "teamDelta": -0.0573,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.5479
+        },
+        {
+          "cohort": "updated",
+          "score": 0.5474
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.6445,
+          "newScore": 0.5215,
+          "delta": -0.123,
+          "changed": 670
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 481,
+          "oldScore": 0.594,
+          "newScore": 0.507,
+          "delta": -0.087,
+          "changed": 494
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.607,
+          "newScore": 0.5455,
+          "delta": -0.0615,
+          "changed": 432
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.594,
+          "newScore": 0.6305,
+          "delta": 0.0365,
+          "changed": 407
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.607,
+          "newScore": 0.5455,
+          "delta": -0.0615,
+          "changed": 432
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.6155,
+          "newScore": 0.511,
+          "delta": -0.1045,
+          "changed": 373
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.651,
+          "newScore": 0.502,
+          "delta": -0.149,
+          "changed": 673
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 481,
+          "oldScore": 0.598,
+          "newScore": 0.4975,
+          "delta": -0.1005,
+          "changed": 501
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.6,
+          "newScore": 0.5415,
+          "delta": -0.0585,
+          "changed": 430
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.6125,
+          "newScore": 0.6455,
+          "delta": 0.033,
+          "changed": 418
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.6,
+          "newScore": 0.5415,
+          "delta": -0.0585,
+          "changed": 430
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.6215,
+          "newScore": 0.511,
+          "delta": -0.1105,
+          "changed": 371
+        }
+      ]
+    },
+    {
+      "name": "Kenny McCormick",
+      "tier": 4,
+      "keyword": "reborn",
+      "stats": "6/4",
+      "teamScore": 0.5483499999999999,
+      "teamDelta": -0.024700000000000003,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.5456
+        },
+        {
+          "cohort": "updated",
+          "score": 0.5511
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 499,
+          "oldScore": 0.463,
+          "newScore": 0.805,
+          "delta": 0.342,
+          "changed": 610
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 506,
+          "oldScore": 0.474,
+          "newScore": 0.595,
+          "delta": 0.121,
+          "changed": 433
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 486,
+          "oldScore": 0.597,
+          "newScore": 0.5315,
+          "delta": -0.0655,
+          "changed": 348
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 486,
+          "oldScore": 0.5505,
+          "newScore": 0.5375,
+          "delta": -0.013,
+          "changed": 363
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 486,
+          "oldScore": 0.597,
+          "newScore": 0.5315,
+          "delta": -0.0655,
+          "changed": 348
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 486,
+          "oldScore": 0.63,
+          "newScore": 0.5325,
+          "delta": -0.0975,
+          "changed": 288
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 499,
+          "oldScore": 0.4555,
+          "newScore": 0.7975,
+          "delta": 0.342,
+          "changed": 610
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 506,
+          "oldScore": 0.4765,
+          "newScore": 0.5925,
+          "delta": 0.116,
+          "changed": 430
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 486,
+          "oldScore": 0.6095,
+          "newScore": 0.5435,
+          "delta": -0.066,
+          "changed": 337
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 486,
+          "oldScore": 0.551,
+          "newScore": 0.539,
+          "delta": -0.012,
+          "changed": 369
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 486,
+          "oldScore": 0.6095,
+          "newScore": 0.5435,
+          "delta": -0.066,
+          "changed": 337
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 486,
+          "oldScore": 0.6355,
+          "newScore": 0.537,
+          "delta": -0.0985,
+          "changed": 281
+        }
+      ]
+    },
+    {
+      "name": "The Doctor",
+      "tier": 4,
+      "keyword": "reborn",
+      "stats": "4/6",
+      "teamScore": 0.5201999999999999,
+      "teamDelta": 0.040850000000000004,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.5189
+        },
+        {
+          "cohort": "updated",
+          "score": 0.5215
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 494,
+          "oldScore": 0.428,
+          "newScore": 0.973,
+          "delta": 0.545,
+          "changed": 991
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 500,
+          "oldScore": 0.4595,
+          "newScore": 0.5475,
+          "delta": 0.088,
+          "changed": 496
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 516,
+          "oldScore": 0.48,
+          "newScore": 0.4875,
+          "delta": 0.0075,
+          "changed": 344
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 516,
+          "oldScore": 0.5215,
+          "newScore": 0.505,
+          "delta": -0.0165,
+          "changed": 359
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 516,
+          "oldScore": 0.48,
+          "newScore": 0.4875,
+          "delta": 0.0075,
+          "changed": 344
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 516,
+          "oldScore": 0.454,
+          "newScore": 0.567,
+          "delta": 0.113,
+          "changed": 251
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 494,
+          "oldScore": 0.42,
+          "newScore": 0.965,
+          "delta": 0.545,
+          "changed": 991
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 500,
+          "oldScore": 0.469,
+          "newScore": 0.5525,
+          "delta": 0.0835,
+          "changed": 493
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 516,
+          "oldScore": 0.4755,
+          "newScore": 0.488,
+          "delta": 0.0125,
+          "changed": 342
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 516,
+          "oldScore": 0.524,
+          "newScore": 0.5015,
+          "delta": -0.0225,
+          "changed": 371
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 516,
+          "oldScore": 0.4755,
+          "newScore": 0.488,
+          "delta": 0.0125,
+          "changed": 342
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 516,
+          "oldScore": 0.4545,
+          "newScore": 0.5775,
+          "delta": 0.123,
+          "changed": 266
+        }
+      ]
+    },
+    {
+      "name": "Soul of Cinder",
+      "tier": 6,
+      "keyword": "reborn",
+      "stats": "6/9",
+      "teamScore": 0.4888,
+      "teamDelta": -0.12615,
+      "cohortScores": [
+        {
+          "cohort": "baseline",
+          "score": 0.487
+        },
+        {
+          "cohort": "updated",
+          "score": 0.4906
+        }
+      ],
+      "review": false,
+      "results": [
+        {
+          "cohort": "baseline",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.761,
+          "newScore": 0.761,
+          "delta": 0,
+          "changed": 0
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 526,
+          "oldScore": 0.617,
+          "newScore": 0.4855,
+          "delta": -0.1315,
+          "changed": 372
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.629,
+          "newScore": 0.4715,
+          "delta": -0.1575,
+          "changed": 232
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.575,
+          "newScore": 0.538,
+          "delta": -0.037,
+          "changed": 371
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.629,
+          "newScore": 0.4715,
+          "delta": -0.1575,
+          "changed": 232
+        },
+        {
+          "cohort": "baseline",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.6275,
+          "newScore": 0.4685,
+          "delta": -0.159,
+          "changed": 275
+        },
+        {
+          "cohort": "updated",
+          "scenario": "duel",
+          "samples": 1000,
+          "leftStarts": 501,
+          "oldScore": 0.679,
+          "newScore": 0.679,
+          "delta": 0,
+          "changed": 0
+        },
+        {
+          "cohort": "updated",
+          "scenario": "three",
+          "samples": 1000,
+          "leftStarts": 526,
+          "oldScore": 0.614,
+          "newScore": 0.493,
+          "delta": -0.121,
+          "changed": 384
+        },
+        {
+          "cohort": "updated",
+          "scenario": "seven",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.625,
+          "newScore": 0.4875,
+          "delta": -0.1375,
+          "changed": 216
+        },
+        {
+          "cohort": "updated",
+          "scenario": "buffed",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.578,
+          "newScore": 0.5175,
+          "delta": -0.0605,
+          "changed": 348
+        },
+        {
+          "cohort": "updated",
+          "scenario": "golden",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.625,
+          "newScore": 0.4875,
+          "delta": -0.1375,
+          "changed": 216
+        },
+        {
+          "cohort": "updated",
+          "scenario": "shielded",
+          "samples": 1000,
+          "leftStarts": 511,
+          "oldScore": 0.63,
+          "newScore": 0.4675,
+          "delta": -0.1625,
+          "changed": 283
+        }
+      ]
+    }
+  ]
+}
