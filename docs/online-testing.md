@@ -20,4 +20,4 @@ A Railway projekt: 5c3f1569-ec7e-4041-84b9-5c01c27ebfe8, production környezet: 
 
 Verzió: bg-37.0-core-custom-8 / franchise-357-heroes-35-v12.
 
-Élő játék: https://utolso-pad-production.up.railway.app . Railway deployment: 32653859-9687-40e5-ab9d-7898845a24d6; rögzített forráscommit: 2f75bb9c425bec3cc6aab81b0dead571e6237237 (codex/invite-multiplayer). Az élő címet két külön böngészős meccsel is ellenőriztük.
+Élő játék: https://utolso-pad-production.up.railway.app . Railway deployment: ed5a56e9-c6c2-4d33-9e22-aeafed173687; rögzített forráscommit: 8ee0cd795c3dd57f75aaa81670a44fd2da47d83e (codex/invite-multiplayer). Az élő címet két külön böngészős meccsel is ellenőriztük.

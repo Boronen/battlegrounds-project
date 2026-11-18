@@ -329,3 +329,4 @@ This file records the work and checks performed during this session; no deployme
 - A meghívókódos szoba már egy csatlakozott házigazdával is elindítható, szerver- és kliensoldalon egyaránt. Az üres helyeket a meglévő botok töltik fel; egy embernél hét bot játszik.
 - Production build, egyböngészős teljes első kör (szoba, hősválasztás, harc, következő kör, kilépés) és meglévő kétklienses online regressziós teszt sikeres. Új teszt: tests/online-solo-browser.ts.
 - Élő frissítés a meglévő Railway szolgáltatásra folyamatban.
+- Élesítve és az élő címen is ellenőrizve: 8ee0cd795c3dd57f75aaa81670a44fd2da47d83e, Railway ed5a56e9-c6c2-4d33-9e22-aeafed173687, SUCCESS. Az egyedüli emberrel, hét bottal indított meghívókódos szoba hősválasztása, harca, következő köre és kilépése is sikeres volt a https://utolso-pad-production.up.railway.app címen.
