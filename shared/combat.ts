@@ -82,6 +82,8 @@ export function fight(leftInput:Unit[],rightInput:Unit[],seed:number,options:{re
    hit(target,outgoing,attacker,venomOut);hit(attacker,incoming,target,venomIn);deaths();
    const still=sides[current].findIndex(u=>u.uid===attacker!.uid);next[current]=still>=0?still+1:oldIndex;
   }
+  championTurns[current]++;
+  if(championTurns[current]>=Math.max(1,sides[current].length)){championTurns[current]=0;championStrike(current);}
   current=1-current;
  }
  const winner=sides[0].length&&!sides[1].length?0:sides[1].length&&!sides[0].length?1:null;
