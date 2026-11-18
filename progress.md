@@ -323,3 +323,9 @@ This file records the work and checks performed during this session; no deployme
 - Verzió: bg-37.0-core-custom-8 / franchise-357-heroes-35-v12. Publikálás a meglévő Railway szolgáltatásra folyamatban.
 - További kapcsolat-regressziók is sikeresek: az egyik böngészőlap bezárása nem állít botra egy másik lapon még csatlakozott játékost; hősválasztás közbeni kapcsolatvesztés 10 másodperc után automatikusan feloldódik. Végső teszteredmény: 100/100.
 - Élő hibajavító release: 2f75bb9c425bec3cc6aab81b0dead571e6237237; Railway 32653859-9687-40e5-ab9d-7898845a24d6, SUCCESS. A korábbi 606e9edf-6bd0-4fb1-b8cb-bf736b96db22 build két utólag hozzáadott teszt TS-típusszűkítésén megállt; a tesztek javítva, teljes build és az öt kilépési teszt ismét sikeres. Az élő oldalon is lefutott a tests/bugfixes-browser.ts két böngészővel: 3 reroll, 7 nemnéma dekódolt felvételforrás running állapotban, 0 oszcillátor, működő némítás, disconnect utáni körváltás, explicit kilépés; böngészős hibák nélkül. Az új verzióhoz oldalfrissítés és új szoba szükséges.
+
+## Egyedüli online tesztindítás — November 18, 2026
+
+- A meghívókódos szoba már egy csatlakozott házigazdával is elindítható, szerver- és kliensoldalon egyaránt. Az üres helyeket a meglévő botok töltik fel; egy embernél hét bot játszik.
+- Production build, egyböngészős teljes első kör (szoba, hősválasztás, harc, következő kör, kilépés) és meglévő kétklienses online regressziós teszt sikeres. Új teszt: tests/online-solo-browser.ts.
+- Élő frissítés a meglévő Railway szolgáltatásra folyamatban.

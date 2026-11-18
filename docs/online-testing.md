@@ -2,7 +2,7 @@
 
 1. Név megadása, üres kóddal szoba létrehozása.
 2. A kapott nyolcjegyű szobakódot meg kell osztani a többiekkel. Másik böngészőben/eszközön a kóddal lehet csatlakozni.
-3. A házigazda legalább két emberrel indíthat. Maximum nyolc ember, a megmaradó helyeket botok töltik fel. Indítás után nincs új belépő.
+3. A házigazda egyedül is indíthat: ilyenkor hét bot tölti fel a többi helyet. Maximum nyolc ember, a megmaradó helyeket botok töltik fel. Indítás után nincs új belépő.
 4. Minden ember saját hőst, boltot és kezet vezérel. Ha minden élő ember kész, indul a harc; a toborzás 120 másodperc után is továbblép. Harc után csak a csatlakozott, élő emberi játékosok szavazata szükséges a Következő kör gombbal. Ha nincs élő ember, a csatlakozott nézők léptethetnek. A lecsatlakozott helyet bot veszi át, és nem blokkolja a szavazást.
 5. Oldalfrissítés után az adott lap sessionStorage-tokenjével visszacsatlakozik a saját helyére. Megszakadt játékos a saját böngészőlapjából térjen vissza; új eszközre tokenátvitel nincs.
 
