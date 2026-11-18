@@ -29,6 +29,8 @@ try {
  await page.locator('.shop .unit').first().waitFor();
  const session=[...server.sessions.values()][0];
  const m=session.match,p=m.players[0];
+ // This check advances combat explicitly; keep its isolated fixture in manual mode.
+ m.mode='manual';session.setDeadline();
  const active=m.activeCardIds[0];
  m.pool[active]-=7;p.board=Array.from({length:7},()=>makeUnit(m,active));
  // Reconnect to receive the representative full warband through the real snapshot.
@@ -64,7 +66,7 @@ try {
  assert.deepEqual(errors,[]);
  // A contact sheet uses the actual local portrait SVGs for visual review.
  const cards=await Promise.all(HEROES.map(async h=>`<figure><img src="data:${h.portrait.endsWith('.png')?'image/png':'image/svg+xml'};base64,${(await readFile(new URL('../public'+h.portrait,import.meta.url))).toString('base64')}"/><figcaption>${h.name}</figcaption></figure>`));
- const html=`<!doctype html><html lang="hu"><meta charset="utf-8"><title>Hero avatars</title><style>*{box-sizing:border-box}body{margin:0;padding:32px;background:#1c2029;color:#f2e5cb;font:16px Georgia}h1{margin:0 0 24px;font-size:30px}main{display:grid;grid-template-columns:repeat(9,1fr);gap:18px}figure{margin:0;text-align:center}img{width:100%;height:auto;display:block}figcaption{padding:8px 0;font-size:14px}</style><h1>34 hős · külön karakterek</h1><main>${cards.join('')}</main></html>`;
+ const html=`<!doctype html><html lang="hu"><meta charset="utf-8"><title>Hero avatars</title><style>*{box-sizing:border-box}body{margin:0;padding:32px;background:#1c2029;color:#f2e5cb;font:16px Georgia}h1{margin:0 0 24px;font-size:30px}main{display:grid;grid-template-columns:repeat(9,1fr);gap:18px}figure{margin:0;text-align:center}img{width:100%;height:auto;display:block}figcaption{padding:8px 0;font-size:14px}</style><h1>${HEROES.length} hős · külön karakterek</h1><main>${cards.join('')}</main></html>`;
  await writeFile('test-results/hero-portraits.html',html);
  await page.setViewportSize({width:1440,height:1100});await page.setContent(html);
  await page.screenshot({path:'test-results/hero-portraits.png',fullPage:true});

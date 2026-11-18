@@ -5,8 +5,8 @@ Date: November 13, 2026
 ## Current state
 
 - 357 recruitable card designs across 35 franchises.
-- 34 heroes based on the original characters, with their original names and portraits.
-- Hero powers are unavailable for now. Every hero starts with 30 health and 0 armor.
+- 35 heroes: the original 34 characters plus Ákos, added on November 17. Music/VFX details and the remaining eight franchise clips are recorded in the latest section.
+- 19 heroes have implemented powers; the other 16 remain unavailable. Every hero starts with 30 health and 0 armor. Current behavior is documented in `docs/hero-powers-spec.md`.
 - Hero selection offers three choices and three full rerolls. Previously offered heroes cannot reappear during that player's selection.
 - New games receive random seeds automatically; explicit seeds remain available for testing.
 - Each match selects five of eight tribes and uses exactly 80 card designs.
@@ -233,3 +233,73 @@ This file records the work and checks performed during this session; no deployme
 - Durable rules and measured results: `docs/keywords.md`, `docs/keyword-balance.md`, `docs/keyword-balance.json`. Detailed generated results remain in `test-results/keyword-balance.json`; UI previews include `test-results/keyword-board.png` and `test-results/keyword-catalog.png`.
 - Limits: benchmark team score is win plus half a draw, not card or match win rate. Random same-tier boards and fixed buffs/shields do not prove competitive balance or cover every human strategy. Duel results are reported separately. Further playtesting remains necessary.
 - Rules/catalog versions bumped to `bg-37.0-core-custom-5` / `franchise-357-heroes-34-v7`. Restart the development server and start a new match; older replays are incompatible.
+
+## Arena furniture, modern lobby and combat visuals — November 17, 2026
+
+- Replaced the welcome overlay with a responsive dark lobby, using the local `design-md/linear.app` and `design-md/playstation` references for typography, spacing, surfaces and image-led composition. Added arena previews, compact match settings and an explicit start action. Updated the header, catalog, test panel and results styling.
+- Preserved all ten existing painted arena backgrounds and stable match-based selection. Added typed arena materials, palette tokens, emblems and normalized furniture anchors. Each theme has matching SVG details: chitin, foliage, shells, scales, bone, obsidian, coral, rope, tusks or crystals.
+- Mounted upgrade, refresh and freeze controls on a continuous rim rail; placed the combat/next-round action in a bracketed plaque. SVG sockets provide bevels, fasteners, recessed faces, contact shadows and themed ornament. Labels, costs and icons remain HTML within semantic buttons. Disabled controls retain their structure; freezing has an explicit pressed state.
+- Integrated hero trim, gold, timer, standings and the hand tray with the arena materials. Added a keyboard/click sell slot alongside drag/drop selling. Preserved all 34 pencil portraits and shared tribe card artwork. Rebalanced seven-unit rows and hero sockets, moved tablet standings beneath the full board, and retained horizontal scrolling on phones. Corrected mobile hero art cropping and background scaling.
+- Added snapshot-derived visual descriptors for hits, shield gain/break, venom consumption, reborn, stealth reveal, windfury, buffs, summons and death. Effects use SVG/CSS and existing animation/audio timing; localized event text is never parsed. Empty-side summons use their side's row as a position fallback. Timers and animations cancel on beat/phase changes, and reduced motion retains static feedback.
+- Kept command controls focusable while awaiting acknowledgment; the existing send guard prevents duplicate actions. Added busy semantics and keyboard/touch checks. No server protocol, gameplay rules, balance, replay versions or portrait assets changed.
+- Replaced the obsolete `classroom-theme.css` with scoped arena, webpage and effects styles. Added `npm run test:arena-redesign` and four visual-transition tests. The expanded unit/integration suite has 56 passing tests.
+- Validation includes production build; hero-layout, catalog, keyword, combat-polish and board/audio browser checks; and an isolated all-arena browser suite covering 40 recruitment/combat views at 1440px and 1000px, seven-unit teams, control hit areas, actual buy/play/sell drag/drop, freeze, keyboard focus/activation, touch, 390px lobby/selection/board layouts, reconnect, missing background artwork, shield-blocked venom, reborn and effect cleanup. Browser checks reported no page errors.
+- Review artifacts: `test-results/arena-redesign/lobby-desktop.png`, `lobby-mobile.png`, `hero-mobile.png`, `board-mobile.png`, `venom-impact.png`, individual arena/phase/width screenshots, `all-arenas-contact-sheet.jpg` and `report.json`. Generated artifacts remain gitignored. Existing browser checks also refreshed their screenshots.
+- All new graphics are local SVG/CSS. No Higgsfield/PixelLab generations, paid calls, credentials in source, installations, external publication or deployment were used. The user's existing `design-md/` directory was read and left intact.
+
+## Animáció és köridő javítása — November 17, 2026
+
+- Külön, megjegyzett animációkapcsoló került a fejlécbe, alapból bekapcsolva; a rendszer csökkentett mozgás beállítása nem tiltja felül a kifejezett választást.
+- Normál módban csak a felkészülés időzített: 120 másodperc. Hősválasztás és harc időkorlát nélkül; a következő kör a meglévő gombbal indítható. A tesztmód kézi marad.
+- Az alapértelmezett mód normál/időzített lett. A szervermódosításhoz újra kell indítani a fejlesztői szervert.
+
+## Nagyobb VFX, valódi hangok és hőszenék — November 17, 2026
+
+- Folytatás a fenti állapotból. Az új XLSX-válaszokat adatként olvastuk, az eredeti munkafüzet változatlan. E-mail-címeket nem másoltunk a projektbe.
+- Nagyobb, többrétegű ütésvillanás, két lökéshullám, hosszabb szikrák, fényesebb támadási ív és nagyobb kulcsszóeffektek kerültek a harcba. Megmaradt az eredeti becsapódási időzítés és a csökkentett mozgás kapcsoló.
+- Dávid csapatának támadásai motoros guminyomot és porfüstöt hagynak. Kevin csapata forgó súlyzót, Gergőé rajzolt röplabdát dob. A támadó oldal hőse választja az effektet, mindkét félre. A hőskártyák, saját hős és álláslista jelzik az egyedi effektet.
+- Az összes procedurális hanggenerálást eltávolítottuk. Hat letöltött Kenney OGG-minta szól az alap műveleteknél; a hangkezelő korlátozza az átfedést és némításkor az aktív mintákat is leállítja.
+- 27 franchise-hoz helyi, letöltött MP3-bejátszás kapcsolódik. Sikeres minion-kijátszás indítja, legfeljebb 3,5 másodpercig; új idézet megszakítja a régit. A ♪ jelzés csak ilyen kártyákon/katalógusbejegyzéseken jelenik meg. A hőszene az idézet alatt lehalkul.
+- 13 hőshöz tartozik űrlap szerinti zene: Kevin, Gergő, Vera, Milán, Dávid, Tomi, Marci, Villő, Fruzsi, Csefi, Mihály, Tibi és Ákos. Dani „nincs kedvenc” válasza nem indít zenét. Az explicit négy megfeleltetést használtuk; a többit nevekből párosítottuk.
+- Csefi előadói válaszához Palya Bea – Szabadon (Live, Kobuci, 2026), Mihály soundtrack-gyűjteményéhez Chris Christodoulou – The Rain Formerly Known as Purple lett dokumentált alapértelmezés. A megadott 12 videóazonosító mind feloldódott a YouTube oEmbed végpontján; Ákos az eredeti Amondó albumlistát használja.
+- A látható YouTube-lejátszó toborzás és harc között folyamatos marad; a globális némítás szünetelteti. Hibás/elérhetetlen beágyazás és automatikus lejátszási tiltás külön visszajelzést kap. Élő YouTube-lejátszás régiós/böngészős viselkedése nem garantált; a célzott böngészőteszt a YouTube API-szerződést stubbal ellenőrzi, nem teljes külső streaminget.
+- A felhasználó külön kérésére Ákos új, 35. hős lett, külön helyben rajzolt SVG/PNG-portréval. Az eredeti 34 hős neve és portréja megmaradt. A katalógusverzió `franchise-357-heroes-35-v8`; a régi replayek nem kompatibilisek. Újra kell indítani a szervert és új meccset indítani.
+- Forrásjegyzékek: `public/audio/sfx-sources.json`, `public/audio/series-sources.json`. Dokumentáció és hiánylista: `docs/audio-and-vfx.md`. A franchise-hangokhoz nem állítunk újraterjesztési licencet. Publikálás nem történt.
+- Nyitott: még nincs megfelelő bejátszás a The Chosen, Shutter Island, East of Eden (2008), Lord of Mysteries, Vintage Story, Hero (2002), The Residence és Dixit franchise-okhoz. A hasonló nevű, más művekből származó találatokat nem kötöttük be.
+- A kért find-skills keresés megtörtént (game audio); új skillt nem telepítettünk. A Higgsfield eszközeit felderítettük; a valós idejű VFX helyi SVG/CSS-elemekből készült, új generálás vagy fizetős hívás nélkül.
+- Ellenőrzés: 56/56 unit/integrációs teszt és production build sikeres. `npm run test:media` izolált valós szerveren mind a 33 helyi hangfájl dekódolását, sikeres kijátszás hangját, a három támadáseffektet, hőszene-párosítást, albumlistát, némítást és 390px-es túlcsordulásmentes nézetet ellenőrzött. YouTube API stubbal; helyi audio tényleges dekódolással. Előnézetek: `test-results/media/`.
+- További végső ellenőrzés: a hőselrendezés tesztje desktop/tablet/mobil méreten sikeres; a 35 hős galériája frissült. A kézi léptetést használó elrendezésteszt saját fixture-je kézi módot kapott az időzített alapmód helyett.
+
+## Hősképességek specifikációja — November 18, 2026
+
+- A 15 hőshöz megadott képességeket és a szükséges engine/protokoll/UI-bővítéseket rögzítettük: docs/hero-powers-spec.md.
+- Még nincs implementáció. Csefi pontos működése, a maximális arany szabályai és több meg nem adott költség/skála egyeztetés alatt van; a felhasználónak elküldött kérdésekre várunk.
+- Kevin linkelt Upgrade-spellcsaládját átnéztük; a specifikáció szerinti 2/2 a követendő, nem az aktuális külső balansz.
+
+## Hősképességek implementálása — November 18, 2026
+
+- Elkészült a 19 kért hős képessége: Csefi, OLAJOS, Gergő, Mihály, Ágoston, Kevin, Vera, Milán, Villő, Viki, Nao, Levi, Giga, Márk, Marci, Tibi, Maja, Balázs és Fruzsi. A többi hős maradt képesség nélkül.
+- A pontosított Csefi 1 támadású, nem célozható nyolcadik harcos, első támadással és csapatciklusonként további ütéssel. A hét rendes minion elvesztésekor véget ér a harca. A 2 aranyas fejlesztés +Tavern-szint tartós támadást ad, és arra a körre kihagyja a harcot. A portré támadásjelzőt kapott.
+- OIL tartós maximumot és következő köröktől kezdő aranyat növel. Gergő elhalasztott jutalma korlátlanul hozzáadódik a következő kör kezdő aranyához. Az aranykezelés és a felület 10 fölötti értékeket is kezel.
+- Új spellkínálat és külön spellkéz került a tábla alá; minionokkal közös 10-es kézkorlát. Kevin két saját Upgrade-spellhelyet kapott, a többi hős egy általános spellhelyet, így Mihály dupla cast jutalma valóban használható. A Battlecruiser fejlesztések helyi, 1–6 tierre skálázott adaptációk, nem a teljes külső Hearthstone-katalógus másolatai. A Magnetic-mech készlet három helyi statváltozatot tartalmaz.
+- Küldetésszámlálás, cooldown, egyszeri képességek, generált lapok, kombinált minionképességek és megmaradó fejlesztések szerveroldali, replay-kompatibilis állapotban. A generált minionok nem módosítják a véges fizikai poolt; a saját tierjük számít a hőssebzésbe. Nem váltanak ki fizikai triplaegyesítést. Levi goldenizálása sem hoz létre két új poolmásolatot vagy tripla felfedezést.
+- Tibi helyes tippje +1 arany (felhasználói pontosítás). Pontosan egy helyes opció; a másik a legközelebbi elérhető tierből, az ellenfél boardján nem szereplő lap. A helyes válasz csak a Match privát heroSecrets mezőjében van, nem kerül snapshotba; az opcióazonosítók nem árulják el. Üres boardnál később próbálható.
+- Maja az előző ellenfél legutóbbi táblájának alaplapjait kínálja 1 aranyért. Balázs 0 aranyért egyszer, szabad boardhelyre idéz pontos saját másolatot, megtartott erősítésekkel, battlecry nélkül. Fruzsi körönként két újrahasználható aktív képesség közül választ; a passzívak, egyszeriek, önmaga és a passzív harcost is adó Csefi ki vannak zárva. A választott képesség saját ára érvényes, a már megszerzett jutalom megmarad.
+- Képességpanel célpontválasztással, tippel, Fruzsi-választással, Marci-kombinálással, quest/cooldown státusszal és olvasható spellhatásokkal. Giga elszívásához helyi füstanimáció készült. A túl hosszú leírások kikerültek a portrédokkból; teljes szövegük a panelben van.
+- Az alap botok is használják az új aktív képességeket/spelleket és a függő választásokat. A régi általános mechanikatesztek fix, kezdő miniont nem adó hőst használnak; az új tesztek külön ellenőrzik a passzív kezdő lapokat.
+- Fő új fájlok: shared/hero-powers.ts, src/HeroPowerPanel.tsx, tests/hero-powers.test.ts, tests/hero-powers-browser.ts. A végleges működést a docs/hero-powers-spec.md írja le; ez felülírja a korábbi „még nincs implementáció” állapotot.
+- Verzió: bg-37.0-core-custom-6 / franchise-357-heroes-35-v10. Szerver-újraindítás és új mérkőzés szükséges; régi replayek nem kompatibilisek.
+- Végső ellenőrzés: 83/83 egység-/integrációs teszt, TypeScript+Vite production build, 19 hős izolált, valós parancsokat használó böngészőtesztje és a desktop/tablet/mobil hőselrendezés tesztje sikeres. Böngészős JavaScript-hiba nem volt. A külső YouTube a képességtesztben le van tiltva; a teszt a helyi játékot ellenőrzi.
+- Előnézetek és böngészőjelentés: test-results/hero-powers/. A 15 hősös köztes változat 100 megismételt teljes meccse már sikeres volt (13–26 kör), determinisztikusan és poolmegmaradással; a végleges 19 hősös változat szimulációja külön ellenőrzés alatt.
+- Korlát: a tesztek a helyes működést ellenőrzik, versenyegyensúlyt nem bizonyítanak. Publikálás/deployment nem történt.
+- A végleges 19 hősös változat teljes szimulációja is sikeres: 100 meccs, mindegyik megismételve; minden meccs befejeződött 13–24 kör között, determinisztikusan, megőrzött poollal (175766 ms).
+- Csefi külön harci böngészőellenőrzése is sikeres: hét rendes minion mellett a portréja animálva támad, támadásjelzővel, nyolcadik kártyahely elfoglalása nélkül. Előnézet: test-results/hero-powers/csefi-combat.png. README, szabályprofil és protokoll dokumentáció frissítve.
+- Végső képi javítás: Csefi kis támadásjelzője nem örökli a régi portré-iniciálé nagy betűméretét. A harci böngészőteszt fix, harckezdeti buff nélküli csapatot használ, és a tényleges portréanimáció kezdetére vár; a 19 hősös böngészőteszt ezen is sikeres.
+
+## Online meghívókódos teszt és öt további hős — November 18, 2026
+
+- A 24 megadott hősképesség bekötve: Feri, Bea, Vanda, Dani és M. Geri új. Dani két ritka hőstámadására külön csatánkénti limit van. M. Geri HP-ja a hősé, +3 támadása Csolti jelenlétében minden ellenfél ellen tartós.
+- Meghívókódos szobák 2–8 emberrel, maradék helyeken botokkal. Játékosonként hitelesített seat, saját snapshot, közös szimuláció, készre jelentkezés, visszacsatlakozás. Online tesztvezérlés és replay-export tiltva.
+- 90/90 teszt és build sikeres. Két valódi Socket.IO-klienssel és két külön böngészővel tesztelt csatlakozás, közös match, saját board, parancsizoláció, újracsatlakozás és mobilnézet. Részletek: docs/online-testing.md.
+- Railway csatlakoztatva, projekt és production környezet létrehozva. A felhasználó megerősítette a csillageri05-spec/Battlegrounds_project tárolót a deployhoz. Publikálás folyamatban; élő URL még nincs igazolva.
+- Új verzió: bg-37.0-core-custom-7 / franchise-357-heroes-35-v11. Memóriában tárolt, egyreplikás tesztüzem; restart elveszíti a szobákat.

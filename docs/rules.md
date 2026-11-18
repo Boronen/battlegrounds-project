@@ -1,17 +1,17 @@
 # A demó tényleges szabályprofilja
 
-Profil: `bg-37.0-core-custom-5`. Katalógus: `franchise-357-heroes-34-v7`. Referencia: a 37.0 patch hivatalos kiadási jegyzete és az alapmechanikák korábbi hivatalos leírásai. Ellenőrzés: 2026. november 3.
+Profil: `bg-37.0-core-custom-6`. Katalógus: `franchise-357-heroes-35-v10`. Referencia: a 37.0 patch hivatalos kiadási jegyzete és az alapmechanikák korábbi hivatalos leírásai. Helyi szabályok frissítése: 2026. november 18.
 
-Ez egy saját karakterkészlettel játszható alaploop. A teljes 37.0 szerverlogikával való azonosság nem igazolt. Szezonális mechanikák, eredeti hősök, bolti varázslatok és az eredeti teljes egységkészlet nem szerepelnek benne.
+Ez egy saját karakterkészlettel játszható alaploop. A teljes 37.0 szerverlogikával való azonosság nem igazolt. A saját hősök, az általános spellek és Kevin Battlecruiser-fejlesztései helyi szabályok; nem a teljes eredeti Hearthstone-készlet másolatai. Lásd: [hősképességek](hero-powers-spec.md).
 
 ## Működés
 
 | Terület | Megvalósított működés | Bizonyíték / minősítés |
 |---|---|---|
 | Meccs | Nyolc résztvevő, egy ember és hét bot | Saját demókonfiguráció a Battlegrounds alapstruktúrájához |
-| Hős | 34 eredeti karakter; három ajánlat, 3 teljes frissítés ismétlődő hősök nélkül, 30 HP, 0 páncél, hősképesség nélkül | A képességek később érkeznek; a 357 franchise-kártya toborozható |
-| Gazdaság | 3 kezdőarany, körönként +1, legfeljebb 10; vétel 3, eladás 1, frissítés 1 | A hivatalos bevezető igazolja a vételt/eladást/frissítést; az összes mai numerikus részlet élő ellenőrzése még hiányzik |
-| Bolt | Szintenként 3/4/4/5/5/6 egység, csak elért szintig; egyedi példányok készletarányos sorsolása | Egységekre korlátozott profil, bolti varázslatok nélkül |
+| Hős | 35 karakter; három ajánlat, 3 teljes frissítés ismétlődő hősök nélkül, 30 HP, 0 páncél, 19 saját képesség | Saját, dokumentált képességek; a 357 franchise-kártya toborozható |
+| Gazdaság | 3 kezdőarany, körönként +1, legfeljebb 10; alap vétel 3, eladás 1, frissítés 1; Villő vétele 2, OIL és Gergő jutalma 10 fölé mehet | A hivatalos bevezető igazolja a vételt/eladást/frissítést; az összes mai numerikus részlet élő ellenőrzése még hiányzik |
+| Bolt | Szintenként 3/4/4/5/5/6 egység, csak elért szintig; egyedi példányok készletarányos sorsolása | Egy külön általános spellhely, Kevinnek helyette két fejlesztő spellhely; hősképességek módosíthatják a minionkínálatot |
 | Fejlesztés | 1→2: 5; 2→3: 7; 3→4: 8; 4→5: 11; 5→6: 11; minden következő körben −1, minimum 0 | A 34.2 jegyzet igazolja a két felső lépés +1 módosítását; teljes mai ártábla független futásidejű ellenőrzése még hiányzik |
 | Készlet | Szintenként 15/15/13/11/9/7 példány karakterenként | A 23.6 jegyzet igazolja az 1. szint 15-re csökkentését; a teljes sor verziózott demóérték, mai szerveroldali készlet nem hozzáférhető |
 | Fagyasztás | Megmaradt ajánlatok következő körre megmaradnak, üres helyek feltöltődnek; kapcsoló visszaáll | Saját, egységboltra alkalmazott működés; a 34.2 teljes bolti limitje varázslathelyet is tartalmaz |

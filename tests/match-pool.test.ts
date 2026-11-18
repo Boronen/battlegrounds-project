@@ -53,6 +53,7 @@ test('every franchise gains Neutral and All-type cards and every tribe has two d
 
 test('shops and triple rewards draw only active cards, while catalog IDs survive depletion',()=>{
  const m=createMatch(42);
+ m.players[0].heroOffers=['original-15'];
  act(m,'p0',{type:'chooseHero',heroId:m.players[0].heroOffers[0]});
  const p=m.players[0];
  for(let tier=1;tier<=6;tier++) {

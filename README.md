@@ -1,6 +1,6 @@
 # Utolsó pad – Csatatér
 
-Böngészős, szerver által vezérelt stratégiai játékmenetdemó. Egy ember és hét bot, 357 toborozható kártya (35 franchise, mindegyikben semleges és minden típusú kártyákkal), 34 hős az eredeti karakterekből. A hősök egyelőre hősképesség nélkül, egységesen 30 életerővel és 0 páncéllal indulnak; képességeik később érkeznek. A karakterképek saját, helyi SVG-placeholderek. A teljes névsor, kezdeti értékek és forrásértelmezések: [kártyakatalógus](docs/card-pool.md).
+Böngészős, szerver által vezérelt stratégiai játékmenetdemó. Egy ember és hét bot, 357 toborozható kártya (35 franchise, mindegyikben semleges és minden típusú kártyákkal), 35 hős, közülük 19 saját hősképességgel. Egységesen 30 életerővel és 0 páncéllal indulnak. A képességek és spellek pontos működése: [hősképességek](docs/hero-powers-spec.md). A hősök helyi ceruzarajz-portrékat, a minionok törzsenkénti kártyafelületet használnak. A teljes névsor, kezdeti értékek és forrásértelmezések: [kártyakatalógus](docs/card-pool.md).
 
 ## Indítás Windows alatt
 
@@ -28,7 +28,7 @@ Ha a gépen az npm PowerShell-indítója hibás, a mellékelt indítószkript k�
 3. A bolti kártyára kattintva 3 aranyért megveszed. A kézben lévő kártyára kattintva kijátszod.
 4. Célzott kijátszási képességnél előbb válaszd ki a kézben lévő kártyát, majd a célpontot a táblán.
 5. Egy táblán lévő kártya kijelölése után Balra/Jobbra gombbal rendezheted vagy eladhatod. Egérrel húzás is használható.
-6. Fejlesztheted a boltot, frissítheted a kínálatot, vagy befagyaszthatod a következő körre. A hősképességek egyelőre nem elérhetők.
+6. Fejlesztheted a boltot, frissítheted a kínálatot, vagy befagyaszthatod a következő körre. A tábla alatti panelen használhatod a hősképességet és a spelleket; itt választhatsz célpontot és követheted a küldetést is.
 7. Három azonos normál egység arany példánnyá egyesül a kézben. Kijátszásakor a boltodnál eggyel magasabb szintről választhatsz jutalmat, legfeljebb a 6. szintről.
 8. A Harc indítása tesztmódban lezárja a vásárlást. A harc szerveren számított eseménysorát a kliens lejátssza. A Következő kör feldolgozza az eredményt.
 9. Kiesés után nézőként folytathatod a meccset a Harc megtekintése gombbal.

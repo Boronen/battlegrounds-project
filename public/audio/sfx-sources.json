@@ -1,0 +1,38 @@
+[
+  {
+    "file": "sfx/break.ogg",
+    "url": "https://raw.githubusercontent.com/KenneyNL/Starter-Kit-3D-Platformer/main/sounds/break.ogg",
+    "license": "CC0",
+    "author": "Kenney"
+  },
+  {
+    "file": "sfx/coin.ogg",
+    "url": "https://raw.githubusercontent.com/KenneyNL/Starter-Kit-3D-Platformer/main/sounds/coin.ogg",
+    "license": "CC0",
+    "author": "Kenney"
+  },
+  {
+    "file": "sfx/fall.ogg",
+    "url": "https://raw.githubusercontent.com/KenneyNL/Starter-Kit-3D-Platformer/main/sounds/fall.ogg",
+    "license": "CC0",
+    "author": "Kenney"
+  },
+  {
+    "file": "sfx/jump.ogg",
+    "url": "https://raw.githubusercontent.com/KenneyNL/Starter-Kit-3D-Platformer/main/sounds/jump.ogg",
+    "license": "CC0",
+    "author": "Kenney"
+  },
+  {
+    "file": "sfx/land.ogg",
+    "url": "https://raw.githubusercontent.com/KenneyNL/Starter-Kit-3D-Platformer/main/sounds/land.ogg",
+    "license": "CC0",
+    "author": "Kenney"
+  },
+  {
+    "file": "sfx/walking.ogg",
+    "url": "https://raw.githubusercontent.com/KenneyNL/Starter-Kit-3D-Platformer/main/sounds/walking.ogg",
+    "license": "CC0",
+    "author": "Kenney"
+  }
+]

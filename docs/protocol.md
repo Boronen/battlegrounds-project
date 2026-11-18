@@ -25,6 +25,8 @@ Hero selection: `you.heroOffers` contains three choices. `{type:"rerollHeroes"}`
 
 Omitting `seed` on `start` generates a random nonzero uint32 on the server, different from the preceding match on that connection. Explicit valid seeds remain supported for testing. The chosen seed is retained in snapshots and replay exports; reconnecting does not generate a new seed.
 
-Active match pool: snapshots expose `activeTribes` (five tribe IDs) and `activeCardIds` (80 distinct card IDs). These describe the fixed roster, not remaining copy counts; private pool quantities are still excluded. Both fields persist through reconnect and are reconstructed deterministically for replays. Ruleset: `bg-37.0-core-custom-4`.
+Active match pool: snapshots expose `activeTribes` (five tribe IDs) and `activeCardIds` (80 distinct card IDs). These describe the fixed roster, not remaining copy counts; private pool quantities are still excluded. Both fields persist through reconnect and are reconstructed deterministically for replays. Ruleset: `bg-37.0-core-custom-6`.
 
 Card types: `activeTribes` still contains only five regular tribe IDs. `activeCardIds` additionally includes 12 Neutral and eight All-type designs, independent of tribe selection. Card type is resolved by `tribeFor`; membership checks use `hasTribe` so All-type cards match every tribe while Neutral matches none.
+
+Hero powers and spells: `power` accepts optional `targetUid`, `mode` (`upgrade`, `buySpell`, `castSpell`, `combine`, `guess`, `choosePower`), `spellUid` and `choice` (0 or 1). A player only receives their own `heroState`, including spell shop/hand, quest/cooldown, combination and visible choice options. Tibi's correct answer lives in Match.heroSecrets and is never included in snapshots. Power choices and casts use the same command idempotency and transaction boundary as other actions. Catalog: `franchise-357-heroes-35-v10`.

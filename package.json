@@ -17,7 +17,11 @@
     "test:board-audio": "tsx tests/board-audio-browser.ts",
     "preview:hero-cards": "tsx tests/hero-cards-preview.tsx",
     "test:keyword-balance": "tsx tests/keyword-balance.ts",
-    "test:keywords-browser": "tsx tests/keywords-browser.ts"
+    "test:keywords-browser": "tsx tests/keywords-browser.ts",
+    "test:arena-redesign": "tsx tests/arena-redesign-browser.ts",
+    "test:media": "tsx tests/media-browser.ts",
+    "test:hero-powers": "tsx tests/hero-powers-browser.ts",
+    "test:online": "tsx tests/online-browser.ts"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

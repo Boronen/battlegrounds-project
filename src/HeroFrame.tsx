@@ -8,8 +8,8 @@ export function HeroFrame({children}:{children:ReactNode}) {
   <svg className="hero-frame-trim" viewBox="0 0 200 220" preserveAspectRatio="none" aria-hidden="true">
    <defs>
     <linearGradient id={`${id}-metal`} x1="0" y1="0" x2="1" y2="1">
-     <stop stopColor="#fff0b7"/><stop offset=".22" stopColor="#caa46a"/>
-     <stop offset=".48" stopColor="#735032"/><stop offset=".7" stopColor="#e2bf7d"/><stop offset="1" stopColor="#624329"/>
+     <stop stopColor="#fff0b7"/><stop offset=".22" stopColor="var(--arena-metal, #caa46a)"/>
+     <stop offset=".48" stopColor="var(--arena-surface, #735032)"/><stop offset=".7" stopColor="var(--arena-metal, #e2bf7d)"/><stop offset="1" stopColor="#624329"/>
     </linearGradient>
     <linearGradient id={`${id}-wood`} x2="0" y2="1">
      <stop stopColor="#6d5141"/><stop offset=".5" stopColor="#3d2b28"/><stop offset="1" stopColor="#241f23"/>

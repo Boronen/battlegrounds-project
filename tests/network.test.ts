@@ -56,7 +56,9 @@ test('timed phases advance on the server and pause survives reconnect snapshot',
   const recruit=next('recruit');session.deadline=Date.now()-1;await recruit;
   const paused=new Promise<Snapshot>(r=>socket.once('snapshot',r));await socket.timeout(3000).emitWithAck('control','pause');const snap=await paused;assert.equal(snap.paused,true);assert.equal(snap.deadline,null);
   await socket.timeout(3000).emitWithAck('control','resume');const combat=next('combat');session.deadline=Date.now()-1;await combat;
-  const roundTwo=next('recruit');session.deadline=Date.now()-1;assert.equal((await roundTwo).round,2);
+  assert.equal(session.deadline,null);await new Promise(r=>setTimeout(r,250));assert.equal(session.match.phase,'combat');
+  const roundTwo=next('recruit');await socket.timeout(3000).emitWithAck('control','finishCombat');assert.equal((await roundTwo).round,2);
+  assert.ok(session.deadline!>Date.now()+118000&&session.deadline!<=Date.now()+120000);
   assert.equal(session.replay().actions.filter(e=>e.kind==='advance').length,3);
  }finally{socket.disconnect();await server.close();}
 });

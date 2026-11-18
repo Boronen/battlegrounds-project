@@ -1,3 +1,4 @@
+import {attachRooms} from './rooms';
 import express from 'express';
 import { randomInt } from 'node:crypto';
 import { createServer } from 'node:http';
@@ -10,6 +11,7 @@ import type { Command, Control } from '../shared/types';
 
 export async function createApp(production=false){
  const app=express();const http=createServer(app);const io=new Server(http,{maxHttpBufferSize:100000,serveClient:false});const sessions=new Map<string,Session>();
+ const online=attachRooms(io);
  app.use(express.json({limit:'2mb'}));app.get('/api/health',(_,res)=>res.json({ok:true}));
  app.post('/api/replays/verify',(req,res)=>{try{const m=replayMatch(req.body);res.json({ok:true,round:m.round,phase:m.phase,placements:m.players.map(p=>({name:p.name,place:p.place}))});}catch(e){res.status(422).json({ok:false,error:e instanceof Error?e.message:'Hibás fájl.'});}});
  const emit=(s:Session)=>io.to(s.token).emit('snapshot',s.snapshot());
@@ -17,7 +19,7 @@ export async function createApp(production=false){
   let session:Session|undefined;let requests=0;let windowStart=Date.now();
   const limited=()=>{if(Date.now()-windowStart>1000){windowStart=Date.now();requests=0;}return ++requests>30;};
   const resume=socket.handshake.auth?.token;if(typeof resume==='string'&&sessions.has(resume)){session=sessions.get(resume)!;session.touched=Date.now();socket.join(resume);socket.emit('snapshot',session.snapshot());}
-  socket.on('start',(input,ack)=>{
+  socket.on('start',(input,ack)=>{if(online.has(socket.id)){if(typeof ack==='function')ack({ok:false,message:'Online szobában vagy; új játékhoz nyiss új lapot.'});return;}
    if(typeof ack!=='function'||limited())return;
    if(sessions.size>=30){ack({ok:false,message:'A demószerver megtelt. Próbáld később.'});return;}
    let seed:number;
@@ -28,8 +30,8 @@ export async function createApp(production=false){
    if(session){socket.leave(session.token);sessions.delete(session.token);}
    session=new Session(seed,input.mode);sessions.set(session.token,session);socket.join(session.token);ack({ok:true,token:session.token});emit(session);
   });
-  socket.on('command',(cmd:Command,ack)=>{if(typeof ack!=='function')return;if(!session||limited()){ack({ok:false,code:'SESSION',message:'Nincs aktív kapcsolat.'});return;}ack(session.command(cmd));emit(session);});
-  socket.on('control',(control:Control,ack)=>{
+  socket.on('command',(cmd:Command,ack)=>{if(online.has(socket.id))return;if(typeof ack!=='function')return;if(!session||limited()){ack({ok:false,code:'SESSION',message:'Nincs aktív kapcsolat.'});return;}ack(session.command(cmd));emit(session);});
+  socket.on('control',(control:Control,ack)=>{if(online.has(socket.id))return;
    if(typeof ack!=='function')return;if(!session||limited()){ack({ok:false});return;}
    if(control==='pause'){session.paused=true;session.deadline=null;}
    else if(control==='resume'){session.paused=false;session.setDeadline();}
@@ -40,12 +42,12 @@ export async function createApp(production=false){
    }else{ack({ok:false});return;}
    ack({ok:true});emit(session);
   });
-  socket.on('export',ack=>{if(typeof ack==='function'&&session)ack(session.replay());});
+  socket.on('export',ack=>{if(online.has(socket.id))return;if(typeof ack==='function'&&session)ack(session.replay());});
  });
  const ticker=setInterval(()=>{for(const [token,s] of sessions){if(Date.now()-s.touched>3600000){sessions.delete(token);continue;}if(s.deadline!==null&&Date.now()>=s.deadline){s.advance();emit(s);}}},200);
  let vite:Awaited<ReturnType<typeof createVite>>|undefined;
  if(production)app.use(express.static(resolve('dist')));else{vite=await createVite({server:{middlewareMode:true},appType:'spa'});app.use(vite.middlewares);}
- return {http,io,sessions,close:async()=>{clearInterval(ticker);await vite?.close();await new Promise<void>(r=>io.close(()=>r()));}};
+ return {http,io,sessions,close:async()=>{clearInterval(ticker);online.close();await vite?.close();await new Promise<void>(r=>io.close(()=>r()));}};
 }
 if(process.argv[1]&&import.meta.url===pathToFileURL(resolve(process.argv[1])).href){
  const server=await createApp(process.env.NODE_ENV==='production');const port=Number(process.env.PORT||5173);server.http.listen(port,process.env.HOST||'127.0.0.1',()=>console.log(`Csatatér: http://localhost:${port}`));

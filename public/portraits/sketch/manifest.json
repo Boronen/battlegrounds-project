@@ -59,5 +59,14 @@
     "overrides": {
       "32.png": "Standalone corrected female portrait; the original atlas-29-34.png is historical and must not replace this portrait."
     }
+  },
+  {
+    "start": 35,
+    "characters": [
+      "Ákos – local graphite-style vector illustration; short hair, light beard, casual jacket and Dixit-inspired card."
+    ],
+    "overrides": {
+      "35.png": "Rendered from 35.svg by scripts/render-akos.ts; standalone addition, not an atlas crop."
+    }
   }
 ]
