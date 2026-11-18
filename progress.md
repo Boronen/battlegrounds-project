@@ -312,3 +312,13 @@ This file records the work and checks performed during this session; no deployme
 - Az élő oldalon két külön böngészőmunkamenet szobakódos csatlakozása, közös hősválasztása, saját boardja, újratöltés utáni visszacsatlakozása és 390px-es túlcsordulásmentes nézete is sikeres. JavaScript-hiba nem volt. Előnézet: test-results/online/mobile.png.
 - A későbbi kódmódosítások nem deployolnak automatikusan, amíg a Railway-forrás commit-rögzítése él. Új verzióhoz a forrást a következő ellenőrzött commitra kell átállítani.
 - Végső javított publikáció: 2af21d762566764015b155cc39a84eef24cd821d, Railway b3888e3e-ee6e-4fe1-805d-d713390815c0, SUCCESS. Vanda minden egyidejű harci halált megőriz, Csefi a csapatciklusok után ismét támad. 92/92 teszt és build sikeres. Az online változat 100 megismételt meccse 13–24 kör alatt befejeződött (155313 ms; ez a két végső harci javítás előtti futás).
+
+## Négy online hibajavítás — November 18, 2026
+
+- Vanda generált lapjai triplázhatók, vegyes fizikai/virtuális példányokkal is. A golden lap valós másolatszáma pontosan megmarad; eladáskor nem kerül fiktív lap a poolba. Külön goldenizálás is tesztelve.
+- A hősfrissítő a kártyák elé, jól látható, tapadó sávba került; mindhárom frissítés új ajánlatot ad és 0/3-nál tiltott.
+- A hangok letöltött felvételekből dekódolt Web Audio-mintákon szólalnak meg. A kattintás/billentyű szinkronban hozza létre/feloldja az AudioContextet; előtöltés, némítás, maximális átfedés és megszakított függő lejátszás kezelve. Nincs oszcillátoros hanggenerálás. Hibánál látható visszajelzés van.
+- A szavazás csak a csatlakozott, élő emberi helyekre vár; a kilépett helyet bot veszi át. A megszakadt kapcsolat visszatérhet a régi tokennel. Külön szobából kilépés, token-visszavonás és házigazda-átadás van. Hősválasztásnál 10 másodperc után a lecsatlakozott bot automatikusan választ. Több azonos tokenű lap közül egy bezárása nem jelenti az egész játékos kilépését.
+- Ellenőrzés: 98 teszt, production build, kétböngészős hibaregresszió sikeres. Három online reroll desktop/mobil, valódi nemnéma dekódolt hangminták szigorú autoplay-szabállyal (7 forrás, mind running állapotban, 0 oszcillátor), némítás, disconnect utáni továbblépés és explicit kilépés. Előnézet/jelentés: test-results/bugfixes/.
+- Verzió: bg-37.0-core-custom-8 / franchise-357-heroes-35-v12. Publikálás a meglévő Railway szolgáltatásra folyamatban.
+- További kapcsolat-regressziók is sikeresek: az egyik böngészőlap bezárása nem állít botra egy másik lapon még csatlakozott játékost; hősválasztás közbeni kapcsolatvesztés 10 másodperc után automatikusan feloldódik. Végső teszteredmény: 100/100.

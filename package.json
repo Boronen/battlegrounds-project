@@ -21,7 +21,8 @@
     "test:arena-redesign": "tsx tests/arena-redesign-browser.ts",
     "test:media": "tsx tests/media-browser.ts",
     "test:hero-powers": "tsx tests/hero-powers-browser.ts",
-    "test:online": "tsx tests/online-browser.ts"
+    "test:online": "tsx tests/online-browser.ts",
+    "test:bugfixes": "tsx tests/bugfixes-browser.ts"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

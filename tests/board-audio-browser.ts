@@ -4,7 +4,7 @@ import {writeFile} from 'node:fs/promises';
 const browser=await chromium.launch({headless:true,executablePath:process.env.BROWSER_EXECUTABLE||'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'});
 try{
  const p=await browser.newPage({viewport:{width:1600,height:1050},reducedMotion:'no-preference'});const errors:string[]=[];p.on('pageerror',e=>errors.push(e.message));
- await p.addInitScript(()=>{const counts={samples:0};(window as unknown as {audioCounts:typeof counts}).audioCounts=counts;const play=HTMLMediaElement.prototype.play;HTMLMediaElement.prototype.play=function(){counts.samples++;return play.call(this);};});
+ await p.addInitScript(()=>{const counts={samples:0};(window as unknown as {audioCounts:typeof counts}).audioCounts=counts;const create=AudioContext.prototype.createBufferSource;AudioContext.prototype.createBufferSource=function(){counts.samples++;return create.call(this);};});
  await p.goto('http://127.0.0.1:5173');await p.getByText('Szerver online',{exact:true}).waitFor();await p.getByRole('button',{name:'Mérkőzés indítása'}).click();await p.getByRole('button').filter({hasText:'Őt választom'}).first().click();await p.getByText('Kínálat • 3 arany / egység').waitFor();
  assert.ok(await p.locator('.player-hero img').getAttribute('src'));assert.ok(await p.locator('.keeper-avatar img').getAttribute('src'));
  const image=await p.locator('.arena').evaluate(el=>getComputedStyle(el).backgroundImage);assert.ok(image.includes('/boards/tribes/'));

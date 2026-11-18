@@ -1,6 +1,6 @@
 /** Numbers are explicitly versioned; see docs/rules.md for evidence and limits. */
 export const RULES = {
- id:'bg-37.0-core-custom-7', catalogVersion:'franchise-357-heroes-35-v11', referencePatch:'37.0',
+ id:'bg-37.0-core-custom-8', catalogVersion:'franchise-357-heroes-35-v12', referencePatch:'37.0',
  heroChoices:3, heroRerolls:3,
  startHealth:30, buy:3, sell:1, refresh:1, boardSize:7, handSize:10,
  shopSizes:[0,3,4,4,5,5,6], poolCopies:[0,15,15,13,11,9,7],

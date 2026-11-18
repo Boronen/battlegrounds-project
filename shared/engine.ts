@@ -29,9 +29,9 @@ function draw(m:Match,tier:number,exact=false,exclude:number[]=[]):Unit|null{
 export function fillShop(m:Match,p:Player,keep=false){if(!keep){p.shop.forEach(u=>release(m,u));p.shop=[];}while(p.shop.length<RULES.shopSizes[p.tier])p.shop.push(null);const fresh:Unit[]=[];p.shop=p.shop.map(u=>{if(u)return u;const next=draw(m,p.tier);if(next)fresh.push(next);return next;});if(p.heroId==='original-21'){for(const u of p.shop)if(u)u.drunk=false;enchantShop(m,p,p.shop.filter((u):u is Unit=>!!u));}else enchantShop(m,p,fresh);if(!keep||!powerState(p).spellShop.length)newSpellShop(m,p);}
 function discover(m:Match,p:Player){if(p.discover.length||!p.rewards.length)return;const tier=p.rewards.shift()!;powerState(p).discoverKind='golden';for(let i=0;i<3;i++){const u=draw(m,tier,true,p.discover.map(u=>u.characterId));if(u)p.discover.push(u);}}
 function merge(m:Match,p:Player){
- for(const c of CHARACTERS){const units=[...p.hand,...p.board].filter(u=>!u.golden&&!u.token&&u.characterId===c.id);if(units.length<3)continue;
+ for(const c of CHARACTERS){const units=[...p.hand,...p.board].filter(u=>!u.golden&&(!u.token||u.generated)&&!u.name&&u.characterId===c.id);if(units.length<3)continue;
   const group=units.slice(0,3),ids=new Set(group.map(u=>u.uid));p.hand=p.hand.filter(u=>!ids.has(u.uid));p.board=p.board.filter(u=>!ids.has(u.uid));
-  const gold=makeUnit(m,c.id,true);gold.attack+=group.reduce((s,u)=>s+u.attack-c.attack,0);gold.health+=group.reduce((s,u)=>s+u.health-c.health,0);gold.drunk=group.some(u=>u.drunk);gold.shield=group.some(u=>u.shield);gold.rewardTier=1;p.hand.push(gold);m.log.push(`${p.name}: tripla – ${c.name}.`);merge(m,p);return;
+  const gold=makeUnit(m,c.id,true);gold.copies=group.reduce((n,u)=>n+(u.token?0:u.copies),0);gold.token=gold.copies===0;gold.generated=group.some(u=>u.generated);if(gold.token)gold.ability=structuredClone(c.ability);gold.keywords=[...new Set(group.flatMap(u=>u.keywords||[]).concat(c.keywords||[]))];gold.attack+=group.reduce((s,u)=>s+u.attack-c.attack,0);gold.health+=group.reduce((s,u)=>s+u.health-c.health,0);gold.drunk=group.some(u=>u.drunk);gold.shield=group.some(u=>u.shield);gold.rewardTier=1;p.hand.push(gold);m.log.push(`${p.name}: tripla – ${c.name}.`);merge(m,p);return;
  }
 }
 function beginRecruit(m:Match){

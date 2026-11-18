@@ -43,7 +43,7 @@ Források: https://hearthstone.wiki.gg/wiki/Battlegrounds/Battlecruiser és http
 
 ## Állapot, pool és felület
 
-- Az idézett/generált lapok nem vesznek el fizikai lapot a véges poolból, és eladáskor nem teremtenek új poolpéldányt. Eltérnek az egyszerű harci segítő tokenektől: a saját tierjük szerint számítanak a hőssebzésbe, és a normál képességeik működnek. A generált másolatok nem váltanak ki automatikus fizikai triplaegyesítést.
+- Az idézett/generált lapok nem vesznek el fizikai lapot a véges poolból, és eladáskor nem teremtenek új poolpéldányt. Eltérnek az egyszerű harci segítő tokenektől: a saját tierjük szerint számítanak a hőssebzésbe, és a normál képességeik működnek. A generált, normál nevű kártyamásolatok (például Vanda jutalmai) triplázhatók egymással vagy valódi poolpéldányokkal. Az arany lap csak az összevont valódi példányszámot adja vissza a poolnak; a névvel és saját képességgel kombinált egyedi rajzok nem egyesülnek pusztán a forrásazonosítójuk alapján.
 - A célpontválasztás, státusz, cooldown, quest, tipp, kombinálás és Fruzsi választása a tábla alatti képességpanelen található. Csefi harci támadásértékét a portréján is jelöljük.
 - A botok használják az aktív képességeket és spelleket, illetve válaszolnak a függő választásokra. Ez alap AI, nem versenyszintű stratégia.
 - Minden állapot és véletlen döntés szerveroldali, replayből reprodukálható. Hibás parancs atomikusan elutasított.
