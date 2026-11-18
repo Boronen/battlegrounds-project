@@ -1,6 +1,6 @@
 # A demó tényleges szabályprofilja
 
-Profil: `bg-37.0-core-custom-6`. Katalógus: `franchise-357-heroes-35-v10`. Referencia: a 37.0 patch hivatalos kiadási jegyzete és az alapmechanikák korábbi hivatalos leírásai. Helyi szabályok frissítése: 2026. november 18.
+Profil: `bg-37.0-core-custom-8`. Katalógus: `franchise-357-heroes-35-v12`. Referencia: a 37.0 patch hivatalos kiadási jegyzete és az alapmechanikák korábbi hivatalos leírásai. Helyi szabályok frissítése: 2026. november 18.
 
 Ez egy saját karakterkészlettel játszható alaploop. A teljes 37.0 szerverlogikával való azonosság nem igazolt. A saját hősök, az általános spellek és Kevin Battlecruiser-fejlesztései helyi szabályok; nem a teljes eredeti Hearthstone-készlet másolatai. Lásd: [hősképességek](hero-powers-spec.md).
 

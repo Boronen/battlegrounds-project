@@ -47,4 +47,4 @@ Források: https://hearthstone.wiki.gg/wiki/Battlegrounds/Battlecruiser és http
 - A célpontválasztás, státusz, cooldown, quest, tipp, kombinálás és Fruzsi választása a tábla alatti képességpanelen található. Csefi harci támadásértékét a portréján is jelöljük.
 - A botok használják az aktív képességeket és spelleket, illetve válaszolnak a függő választásokra. Ez alap AI, nem versenyszintű stratégia.
 - Minden állapot és véletlen döntés szerveroldali, replayből reprodukálható. Hibás parancs atomikusan elutasított.
-- Verzió: bg-37.0-core-custom-6 / franchise-357-heroes-35-v10. A fejlesztői szervert újra kell indítani, és új meccset kell kezdeni. A régi replayek nem kompatibilisek.
+- Verzió: bg-37.0-core-custom-8 / franchise-357-heroes-35-v12. A fejlesztői szervert újra kell indítani, és új meccset kell kezdeni. A régi replayek nem kompatibilisek.
