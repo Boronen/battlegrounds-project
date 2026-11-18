@@ -1,6 +1,6 @@
 # Utolsó pad – Csatatér
 
-Böngészős, szerver által vezérelt stratégiai játékmenetdemó. Egy ember és hét bot, 357 toborozható kártya (35 franchise, mindegyikben semleges és minden típusú kártyákkal), 35 hős, közülük 19 saját hősképességgel. Egységesen 30 életerővel és 0 páncéllal indulnak. A képességek és spellek pontos működése: [hősképességek](docs/hero-powers-spec.md). A hősök helyi ceruzarajz-portrékat, a minionok törzsenkénti kártyafelületet használnak. A teljes névsor, kezdeti értékek és forrásértelmezések: [kártyakatalógus](docs/card-pool.md).
+Böngészős, szerver által vezérelt stratégiai játékmenetdemó. Egy ember és hét bot, 357 toborozható kártya (35 franchise, mindegyikben semleges és minden típusú kártyákkal), 35 hős, közülük 24 saját hősképességgel. Egységesen 30 életerővel és 0 páncéllal indulnak. A képességek és spellek pontos működése: [hősképességek](docs/hero-powers-spec.md). A hősök helyi ceruzarajz-portrékat, a minionok törzsenkénti kártyafelületet használnak. A teljes névsor, kezdeti értékek és forrásértelmezések: [kártyakatalógus](docs/card-pool.md).
 
 ## Indítás Windows alatt
 
@@ -94,3 +94,5 @@ Készítők: **Kovács Kevin és Csillag Gergő Zsolt**.
 Match pool: exactly 80 designs, with 12 cards from each of five active tribes (two per tier), 12 Neutral cards, and eight All-type cards. All-type cards count as every tribe; Neutral cards count as none. The catalog includes separate filters for both, and each tribe filter also includes All-type cards. Card availability is balanced by count and tier; combat values still require playtesting.
 
 Combat keywords: 24 recruitable cards now use Stealth, Windfury, Venomous or Reborn. See [keyword rules](docs/keywords.md) and the [measured balance report](docs/keyword-balance.md). Run `npm run test:keyword-balance` to reproduce the benchmark. Restart the development server and begin a new match after this rules/catalog update.
+
+Online teszt: https://utolso-pad-production.up.railway.app — [meghívókódos használat és korlátok](docs/online-testing.md).

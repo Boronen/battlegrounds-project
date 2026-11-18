@@ -6,7 +6,7 @@ Date: November 13, 2026
 
 - 357 recruitable card designs across 35 franchises.
 - 35 heroes: the original 34 characters plus Ákos, added on November 17. Music/VFX details and the remaining eight franchise clips are recorded in the latest section.
-- 19 heroes have implemented powers; the other 16 remain unavailable. Every hero starts with 30 health and 0 armor. Current behavior is documented in `docs/hero-powers-spec.md`.
+- 24 heroes have implemented powers; the other 11 remain unavailable. Invite-code online play is live; see the latest deployment section. Every hero starts with 30 health and 0 armor. Current behavior is documented in `docs/hero-powers-spec.md`.
 - Hero selection offers three choices and three full rerolls. Previously offered heroes cannot reappear during that player's selection.
 - New games receive random seeds automatically; explicit seeds remain available for testing.
 - Each match selects five of eight tribes and uses exactly 80 card designs.
@@ -303,3 +303,11 @@ This file records the work and checks performed during this session; no deployme
 - 90/90 teszt és build sikeres. Két valódi Socket.IO-klienssel és két külön böngészővel tesztelt csatlakozás, közös match, saját board, parancsizoláció, újracsatlakozás és mobilnézet. Részletek: docs/online-testing.md.
 - Railway csatlakoztatva, projekt és production környezet létrehozva. A felhasználó megerősítette a csillageri05-spec/Battlegrounds_project tárolót a deployhoz. Publikálás folyamatban; élő URL még nincs igazolva.
 - Új verzió: bg-37.0-core-custom-7 / franchise-357-heroes-35-v11. Memóriában tárolt, egyreplikás tesztüzem; restart elveszíti a szobákat.
+
+## Élő publikálás — November 18, 2026
+
+- Élő URL: https://utolso-pad-production.up.railway.app
+- Railway service: 9cd200a0-0977-4918-a6a9-7f9cb32cb66e; sikeres deployment: 21821f4e-6417-4a7e-859c-704755c7b493.
+- Pontosan a 3388f5e16290ad794c611c6ddcd995cabd72bee7 commitra rögzítve a codex/invite-multiplayer ágról. A main ág változatlan. Az első Railway create művelet átmenetileg a main ággal indított buildet; a forrás ezután explicit a tesztelt commitra lett rögzítve, és ennek sikerét ellenőriztük.
+- Az élő oldalon két külön böngészőmunkamenet szobakódos csatlakozása, közös hősválasztása, saját boardja, újratöltés utáni visszacsatlakozása és 390px-es túlcsordulásmentes nézete is sikeres. JavaScript-hiba nem volt. Előnézet: test-results/online/mobile.png.
+- A későbbi kódmódosítások nem deployolnak automatikusan, amíg a Railway-forrás commit-rögzítése él. Új verzióhoz a forrást a következő ellenőrzött commitra kell átállítani.

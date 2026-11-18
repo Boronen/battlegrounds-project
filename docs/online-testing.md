@@ -19,3 +19,5 @@ A Railway projekt: 5c3f1569-ec7e-4041-84b9-5c01c27ebfe8, production környezet: 
 - M. Geri: a hős 50 kezdő HP-t kap, ha Csolti is a meccsben van, egyébként 60-at. Csolti jelenlétében minden harc elején tartós +3 támadást kapnak a saját boardminionok, bármelyik ellenfél ellen.
 
 Verzió: bg-37.0-core-custom-7 / franchise-357-heroes-35-v11.
+
+Élő játék: https://utolso-pad-production.up.railway.app . Railway deployment: 21821f4e-6417-4a7e-859c-704755c7b493; rögzített forráscommit: 3388f5e16290ad794c611c6ddcd995cabd72bee7 (codex/invite-multiplayer). Az élő címet két külön böngészős meccsel is ellenőriztük.

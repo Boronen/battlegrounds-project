@@ -1,6 +1,6 @@
 # Hősképességek — 2026-11-18
 
-A 19 megadott hősképesség implementálva. A többi hős képessége változatlanul később érkezik.
+Az első 19 hősképesség alább; az öt további képesség (Feri, Bea, Vanda, Dani, M. Geri) és az élő többjátékos mód leírása: [online tesztverzió](online-testing.md). Összesen 24 képesség implementálva. A többi hős képessége változatlanul később érkezik.
 
 | Hős | Működés |
 | --- | --- |
