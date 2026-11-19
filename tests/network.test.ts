@@ -4,6 +4,30 @@ import {io as client} from 'socket.io-client';
 import {createApp} from '../server/index';
 import type {Snapshot} from '../shared/types';
 
+test('ready starts solo timed combat immediately and a retried command preserves the same battle',async()=>{
+ const server=await createApp(true);
+ await new Promise<void>(resolve=>server.http.listen(0,'127.0.0.1',resolve));
+ const {port}=server.http.address() as {port:number};
+ const socket=client('http://127.0.0.1:'+port,{transports:['websocket']});
+ const snapshot=()=>new Promise<Snapshot>(resolve=>socket.once('snapshot',resolve));
+ try{
+  const hero=snapshot();
+  await socket.timeout(3000).emitWithAck('start',{mode:'timed',seed:62});
+  const selection=await hero,recruit=snapshot();
+  await socket.timeout(3000).emitWithAck('command',{commandId:'pick',expectedVersion:selection.version,action:{type:'chooseHero',heroId:selection.you.heroOffers[0]}});
+  const state=await recruit,combat=snapshot();
+  const ready={commandId:'ready',expectedVersion:state.version,action:{type:'ready'}};
+  const ack=await socket.timeout(3000).emitWithAck('command',ready);
+  const result=await combat;
+  assert.equal(result.phase,'combat');assert.equal(result.deadline,null);
+  const retried=snapshot();
+  assert.deepEqual(await socket.timeout(3000).emitWithAck('command',ready),ack);
+  assert.equal((await retried).version,result.version);
+  const replay=await socket.timeout(3000).emitWithAck('export');
+  assert.equal(replay.actions.filter((a:{kind:string})=>a.kind==='advance').length,1);
+ }finally{socket.disconnect();await server.close();}
+});
+
 test('new games receive random server seeds by default and retain explicit test seeds',async()=>{
  const server=await createApp(true);
  await new Promise<void>(resolve=>server.http.listen(0,'127.0.0.1',resolve));

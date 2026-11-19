@@ -13,10 +13,10 @@ try{
  await p.getByRole('button',{name:'Hang kikapcsolása'}).click();const muted=await p.evaluate(()=>(window as unknown as {audioCounts:{samples:number}}).audioCounts);
  await p.getByRole('button',{name:'Harc indítása'}).click();await p.waitForTimeout(1800);
  assert.deepEqual(await p.evaluate(()=>(window as unknown as {audioCounts:{samples:number}}).audioCounts),muted);
- await p.getByRole('button',{name:'Következő kör'}).click();await p.getByRole('button',{name:'Tesztpad',exact:false}).click();for(let i=0;i<10;i++){await p.getByRole('button',{name:'Bot lépés a saját helyemen is'}).click();await p.waitForTimeout(100);}
+ await p.getByRole('button',{name:'Következő kör'}).click();await p.getByRole('button',{name:'Tesztpad',exact:true}).click();for(let i=0;i<10;i++){await p.getByRole('button',{name:'Bot lépés a saját helyemen is'}).click();await p.waitForTimeout(100);}
  await p.screenshot({path:'test-results/classroom-board-desktop.png',fullPage:true});
- await p.setViewportSize({width:390,height:844});await p.getByRole('button',{name:'Tesztpad',exact:false}).click();await p.waitForTimeout(100);await p.screenshot({path:'test-results/classroom-board-mobile.png',fullPage:true});
+ await p.setViewportSize({width:390,height:844});await p.getByRole('button',{name:'Tesztpad',exact:true}).click();await p.waitForTimeout(100);await p.screenshot({path:'test-results/classroom-board-mobile.png',fullPage:true});
  assert.ok(await p.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
- const viewport=p.locator('.board-viewport');assert.ok(await viewport.evaluate(el=>el.scrollWidth>el.clientWidth));
- assert.deepEqual(errors,[]);await writeFile('test-results/board-audio.json',JSON.stringify({mapLoaded:true,selectedHeroPortrait:true,audioNodes:sounds,mutingPreventsSounds:true,mobileBoardScrollable:true,consoleErrors:errors},null,2));console.log('Board, portraits, audio and mute checks passed.');
+ const viewport=p.locator('.board-viewport');assert.ok(await viewport.evaluate(el=>el.scrollWidth<=el.clientWidth+1));
+ assert.deepEqual(errors,[]);await writeFile('test-results/board-audio.json',JSON.stringify({mapLoaded:true,selectedHeroPortrait:true,audioNodes:sounds,mutingPreventsSounds:true,mobileBoardFits:true,consoleErrors:errors},null,2));console.log('Board, portraits, audio and mute checks passed.');
 }finally{await browser.close();}

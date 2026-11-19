@@ -1,15 +1,16 @@
 import type { Tribe } from './tribes';
 import type { CardType } from './tribes';
 export type Phase = 'hero' | 'recruit' | 'combat' | 'finished';
-export type Trigger = 'play' | 'start' | 'death' | 'attack' | 'passive';
-export type Effect = 'buff' | 'shield' | 'damage' | 'taunt' | 'bread' | 'stealShield' | 'summon';
+export type Trigger = 'play' | 'start' | 'death' | 'attack' | 'rally' | 'turnStart' | 'turnEnd' | 'passive';
+export type Effect = 'buff' | 'shield' | 'damage' | 'taunt' | 'bread' | 'stealShield' | 'summon' | 'gold' | 'recruit' | 'amplify';
 export type Keyword = 'stealth' | 'windfury' | 'venomous' | 'reborn';
-export interface Ability { name:string; trigger:Trigger; effect:Effect; target:'self'|'other'|'left'|'neighbors'|'allies'|'enemy'|'enemies'; attack?:number; health?:number; amount?:number; repeats?:number }
+export type AmplifiedTrigger = 'play' | 'death' | 'turnEnd';
+export interface Ability { name:string; trigger:Trigger; effect:Effect; target:'self'|'other'|'left'|'neighbors'|'allies'|'tribe'|'enemy'|'enemies'; attack?:number; health?:number; amount?:number; repeats?:number; amplifies?:AmplifiedTrigger }
 export interface Character { id:number; name:string; tags:string[]; tier:number; attack:number; health:number; ability:Ability; text:string; portrait:string; tribe?:CardType; keywords?:Keyword[] }
 export interface Unit {drunk?:boolean; generated?:boolean;  name?:string; text?:string; ability?:Ability; tier?:number; spellUpgrades?:Record<string,number>; fullReborn?:boolean; heroFighter?:boolean;  uid:string; characterId:number; attack:number; health:number; golden:boolean; shield:boolean; taunt:boolean; copies:number; rewardTier?:number; token?:boolean; keywords?:Keyword[] }
 export interface Hero { id:string; name:string; title:string; armor:number; cost:number; text:string; portrait:string; tags?:string[]; power:'buff'|'shield'|'gold'|'refresh'|'custom'|'passive'|null }
 export interface SpellCard {uid:string; kind:string; tier:number; cost:number}
-export interface HeroState {drunkQuest?:boolean; maxHp?:number; carriedGold?:number; goldenDiscovers?:number; discoverKind?:'golden'|'death'; fallenLast?:number[]; guessOptions?:Unit[]; guessResult?:boolean; powerOffers?:string[]; borrowedId?:string; freeSpellUsed?:boolean;maxGold:number; deferredGold:number; deferSales:boolean; cooldownUntil:number; onceUsed:boolean; quest?:'deaths'|'battlecries'; progress:number; completed:boolean; championAttack:number; championUpgradeRound:number; spellShop:SpellCard[]; spellHand:SpellCard[]; combination:Unit[]; lastRoll?:number}
+export interface HeroState {drunkQuest?:boolean; maxHp?:number; carriedGold?:number; goldenDiscovers?:number; discoverKind?:'golden'|'death'; fallenLast?:number[]; guessOptions?:Unit[]; guessResult?:boolean; powerOffers?:string[]; borrowedId?:string; freeSpellUsed?:boolean;maxGold:number; deferredGold:number; cooldownUntil:number; onceUsed:boolean; quest?:'deaths'|'battlecries'; progress:number; completed:boolean; championAttack:number; championUpgradeRound:number; spellShop:SpellCard[]; spellHand:SpellCard[]; combination:Unit[]; lastRoll?:number}
 export interface Player {heroState?:HeroState;  id:string; name:string; bot:boolean; heroId:string|null; heroOffers:string[]; heroSeen:string[]; heroRerolls:number; hp:number; armor:number; tier:number; upgradeCost:number; gold:number; board:Unit[]; hand:Unit[]; shop:(Unit|null)[]; frozen:boolean; ready:boolean; powerUsed:boolean; discover:Unit[]; rewards:number[]; opponents:string[]; place:number|null; lastBoard:Unit[] }
 export interface CombatEvent { type:'start'|'attack'|'damage'|'shield'|'buff'|'death'|'summon'|'keyword'|'result'; text:string; actor?:string; target?:string; amount?:number; left:Unit[]; right:Unit[] }
 export interface Battle { leftId:string; rightId:string; ghost:boolean; events:CombatEvent[]; winner:string|null; damage:number }

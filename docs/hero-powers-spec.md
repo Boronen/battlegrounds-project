@@ -6,7 +6,7 @@ Az első 19 hősképesség alább; az öt további képesség (Feri, Bea, Vanda,
 | --- | --- |
 | Csefi | 1 alap támadású, nem célozható nyolcadik harcos. Mindig ő üti az első támadást; utána saját csapatciklusonként egyszer támad. Nem kap visszaütési sebzést. Nem foglal minionhelyet, nem számít túlélőnek, és a rendes minionok elvesztésekor véget ér a harca. Toborzáskor 2 aranyért +Tavern-szint tartós támadásra fejleszthető; ebben a körben nem harcol. A fejlesztés kihagyása a támadás választása. |
 | OLAJOS | OIL: 3 arany, körönként egyszer, +1 tartós maximum és a következő köröktől +1 körkezdő arany. 10 fölé nőhet. |
-| Gergő | 0 arany, egy körre aktiválható. A kör eladásai nem adnak azonnali aranyat; a következő kör kezdetén minden ilyen eladás után +2 arany jár, a normál kezdő aranyon felül, korlát nélkül. |
+| Gergő | A Befektetés automatikusan aktív. Az eladás azonnali bevétele 0, minden eladás a következő kör kezdetén +2 aranyat fizet a kezdő aranyon felül, korlát nélkül. Fruzsi nem kaphatja meg. |
 | Mihály | Hősválasztáskor véletlen quest: 25 saját harci minionhalál után minden spell kétszer castolódik; vagy 7 saját battlecry kijátszása után a további battlecryok duplázódnak. A teljesítő hetedik battlecry még egyszer fut. A jutalom tartós; a halálokba az újjászületett és segítő minionok halálai is számítanak. Bolti/board elszívás nem harci halál. |
 | Ágoston | D6, 1 arany: a dobás értékét kapja meg aranyban. A következő N teljes körben nem használhatja, az N+1. következő körben újra elérhető. |
 | Kevin | Kezdéskor egyszer egy 2/2 Battlecruiser a kézbe. Két saját Upgrade-spellhely minden boltban. A fejlesztések a boardon levő Battlecruiserekre hatnak, nem normál minionokra. |
@@ -47,4 +47,4 @@ Források: https://hearthstone.wiki.gg/wiki/Battlegrounds/Battlecruiser és http
 - A célpontválasztás, státusz, cooldown, quest, tipp, kombinálás és Fruzsi választása a tábla alatti képességpanelen található. Csefi harci támadásértékét a portréján is jelöljük.
 - A botok használják az aktív képességeket és spelleket, illetve válaszolnak a függő választásokra. Ez alap AI, nem versenyszintű stratégia.
 - Minden állapot és véletlen döntés szerveroldali, replayből reprodukálható. Hibás parancs atomikusan elutasított.
-- Verzió: bg-37.0-core-custom-8 / franchise-357-heroes-35-v12. A fejlesztői szervert újra kell indítani, és új meccset kell kezdeni. A régi replayek nem kompatibilisek.
+- Verzió: bg-37.0.2-core-custom-10 / franchise-360-heroes-35-v14. A fejlesztői szervert újra kell indítani, és új meccset kell kezdeni. A régi replayek nem kompatibilisek.

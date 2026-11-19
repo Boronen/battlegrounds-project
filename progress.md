@@ -330,3 +330,24 @@ This file records the work and checks performed during this session; no deployme
 - Production build, egyböngészős teljes első kör (szoba, hősválasztás, harc, következő kör, kilépés) és meglévő kétklienses online regressziós teszt sikeres. Új teszt: tests/online-solo-browser.ts.
 - Élő frissítés a meglévő Railway szolgáltatásra folyamatban.
 - Élesítve és az élő címen is ellenőrizve: 8ee0cd795c3dd57f75aaa81670a44fd2da47d83e, Railway ed5a56e9-c6c2-4d33-9e22-aeafed173687, SUCCESS. Az egyedüli emberrel, hét bottal indított meghívókódos szoba hősválasztása, harca, következő köre és kilépése is sikeres volt a https://utolso-pad-production.up.railway.app címen.
+
+## Minionhatások és passzív képességek — November 18, 2026
+
+- A 37.0.2-es Battlegrounds referenciája alapján a saját lapok szerveroldalon külön kezelik a Battlecry-t, a Deathrattle-t, a minden támadásnál futó Rallyt és a két vásárlási fázishatárt. A körbuffok tartósak, a harci buffok a harci másolatot módosítják.
+- 360 toborozható lap. Meccsenként 83 különböző lap és 965 fizikai példány. A három semleges erősítő minden meccsben része a poolnak. A normál erősítő kétszer, az arany háromszor futtatja a hozzá tartozó hatást. A legerősebb erősítő érvényesül.
+- Gergő Befektetése passzív: eladásonként +2 arany a következő körben. A hősképességek és varázslatok vezérlői, illetve a passzív jelzés a meglévő arénakeretet használják.
+- Szabályprofil: bg-37.0.2-core-custom-9 / franchise-360-heroes-35-v13. A 105 teszt, a production build, a mobil katalógus- és hősképesség-böngészőtesztek sikeresek. Új meccs szükséges ehhez a szabályprofilhoz.
+- A helyi meghívókódos teszt egy emberrel és hét bottal végigment a hősválasztástól a harc utáni következő körig. Mind a 100 megismételt botmeccs 14–23 kör között, determinisztikusan és készletvesztés nélkül zárult. Az új build a helyi munkapéldányban van.
+
+## Készletbalansz és képernyőhöz igazodó aréna – 2026. november 18.
+
+- A 360 toborozható lap normál és arany változata átment a toborzási és harci próbákon. A szettben 75 Battlecry, 66 Rally, 44 kör végi, 34 kör eleji és 29 Deathrattle lap szerepel. A magasabb szinteken a tartós szomszéd- és törzsi erősítések nagyobb csapatokat építhetnek. A 83 lapos meccskészlet 965 fizikai példányt tartalmaz. [Mind a 360 lap és a balanszmérés](docs/card-pool.md)
+- Az 1–40-es kezdőértékeken a 12. körös csapat mediánja 50/62-ről 59/72-re nőtt. A 40 új meccsből 12-ben legalább egy minion háromjegyű támadást vagy életerőt ért el. A meccshossz mediánja 16-ról 18 körre változott. A harcok 95. percentilise 16-ról 15 támadásra esett. A 100 meccses külön próba és az ismétlése 13–26 kör alatt, készletvesztés nélkül, egyező eredményekkel zárult.
+- A 576 000 páros harcot mérő kulcsszavas próba két korai Windfury-lapot emelt ki. Gwen Stacy / Ghost-Spider 4/3-at, Flying Snow 2/6-ot kapott. Az újramérésben mind a 24 kulcsszavas lap mindkét vizsgált ellenfélkészlettel a 40–60%-os csapatpontszám-sávba esett. [Részletes eredmények](docs/keyword-balance.md)
+- Az aréna, a bolt, a kéz és a körvezérlés az aktuális képernyőmagassághoz igazodik. Álló telefonon a teljes csapat két sorba rendeződik. A tele kéz oldalirányban lapozható. A Lapinfóval a hosszú nevek és a képességszövegek koppintással olvashatók. A hősképességek, a spellek, a tabella és a zene külön panelt kaptak.
+- A böngészős próbák nyolc képernyőméreten vizsgálták a hősválasztást, a vásárlást, a hét-hét minionos harcot, a tízlapos kezet, a jutalmat és az eredményt. Az időzített szólómeccs készre jelölve rögtön harcba vált. Egy kör végi húzás után megtelt kézből is lehet helyet csinálni a függő jutalomnak.
+- A helyi build szabályprofilja `bg-37.0.2-core-custom-10`, a katalógusé `franchise-360-heroes-35-v14`. A 109 automatikus teszt, a helyi egy- és kétjátékos meghívókódos próba, valamint a tíz arénát végigjáró böngészőteszt sikeres.
+
+## Kártyahúzás és körvégi kötél
+
+Egérrel és érintéssel a megfogott lap követi a mutatót. Boltból kézbe húzva vásárolható, kézből táblára húzva kijátszható. A táblán átrendezhető, a fogadósra húzva eladható. Az időzített vásárlás utolsó húsz másodpercében az izzó kötél a szerver határidejéhez igazodva rövidül. A build és a `tests/card-drag-browser.ts` egérrel és emulált érintéssel futtatott böngészőtesztje sikeres.

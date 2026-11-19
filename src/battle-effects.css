@@ -45,3 +45,30 @@
 .champion-attack-badge{position:absolute;left:-18px;bottom:35px;z-index:12;padding:5px 8px;border-radius:18px;background:#46391d;border:2px solid #e6bf67;color:#ffe7a9;font-weight:900;white-space:nowrap}
 .has-match .player-hero>.champion-attack-badge,.has-match .keeper-avatar>.champion-attack-badge{font:900 14px/1.1 'Nunito Sans',sans-serif;text-shadow:none;color:#ffe7a9;width:auto;height:auto;min-width:0;left:-28px;right:auto;top:auto;bottom:35px;padding:5px 8px;border-radius:18px}
 .hero-selection .hero-reroll{position:sticky;top:8px;z-index:30;margin:12px auto 18px;padding:10px 14px;max-width:480px;background:#171b24f5;border:1px solid #b79b5d;border-radius:10px;box-shadow:0 5px 18px #0007}.hero-selection .hero-reroll button{min-height:44px;width:100%;font-size:16px}
+.hero-abilities .ability-control {
+ position:relative;
+ isolation:isolate;
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ width:min(100%, 320px);
+ min-height:54px;
+ margin:6px 0 10px;
+ padding:10px clamp(28px, 9vw, 54px);
+ border:0;
+ background:transparent;
+ font:700 15px/1.2 'Alegreya', Georgia, serif;
+ color:#fff0d2;
+ text-align:center;
+ text-shadow:0 2px 2px #000;
+ white-space:normal;
+}
+
+.hero-abilities .ability-control .board-socket { inset:-7% 0; width:100%; height:114%; }
+.hero-abilities .ability-control:hover:enabled { filter:brightness(1.16); }
+.hero-abilities .ability-control:active:enabled { transform:translateY(2px); }
+.hero-abilities .ability-control:disabled { opacity:1; color:#c8beb0; filter:saturate(.45); }
+.hero-abilities .ability-control:focus-visible { outline:2px solid var(--arena-glow); outline-offset:2px; }
+.hero-abilities h2.ability-passive { width:min(100%, 240px); padding:8px 36px; }
+.hero-abilities .ability-passive small { display:block; color:var(--arena-glow); font:600 11px/1.25 system-ui, sans-serif; }
+.hero-abilities .power-choice button { padding-inline:clamp(28px, 5vw, 42px); }

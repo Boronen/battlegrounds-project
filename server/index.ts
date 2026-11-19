@@ -30,7 +30,15 @@ export async function createApp(production=false){
    if(session){socket.leave(session.token);sessions.delete(session.token);}
    session=new Session(seed,input.mode);sessions.set(session.token,session);socket.join(session.token);ack({ok:true,token:session.token});emit(session);
   });
-  socket.on('command',(cmd:Command,ack)=>{if(online.has(socket.id))return;if(typeof ack!=='function')return;if(!session||limited()){ack({ok:false,code:'SESSION',message:'Nincs aktív kapcsolat.'});return;}ack(session.command(cmd));emit(session);});
+  socket.on('command',(cmd:Command,ack)=>{
+   if(online.has(socket.id)||typeof ack!=='function')return;
+   if(!session||limited()){ack({ok:false,code:'SESSION',message:'Nincs aktív kapcsolat.'});return;}
+   const reply=session.command(cmd);
+   const match=session.match;
+   if(reply.ok&&cmd.action.type==='ready'&&match.mode==='timed'&&match.phase==='recruit'&&match.version===reply.version)session.advance();
+   ack(reply);
+   emit(session);
+  });
   socket.on('control',(control:Control,ack)=>{if(online.has(socket.id))return;
    if(typeof ack!=='function')return;if(!session||limited()){ack({ok:false});return;}
    if(control==='pause'){session.paused=true;session.deadline=null;}

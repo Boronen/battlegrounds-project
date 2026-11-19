@@ -1,6 +1,6 @@
 # Utolsó pad – Csatatér
 
-Böngészős, szerver által vezérelt stratégiai játékmenetdemó. Egy ember és hét bot, 357 toborozható kártya (35 franchise, mindegyikben semleges és minden típusú kártyákkal), 35 hős, közülük 24 saját hősképességgel. Egységesen 30 életerővel és 0 páncéllal indulnak. A képességek és spellek pontos működése: [hősképességek](docs/hero-powers-spec.md). A hősök helyi ceruzarajz-portrékat, a minionok törzsenkénti kártyafelületet használnak. A teljes névsor, kezdeti értékek és forrásértelmezések: [kártyakatalógus](docs/card-pool.md).
+Az Utolsó pad böngészős stratégiai kártyajáték. Egyedül hét bot ellen vagy meghívókódos szobában játszható. A katalógusban 360 toborozható lap és 35 hős van, közülük 24 saját képességgel. A hősöket ceruzarajzok, a minionok törzsét színes kártyakeretek, a képességük időzítését ikonok jelölik. [Hősképességek](docs/hero-powers-spec.md) · [Kártyakatalógus és balanszmérés](docs/card-pool.md)
 
 ## Indítás Windows alatt
 
@@ -25,12 +25,12 @@ Ha a gépen az npm PowerShell-indítója hibás, a mellékelt indítószkript k�
 
 1. Válassz játékmódot. Minden új meccs automatikusan véletlen kezdőértéket kap; teszteléshez opcionálisan megadhatsz sajátot. Azonos kezdőérték és azonos műveletsor azonos eredményt ad.
 2. Válassz a felajánlott három hős közül. Háromszor frissítheted a teljes ajánlatot; minden frissítés három olyan hőst ad, akit még nem láttál ebben a hősválasztásban.
-3. A bolti kártyára kattintva 3 aranyért megveszed. A kézben lévő kártyára kattintva kijátszod.
+3. A bolti kártyára kattintva a jelzett áron megveszed. A kézben lévő lapra kattintva kijátszod.
 4. Célzott kijátszási képességnél előbb válaszd ki a kézben lévő kártyát, majd a célpontot a táblán.
 5. Egy táblán lévő kártya kijelölése után Balra/Jobbra gombbal rendezheted vagy eladhatod. Egérrel húzás is használható.
-6. Fejlesztheted a boltot, frissítheted a kínálatot, vagy befagyaszthatod a következő körre. A tábla alatti panelen használhatod a hősképességet és a spelleket; itt választhatsz célpontot és követheted a küldetést is.
+6. Fejlesztheted, frissítheted vagy befagyaszthatod a boltot. A hősöd mellett nyílik a képesség- és varázspanel. Itt választhatsz célpontot és követheted a küldetésedet is.
 7. Három azonos normál egység arany példánnyá egyesül a kézben. Kijátszásakor a boltodnál eggyel magasabb szintről választhatsz jutalmat, legfeljebb a 6. szintről.
-8. A Harc indítása tesztmódban lezárja a vásárlást. A harc szerveren számított eseménysorát a kliens lejátssza. A Következő kör feldolgozza az eredményt.
+8. A Harc indítása gombbal készre jelölöd magad. Egyedül azonnal indul a harc. Meghívókódos meccsen a csatlakozott játékosok készenléte indítja. A Következő kör gombbal léphetsz tovább az eredmény után.
 9. Kiesés után nézőként folytathatod a meccset a Harc megtekintése gombbal.
 
 ## Tesztpad
@@ -50,10 +50,12 @@ A JSON-export tartalmazza a seedet, szabály- és katalógusverziót, az elfogad
 ```sh
 npm test
 npm run test:soak
+npm run test:set-balance
 npm run test:browser
 npm run test:polish
 npm run test:board-audio
 npm run build
+npm run test:viewport
 ```
 
 A böngészős teszthez fusson a demó az 5173-as porton. Windows alatt a telepített Edge-et használja; más böngésző útvonala `BROWSER_EXECUTABLE` környezeti változóval adható meg. Más rendszeren a Playwright Chromium telepítése szükséges (`npx playwright install chromium`). Képernyőképek és eredmények: `test-results/`.
@@ -76,9 +78,9 @@ A tényleges szabályok, források és eltérések: [docs/rules.md](docs/rules.m
 
 A játék tíz felülnézetes tribe-arénát használ a `public/boards/tribes/` mappából, 16:9 arányban: Aberration, Beasts, Naga, Dragons, Undead, Demon, Murlocs, Pirate, Quilboar és Elementals. A képek a korábban generált arénák WebP-változatai. Minden új mérkőzés véletlen szerveroldali azonosítót kap; ebből a `src/arenas.ts` választ hátteret. A választás független a játékmenet seedjétől és a csapat tribe-jától, és körváltás, újracsatlakozás vagy oldalfrissítés után is megmarad. Egymást követő meccseken ismétlődés lehetséges. A korábbi tantermes kép megmarad az assetek között, de nem része a sorsolásnak. A karakterképek a katalógus `portrait` mezőjében, a hősképek a `HeroPortrait.tsx` leképezésében cserélhetők.
 
-Keskeny kijelzőn a tábla megtartja az arányait és oldalra görgethető, a kéz külön, a képernyő szélességén belül marad. A teljes arénához a fekvő nézet kényelmesebb.
+Álló telefonon a fogadó és a csapat egymás alá kerül. Öt vagy több minion két sorban látszik. A kéz, a körváltás és a bolt vezérlői végig a képernyőn maradnak. A tele kezet oldalra lehet húzni. A Lapinfó gomb után egy kártyára koppintva olvasható a teljes képesség. A tabella, a hősképesség és a beállítások külön megnyithatók.
 
-A rövid suhintás-, találat-, pajzs-, buff-, vásárlás- és kijátszáshangok Web Audio-val előállított saját effektek. Nincs háttérzene vagy külső hangletöltés. A hang az első kattintás vagy billentyűleütés után használható; a fejléc némítógombja megjegyzi a beállítást. A hangrendszer hibája nem akadályozza a játékot.
+A rövid harci hangok és a sorozatokhoz tartozó bejátszások helyi hangfájlokból szólnak. A hőshöz beállított zene a YouTube-lejátszóval érhető el a meccs alatt. A fejlécben található a némítás, a beállítások között a lejátszó.
 
 A támadó a célpont közepéig mozdul, majd visszatér a saját helyére. Az ütközéshez irányított visszalökés, rövid rázkódás, szikrák és sebzésszámok tartoznak. A mozgás sebessége a tesztpadon állítható, a csökkentett mozgás beállítása továbbra is támogatott.
 
@@ -91,7 +93,7 @@ Készítők: **Kovács Kevin és Csillag Gergő Zsolt**.
 - [Szerkeszthető projektterv](documentation/Online_strategiai_kartyajatek_projektterv.docx)
 - [Projektterv PDF](documentation/Online_strategiai_kartyajatek_projektterv.pdf)
 
-Match pool: exactly 80 designs, with 12 cards from each of five active tribes (two per tier), 12 Neutral cards, and eight All-type cards. All-type cards count as every tribe; Neutral cards count as none. The catalog includes separate filters for both, and each tribe filter also includes All-type cards. Card availability is balanced by count and tier; combat values still require playtesting.
+A 360 lapos katalógusból egy meccsben 83 különböző lap és 965 fizikai példány érhető el. Öt aktív törzs egyenként 12 lapot ad. A készlethez 12 forgó semleges, három állandó semleges erősítő és nyolc minden típusú lap tartozik. A teljes készlet szövegeit és az egyensúlymérést a [kártyakatalógus](docs/card-pool.md) tartalmazza.
 
 Combat keywords: 24 recruitable cards now use Stealth, Windfury, Venomous or Reborn. See [keyword rules](docs/keywords.md) and the [measured balance report](docs/keyword-balance.md). Run `npm run test:keyword-balance` to reproduce the benchmark. Restart the development server and begin a new match after this rules/catalog update.
 

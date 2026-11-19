@@ -19,7 +19,7 @@ try{
  await page.goto(`http://127.0.0.1:${port}`);await page.locator('.start-button:enabled').waitFor();await page.locator('.start-button').click();await page.locator('.hero-offer').first().waitFor();
  const session=[...server.sessions.values()][0],m=session.match;let p=m.players[0],enemy=m.players[1];
  p.heroOffers=['original-2','original-12','original-1'];await page.reload();await page.locator('.hero-offer').first().waitFor();assert.equal(await page.locator('.hero-offer .hero-media-badges').count(),3);
- await page.locator('.hero-offer').first().click();await page.locator('.youtube-host iframe').waitFor();
+ await page.locator('.hero-offer').first().click();await page.locator('.youtube-host iframe').waitFor({state:'attached'});
  const calls=()=>page.evaluate(()=>(window as unknown as {musicCalls:unknown[][]}).musicCalls);
  assert.ok((await calls()).some(c=>c[0]==='create'&&c[1]===HERO_MUSIC['original-2'].videoId));
  await page.getByRole('button',{name:'Hang kikapcsolása'}).click();assert.ok((await calls()).some(c=>c[0]==='pause'));await page.getByRole('button',{name:'Hang bekapcsolása'}).click();
@@ -39,9 +39,9 @@ try{
   for(let i=0;i<5&&!(await page.locator(`[data-attack-style="${style}"]`).count());i++){await page.getByRole('button',{name:'Esemény léptetése'}).click();await page.waitForTimeout(50);}
   await page.locator(`[data-attack-style="${style}"]`).waitFor({state:'attached'});await page.waitForTimeout(390);await page.screenshot({path:`test-results/media/${style}-flight.png`,fullPage:true});await page.waitForTimeout(250);assert.ok(await page.locator('.impact-shockwave').count());await page.screenshot({path:`test-results/media/${style}.png`,fullPage:true});
  }
- await page.getByRole('button',{name:'Animációk ki'}).or(page.getByRole('button',{name:'Animációk be'})).click();
+ await page.locator('.settings-toggle').click();await page.getByRole('button',{name:'Animációk ki'}).or(page.getByRole('button',{name:'Animációk be'})).click();await page.keyboard.press('Escape');
  await page.getByRole('button',{name:'Következő kör'}).click();await page.locator('.shop .unit').first().waitFor();assert.equal(await page.locator('.signature-attack').count(),0);
- p=m.players[0];p.heroId='original-35';await page.reload();await page.locator('.youtube-host iframe').waitFor();assert.ok((await calls()).some(c=>c[0]==='create'&&c[1]===HERO_MUSIC['original-35'].playlistId));
+ p=m.players[0];p.heroId='original-35';await page.reload();await page.locator('.youtube-host iframe').waitFor({state:'attached'});assert.ok((await calls()).some(c=>c[0]==='create'&&c[1]===HERO_MUSIC['original-35'].playlistId));
  await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:'test-results/media/mobile.png',fullPage:true});
  assert.deepEqual(errors,[]);await writeFile('test-results/media/report.json',JSON.stringify({decodedFiles:urls.length,seriesPlay:true,signatures:3,musicMapping:true,playlist:true,mute:true,mobile:true,errors},null,2));console.log('Media checks passed: downloaded files decode, series play, three signatures, music, mute, mobile.');
 }finally{await browser.close();await server.close();}

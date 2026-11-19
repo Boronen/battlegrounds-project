@@ -2,10 +2,11 @@ import {powerState,currentPower,effectivePowerId,BORROWABLE_POWERS,minionPrice,e
 import { selectMatchPool } from './match-pool';
 import { CHARACTERS, HEROES, character, hero,unitDefinition } from './catalog';
 import { fight } from './combat';
+import {changeStats,effectSize,minionAbility,tribalAllies,triggerCount} from './minion-effects';
 import {hasKeyword} from './keywords';
 import { pick, random, shuffle } from './random';
 import { damageCap, RULES } from './rules';
-import type { Action, Battle, Match, Player, Unit } from './types';
+import type { Ability, Action, Battle, Match, Player, Unit } from './types';
 export class RuleError extends Error { constructor(public code:string,message:string){super(message);} }
 function ensure(ok:unknown,code:string,message:string):asserts ok{if(!ok)throw new RuleError(code,message);}
 const alive=(p:Player)=>p.hp>0;
@@ -34,9 +35,47 @@ function merge(m:Match,p:Player){
   const gold=makeUnit(m,c.id,true);gold.copies=group.reduce((n,u)=>n+(u.token?0:u.copies),0);gold.token=gold.copies===0;gold.generated=group.some(u=>u.generated);if(gold.token)gold.ability=structuredClone(c.ability);gold.keywords=[...new Set(group.flatMap(u=>u.keywords||[]).concat(c.keywords||[]))];gold.attack+=group.reduce((s,u)=>s+u.attack-c.attack,0);gold.health+=group.reduce((s,u)=>s+u.health-c.health,0);gold.drunk=group.some(u=>u.drunk);gold.shield=group.some(u=>u.shield);gold.rewardTier=1;p.hand.push(gold);m.log.push(`${p.name}: tripla – ${c.name}.`);merge(m,p);return;
  }
 }
+function recruitEffect(m:Match,p:Player,source:Unit,ability:Ability,target?:Unit){
+ const hs=powerState(p);
+ const questBonus=ability.trigger==='play'&&hs.completed&&hs.quest==='battlecries'?2:1;
+ const count=triggerCount(p.board,ability.trigger,questBonus)*(ability.repeats??1);
+ const size=effectSize(source);
+ for(let cast=0;cast<count;cast++){
+  if(ability.effect==='gold'){
+   p.gold+=(ability.amount??1)*size;
+   continue;
+  }
+  if(ability.effect==='recruit'){
+   for(let i=0;i<size&&p.hand.length+hs.spellHand.length<RULES.handSize;i++){
+    const unit=draw(m,Math.min(p.tier,ability.amount??p.tier),true);
+    if(!unit)break;
+    p.hand.push(unit);
+    merge(m,p);
+   }
+   continue;
+  }
+  const position=p.board.indexOf(source);
+  const others=p.board.filter(u=>u!==source);
+  const targets={
+   self:[source],other:target?[target]:ability.target==='other'&&ability.trigger!=='play'&&others.length?[pick(m,others)]:[],
+   allies:others,left:[p.board[position-1]],neighbors:[p.board[position-1],p.board[position+1]],
+   tribe:ability.target==='tribe'?tribalAllies(p.board,source):[],enemy:[],enemies:[],
+  }[ability.target];
+  for(const unit of targets)if(unit)changeStats(unit,ability,size);
+ }
+}
+
+function turnEffects(m:Match,p:Player,timing:'turnStart'|'turnEnd'){
+ for(const unit of [...p.board]){
+  if(!p.board.includes(unit))continue;
+  const ability=minionAbility(unit);
+  if(ability?.trigger===timing)recruitEffect(m,p,unit,ability);
+ }
+}
 function beginRecruit(m:Match){
  m.round++;m.phase='recruit';m.battles=[];m.pendingDamage={};
- for(const p of m.players.filter(alive)){const hs=powerState(p);hs.guessOptions=[];hs.guessResult=undefined;if(m.heroSecrets)delete m.heroSecrets[p.id];if(p.heroId==='original-17'){hs.borrowedId=undefined;hs.powerOffers=shuffle(m,BORROWABLE_POWERS.filter(id=>id!=='original-13'||m.round>=3)).slice(0,2);hs.cooldownUntil=0;hs.combination=[];}if(m.round===1&&p.heroId==='original-22'){hs.maxHp=30+(m.players.some(q=>q.heroId==='original-25')?20:30);p.hp=hs.maxHp;}hs.carriedGold=p.heroId==='original-18'?Math.min(p.gold,[0,1,2,4,5,7,9][p.tier]):0;p.gold=Math.min(10,m.round+2)+(hs.maxGold-10)+hs.deferredGold+hs.carriedGold;hs.deferredGold=0;hs.deferSales=false;hs.freeSpellUsed=false;if(m.round===1){if(p.heroId==='original-10')hs.quest=pick(m,['deaths','battlecries'] as const);if(p.heroId==='original-4'||p.heroId==='original-12'){const u=makeUnit(m,p.heroId==='original-4'?-1:-2);u.token=true;u.generated=true;u.copies=0;p.hand.push(u);}}p.ready=false;p.powerUsed=false;p.upgradeCost=Math.max(0,p.upgradeCost-(m.round>1?1:0));for(const u of p.board)u.shield=false;fillShop(m,p,p.frozen);p.frozen=false;}
+ for(const p of m.players.filter(alive)){const hs=powerState(p);hs.guessOptions=[];hs.guessResult=undefined;if(m.heroSecrets)delete m.heroSecrets[p.id];if(p.heroId==='original-17'){hs.borrowedId=undefined;hs.powerOffers=shuffle(m,BORROWABLE_POWERS.filter(id=>id!=='original-13'||m.round>=3)).slice(0,2);hs.cooldownUntil=0;hs.combination=[];}if(m.round===1&&p.heroId==='original-22'){hs.maxHp=30+(m.players.some(q=>q.heroId==='original-25')?20:30);p.hp=hs.maxHp;}hs.carriedGold=p.heroId==='original-18'?Math.min(p.gold,[0,1,2,4,5,7,9][p.tier]):0;p.gold=Math.min(10,m.round+2)+(hs.maxGold-10)+hs.deferredGold+hs.carriedGold;hs.deferredGold=0;hs.freeSpellUsed=false;if(m.round===1){if(p.heroId==='original-10')hs.quest=pick(m,['deaths','battlecries'] as const);if(p.heroId==='original-4'||p.heroId==='original-12'){const u=makeUnit(m,p.heroId==='original-4'?-1:-2);u.token=true;u.generated=true;u.copies=0;p.hand.push(u);}}p.ready=false;p.powerUsed=false;p.upgradeCost=Math.max(0,p.upgradeCost-(m.round>1?1:0));for(const u of p.board)u.shield=false;fillShop(m,p,p.frozen);p.frozen=false;}
+ for(const p of m.players.filter(alive))turnEffects(m,p,'turnStart');
  m.pairings=pairPlayers(m);m.log.push(`${m.round}. kör: vásárlás.`);
 }
 function pairPlayers(m:Match):[string,string][]{
@@ -58,13 +97,17 @@ function perform(m:Match,p:Player,a:Action){
  }
  if(a.type==='chooseHero'){ensure(m.phase==='hero'&&!p.heroId,'PHASE','Most nem választhatsz hőst.');ensure(p.heroOffers.includes(a.heroId),'HERO','Ez a hős nincs az ajánlatban.');assignHero(p,a.heroId);if(m.players.every(p=>p.heroId))beginRecruit(m);return;}
  ensure(m.phase==='recruit'&&alive(p)&&!p.ready,'PHASE','Ez a művelet most nem elérhető.');
- if(a.type!=='discover'&&a.type!=='ready')ensure(!p.discover.length,'DISCOVER','Előbb válassz jutalmat.');
+ if(p.discover.length&&a.type!=='discover'&&a.type!=='ready'){
+  const full=p.hand.length+powerState(p).spellHand.length>=RULES.handSize;
+  const freesSpace=a.type==='play'||a.type==='sell'||(a.type==='power'&&a.mode==='castSpell');
+  ensure(full&&freesSpace,'DISCOVER','Előbb válassz jutalmat.');
+ }
  if(a.type==='power'&&(a.mode==='buySpell'||a.mode==='castSpell')){const hs=powerState(p);if(a.mode==='buySpell'){const spell=hs.spellShop.find(s=>s.uid===a.spellUid);ensure(spell,'SPELL','Nincs ilyen spell.');ensure(p.hand.length+hs.spellHand.length<10,'HAND','Megtelt a kezed.');const free=p.board.some(u=>u.characterId===-2&&u.spellUpgrades?.free)&&!hs.freeSpellUsed;const cost=free?0:spell.cost;ensure(p.gold>=cost,'GOLD','Nincs elég arany.');p.gold-=cost;if(free)hs.freeSpellUsed=true;hs.spellHand.push(spell);hs.spellShop=hs.spellShop.filter(s=>s!==spell);}else{const spell=hs.spellHand.find(s=>s.uid===a.spellUid);ensure(spell,'SPELL','Nincs ilyen spell a kézben.');const upgrade=!['buff','shield'].includes(spell.kind);const targets=upgrade?p.board.filter(u=>u.characterId===-2):p.board.filter(u=>u.uid===a.targetUid);ensure(targets.length,'TARGET',upgrade?'Előbb játssz ki egy Battlecruisert.':'Válassz saját miniont.');for(let cast=0;cast<(hs.completed&&hs.quest==='deaths'?2:1);cast++)for(const target of targets){if(spell.kind==='buff'){target.attack+=spell.tier;target.health+=spell.tier;}else if(spell.kind==='shield')target.shield=true;else applyUpgrade(target,spell);}hs.spellHand=hs.spellHand.filter(s=>s!==spell);}return;}
  switch(a.type){
   case 'buy':{const index=p.shop.findIndex(u=>u?.uid===a.uid);ensure(index>=0,'UNIT','Nincs ilyen bolti egység.');ensure(p.gold>=minionPrice(p,p.shop[index]!),'GOLD','Nincs elég aranyad.');ensure(p.hand.length+powerState(p).spellHand.length<RULES.handSize,'HAND','Megtelt a kezed.');p.gold-=minionPrice(p,p.shop[index]!);p.hand.push(p.shop[index]!);p.shop[index]=null;merge(m,p);break;}
-  case 'sell':{const i=p.board.findIndex(u=>u.uid===a.uid);ensure(i>=0,'UNIT','Csak táblán lévő egység adható el.');release(m,p.board[i]);p.board.splice(i,1);if(powerState(p).deferSales)powerState(p).deferredGold+=2;else p.gold=Math.max(p.gold,Math.min(powerState(p).maxGold,p.gold+1));break;}
-  case 'play':{const i=p.hand.findIndex(u=>u.uid===a.uid);ensure(i>=0,'UNIT','Nincs ilyen egység a kezedben.');ensure(p.board.length<7||([-4,-5,-6].includes(p.hand[i].characterId)&&p.board.some(u=>u.uid===a.targetUid)),'BOARD','Legfeljebb 7 egység lehet a táblán.');const u=p.hand[i],c=unitDefinition(u),ab=c.ability;const target=p.board.find(x=>x.uid===a.targetUid);if(ab.trigger==='play'&&ab.target==='other'&&p.board.length)ensure(target,'TARGET','Válassz egy saját egységet a képességhez.');const pos=a.position??p.board.length;ensure(Number.isInteger(pos)&&pos>=0&&pos<=p.board.length,'POSITION','Érvénytelen hely.');p.hand.splice(i,1);if([-4,-5,-6].includes(u.characterId)&&target){target.attack+=u.attack;target.health+=u.health;break;}p.board.splice(pos,0,u);
-   if(ab.trigger==='play'){const repeated=powerState(p).completed&&powerState(p).quest==='battlecries'?2:1;for(let cast=0;cast<repeated;cast++){let targets:Unit[]=ab.target==='self'?[u]:ab.target==='other'?(target?[target]:[]):ab.target==='allies'?p.board.filter(x=>x!==u):[p.board[pos-1],p.board[pos+1]].filter(Boolean);for(const t of targets){t.attack+=(ab.attack||0)*(u.golden?2:1);t.health+=(ab.health||0)*(u.golden?2:1);}}completeQuest(p,1,'battlecries');}
+  case 'sell':{const i=p.board.findIndex(u=>u.uid===a.uid);ensure(i>=0,'UNIT','Csak táblán lévő egység adható el.');release(m,p.board[i]);p.board.splice(i,1);if(p.heroId==='original-1')powerState(p).deferredGold+=2;else p.gold=Math.max(p.gold,Math.min(powerState(p).maxGold,p.gold+1));break;}
+  case 'play':{const i=p.hand.findIndex(u=>u.uid===a.uid);ensure(i>=0,'UNIT','Nincs ilyen egység a kezedben.');ensure(p.board.length<7||([-4,-5,-6].includes(p.hand[i].characterId)&&p.board.some(u=>u.uid===a.targetUid)),'BOARD','Legfeljebb 7 egység lehet a táblán.');const u=p.hand[i],ab=minionAbility(u);const target=p.board.find(x=>x.uid===a.targetUid);if(ab?.trigger==='play'&&ab.target==='other'&&p.board.length)ensure(target,'TARGET','Válassz egy saját egységet a képességhez.');const pos=a.position??p.board.length;ensure(Number.isInteger(pos)&&pos>=0&&pos<=p.board.length,'POSITION','Érvénytelen hely.');p.hand.splice(i,1);if([-4,-5,-6].includes(u.characterId)&&target){target.attack+=u.attack;target.health+=u.health;break;}p.board.splice(pos,0,u);
+   if(ab?.trigger==='play'){recruitEffect(m,p,u,ab,target);completeQuest(p,1,'battlecries');}
    if(u.rewardTier){p.rewards.push(Math.min(6,p.tier+1));delete u.rewardTier;discover(m,p);}break;}
   case 'reorder':{ensure(a.uids.length===p.board.length&&new Set(a.uids).size===p.board.length&&a.uids.every(id=>p.board.some(u=>u.uid===id)),'ORDER','Az átrendezés minden egységet pontosan egyszer tartalmazzon.');p.board=a.uids.map(id=>p.board.find(u=>u.uid===id)!);break;}
   case 'refresh':ensure(p.gold>=1,'GOLD','A frissítéshez 1 arany kell.');p.gold--;fillShop(m,p);break;
@@ -84,7 +127,6 @@ function perform(m:Match,p:Player,a:Action){
     case 'original-16':ensure(!hs.onceUsed,'ONCE','Már felhasználtad.');ensure(own,'TARGET','Válassz saját miniont.');ensure(p.board.length<7,'BOARD','A másolathoz szabad hely kell.');{const clone={...structuredClone(own),uid:`u${m.nextUid++}`,token:true,generated:true,copies:0,ability:structuredClone(unitDefinition(own).ability)};p.board.splice(p.board.indexOf(own)+1,0,clone);}hs.onceUsed=true;break;
     case 'original-26':ensure(a.mode==='upgrade','CHOICE','Válaszd a fejlesztést, vagy hagyd Csefit harcolni.');hs.championAttack+=p.tier;hs.championUpgradeRound=m.round;break;
     case 'original-31':hs.maxGold++;break;
-    case 'original-1':hs.deferSales=true;break;
     case 'original-34':{const roll=1+Math.floor(random(m)*6);hs.lastRoll=roll;hs.cooldownUntil=m.round+roll+1;p.gold+=roll;break;}
     case 'original-3':ensure(index>=0,'TARGET','Válassz bolti miniont.');ensure(p.hand.length+powerState(p).spellHand.length<10,'HAND','Megtelt a kezed.');p.hand.push(p.shop[index]!);p.shop[index]=null;merge(m,p);break;
     case 'original-8':ensure(!hs.onceUsed,'ONCE','Már felhasználtad.');ensure(own&&!own.golden,'TARGET','Válassz nem arany saját miniont.');own.attack+=unitDefinition(own).attack;own.health+=unitDefinition(own).health;own.golden=true;hs.onceUsed=true;break;
@@ -108,7 +150,14 @@ export function botTurn(m:Match,id:string){
  for(let n=0;n<50;n++){
   const p=get();
   if(powerState(p).combination.length){run({type:'power',mode:'combine',choice:0});continue;}
-  if(p.discover.length){if(p.hand.length>=10)break;run({type:'discover',uid:[...p.discover].sort((a,b)=>score(b)-score(a))[0].uid});continue;}
+  if(p.discover.length){
+   if(p.hand.length+powerState(p).spellHand.length<RULES.handSize){
+    run({type:'discover',uid:[...p.discover].sort((a,b)=>score(b)-score(a))[0].uid});continue;
+   }
+   if(p.hand.length&&p.board.length===RULES.boardSize){
+    run({type:'sell',uid:[...p.board].sort((a,b)=>score(a)-score(b))[0].uid});continue;
+   }
+  }
   if(p.hand.length&&p.board.length<7){run({type:'play',uid:p.hand[0].uid,targetUid:p.board[0]?.uid});continue;}
   if(p.hand.length&&p.board.length===7){const weakest=[...p.board].sort((a,b)=>score(a)-score(b))[0];if(score(p.hand[0])>score(weakest)){run({type:'sell',uid:weakest.uid});continue;}}
   if(!p.powerUsed&&currentPower(p)&&!currentPower(p)!.passive&&p.gold>=currentPower(p)!.cost){const target=effectivePowerId(p)==='original-3'?p.shop.find(Boolean)?.uid:p.board[0]?.uid;if(run({type:'power',targetUid:target,mode:effectivePowerId(p)==='original-26'?'upgrade':undefined}))continue;}
@@ -132,7 +181,7 @@ export function advance(m:Match){
  if(m.phase==='hero'){for(const p of [...m.players])if(!p.heroId)act(m,p.id,{type:'chooseHero',heroId:p.heroOffers[0]});return;}
  if(m.phase==='recruit'){
   for(const p of [...m.players])if(p.bot)botTurn(m,p.id);
-  for(const p of m.players){if(!alive(p))continue;if(p.heroId==='original-22'&&m.players.some(q=>q.heroId==='original-25'))for(const u of p.board)u.attack+=3;if(p.heroId==='original-21'&&p.board.filter(u=>u.drunk).length>=5)powerState(p).drunkQuest=true;if(p.heroId==='original-5')p.frozen=true;for(const u of p.board.filter(u=>u.spellUpgrades?.magnetic)){if(p.hand.length+powerState(p).spellHand.length<10){const token=makeUnit(m,pick(m,[-4,-5,-6]));token.token=true;token.copies=0;p.hand.push(token);}}p.lastBoard=structuredClone(p.board);p.ready=true;p.opponents.push(m.pairings.flat().includes(p.id)?m.pairings.find(pair=>pair.includes(p.id))!.find(id=>id!==p.id)!:'');}
+  for(const p of m.players){if(!alive(p))continue;turnEffects(m,p,'turnEnd');if(p.heroId==='original-22'&&m.players.some(q=>q.heroId==='original-25'))for(const u of p.board)u.attack+=3;if(p.heroId==='original-21'&&p.board.filter(u=>u.drunk).length>=5)powerState(p).drunkQuest=true;if(p.heroId==='original-5')p.frozen=true;for(const u of p.board.filter(u=>u.spellUpgrades?.magnetic)){if(p.hand.length+powerState(p).spellHand.length<10){const token=makeUnit(m,pick(m,[-4,-5,-6]));token.token=true;token.copies=0;p.hand.push(token);}}p.lastBoard=structuredClone(p.board);p.ready=true;p.opponents.push(m.pairings.flat().includes(p.id)?m.pairings.find(pair=>pair.includes(p.id))!.find(id=>id!==p.id)!:'');}
   m.phase='combat';m.battles=[];m.pendingDamage={};const living=m.players.filter(alive).length;
   for(const [leftId,rightId] of m.pairings){const l=m.players.find(p=>p.id===leftId)!,r=m.players.find(p=>p.id===rightId)!;const result=fight(l.board,alive(r)?r.board:r.lastBoard,Math.floor(random(m)*4294967296),{champions:[l,r].map(p=>p.heroId==='original-26'&&powerState(p).championUpgradeRound!==m.round?powerState(p).championAttack:0)});const combatUnits=new Map(result.events.flatMap(e=>[...e.left,...e.right]).map(u=>[u.uid,u]));for(const [side,p] of [[0,l],[1,r]] as const){if(!alive(p))continue;powerState(p).fallenLast=[];const ownIds=new Set((side===0?result.events[0]?.left:result.events[0]?.right)?.map(u=>u.uid)||[]);for(const e of result.events){for(const u of (side===0?e.left:e.right))ownIds.add(u.uid);if(e.type==='death'){const dead=combatUnits.get(e.actor||'');if(dead&&!dead.heroFighter)powerState(p).fallenLast!.push(dead.characterId);}if(e.type==='death'&&ownIds.has(e.actor||''))completeQuest(p,1,'deaths');}}const winner=result.winner===0?l:result.winner===1?r:null;const loser=winner===l?r:l;const raw=winner?winner.tier+result.survivors.reduce((n,u)=>n+(u.token&&!u.generated?1:unitDefinition(u).tier),0):0;const damage=Math.max(0,Math.min(raw,damageCap(m.round,living))-(loser.heroId==='original-7'?loser.tier:0));if(winner&&alive(loser))m.pendingDamage[loser.id]=(m.pendingDamage[loser.id]||0)+damage;for(const [side,p] of [[0,l],[1,r]] as const)if(alive(p))m.pendingDamage[p.id]=(m.pendingDamage[p.id]||0)+result.heroDamage[side];const battle:Battle={leftId,rightId,ghost:!alive(r),events:result.events,winner:winner?.id||null,damage};m.battles.push(battle);}
  }else{

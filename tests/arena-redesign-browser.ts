@@ -66,7 +66,7 @@ try{
  }
  m.phase='recruit';session.paused=false;p.gold=0;
  await page.setViewportSize({width:390,height:844});await page.reload();await page.locator('.board .unit').nth(6).waitFor();await overflow();
- assert.ok(await page.locator('.board-viewport').evaluate(el=>el.scrollWidth>el.clientWidth));
+ assert.ok(await page.locator('.board-viewport').evaluate(el=>el.scrollWidth<=el.clientWidth+1));
  assert.ok(await page.locator('.upgrade-control').isDisabled());assert.ok(await page.locator('.refresh-control').isDisabled());
  await page.screenshot({path:`${path}/board-mobile.png`,fullPage:true});
  // Artwork is decorative: controls remain available even when background images fail.
@@ -94,7 +94,7 @@ try{
  await page.getByRole('button',{name:'Következő kör'}).click();await page.locator('.shop .unit').first().waitFor();await page.waitForTimeout(700);
  assert.equal(await page.locator('[data-effect]').count(),0);assert.equal(await page.locator('.arena,.unit-wrap').evaluateAll(nodes=>nodes.flatMap(n=>n.getAnimations()).filter(a=>a.playState==='running').length),0);
  assert.deepEqual(errors,[]);
- await writeFile(`${path}/report.json`,JSON.stringify({arenas:10,screenshots:sheet.length,controlHitAreas:true,keyboardFocusAndActivation:true,touchActivation:true,dragDropAndSell:true,phoneScroll:true,missingArtworkFallback:true,combatEffects:[...seen],interruptionCleanup:true,browserErrors:errors},null,2));
+ await writeFile(`${path}/report.json`,JSON.stringify({arenas:10,screenshots:sheet.length,controlHitAreas:true,keyboardFocusAndActivation:true,touchActivation:true,dragDropAndSell:true,phoneBoardFits:true,missingArtworkFallback:true,combatEffects:[...seen],interruptionCleanup:true,browserErrors:errors},null,2));
  await page.setViewportSize({width:1200,height:1100});
  await page.setContent(`<html><style>body{background:#101218;color:#ddd;font:14px sans-serif;margin:20px}main{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}figure{margin:0}img{width:100%}figcaption{padding:5px}</style><main>${sheet.map(s=>`<figure><img src="data:image/png;base64,${s.image}"><figcaption>${s.label}</figcaption></figure>`).join('')}</main></html>`);
  await page.screenshot({path:`${path}/all-arenas-contact-sheet.jpg`,type:'jpeg',quality:65,fullPage:true});

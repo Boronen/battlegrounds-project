@@ -26,10 +26,14 @@ try {
  const match=[...server.sessions.values()][0].match;
  const active=CHARACTERS.filter(c=>match.activeCardIds.includes(c.id));
  await toggle.click();
- assert.equal(await dialog.locator('.pool-card').count(),80);
+ assert.equal(await dialog.locator('.pool-card').count(),83);
+ await dialog.getByText('83 kártya az aktuális mérkőzésben · 965 kezdő példány').waitFor();
+ await dialog.getByRole('searchbox',{name:'Keresés'}).fill('Rally');
+ assert.equal(await dialog.locator('.pool-card').count(),active.filter(c=>c.ability.trigger==='rally').length);
+ await dialog.getByRole('searchbox',{name:'Keresés'}).fill('');
  await mkdir('test-results',{recursive:true});
  await page.screenshot({path:'test-results/catalog-templates.png',fullPage:true});
- assert.equal(await dialog.locator('.pool-card>.tribe-surface').count(),80);
+ assert.equal(await dialog.locator('.pool-card>.tribe-surface').count(),83);
  assert.equal(await dialog.locator('.pool-card img').count(),0);
  assert.equal(await dialog.getByRole('combobox',{name:'Törzs'}).locator('option').count(),8);
  assert.deepEqual((await dialog.locator('.pool-card').evaluateAll(cards=>cards.map(c=>Number(c.getAttribute('data-card-id'))))).sort((a,b)=>a-b),match.activeCardIds);
@@ -48,7 +52,7 @@ try {
   await dialog.getByRole('button',{name:/^Összes/}).click();
  }
  await dialog.getByRole('combobox',{name:'Törzs'}).selectOption('');
- for(const [type,count] of [['neutral',12],['all',8]] as const){
+ for(const [type,count] of [['neutral',15],['all',8]] as const){
   await dialog.getByRole('combobox',{name:'Törzs'}).selectOption(type);
   assert.equal(await dialog.locator('.pool-card').count(),count);
   assert.ok((await dialog.locator('.pool-card').evaluateAll(cards=>cards.map(c=>c.getAttribute('data-tribe')))).every(value=>value===type));
@@ -69,11 +73,11 @@ try {
  await page.locator('.hero-offer').first().click();
  await page.locator('.shop .unit').first().waitFor();
  await toggle.click();
- assert.equal(await dialog.locator('.pool-card').count(),80);
+ assert.equal(await dialog.locator('.pool-card').count(),83);
  await page.reload();
  await page.locator('.shop .unit').first().waitFor();
  await toggle.click();
- assert.equal(await dialog.locator('.pool-card').count(),80);
+ assert.equal(await dialog.locator('.pool-card').count(),83);
  await page.setViewportSize({width:390,height:844});
  const bounds=await dialog.boundingBox();
  assert.ok(bounds&&bounds.x>=0&&bounds.x+bounds.width<=390);

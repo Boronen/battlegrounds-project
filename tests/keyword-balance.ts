@@ -2,6 +2,7 @@ import {mkdir,writeFile} from 'node:fs/promises';
 import assert from 'node:assert/strict';
 import {CHARACTERS,character} from '../shared/catalog';
 import {KEYWORD_BASELINES,KEYWORD_DESIGNS} from '../shared/keyword-designs';
+import {changeStats,effectSize,triggerCount} from '../shared/minion-effects';
 import {fight} from '../shared/combat';
 import {pick,random} from '../shared/random';
 import type {Character,Unit} from '../shared/types';
@@ -18,12 +19,15 @@ const scenarios=[
  {name:'shielded',size:7,buff:0,golden:false,shield:true},
 ];
 function build(cards:Character[],prefix:string,s:typeof scenarios[number]):Unit[]{
- const units=cards.map((c,i)=>({uid:prefix+i,characterId:c.id,attack:c.attack*(s.golden?2:1)+s.buff,health:c.health*(s.golden?2:1)+s.buff,golden:s.golden,shield:s.shield,taunt:c.ability.effect==='taunt',copies:s.golden?3:1,keywords:[...(c.keywords||[])]}));
+ const units:Unit[]=cards.map((c,i)=>({uid:prefix+i,characterId:c.id,attack:c.attack*(s.golden?2:1)+s.buff,health:c.health*(s.golden?2:1)+s.buff,golden:s.golden,shield:s.shield,taunt:c.ability.effect==='taunt',copies:s.golden?3:1,keywords:[...(c.keywords||[])]}));
  // Include recruitment value: permanent play buffs have already happened.
- cards.forEach((c,i)=>{const a=c.ability,m=s.golden?2:1;if(a.trigger==='play'&&a.effect==='buff'){
-  const target=a.target==='self'?units[i]:units.find((_,j)=>j!==i);
-  if(target){target.attack+=(a.attack||0)*m;target.health+=(a.health||0)*m;}
- }});
+ const casts=triggerCount(units,'play',1,u=>cards[units.indexOf(u)].ability);
+ cards.forEach((c,i)=>{
+  if(c.ability.trigger!=='play'||c.ability.effect!=='buff')return;
+  const targets=c.ability.target==='neighbors'?[units[i-1],units[i+1]]:
+   c.ability.target==='self'?[units[i]]:[units.find((_,j)=>j!==i)];
+  for(const target of targets)if(target)changeStats(target,c.ability,casts*effectSize(units[i]));
+ });
  return units;
 }
 const rows=[];
@@ -71,7 +75,7 @@ await writeFile('test-results/keyword-balance.md',[
  '| Card | Tier | Keyword | Stats | Baseline peers (%) | Updated peers (%) | Change vs old (pp) | Review |',
  '|---|---:|---|---|---:|---:|---:|---|',
  ...rows.map(r=>'| '+[r.name,r.tier,r.keyword,r.stats,...r.cohortScores.map(s=>pct(s.score)),pct(r.teamDelta),r.review?'YES':''].join(' | ')+' |'),'',
- 'Development used tuning seeds 1-48 and exploratory checks. Raw-seed starting-side bias was corrected before final validation; mixed combat seeds now have explicit starting-side sampling checks. The final seed range is independent of tuning. The midpoint target and 40-60% band were chosen before final validation.',
+ 'Each paired comparison uses the same combat seed and teammates. Both cohorts include the current tier roster. Baseline peers use their pre-keyword card definitions. Starting-side sampling is checked for each scenario.',
  'Duels are diagnostic only: specialists and support cards are not expected to have equal solo strength. Team scores average three-unit, seven-unit, buffed, golden and shielded scenarios. Per-scenario and duel results are in the JSON report.',
  'These experiments do not establish competitive balance, model player choices, or exhaust every synergy. Full-match soak tests verify termination, determinism and pool conservation, not equal card strength.',''
 ].join('\n'));

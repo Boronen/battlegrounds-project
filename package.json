@@ -9,6 +9,8 @@
     "start": "tsx server/index.ts",
     "test": "tsx --test tests/*.test.ts",
     "test:soak": "tsx tests/soak.ts",
+    "test:set-balance": "tsx tests/set-balance.ts",
+    "test:viewport": "tsx tests/viewport-browser.ts",
     "test:browser": "tsx tests/browser.ts",
     "test:card-pool": "tsx tests/card-pool-browser.ts",
     "test:card-templates": "tsx tests/card-templates-browser.tsx",

@@ -56,7 +56,7 @@ test('reroll commands are idempotent, preserve deadlines, survive snapshots and 
 
 test('35 original characters have configured powers, excluded from the recruitable pool',()=>{
  assert.equal(HEROES.length,35);
- assert.equal(CHARACTERS.length,357);
+ assert.equal(CHARACTERS.length,360);
  assert.equal(new Set(HEROES.map(h=>h.id)).size,35);
  for(let id=1;id<=34;id++) {
   const h=hero(`original-${id}`)!;
