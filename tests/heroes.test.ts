@@ -1,3 +1,4 @@
+import {POWER_DEFS} from '../shared/hero-powers';
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { existsSync, readFileSync } from 'node:fs';
@@ -53,14 +54,14 @@ test('reroll commands are idempotent, preserve deadlines, survive snapshots and 
  assert.equal(digest(replayMatch(s.replay())),digest(s.match));
 });
 
-test('34 original characters are powerless heroes, excluded from the recruitable pool',()=>{
- assert.equal(HEROES.length,34);
- assert.equal(CHARACTERS.length,357);
- assert.equal(new Set(HEROES.map(h=>h.id)).size,34);
+test('35 original characters have configured powers, excluded from the recruitable pool',()=>{
+ assert.equal(HEROES.length,35);
+ assert.equal(CHARACTERS.length,360);
+ assert.equal(new Set(HEROES.map(h=>h.id)).size,35);
  for(let id=1;id<=34;id++) {
   const h=hero(`original-${id}`)!;
   assert.ok(h);
-  assert.equal(h.power,null);
+  assert.equal(h.power,POWER_DEFS[h.id]?(POWER_DEFS[h.id].passive?'passive':'custom'):null);
   assert.equal(h.armor,0);
   assert.equal(h.portrait,`/portraits/sketch/${id}.png`);
   assert.ok(existsSync(new URL('../public'+h.portrait,import.meta.url)));
@@ -69,11 +70,11 @@ test('34 original characters are powerless heroes, excluded from the recruitable
  for(const retired of ['mentor','guardian','treasurer','inventor']) assert.equal(hero(retired),undefined);
  assert.ok(CHARACTERS.every(c=>c.id>=35));
  const portraits=HEROES.map(h=>readFileSync(new URL('../public'+h.portrait,import.meta.url)).toString('base64'));
- assert.equal(new Set(portraits).size,34);
+ assert.equal(new Set(portraits).size,35);
  assert.ok(portraits.every(png=>png.startsWith('iVBORw0KGgo')), 'Every hero uses a PNG sketch portrait');
 });
 
-test('every original hero can be selected and power requests are rejected atomically',()=>{
+test('every original hero can be selected and unavailable powers reject atomically',()=>{
  for(const h of HEROES) {
   const m=createMatch(42);
   const player=m.players[0];
@@ -82,7 +83,7 @@ test('every original hero can be selected and power requests are rejected atomic
   assert.equal(m.players[0].heroId,h.id);
   assert.equal(m.players[0].armor,0);
   const before=structuredClone(m);
-  for(const action of [{type:'power'},{type:'power',targetUid:'missing'}] as const) {
+  for(const action of (!h.power||h.power==='passive'?[{type:'power'},{type:'power',targetUid:'missing'}]:[]) as {type:'power';targetUid?:string}[]) {
    assert.throws(()=>act(m,'p0',action),(error:unknown)=>error instanceof RuleError&&error.code==='POWER_UNAVAILABLE');
    assert.deepEqual(m,before);
   }
@@ -90,7 +91,7 @@ test('every original hero can be selected and power requests are rejected atomic
  }
 });
 
-test('hero offers and bot turns use original heroes without activating powers',()=>{
+test('hero offers and bot turns preserve hero and pool invariants',()=>{
  const offered=new Set<string>();
  for(let seed=1;seed<=20;seed++) {
   const m=createMatch(seed,'manual',true);
@@ -101,9 +102,9 @@ test('hero offers and bot turns use original heroes without activating powers',(
    assert.ok(hero(player.heroId));
   }
   autoplay(m);
-  assert.ok(m.players.every(p=>!p.powerUsed));
+  assert.ok(m.players.every(p=>typeof p.powerUsed==='boolean'));
   assert.ok(Object.keys(m.pool).every(id=>Number(id)>=35));
   assertInvariants(m);
  }
- assert.equal(offered.size,34);
+ assert.equal(offered.size,35);
 });

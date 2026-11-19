@@ -1,0 +1,47 @@
+import {chromium} from '@playwright/test';
+import assert from 'node:assert/strict';
+import {mkdir,writeFile} from 'node:fs/promises';
+import {createApp} from '../server/index';
+import {powerState,POWER_DEFS} from '../shared/hero-powers';
+import {makeUnit} from '../shared/engine';
+import {fight} from '../shared/combat';
+import {CHARACTERS} from '../shared/catalog';
+const server=await createApp(true);await new Promise<void>(r=>server.http.listen(0,'127.0.0.1',r));const {port}=server.http.address() as {port:number};
+const browser=await chromium.launch({headless:true,executablePath:'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe'});
+await mkdir('test-results/hero-powers',{recursive:true});const errors:string[]=[];
+try{for(const heroId of Object.keys(POWER_DEFS)){
+ const page=await browser.newPage({viewport:{width:1440,height:1050}});page.on('pageerror',e=>{errors.push(e.message);console.log('PAGE ERROR',heroId,e.message);});console.log('Checking',heroId);await page.addInitScript(()=>localStorage.setItem('battleSound','off'));await page.route('https://www.youtube.com/**',r=>r.abort());
+ await page.goto(`http://127.0.0.1:${port}`);await page.locator('.start-button:enabled').waitFor();await page.locator('.start-button').click();await page.locator('.hero-offer').first().waitFor();const session=[...server.sessions.values()].at(-1)!;session.match.players[0].heroOffers=[heroId];await page.reload();await page.locator('.hero-offer').first().click();await page.locator('.power-launch').click();await page.locator('.hero-abilities').waitFor().catch(async e=>{console.log('Phase',session.match.phase,await page.locator('body').innerText());await page.screenshot({path:'test-results/hero-powers/failure.png',fullPage:true});throw e;});
+ let p=session.match.players[0];assert.ok(await page.locator('.hero-power-details').innerText());assert.ok(await page.locator('.spell-market').isVisible());
+ assert.ok(await page.locator('.spell-market button > .board-socket').count());
+ if(heroId==='original-20'){
+  powerState(p).fallenLast=session.match.activeCardIds.slice(0,3);
+  await page.getByRole('button',{name:/Emlékidézés · 2/}).click();
+  await page.locator('.discover button').nth(2).click();
+  await page.locator('.discover').waitFor({state:'detached'});
+  assert.ok(session.match.players[0].hand.some(unit=>unit.generated&&unit.copies===0));
+ }
+ if(heroId==='original-1'){
+  await page.locator('.ability-passive > .board-socket').waitFor();
+  assert.equal(await page.getByRole('button',{name:/Befektetés/}).count(),0);
+  const id=session.match.activeCardIds[0];
+  session.match.pool[id]--;
+  p.board.push(makeUnit(session.match,id));
+  await page.reload();
+  await page.locator('.board .unit').click();
+  await page.getByRole('button',{name:'Eladás +2 ◉ a következő körben'}).click();
+  await page.locator('.power-launch').click();await page.getByRole('status').filter({hasText:'Következő kör: +2 arany'}).waitFor();
+ }
+ if(heroId==='original-26'){await page.getByRole('button',{name:'Fejlesztés (ebben a körben nem támad)'}).click();await page.locator('.hero-power-details').getByText('2 támadás · Most tanul',{exact:false}).waitFor();assert.equal(powerState(session.match.players[0]).championAttack,2);}
+ if(heroId==='original-26'){const m=session.match;p=m.players[0];const enemy=m.players[1];const id=35;p.board=Array.from({length:7},()=>makeUnit(m,id));enemy.board=Array.from({length:7},()=>makeUnit(m,id));m.round++;m.phase='combat';m.pairings=[['p0',enemy.id]];session.paused=true;m.battles=[{leftId:'p0',rightId:enemy.id,ghost:false,events:fight(p.board,enemy.board,44,{champions:[2,0]}).events,winner:null,damage:0}];await page.reload();await page.locator('.board .unit').nth(6).waitFor();assert.equal(await page.locator('.board .unit').count(),7);await page.locator('.player-hero .champion-attack-badge').waitFor();await page.locator('.tools-toggle').click();const moving=page.waitForFunction(()=>document.querySelector('.player-hero')?.getAnimations().some(a=>a.playState==='running'));await page.getByRole('button',{name:'Esemény léptetése'}).click();await moving;await page.screenshot({path:'test-results/hero-powers/csefi-combat.png',fullPage:true});}
+ if(heroId==='original-31'){await page.getByRole('button',{name:'OIL · 3'}).click();await page.waitForTimeout(100);assert.equal(powerState(session.match.players[0]).maxGold,11);}
+ if(heroId==='original-3'){const uid=p.shop[0]!.uid;await page.locator('.hero-power-details select').selectOption(uid);await page.getByRole('button',{name:'Lopás · 2'}).click();await page.locator('.hand .unit').waitFor();assert.ok(session.match.players[0].hand.some(u=>u.uid===uid));}
+ if(heroId==='original-9'){p.hp=20;const uid=p.shop[0]!.uid;await page.locator('.hero-power-details select').selectOption(uid);await page.getByRole('button',{name:'Elszívás · 2'}).click();await page.locator('.drain-smoke').waitFor({state:'attached'});await page.screenshot({path:'test-results/hero-powers/drain.png',fullPage:true});}
+ if(heroId==='original-12'){await page.keyboard.press('Escape');await page.locator('.hand .unit').click();await page.locator('.board .unit').waitFor();await page.locator('.power-launch').click();await page.locator('.spell-market>div').first().locator('button').first().click();await page.locator('.spell-market>div').last().locator('button').first().click();await page.waitForTimeout(100);assert.equal(powerState(session.match.players[0]).spellHand.length,0);}
+ if(heroId==='original-13'){p=session.match.players[0];session.match.round=3;p.gold=5;await page.reload();await page.locator('.power-launch').click();await page.getByRole('button',{name:'Rajzasztal · 2'}).click();await page.locator('.combination button').first().click();await page.locator('.hand .unit').waitFor();assert.ok(session.match.players[0].hand[0].ability);}
+ if(heroId==='original-14'){p=session.match.players[0];const pair=session.match.pairings.find(pair=>pair.includes(p.id))!;const foe=session.match.players.find(q=>q.id===pair.find(id=>id!==p.id))!;foe.board=[makeUnit(session.match,session.match.activeCardIds[0])];await page.getByRole('button',{name:'Olvasom a játékod · 0'}).click();await page.locator('.guess-choice button').first().waitFor();assert.equal(await page.locator('.guess-choice button').count(),2);await page.locator('.guess-choice button').first().click();await page.waitForTimeout(100);assert.equal(powerState(session.match.players[0]).guessOptions?.length,0);}
+ if(heroId==='original-16'){p=session.match.players[0];const id=session.match.activeCardIds[0];session.match.pool[id]--;p.board.push(makeUnit(session.match,id));await page.reload();await page.locator('.power-launch').click();await page.locator('.hero-power-details select').selectOption(p.board[0].uid);await page.getByRole('button',{name:'Pontos másolat · 0'}).click();await page.locator('.board .unit').nth(1).waitFor();}
+ if(heroId==='original-17'){await page.locator('.power-choice button').first().waitFor();assert.equal(await page.locator('.power-choice button').count(),2);await page.locator('.power-choice button').first().click();await page.locator('.power-choice').waitFor({state:'detached'});assert.ok(powerState(session.match.players[0]).borrowedId);}
+ if(heroId==='original-8'){p=session.match.players[0];const id=session.match.activeCardIds[0];session.match.pool[id]--;p.board.push(makeUnit(session.match,id));await page.reload();await page.locator('.power-launch').click();await page.locator('.hero-power-details select').selectOption(p.board[0].uid);await page.getByRole('button',{name:'Aranyérintés · 0'}).click();await page.locator('.board .unit.golden').waitFor();}
+ await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),heroId);if(heroId==='original-13'||heroId==='original-12')await page.screenshot({path:`test-results/hero-powers/${heroId}-mobile.png`,fullPage:true});await page.close();
+}assert.deepEqual(errors,[]);await writeFile('test-results/hero-powers/browser.json',JSON.stringify({heroes:Object.keys(POWER_DEFS).length,realCommands:true,mobileOverflow:false,errors},null,2));console.log('All configured hero panels render; real targeted commands, spells, combination, smoke and mobile layout pass.');}finally{await browser.close();await server.close();}

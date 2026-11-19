@@ -1,7 +1,7 @@
 import type {Character, Keyword} from './types';
 import {KEYWORDS} from './keywords';
 
-// Keep tiers and tribes unchanged: the 80-card match quotas remain intact.
+// Keyword assignments preserve the tier and tribe of each card.
 export const KEYWORD_DESIGNS:{name:string;keyword:Keyword;attack:number;health:number}[]=[
  {name:'Selina Kyle / Catwoman',keyword:'stealth',attack:4,health:8},
  {name:'Gollum',keyword:'stealth',attack:3,health:11},
@@ -11,8 +11,8 @@ export const KEYWORD_DESIGNS:{name:string;keyword:Keyword;attack:number;health:n
  {name:'Klein Moretti',keyword:'stealth',attack:5,health:6},
  {name:'General Grievous',keyword:'windfury',attack:3,health:5},
  {name:'Abyss Watcher',keyword:'windfury',attack:3,health:5},
- {name:'Gwen Stacy / Ghost-Spider',keyword:'windfury',attack:4,health:4},
- {name:'Flying Snow',keyword:'windfury',attack:3,health:6},
+ {name:'Gwen Stacy / Ghost-Spider',keyword:'windfury',attack:4,health:3},
+ {name:'Flying Snow',keyword:'windfury',attack:2,health:6},
  {name:'Pontiff Sulyvahn',keyword:'windfury',attack:3,health:10},
  {name:'Darth Maul',keyword:'windfury',attack:12,health:15},
  {name:'Nameless',keyword:'venomous',attack:3,health:6},

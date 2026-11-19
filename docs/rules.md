@@ -1,17 +1,17 @@
 # A demó tényleges szabályprofilja
 
-Profil: `bg-37.0-core-custom-5`. Katalógus: `franchise-357-heroes-34-v7`. Referencia: a 37.0 patch hivatalos kiadási jegyzete és az alapmechanikák korábbi hivatalos leírásai. Ellenőrzés: 2026. november 3.
+Profil: `bg-37.0.2-core-custom-10`. Katalógus: `franchise-360-heroes-35-v14`. Referencia: a 37.0.2 patch hivatalos kiadási jegyzete és az alapmechanikák korábbi hivatalos leírásai. Helyi szabályok frissítése: 2026. november 18.
 
-Ez egy saját karakterkészlettel játszható alaploop. A teljes 37.0 szerverlogikával való azonosság nem igazolt. Szezonális mechanikák, eredeti hősök, bolti varázslatok és az eredeti teljes egységkészlet nem szerepelnek benne.
+Ez egy saját karakterkészlettel játszható alaploop. A teljes 37.0.2 szerverlogikával való azonosság nem igazolt. A saját hősök, az általános spellek és Kevin Battlecruiser-fejlesztései helyi szabályok; nem a teljes eredeti Hearthstone-készlet másolatai. Lásd: [hősképességek](hero-powers-spec.md).
 
 ## Működés
 
 | Terület | Megvalósított működés | Bizonyíték / minősítés |
 |---|---|---|
 | Meccs | Nyolc résztvevő, egy ember és hét bot | Saját demókonfiguráció a Battlegrounds alapstruktúrájához |
-| Hős | 34 eredeti karakter; három ajánlat, 3 teljes frissítés ismétlődő hősök nélkül, 30 HP, 0 páncél, hősképesség nélkül | A képességek később érkeznek; a 357 franchise-kártya toborozható |
-| Gazdaság | 3 kezdőarany, körönként +1, legfeljebb 10; vétel 3, eladás 1, frissítés 1 | A hivatalos bevezető igazolja a vételt/eladást/frissítést; az összes mai numerikus részlet élő ellenőrzése még hiányzik |
-| Bolt | Szintenként 3/4/4/5/5/6 egység, csak elért szintig; egyedi példányok készletarányos sorsolása | Egységekre korlátozott profil, bolti varázslatok nélkül |
+| Hős | 35 karakter; három ajánlat, 3 teljes frissítés ismétlődő hősök nélkül, 30 HP, 0 páncél, 24 saját képesség | Saját, dokumentált képességek; a 360 kártya toborozható |
+| Gazdaság | 3 kezdőarany, körönként +1, legfeljebb 10; alap vétel 3, eladás 1, frissítés 1; Villő vétele 2, OIL és Gergő jutalma 10 fölé mehet | A hivatalos bevezető igazolja a vételt/eladást/frissítést; az összes mai numerikus részlet élő ellenőrzése még hiányzik |
+| Bolt | Szintenként 3/4/4/5/5/6 egység, csak elért szintig; egyedi példányok készletarányos sorsolása | Egy külön általános spellhely, Kevinnek helyette két fejlesztő spellhely; hősképességek módosíthatják a minionkínálatot |
 | Fejlesztés | 1→2: 5; 2→3: 7; 3→4: 8; 4→5: 11; 5→6: 11; minden következő körben −1, minimum 0 | A 34.2 jegyzet igazolja a két felső lépés +1 módosítását; teljes mai ártábla független futásidejű ellenőrzése még hiányzik |
 | Készlet | Szintenként 15/15/13/11/9/7 példány karakterenként | A 23.6 jegyzet igazolja az 1. szint 15-re csökkentését; a teljes sor verziózott demóérték, mai szerveroldali készlet nem hozzáférhető |
 | Fagyasztás | Megmaradt ajánlatok következő körre megmaradnak, üres helyek feltöltődnek; kapcsoló visszaáll | Saját, egységboltra alkalmazott működés; a 34.2 teljes bolti limitje varázslathelyet is tartalmaz |
@@ -24,16 +24,26 @@ Ez egy saját karakterkészlettel játszható alaploop. A teljes 37.0 szerverlog
 | Hőssebzés | Győztes boltszintje + túlélők szintje; pajzs helyett előbb hőspáncél fogy | Saját motor a műfaji alaphoz |
 | Sebzéskorlát | 1–3. kör: 5; 4–7.: 10; 8-tól: 15; legjobb négynél megszűnik | Hivatalos Season 9 bejelentés |
 | Holtverseny | Ugyanazon körben kiesők előző HP+páncél szerint; azonosságnál ülésazonosító; egyedi helyezések | Saját tesztelhető szabály, az eredeti megosztott helyezés helyett |
-| Biztonsági limitek | Harconként 500 támadás után döntetlen; 60 kör után HP+páncél szerinti lezárás | Saját védőkorlát; a végleges profil első 100 tesztmeccse mind 13–21 kör között végzett |
-| Időzítés | Hősválasztás 30 s, vásárlás 60 s, harc 18 s; kézi módban explicit továbbhaladás | Saját demóidőzítők |
+| Biztonsági limitek | 500 támadásnál döntetlen, 60 körnél a hősök életereje és páncélja dönti el a sorrendet | A v14-es készlettel a 100 újrajátszott tesztmeccs 13–26 kör alatt ért véget |
+| Időzítés | Az időzített toborzásnak határideje van. A harcból a következő kör gombbal lehet továbblépni. | A meghívókódos szobában az aktív emberi játékosok készenléte számít |
 
 ## Képességek és állapot
 
-A 357 franchise-egység saját, módosítható értékeket kapott. A stíluscímkék megmaradtak, de nem adnak külön szinergiabónuszt. Rejtett tulajdonságokhoz nem tartozik háromkörös aktiválás. Tárgy-, mana-, támadási sebesség- és hexarácsrendszer nincs.
+A törzsekre ható képességek a kártyával azonos törzsű többi élő szövetségest és a minden típusú szövetségeseket erősítik. A semleges egységek külön csoportot alkotnak. A kézből és a körhatárokon szerzett statok tartósak. A Rally és a Deathrattle harci erősítése a csata végéig él.
 
-A kijátszási buff végleges, a harckezdeti, támadáskori és halálhatás csak a harci másolatokra hat. Harc után a toborzási csapat sértetlenül tér vissza. Az arany példány az effektus numerikus erejét duplázza; a pajzs nem halmozódik. A kenyeres hatás esélye 25%, arany változatnál a bónusz kétszeres. A szomszédság az esemény pillanatában érvényes táblasorrendet használja.
+A Blizzard 37.0.2-es Battlegrounds-frissítésében a Battlecry és Deathrattle egy minion külön aktiválási eseménye lehet. A Rally az egyes támadásokhoz kötődik, a körhatások pedig a harcon kívüli fázishatárokhoz. A saját kártyák ezekből az időzítésekből, statbuffokból, idézésből és erőforrás-termelésből építkeznek. [37.0.2 kiadási jegyzet](https://hearthstone.blizzard.com/en-us/news/24307311), [Rally szabály](https://hearthstone.blizzard.com/en-us/news/24223019).
 
-A nullára csökkent életerejű egységek egy halálcsoportként eltűnnek, majd a támadó oldal, utána a másik oldal balról jobbra sorrendjében lefutnak a halálhatások. Az idézett demótoken 2/2-es, nem örökli az idéző képességét, és nem fogyaszt példányt a boltból.
+| Hatás | Aktiválás a játékban |
+|---|---|
+| Battlecry | Kézből kijátszáskor. A statbuff tartós, a választott célpont a megismételt aktiváláskor is ugyanaz. |
+| Deathrattle | A halálcsoport eltávolítása után. Az adott oldalon még élő erősítők számítanak. |
+| Rally | Minden támadáskor, Windfury mindkét ütésénél is. A Rally statbuffjai a harci másolatot módosítják. |
+| Kör eleje | Az új kör alap aranya és boltja után. A szomszédbuff tartós, a Napidíj azonnal elkölthető. |
+| Kör vége | A vásárlási szakasz lezárásakor, a harci másolat létrehozása előtt. Az Utánpótlás a véges készletből húz. |
+
+Az arany változat megduplázza a számértéket vagy az idézett, húzott egységek számát. A pajzs egyszeri állapot. A műsorvezető a Battlecry-t, a Visszhangőr a Deathrattle-t, a Záróra mestere a kör végi hatásokat aktiválja kétszer, aranyként háromszor. Az azonos típusú erősítők és Mihály Battlecry-jutalma közül a legnagyobb szorzó érvényesül.
+
+A nullára csökkent életerejű egységek egy halálcsoportként eltűnnek, majd a támadó oldal, utána a másik oldal balról jobbra sorrendjében lefutnak a halálhatások. Az idézett 2/2-es Segítő külön egység, és készleten kívül jön létre.
 
 ## Helyi kliensből származó megfigyelés
 
@@ -55,7 +65,7 @@ A következő referenciahűségi lépés egy azonos patchen megfigyelt játékme
 
 ## Active tribes and match roster
 
-The 357-card collection contains eight tribes plus Neutral and All-type cards. Every franchise contributes one Neutral and one All-type card; seven additional cards fill tribe/tier shortages. Five tribes are selected randomly. Each contributes exactly two cards per tier (12 per tribe). Add two Neutral cards per tier (12), and 2/2/1/1/1/1 All-type cards (8). Total: 80 unique designs, with tier counts 14/14/13/13/13/13. Shared cards occupy separate slots and are never counted twice. All-type cards belong to all tribes via hasTribe; Neutral cards belong to none. Tribe-specific combat bonuses remain future work. Equal availability does not establish equal combat strength; values are an initial balance pass. Shops and triple discovers use only the selected roster. Per-tier copy counts remain 15/15/13/11/9/7. The catalog retains all active designs regardless of remaining copies.
+A 360 lapos katalógusból meccsenként öt törzs sorsolódik. Törzsenként 12 különböző lap kerül be, szintenként kettő. Ehhez 12 forgó semleges, nyolc minden típusú és három mindig elérhető semleges hatáserősítő adódik. Így szintenként 14/14/13/13/15/14 különböző lap érhető el. A kártyánkénti 15/15/13/11/9/7 példány összesen 965 fizikai lapot jelent. A boltok és a tripla jutalmak a közös készletből húznak. A versenyegyensúlyhoz játékosadatokra van szükség.
 
 
 ## Combat keyword release

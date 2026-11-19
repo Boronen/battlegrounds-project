@@ -494,5 +494,6 @@ export const ORIGINAL_HEROES:Hero[] = [
       "Tömő",
       "Vegas"
     ]
-  }
+  },
+ {id:"original-35",name:"Ákos",title:"Az eredeti csapat",armor:0,cost:0,power:null,text:"A hősképesség később érkezik.",portrait:"/portraits/sketch/35.png",tags:["Hiperkarma","Dixit"]}
 ];

@@ -23,7 +23,7 @@ try {
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(`http://127.0.0.1:${port}`);
  await page.locator('.start-button:enabled').waitFor();
- await page.locator('.start-settings input').fill(String(seed));
+ await page.getByLabel('Kezdőérték',{exact:false}).fill(String(seed));
  await page.locator('.start-button').click();await page.locator('.hero-offer').first().click();
  await page.locator('.shop .unit').first().waitFor();
  const session=[...server.sessions.values()][0],m=session.match,p=m.players[0];

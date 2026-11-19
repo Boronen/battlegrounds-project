@@ -6,7 +6,6 @@ import { CHARACTERS } from '../shared/catalog';
 import { BACK_TO_THE_FUTURE } from '../shared/back-to-the-future';
 import { AMERICAN_DRAGON } from '../shared/american-dragon';
 import { FRANCHISE_EXPANSION, REMAINING_ROSTERS } from '../shared/franchise-expansion';
-import { SHARED_CARDS, TRIBE_SUPPORT } from '../shared/shared-cards';
 import { act, makeUnit, assertInvariants } from '../shared/engine';
 import { fight } from '../shared/combat';
 import { RULES } from '../shared/rules';
@@ -28,8 +27,8 @@ test('franchise cards join the finite pool with unique IDs and local portraits',
  assertInvariants(m);
 });
 
-test('every expansion card supports normal and golden recruitment and deterministic combat', () => {
- for (const c of [...FRANCHISE_EXPANSION,...SHARED_CARDS,...TRIBE_SUPPORT]) for (const golden of [false,true]) {
+test('all 360 cards support normal and golden recruitment and deterministic combat', () => {
+ for (const c of CHARACTERS) for (const golden of [false,true]) {
   const m=createMatch(7);
   act(m,'p0',{type:'chooseHero',heroId:m.players[0].heroOffers[0]});
   const leftNeighbor=makeUnit(m,47),rightNeighbor=makeUnit(m,47),u=makeUnit(m,c.id,golden);
