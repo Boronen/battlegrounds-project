@@ -19,6 +19,7 @@ try{
   const rope=page.locator('.round-rope i'),width=await rope.evaluate(el=>el.getBoundingClientRect().width);
   await page.waitForFunction(w=>document.querySelector('.round-rope i')!.getBoundingClientRect().width<w-2,width);
   async function drag(from:Locator,to:Locator){
+   const label=await from.getAttribute('aria-label');
    const a=(await from.boundingBox())!,b=(await to.boundingBox())!;
    const start={x:a.x+a.width/2,y:a.y+a.height/2},end={x:b.x+b.width/2,y:b.y+b.height/2};
    if(touch){
@@ -27,6 +28,9 @@ try{
     await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[end]});
    }else{await page.mouse.move(start.x,start.y);await page.mouse.down();await page.mouse.move(end.x,end.y,{steps:6});}
    await page.locator('.card-in-flight').waitFor();await page.locator('.card-drop-target').waitFor();
+   const held=await page.locator('.card-in-flight .unit').boundingBox();
+   assert.ok(held&&end.x>=held.x&&end.x<=held.x+held.width&&end.y>=held.y&&end.y<=held.y+held.height,
+    'The visible card must follow the pointer for '+(touch?'touch':'mouse')+' drags from '+label);
    if(touch)await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});else await page.mouse.up();
    await page.locator('.card-in-flight').waitFor({state:'detached'});
   }
