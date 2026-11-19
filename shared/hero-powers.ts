@@ -1,6 +1,17 @@
 import type {Hero,Player,HeroState,Unit,SpellCard,Match} from './types';
 import {pick,shuffle} from './random';
 export const POWER_DEFS:Record<string,{name:string;cost:number;passive?:boolean;text:string}>={
+ 'original-2':{name:'Padlógáz',cost:1,text:'Körönként: egy saját minion tartósan +Tavern-szint támadást kap. A jobb oldali szomszédja +1 életerőt kap.'},
+ 'original-23':{name:'Második műszak',cost:0,passive:true,text:'Harc elején, ha van szabad hely: megidézi a legnagyobb életerejű saját minion pontos másolatát erre a harcra. Döntetlennél a bal szélsőt választja.'},
+ 'original-24':{name:'Összetartás',cost:1,text:'Körönként: egy saját minion és közvetlen szomszédai tartósan +2 életerőt kapnak.'},
+ 'original-25':{name:'Visszaszólás',cost:1,text:'Körönként: egy saját minion Tauntot és tartósan +2 támadást kap. Ha már Tauntos, további +3 életerőt kap.'},
+ 'original-27':{name:'Újratervezés',cost:1,text:'Körönként: felcseréli egy saját minion támadását és életerejét, majd tartósan +1/+1-et ad neki.'},
+ 'original-28':{name:'Páncélműhely',cost:2,text:'Körönként: egy saját minion pajzsot kap a következő harcra és tartósan +2 életerőt.'},
+ 'original-29':{name:'Turbófokozat',cost:2,text:'Körönként: egy saját minion Windfuryt kap. Ha már rendelkezik vele, helyette tartósan +3 támadást kap.'},
+ 'original-30':{name:'SIMON mondja',cost:1,text:'Körönként: egy saját minion tartósan +1 támadást kap minden más, vele azonos tierű saját minion után, és +1 életerőt.'},
+ 'original-32':{name:'Tövismásolat',cost:0,passive:true,text:'Harc elején, ha van szabad hely: megidézi a legnagyobb támadású saját minion pontos másolatát erre a harcra. Döntetlennél a bal szélsőt választja.'},
+ 'original-33':{name:'Korrepetálás',cost:1,text:'Körönként: egy saját minion tartósan +1/+1-et kap minden Tavern-szintért, amennyivel a boltod az ő tierje felett van. Legalább +1/+1.'},
+ 'original-35':{name:'Képzettársítás',cost:1,text:'Körönként: egy saját minion tartósan +1/+1-et kap minden, a tábládon jelen lévő különböző miniontier után.'},
  'original-21':{name:'Mértékletesség',cost:0,passive:true,text:'Minden boltban két részeg minion. Bárkit támadhatnak. Öt részeg saját minion egy harcban: innentől a részegek 2 aranyba kerülnek.'},
  'original-22':{name:'Rivalizálás',cost:0,passive:true,text:'Csolti jelenlétében +20 kezdő HP, nélküle +30. Ha Csolti is játszik, harconként minden minion tartósan +3 támadást kap, bárki ellen.'},
  'original-18':{name:'Tartalék',cost:0,passive:true,text:'El nem költött aranyból továbbvisz a következő körre: tier 1–6 esetén 1/2/4/5/7/9 aranyat.'},
@@ -15,7 +26,7 @@ export const POWER_DEFS:Record<string,{name:string;cost:number;passive?:boolean;
  'original-1':{name:'Befektetés',cost:0,passive:true,text:'A minionok eladásakor nem kapsz azonnal aranyat. A következő kör elején eladott miniononként 2 aranyat kapsz, korlát nélkül.'},
  'original-10':{name:'Küldetés',cost:0,passive:true,text:'Véletlen küldetés: 25 saját minionhalál után dupla spellcast, vagy 7 battlecry után dupla battlecry. A jutalom a meccs végéig tart.'},
  'original-34':{name:'D6',cost:1,text:'Dobj D6-tal: annyi aranyat kapsz, és a következő ugyanennyi körben nem használhatod újra.'},
- 'original-12':{name:'Battlecruiser',cost:0,passive:true,text:'Kezdéskor kapsz egy 2/2 Battlecruisert. A boltban mindig két külön fejlesztő spell található.'},
+ 'original-12':{name:'Battlecruiser',cost:0,passive:true,text:'Kezdéskor kapsz egy 2/2 Battlecruisert. A boltban mindig egy fejlesztő spell található.'},
  'original-3':{name:'Lopás',cost:2,text:'Körönként: egy kiválasztott bolti miniont a kezedbe veszel.'},
  'original-4':{name:'Renata',cost:0,passive:true,text:'Kezdéskor kapsz egy 2/2, minden típusú, Mérgező Renatát.'},
  'original-5':{name:'Hideg alku',cost:0,passive:true,text:'A minionok 2 aranyba kerülnek. A bolt minden kör végén automatikusan befagy.'},

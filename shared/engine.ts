@@ -121,6 +121,50 @@ function perform(m:Match,p:Player,a:Action){
    ensure(!p.powerUsed,'POWER','Ebben a körben már használtad.');ensure(m.round>=hs.cooldownUntil,'COOLDOWN','A dobókocka még töltődik.');ensure(p.gold>=h.cost,'GOLD','Nincs elég arany.');
    const own=p.board.find(u=>u.uid===a.targetUid),index=p.shop.findIndex(u=>u?.uid===a.targetUid);
    switch(powerId){
+    case 'original-2':{
+     ensure(own,'TARGET','Válassz saját miniont.');
+     own.attack+=p.tier;
+     const neighbor=p.board[p.board.indexOf(own)+1];
+     if(neighbor)neighbor.health++;
+     break;
+    }
+    case 'original-24':{
+     ensure(own,'TARGET','Válassz saját miniont.');
+     const position=p.board.indexOf(own);
+     for(const unit of p.board.slice(Math.max(0,position-1),position+2))unit.health+=2;
+     break;
+    }
+    case 'original-25':
+     ensure(own,'TARGET','Válassz saját miniont.');
+     if(own.taunt)own.health+=3;
+     own.taunt=true;own.attack+=2;break;
+    case 'original-27':{
+     ensure(own,'TARGET','Válassz saját miniont.');
+     const attack=own.attack;
+     own.attack=own.health+1;own.health=attack+1;break;
+    }
+    case 'original-28':
+     ensure(own,'TARGET','Válassz saját miniont.');
+     own.shield=true;own.health+=2;break;
+    case 'original-29':
+     ensure(own,'TARGET','Válassz saját miniont.');
+     if(hasKeyword(own,'windfury'))own.attack+=3;
+     else own.keywords=[...(own.keywords||[]),'windfury'];
+     break;
+    case 'original-30':
+     ensure(own,'TARGET','Válassz saját miniont.');
+     own.attack+=p.board.filter(unit=>unit!==own&&unitDefinition(unit).tier===unitDefinition(own).tier).length;
+     own.health++;break;
+    case 'original-33':{
+     ensure(own,'TARGET','Válassz saját miniont.');
+     const amount=Math.max(1,p.tier-unitDefinition(own).tier);
+     own.attack+=amount;own.health+=amount;break;
+    }
+    case 'original-35':{
+     ensure(own,'TARGET','Válassz saját miniont.');
+     const amount=new Set(p.board.map(unit=>unitDefinition(unit).tier)).size;
+     own.attack+=amount;own.health+=amount;break;
+    }
     case 'original-20':{const candidates=shuffle(m,[...new Set(hs.fallenLast||[])]).slice(0,3);ensure(candidates.length,'DISCOVER','Az előző harcodban nem halt meg minion.');ensure(p.hand.length+hs.spellHand.length<10,'HAND','Megtelt a kéz.');p.discover=candidates.map(id=>{const u=makeUnit(m,id);u.token=true;u.generated=true;u.copies=0;u.ability=structuredClone(character(id).ability);return u;});hs.discoverKind='death';break;}
     case 'original-14':{const opponentId=m.pairings.find(pair=>pair.includes(p.id))?.find(id=>id!==p.id);const opponent=m.players.find(q=>q.id===opponentId);const opponentBoard=opponent?(opponent.hp>0?opponent.board:opponent.lastBoard):[];ensure(opponentBoard.length,'OPPONENT','Az ellenfél táblája még üres; később próbáld.');const truth=pick(m,opponentBoard);const excluded=new Set(opponentBoard.map(u=>u.characterId));const choices=CHARACTERS.filter(c=>m.activeCardIds.includes(c.id)&&!excluded.has(c.id)).sort((a,b)=>Math.abs(a.tier-unitDefinition(truth).tier)-Math.abs(b.tier-unitDefinition(truth).tier));ensure(choices.length,'POOL','Nincs megfelelő téves válasz.');const nearest=choices.filter(c=>Math.abs(c.tier-unitDefinition(truth).tier)===Math.abs(choices[0].tier-unitDefinition(truth).tier));const decoy=makeUnit(m,pick(m,nearest).id);const answer=makeUnit(m,truth.characterId);answer.name=truth.name;hs.guessOptions=shuffle(m,[answer,decoy]);for(const option of hs.guessOptions)option.uid=`g${m.nextUid++}`;(m.heroSecrets??={})[p.id]={correctGuessUid:answer.uid};break;}
     case 'original-15':{const opponent=m.players.find(q=>q.id===p.opponents.at(-1));ensure(opponent,'OPPONENT','Előbb játssz le egy harcot.');p.shop.forEach(u=>release(m,u));p.shop=opponent.lastBoard.map(source=>{const u=makeUnit(m,source.characterId);u.token=true;u.generated=true;u.copies=0;u.ability=structuredClone(character(source.characterId).ability);return u;});break;}
@@ -184,7 +228,7 @@ export function advance(m:Match){
   for(const p of [...m.players])if(p.bot)botTurn(m,p.id);
   for(const p of m.players){if(!alive(p))continue;turnEffects(m,p,'turnEnd');if(p.heroId==='original-22'&&m.players.some(q=>q.heroId==='original-25'))for(const u of p.board)u.attack+=3;if(p.heroId==='original-21'&&p.board.filter(u=>u.drunk).length>=5)powerState(p).drunkQuest=true;if(p.heroId==='original-5')p.frozen=true;for(const u of p.board.filter(u=>u.spellUpgrades?.magnetic)){if(p.hand.length+powerState(p).spellHand.length<10){const token=makeUnit(m,pick(m,[-4,-5,-6]));token.token=true;token.copies=0;p.hand.push(token);}}p.lastBoard=structuredClone(p.board);p.ready=true;p.opponents.push(m.pairings.flat().includes(p.id)?m.pairings.find(pair=>pair.includes(p.id))!.find(id=>id!==p.id)!:'');}
   m.phase='combat';m.battles=[];m.pendingDamage={};const living=m.players.filter(alive).length;
-  for(const [leftId,rightId] of m.pairings){const l=m.players.find(p=>p.id===leftId)!,r=m.players.find(p=>p.id===rightId)!;const result=fight(l.board,alive(r)?r.board:r.lastBoard,Math.floor(random(m)*4294967296),{champions:[l,r].map(p=>p.heroId==='original-26'&&powerState(p).championUpgradeRound!==m.round?powerState(p).championAttack:0)});const combatUnits=new Map(result.events.flatMap(e=>[...e.left,...e.right]).map(u=>[u.uid,u]));for(const [side,p] of [[0,l],[1,r]] as const){if(!alive(p))continue;powerState(p).fallenLast=[];const ownIds=new Set((side===0?result.events[0]?.left:result.events[0]?.right)?.map(u=>u.uid)||[]);for(const e of result.events){for(const u of (side===0?e.left:e.right))ownIds.add(u.uid);if(e.type==='death'){const dead=combatUnits.get(e.actor||'');if(dead&&!dead.heroFighter)powerState(p).fallenLast!.push(dead.characterId);}if(e.type==='death'&&ownIds.has(e.actor||''))completeQuest(p,1,'deaths');}}const winner=result.winner===0?l:result.winner===1?r:null;const loser=winner===l?r:l;const raw=winner?winner.tier+result.survivors.reduce((n,u)=>n+(u.token&&!u.generated?1:unitDefinition(u).tier),0):0;const damage=Math.max(0,Math.min(raw,damageCap(m.round,living))-(loser.heroId==='original-7'?loser.tier:0));if(winner&&alive(loser))m.pendingDamage[loser.id]=(m.pendingDamage[loser.id]||0)+damage;for(const [side,p] of [[0,l],[1,r]] as const)if(alive(p))m.pendingDamage[p.id]=(m.pendingDamage[p.id]||0)+result.heroDamage[side];const battle:Battle={leftId,rightId,ghost:!alive(r),events:result.events,winner:winner?.id||null,damage};m.battles.push(battle);}
+  for(const [leftId,rightId] of m.pairings){const l=m.players.find(p=>p.id===leftId)!,r=m.players.find(p=>p.id===rightId)!;const result=fight(l.board,alive(r)?r.board:r.lastBoard,Math.floor(random(m)*4294967296),{openingCopies:[l,r].map(p=>p.heroId==='original-23'?'health':p.heroId==='original-32'?'attack':undefined),champions:[l,r].map(p=>p.heroId==='original-26'&&powerState(p).championUpgradeRound!==m.round?powerState(p).championAttack:0)});const combatUnits=new Map(result.events.flatMap(e=>[...e.left,...e.right]).map(u=>[u.uid,u]));for(const [side,p] of [[0,l],[1,r]] as const){if(!alive(p))continue;powerState(p).fallenLast=[];const ownIds=new Set((side===0?result.events[0]?.left:result.events[0]?.right)?.map(u=>u.uid)||[]);for(const e of result.events){for(const u of (side===0?e.left:e.right))ownIds.add(u.uid);if(e.type==='death'){const dead=combatUnits.get(e.actor||'');if(dead&&!dead.heroFighter)powerState(p).fallenLast!.push(dead.characterId);}if(e.type==='death'&&ownIds.has(e.actor||''))completeQuest(p,1,'deaths');}}const winner=result.winner===0?l:result.winner===1?r:null;const loser=winner===l?r:l;const raw=winner?winner.tier+result.survivors.reduce((n,u)=>n+(u.token&&!u.generated?1:unitDefinition(u).tier),0):0;const damage=Math.max(0,Math.min(raw,damageCap(m.round,living))-(loser.heroId==='original-7'?loser.tier:0));if(winner&&alive(loser))m.pendingDamage[loser.id]=(m.pendingDamage[loser.id]||0)+damage;for(const [side,p] of [[0,l],[1,r]] as const)if(alive(p))m.pendingDamage[p.id]=(m.pendingDamage[p.id]||0)+result.heroDamage[side];const battle:Battle={leftId,rightId,ghost:!alive(r),events:result.events,winner:winner?.id||null,damage};m.battles.push(battle);}
  }else{
   const before=m.players.filter(alive).map(p=>({id:p.id,total:p.hp+p.armor}));
   for(const p of m.players){const dmg=m.pendingDamage[p.id]||0;const absorbed=Math.min(p.armor,dmg);p.armor-=absorbed;p.hp-=dmg-absorbed;}

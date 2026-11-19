@@ -5,7 +5,7 @@ import {consumeKeyword, hasKeyword} from './keywords';
 import {changeStats,effectSize,minionAbility,tribalAllies,triggerCount} from './minion-effects';
 import type { Ability, Character, CombatEvent, Unit } from './types';
 
-export function fight(leftInput:Unit[],rightInput:Unit[],seed:number,options:{recordEvents?:boolean;catalog?:(id:number)=>Character;champions?:number[]}={}){
+export function fight(leftInput:Unit[],rightInput:Unit[],seed:number,options:{recordEvents?:boolean;catalog?:(id:number)=>Character;champions?:number[];openingCopies?:('health'|'attack'|undefined)[]}={}){
  const card=options.catalog||character;
  const sides=[structuredClone(leftInput),structuredClone(rightInput)];
  const rng={rng:seed||1}; const events:CombatEvent[]=[];const attacked=new Set<string>();
@@ -81,6 +81,18 @@ export function fight(leftInput:Unit[],rightInput:Unit[],seed:number,options:{re
   }
  }
  emit('start','A harc elkezdődött.');
+ for(const side of [current,1-current]){
+  const stat=options.openingCopies?.[side];
+  const board=sides[side];
+  if(!stat||!board.length||board.length>=RULES.boardSize)continue;
+  const source=board.reduce((best,unit)=>unit[stat]>best[stat]?unit:best);
+  const copy=structuredClone(source);
+  copy.uid=source.uid+'-hero-copy-'+side;
+  copy.copies=0;
+  delete copy.rewardTier;
+  board.push(copy);
+  emit('summon','A hősképesség másolatot idézett erre a harcra.',source.uid,copy.uid);
+ }
  for(const side of [current,1-current])for(const u of [...sides[side]])if(u.health>0&&abilityFor(u)?.trigger==='start'){trigger(side,u,'start',sides[side].indexOf(u));deaths();}
  function championStrike(side:number){const c=champions[side];if(!c?.attack||!sides[side].length||!sides[1-side].length)return;const enemies=sides[1-side].filter(u=>!hasKeyword(u,'stealth'));const eligible=enemies.length?enemies:sides[1-side];const guards=eligible.filter(u=>u.taunt);const target=pick(rng,guards.length?guards:eligible);emit('attack','Csefi támad.',c.uid,target.uid);hit(target,c.attack,c);deaths();}
  for(const side of [current,1-current]){for(const cruiser of [...sides[side]])if(cruiser.spellUpgrades?.yamato){for(let i=0;i<(cruiser.spellUpgrades.missile||1);i++){const target=[...sides[1-side]].sort((a,b)=>b.health-a.health)[0];if(target){hit(target,cruiser.spellUpgrades.yamato,cruiser);deaths();}}}championStrike(side);}

@@ -355,3 +355,8 @@ Egérrel és érintéssel a megfogott lap követi a mutatót. Boltból kézbe h�
 ## Hősképesség és bolti varázslat
 
 A hős jobb oldalán külön gomb nyitja a képességét. A bolt jobb szélső helyén egy türkiz varázslatkártya van. Vásárláskor új varázslat kerül a helyére, a fagyasztás megőrzi az ajánlatot. A kézben lévő varázslat kattintással vagy a táblára húzva játszható ki. Kevin ugyanitt kap Battlecruiser-fejlesztést. A helyi szabályprofil verziója `bg-37.0.2-core-custom-11`.
+
+## Hiányzó hősképességek pótlása
+Mind a 35 hős rendelkezik képességgel. Új aktív képességet kapott Dávid, Tomi, Brigi, Csolti, Ági, Csabi, iSTI, SIMON, Rózsás, Lendvai Katalin és Ákos. A célzott képességek a panel célpontválasztóját használják és Fruzsi kölcsönözheti őket. Szabályverzió: core-custom-12. A korábbi balanszötletek a docs/balance-ideas.md fájlban vannak. A korábbi tier listát újra kell mérni.
+
+Tomi és Rózsás képessége passzív harc eleji másolásra cserélve. Tomi a legnagyobb HP-jú, Rózsás a legnagyobb támadású miniont másolja, ha a táblán kevesebb mint hét minion van. Döntetlennél a bal szélső nyer. A másolat a jobb szélre kerül, megőrzi a statokat és képességeket, csak az adott harcban létezik. A hősképesség a minionok harc eleji képességei előtt aktiválódik.
