@@ -65,7 +65,14 @@ try{
  await page.locator('.round-actions .primary').click();
  await page.locator('.arena.in-combat').waitFor();
  await page.locator('.round-actions .primary').click();await page.locator('.power-launch').waitFor();
- const session=[...server.sessions.values()][0],m=session.match,p=m.players[0];
+ const session=[...server.sessions.values()][0];
+ const frozenOffer=await page.locator('.spell-offer').getAttribute('data-spell-id');
+ await page.locator('.spell-offer button').click();
+ await page.locator('.spell-in-hand button').click();
+ await page.locator('.spell-targets button').first().click();
+ await page.locator('.spell-in-hand').waitFor({state:'detached'});
+ assert.notEqual(await page.locator('.spell-offer').getAttribute('data-spell-id'),frozenOffer);
+ const m=session.match,p=m.players[0];
  const ids=m.activeCardIds.filter(id=>character(id).tier<=5);
  const representative=['rally','death','turnStart','play','turnEnd','start','passive'].map(trigger=>ids.find(id=>character(id).ability.trigger===trigger)!);
  const examples=[...representative,...ids.filter(id=>!representative.includes(id))];
@@ -77,11 +84,11 @@ try{
  for(const [width,height] of sizes){
   await page.setViewportSize({width,height});await page.waitForTimeout(75);
   const label=width+'x'+height;
-  await fit(label);await hit(page.locator('.board .unit,.shop .unit,.power-launch,.shop-actions button,.round-actions .primary,.inspect-toggle'),label);
+  await fit(label);await hit(page.locator('.board .unit,.shop .unit,.spell-offer button,.power-launch,.shop-actions button,.round-actions .primary,.inspect-toggle'),label);
   await shot('board-'+label);
  }
  await page.setViewportSize({width:390,height:844});
- await page.locator('.power-launch').click();await page.getByRole('dialog',{name:'Hősképesség és varázslatok'}).waitFor();await shot('powers-phone');await page.keyboard.press('Escape');
+ await page.locator('.power-launch').click();await page.getByRole('dialog',{name:'Hősképesség'}).waitFor();await shot('powers-phone');await page.keyboard.press('Escape');
  await page.getByRole('button',{name:'Tabella',exact:true}).click();assert.equal(await page.locator('dialog[open] .standing').count(),8);await page.keyboard.press('Escape');
  await page.locator('.settings-toggle').click();await page.locator('.motion-toggle').click();await page.keyboard.press('Escape');
  await page.locator('.card-pool-toggle').click();await page.locator('.pool-card').first().waitFor();await page.keyboard.press('Escape');
