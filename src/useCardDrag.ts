@@ -17,10 +17,11 @@ export function useCardDrag(enabled:boolean,round:number,onDrop:(uid:string,from
   }
   function down(e:PointerEvent){
    if(grip||!e.isPrimary||e.button!==0||!(e.target instanceof Element))return;
-   const card=e.target.closest<HTMLElement>('.unit-wrap');
-   if(!card?.dataset.unitId||!card.querySelector('button.unit:enabled'))return;
-   const from=['shop','hand','board'].find(zone=>card.classList.contains(zone));
-   if(from)grip={id:e.pointerId,x:e.clientX,y:e.clientY,uid:card.dataset.unitId,from,card,touch:e.pointerType==='touch'};
+   const card=e.target.closest<HTMLElement>('.unit-wrap,[data-spell-id]');
+   const uid=card?.dataset.unitId||card?.dataset.spellId;
+   if(!card||!uid||!card.querySelector('button.unit:enabled,button.spell-card:enabled'))return;
+   const from=card.dataset.zone||['shop','hand','board'].find(zone=>card.classList.contains(zone));
+   if(from)grip={id:e.pointerId,x:e.clientX,y:e.clientY,uid,from,card,touch:e.pointerType==='touch'};
   }
   function destination(x:number,y:number){
    const el=document.elementFromPoint(x,y);
@@ -46,9 +47,9 @@ export function useCardDrag(enabled:boolean,round:number,onDrop:(uid:string,from
    if(!grip||grip.id!==e.pointerId)return;
    if(!ghost){
     if(Math.hypot(e.clientX-grip.x,e.clientY-grip.y)<7)return;
-    const rect=grip.card.querySelector('.unit')!.getBoundingClientRect();
+    const rect=grip.card.querySelector('.unit,.spell-card')!.getBoundingClientRect();
     ghost=grip.card.cloneNode(true) as HTMLElement;
-    ghost.removeAttribute('data-unit-id');ghost.setAttribute('aria-hidden','true');ghost.inert=true;
+    ghost.removeAttribute('data-unit-id');ghost.removeAttribute('data-spell-id');ghost.setAttribute('aria-hidden','true');ghost.inert=true;
     ghost.querySelector('.unit-tooltip')?.remove();ghost.classList.add('card-in-flight');
     ghost.style.width=rect.width+'px';ghost.style.height=rect.height+'px';
     document.body.append(ghost);grip.card.classList.add('card-lifted');grip.card.setPointerCapture(e.pointerId);

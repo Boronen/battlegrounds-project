@@ -351,3 +351,7 @@ This file records the work and checks performed during this session; no deployme
 ## Kártyahúzás és körvégi kötél
 
 Egérrel és érintéssel a megfogott lap követi a mutatót. Boltból kézbe húzva vásárolható, kézből táblára húzva kijátszható. A táblán átrendezhető, a fogadósra húzva eladható. Az időzített vásárlás utolsó húsz másodpercében az izzó kötél a szerver határidejéhez igazodva rövidül. A build és a `tests/card-drag-browser.ts` egérrel és emulált érintéssel futtatott böngészőtesztje sikeres.
+
+## Hősképesség és bolti varázslat
+
+A hős jobb oldalán külön gomb nyitja a képességét. A bolt jobb szélső helyén egy türkiz varázslatkártya van. Vásárláskor új varázslat kerül a helyére, a fagyasztás megőrzi az ajánlatot. A kézben lévő varázslat kattintással vagy a táblára húzva játszható ki. Kevin ugyanitt kap Battlecruiser-fejlesztést. A helyi szabályprofil verziója `bg-37.0.2-core-custom-11`.
