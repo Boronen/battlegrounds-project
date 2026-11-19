@@ -30,7 +30,9 @@ try{
    if(touch)await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});else await page.mouse.up();
    await page.locator('.card-in-flight').waitFor({state:'detached'});
   }
-  await drag(page.locator('.shop .unit').first(),page.locator('.hand-dock'));
+  const toolbar=await Promise.all(['.tavern-tier','.upgrade-control','.keeper-avatar','.refresh-control','.freeze-control'].map(s=>page.locator(s).boundingBox()));
+  for(let i=1;i<toolbar.length;i++)assert.ok(toolbar[i-1]!.x+toolbar[i-1]!.width<=toolbar[i]!.x);
+  await drag(page.locator('.shop .unit').first(),page.locator('.board-zone'));
   await drag(page.locator('.hand .unit'),page.locator('.board-zone'));
   await drag(page.locator('.board .unit'),page.locator('.keeper-avatar'));
   await page.locator('.board .unit').waitFor({state:'detached'});
