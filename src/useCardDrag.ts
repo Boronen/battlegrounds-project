@@ -5,7 +5,7 @@ export function useCardDrag(enabled:boolean,round:number,onDrop:(uid:string,from
  useLayoutEffect(()=>{latest.current=onDrop;},[onDrop]);
  useEffect(()=>{
   if(!enabled)return;
-  let grip:{id:number;x:number;y:number;uid:string;from:string;card:HTMLElement}|undefined;
+  let grip:{id:number;x:number;y:number;uid:string;from:string;card:HTMLElement;touch:boolean}|undefined;
   let ghost:HTMLElement|undefined,highlight:Element|null=null,blockClick=false;
   let resetTimer=0;
   function clear(){
@@ -20,16 +20,27 @@ export function useCardDrag(enabled:boolean,round:number,onDrop:(uid:string,from
    const card=e.target.closest<HTMLElement>('.unit-wrap');
    if(!card?.dataset.unitId||!card.querySelector('button.unit:enabled'))return;
    const from=['shop','hand','board'].find(zone=>card.classList.contains(zone));
-   if(from)grip={id:e.pointerId,x:e.clientX,y:e.clientY,uid:card.dataset.unitId,from,card};
+   if(from)grip={id:e.pointerId,x:e.clientX,y:e.clientY,uid:card.dataset.unitId,from,card,touch:e.pointerType==='touch'};
   }
   function destination(x:number,y:number){
    const el=document.elementFromPoint(x,y);
-   if(grip?.from==='shop')return el?.closest('.hand-dock');
+   if(grip?.from==='shop'){
+    const hand=el?.closest('.hand-dock');
+    if(hand)return hand;
+    const arena=el?.closest('.arena');
+    const shop=arena?.querySelector('.top-row');
+    if(shop&&y>shop.getBoundingClientRect().bottom&&!el?.closest('button:not(.unit),.discover-backdrop'))return document.querySelector('.hand-dock');
+    return null;
+   }
    if(grip?.from==='board'){
     const sell=el?.closest('.sell-drop,.keeper-avatar,.top-row');
     if(sell)return sell;
    }
-   return el?.closest('.board-zone .unit-wrap,.board-zone');
+   const slot=el?.closest('.board-zone .unit-wrap,.board-zone');
+   if(slot||grip?.from!=='hand')return slot;
+   const arena=el?.closest('.arena');
+   if(arena&&!el?.closest('button,.discover-backdrop,.top-row,.tavern-top'))return arena.querySelector('.board-zone');
+   return null;
   }
   function move(e:PointerEvent){
    if(!grip||grip.id!==e.pointerId)return;
@@ -59,7 +70,7 @@ export function useCardDrag(enabled:boolean,round:number,onDrop:(uid:string,from
   function cancel(e:PointerEvent){if(grip?.id===e.pointerId)clear();}
   function lost(e:PointerEvent){if(e.target===grip?.card)cancel(e);}
   function click(e:MouseEvent){if(blockClick){e.preventDefault();e.stopImmediatePropagation();}}
-  function menu(e:MouseEvent){if(ghost){e.preventDefault();e.stopImmediatePropagation();}}
+  function menu(e:MouseEvent){if(ghost||grip?.touch){e.preventDefault();e.stopImmediatePropagation();}}
   document.addEventListener('pointerdown',down);document.addEventListener('pointermove',move);
   document.addEventListener('pointerup',up);document.addEventListener('pointercancel',cancel);
   document.addEventListener('lostpointercapture',lost);window.addEventListener('blur',clear);
