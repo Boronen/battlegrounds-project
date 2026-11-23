@@ -1,0 +1,7102 @@
+[
+  {
+    "id": 35,
+    "name": "Marty McFly",
+    "tags": [
+      "Back to the Future"
+    ],
+    "tier": 1,
+    "attack": 3,
+    "health": 2,
+    "ability": {
+      "name": "Gördeszkás lendület",
+      "trigger": "attack",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 0,
+      "amount": 0,
+      "repeats": 1
+    },
+    "text": "Gördeszkás lendület: Az első támadásától +2 támadást kap erre a harcra.",
+    "portrait": "/portraits/35.svg"
+  },
+  {
+    "id": 36,
+    "name": "Doc Brown",
+    "tags": [
+      "Back to the Future"
+    ],
+    "tier": 6,
+    "attack": 7,
+    "health": 10,
+    "ability": {
+      "name": "Időpajzs",
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "attack": 0,
+      "health": 0,
+      "amount": 0,
+      "repeats": 1
+    },
+    "text": "Időpajzs: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/36.svg"
+  },
+  {
+    "id": 37,
+    "name": "Biff Tannen",
+    "tags": [
+      "Back to the Future"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "name": "Útban vagy!",
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "attack": 0,
+      "health": 0,
+      "amount": 0,
+      "repeats": 1
+    },
+    "text": "Útban vagy!: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/37.svg"
+  },
+  {
+    "id": 38,
+    "name": "George McFly",
+    "tags": [
+      "Back to the Future"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "name": "Bátorságpróba",
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "amount": 0,
+      "repeats": 1
+    },
+    "text": "Bátorságpróba: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/38.svg"
+  },
+  {
+    "id": 39,
+    "name": "Lorraine Baines McFly",
+    "tags": [
+      "Back to the Future"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 5,
+    "ability": {
+      "name": "Bátorító szó",
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 2,
+      "health": 2,
+      "amount": 0,
+      "repeats": 1
+    },
+    "text": "Bátorító szó: Egy választott másik szövetséges véglegesen +2/+2 értéket kap.",
+    "portrait": "/portraits/39.svg"
+  },
+  {
+    "id": 40,
+    "name": "Jennifer Parker",
+    "tags": [
+      "Back to the Future"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 7,
+    "ability": {
+      "name": "Közös jövő",
+      "trigger": "start",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 0,
+      "health": 3,
+      "amount": 0,
+      "repeats": 1
+    },
+    "text": "Közös jövő: A közvetlen szomszédok +3 életerőt kapnak erre a harcra.",
+    "portrait": "/portraits/40.svg"
+  },
+  {
+    "id": 41,
+    "name": "Clara Clayton",
+    "tags": [
+      "Back to the Future"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 6,
+    "ability": {
+      "name": "Biztonságos utazás",
+      "trigger": "start",
+      "effect": "shield",
+      "target": "self",
+      "attack": 0,
+      "health": 0,
+      "amount": 0,
+      "repeats": 1
+    },
+    "text": "Biztonságos utazás: Védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/41.svg"
+  },
+  {
+    "id": 42,
+    "name": "Buford “Mad Dog” Tannen",
+    "tags": [
+      "Back to the Future"
+    ],
+    "tier": 5,
+    "attack": 7,
+    "health": 7,
+    "ability": {
+      "name": "Párbaj délben",
+      "trigger": "start",
+      "effect": "damage",
+      "target": "enemy",
+      "attack": 0,
+      "health": 0,
+      "amount": 4,
+      "repeats": 1
+    },
+    "text": "Párbaj délben: 4 sebzést okoz egy véletlen ellenségnek.",
+    "portrait": "/portraits/42.svg"
+  },
+  {
+    "id": 43,
+    "name": "Jake Long",
+    "tags": [
+      "Jake Long: American Dragon"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "name": "Sárkányerő",
+      "trigger": "attack",
+      "effect": "buff",
+      "target": "self",
+      "attack": 3
+    },
+    "text": "Sárkányerő: Az első támadásától +3 támadást kap erre a harcra.",
+    "portrait": "/portraits/43.svg"
+  },
+  {
+    "id": 44,
+    "name": "Rose",
+    "tags": [
+      "Jake Long: American Dragon"
+    ],
+    "tier": 4,
+    "attack": 6,
+    "health": 5,
+    "ability": {
+      "name": "Vadászcsapás",
+      "trigger": "start",
+      "effect": "damage",
+      "target": "enemy",
+      "amount": 3
+    },
+    "text": "Vadászcsapás: 3 sebzést okoz egy véletlen ellenségnek a harc kezdetén.",
+    "portrait": "/portraits/44.svg"
+  },
+  {
+    "id": 45,
+    "name": "Lao Shi",
+    "tags": [
+      "Jake Long: American Dragon"
+    ],
+    "tier": 5,
+    "attack": 5,
+    "health": 9,
+    "ability": {
+      "name": "A mester tanítása",
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "left",
+      "attack": 4,
+      "health": 4
+    },
+    "text": "A mester tanítása: A köröd végén a bal oldali szomszédja tartósan +4/+4-et kap.",
+    "portrait": "/portraits/45.svg"
+  },
+  {
+    "id": 46,
+    "name": "Fu Dog",
+    "tags": [
+      "Jake Long: American Dragon"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "name": "Mágikus védelem",
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left"
+    },
+    "text": "Mágikus védelem: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/46.svg"
+  },
+  {
+    "id": 47,
+    "name": "Trixie Carter",
+    "tags": [
+      "Jake Long: American Dragon"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "name": "Baráti biztatás",
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1
+    },
+    "text": "Baráti biztatás: Egy választott másik szövetséges véglegesen +1 támadást kap.",
+    "portrait": "/portraits/47.svg"
+  },
+  {
+    "id": 48,
+    "name": "Arthur “Spud” Spudinski",
+    "tags": [
+      "Jake Long: American Dragon"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "name": "Szerencsés kitérés",
+      "trigger": "start",
+      "effect": "shield",
+      "target": "self"
+    },
+    "text": "Szerencsés kitérés: Védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/48.svg"
+  },
+  {
+    "id": 49,
+    "name": "Huntsman",
+    "tags": [
+      "Jake Long: American Dragon"
+    ],
+    "tier": 3,
+    "attack": 6,
+    "health": 4,
+    "ability": {
+      "name": "A vadászat vezetője",
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self"
+    },
+    "text": "A vadászat vezetője: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/49.svg"
+  },
+  {
+    "id": 50,
+    "name": "Dark Dragon",
+    "tags": [
+      "Jake Long: American Dragon"
+    ],
+    "tier": 6,
+    "attack": 8,
+    "health": 10,
+    "ability": {
+      "name": "Sötét sárkánytűz",
+      "trigger": "start",
+      "effect": "damage",
+      "target": "enemies",
+      "amount": 3
+    },
+    "text": "Sötét sárkánytűz: 3 sebzést okoz minden ellenséges egységnek a harc kezdetén.",
+    "portrait": "/portraits/50.svg"
+  },
+  {
+    "id": 51,
+    "name": "Gustave",
+    "tags": [
+      "Clair Obscur: Expedition 33"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "name": "Overcharge"
+    },
+    "text": "Overcharge: Minden támadásakor +2 támadást kap erre a harcra.",
+    "portrait": "/portraits/51.svg"
+  },
+  {
+    "id": 52,
+    "name": "Maelle",
+    "tags": [
+      "Clair Obscur: Expedition 33"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Virtuose"
+    },
+    "text": "Virtuose: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/52.svg"
+  },
+  {
+    "id": 53,
+    "name": "Lune",
+    "tags": [
+      "Clair Obscur: Expedition 33"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "name": "Elemental Genesis"
+    },
+    "text": "Elemental Genesis: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/53.svg"
+  },
+  {
+    "id": 54,
+    "name": "Sciel",
+    "tags": [
+      "Clair Obscur: Expedition 33"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Foretell"
+    },
+    "text": "Foretell: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/54.svg"
+  },
+  {
+    "id": 55,
+    "name": "Verso",
+    "tags": [
+      "Clair Obscur: Expedition 33"
+    ],
+    "tier": 3,
+    "attack": 4,
+    "health": 5,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Perfection"
+    },
+    "text": "Perfection: Minden támadásakor a két szomszédja +2/+2-t kap erre a harcra.",
+    "portrait": "/portraits/55.svg"
+  },
+  {
+    "id": 56,
+    "name": "Monoco",
+    "tags": [
+      "Clair Obscur: Expedition 33"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Bestial Wheel"
+    },
+    "text": "Bestial Wheel: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/56.svg"
+  },
+  {
+    "id": 57,
+    "name": "Esquie",
+    "tags": [
+      "Clair Obscur: Expedition 33"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Expedition Guide"
+    },
+    "text": "Expedition Guide: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/57.svg"
+  },
+  {
+    "id": 58,
+    "name": "Renoir",
+    "tags": [
+      "Clair Obscur: Expedition 33"
+    ],
+    "tier": 6,
+    "attack": 6,
+    "health": 10,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "left",
+      "attack": 7,
+      "health": 7,
+      "name": "Chroma Surge"
+    },
+    "text": "Chroma Surge: A köröd végén a bal oldali szomszédja tartósan +7/+7-et kap.",
+    "portrait": "/portraits/58.svg"
+  },
+  {
+    "id": 59,
+    "name": "Anakin Skywalker",
+    "tags": [
+      "Star Wars"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "name": "Chosen One"
+    },
+    "text": "Chosen One: Minden támadásakor +2 támadást kap erre a harcra.",
+    "portrait": "/portraits/59.svg"
+  },
+  {
+    "id": 60,
+    "name": "Obi-Wan Kenobi",
+    "tags": [
+      "Star Wars"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "name": "High Ground"
+    },
+    "text": "High Ground: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/60.svg"
+  },
+  {
+    "id": 61,
+    "name": "Padme Amidala",
+    "tags": [
+      "Star Wars"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Senate Appeal"
+    },
+    "text": "Senate Appeal: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/61.svg"
+  },
+  {
+    "id": 62,
+    "name": "Yoda",
+    "tags": [
+      "Star Wars"
+    ],
+    "tier": 5,
+    "attack": 5,
+    "health": 8,
+    "ability": {
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Jedi Wisdom"
+    },
+    "text": "Jedi Wisdom: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
+    "portrait": "/portraits/62.svg"
+  },
+  {
+    "id": 63,
+    "name": "Mace Windu",
+    "tags": [
+      "Star Wars"
+    ],
+    "tier": 3,
+    "attack": 4,
+    "health": 5,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Vaapad"
+    },
+    "text": "Vaapad: Minden támadásakor a két szomszédja +2/+2-t kap erre a harcra.",
+    "portrait": "/portraits/63.svg"
+  },
+  {
+    "id": 64,
+    "name": "Ahsoka Tano",
+    "tags": [
+      "Star Wars"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Padawan Courage"
+    },
+    "text": "Padawan Courage: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/64.svg"
+  },
+  {
+    "id": 65,
+    "name": "General Grievous",
+    "tags": [
+      "Star Wars"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 5,
+    "ability": {
+      "name": "Szélvész",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Szélvész: Kétszer támad a saját támadási körében, ha túléli az első támadást.",
+    "portrait": "/portraits/65.svg",
+    "keywords": [
+      "windfury"
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Darth Sidious",
+    "tags": [
+      "Star Wars"
+    ],
+    "tier": 6,
+    "attack": 10,
+    "health": 11,
+    "ability": {
+      "trigger": "start",
+      "effect": "damage",
+      "target": "enemies",
+      "amount": 5,
+      "name": "Force Lightning"
+    },
+    "text": "Force Lightning: Harc elején 5 sebzést okoz minden ellenségnek.",
+    "portrait": "/portraits/66.svg"
+  },
+  {
+    "id": 67,
+    "name": "Sung Jinwoo",
+    "tags": [
+      "Solo Leveling"
+    ],
+    "tier": 5,
+    "attack": 6,
+    "health": 9,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Shadow Monarch"
+    },
+    "text": "Shadow Monarch: Minden támadásakor a törzséhez tartozó többi szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/67.svg"
+  },
+  {
+    "id": 68,
+    "name": "Cha Hae-In",
+    "tags": [
+      "Solo Leveling"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 3,
+    "ability": {
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1,
+      "health": 2,
+      "name": "Sword Dance"
+    },
+    "text": "Sword Dance: A köröd elején tartósan +1/+2-t kap.",
+    "portrait": "/portraits/68.svg"
+  },
+  {
+    "id": 69,
+    "name": "Yoo Jinho",
+    "tags": [
+      "Solo Leveling"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Loyal Companion"
+    },
+    "text": "Loyal Companion: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/69.svg"
+  },
+  {
+    "id": 70,
+    "name": "Sung Jinah",
+    "tags": [
+      "Solo Leveling"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Family Resolve"
+    },
+    "text": "Family Resolve: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/70.svg"
+  },
+  {
+    "id": 71,
+    "name": "Igris",
+    "tags": [
+      "Solo Leveling"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 6,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "self",
+      "name": "Blood-Red Commander"
+    },
+    "text": "Blood-Red Commander: Védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/71.svg"
+  },
+  {
+    "id": 72,
+    "name": "Iron",
+    "tags": [
+      "Solo Leveling"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "death",
+      "effect": "summon",
+      "target": "self",
+      "amount": 1,
+      "name": "Iron Wall"
+    },
+    "text": "Iron Wall: Halálakor megidéz egy 2/2-es Segítőt.",
+    "portrait": "/portraits/72.svg"
+  },
+  {
+    "id": 73,
+    "name": "Beru",
+    "tags": [
+      "Solo Leveling"
+    ],
+    "tier": 5,
+    "attack": 8,
+    "health": 8,
+    "ability": {
+      "trigger": "start",
+      "effect": "damage",
+      "target": "enemy",
+      "amount": 7,
+      "name": "Ant King"
+    },
+    "text": "Ant King: Harc elején 7 sebzést okoz egy véletlen ellenségnek.",
+    "portrait": "/portraits/73.svg"
+  },
+  {
+    "id": 74,
+    "name": "Go Gunhee",
+    "tags": [
+      "Solo Leveling"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Hunters Association"
+    },
+    "text": "Hunters Association: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/74.svg"
+  },
+  {
+    "id": 75,
+    "name": "Bob the Bartender",
+    "tags": [
+      "Hearthstone Battlegrounds"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Friendly Advice"
+    },
+    "text": "Friendly Advice: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/75.svg"
+  },
+  {
+    "id": 76,
+    "name": "Patches the Pirate",
+    "tags": [
+      "Hearthstone Battlegrounds"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "name": "Pirate Charge"
+    },
+    "text": "Pirate Charge: Minden támadásakor +2 támadást kap erre a harcra.",
+    "portrait": "/portraits/76.svg"
+  },
+  {
+    "id": 77,
+    "name": "The Curator",
+    "tags": [
+      "Hearthstone Battlegrounds"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Menagerie Keeper"
+    },
+    "text": "Menagerie Keeper: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/77.svg"
+  },
+  {
+    "id": 78,
+    "name": "George the Fallen",
+    "tags": [
+      "Hearthstone Battlegrounds"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "name": "Divine Protection"
+    },
+    "text": "Divine Protection: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/78.svg"
+  },
+  {
+    "id": 79,
+    "name": "A. F. Kay",
+    "tags": [
+      "Hearthstone Battlegrounds"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Patient Return"
+    },
+    "text": "Patient Return: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/79.svg"
+  },
+  {
+    "id": 80,
+    "name": "Millhouse Manastorm",
+    "tags": [
+      "Hearthstone Battlegrounds"
+    ],
+    "tier": 3,
+    "attack": 5,
+    "health": 4,
+    "ability": {
+      "trigger": "attack",
+      "effect": "stealShield",
+      "target": "enemy",
+      "name": "Arcane Trick"
+    },
+    "text": "Arcane Trick: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
+    "portrait": "/portraits/80.svg"
+  },
+  {
+    "id": 81,
+    "name": "Ragnaros the Firelord",
+    "tags": [
+      "Hearthstone Battlegrounds"
+    ],
+    "tier": 5,
+    "attack": 8,
+    "health": 8,
+    "ability": {
+      "trigger": "start",
+      "effect": "damage",
+      "target": "enemy",
+      "amount": 7,
+      "name": "By Fire Be Purged"
+    },
+    "text": "By Fire Be Purged: Harc elején 7 sebzést okoz egy véletlen ellenségnek.",
+    "portrait": "/portraits/81.svg"
+  },
+  {
+    "id": 82,
+    "name": "The Lich King",
+    "tags": [
+      "Hearthstone Battlegrounds"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "trigger": "death",
+      "effect": "buff",
+      "target": "allies",
+      "attack": 3,
+      "health": 3,
+      "name": "Frozen Legacy"
+    },
+    "text": "Frozen Legacy: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/82.svg"
+  },
+  {
+    "id": 83,
+    "name": "Arthur Dent",
+    "tags": [
+      "The Hitchhiker's Guide to the Galaxy"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Do Not Panic"
+    },
+    "text": "Do Not Panic: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/83.svg"
+  },
+  {
+    "id": 84,
+    "name": "Ford Prefect",
+    "tags": [
+      "The Hitchhiker's Guide to the Galaxy"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Guide Entry"
+    },
+    "text": "Guide Entry: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/84.svg"
+  },
+  {
+    "id": 85,
+    "name": "Zaphod Beeblebrox",
+    "tags": [
+      "The Hitchhiker's Guide to the Galaxy"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "name": "Two Heads"
+    },
+    "text": "Two Heads: Minden támadásakor +2 támadást kap erre a harcra.",
+    "portrait": "/portraits/85.svg"
+  },
+  {
+    "id": 86,
+    "name": "Trillian",
+    "tags": [
+      "The Hitchhiker's Guide to the Galaxy"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 4,
+      "health": 4,
+      "name": "Astrophysics"
+    },
+    "text": "Astrophysics: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
+    "portrait": "/portraits/86.svg"
+  },
+  {
+    "id": 87,
+    "name": "Marvin",
+    "tags": [
+      "The Hitchhiker's Guide to the Galaxy"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Brain the Size of a Planet"
+    },
+    "text": "Brain the Size of a Planet: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/87.svg"
+  },
+  {
+    "id": 88,
+    "name": "Slartibartfast",
+    "tags": [
+      "The Hitchhiker's Guide to the Galaxy"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Award-Winning Fjords"
+    },
+    "text": "Award-Winning Fjords: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/88.svg"
+  },
+  {
+    "id": 89,
+    "name": "Humma Kavula",
+    "tags": [
+      "The Hitchhiker's Guide to the Galaxy"
+    ],
+    "tier": 3,
+    "attack": 5,
+    "health": 4,
+    "ability": {
+      "trigger": "attack",
+      "effect": "stealShield",
+      "target": "enemy",
+      "name": "Point of View"
+    },
+    "text": "Point of View: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
+    "portrait": "/portraits/89.svg"
+  },
+  {
+    "id": 90,
+    "name": "Deep Thought",
+    "tags": [
+      "The Hitchhiker's Guide to the Galaxy"
+    ],
+    "tier": 5,
+    "attack": 5,
+    "health": 8,
+    "ability": {
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Forty-Two"
+    },
+    "text": "Forty-Two: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
+    "portrait": "/portraits/90.svg"
+  },
+  {
+    "id": 91,
+    "name": "The Doctor",
+    "tags": [
+      "Doctor Who"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "name": "Újjászületés",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Újjászületés: Egyszer visszatér 1 életerővel és alap támadással, bónuszok, pajzs és kulcsszavak nélkül, ha van hely.",
+    "portrait": "/portraits/91.svg",
+    "keywords": [
+      "reborn"
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Rose Tyler",
+    "tags": [
+      "Doctor Who"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Bad Wolf"
+    },
+    "text": "Bad Wolf: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/92.svg"
+  },
+  {
+    "id": 93,
+    "name": "Martha Jones",
+    "tags": [
+      "Doctor Who"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Medical Training"
+    },
+    "text": "Medical Training: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/93.svg"
+  },
+  {
+    "id": 94,
+    "name": "Donna Noble",
+    "tags": [
+      "Doctor Who"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Best Friend"
+    },
+    "text": "Best Friend: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/94.svg"
+  },
+  {
+    "id": 95,
+    "name": "Amy Pond",
+    "tags": [
+      "Doctor Who"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "left",
+      "attack": 3,
+      "health": 2,
+      "name": "The Girl Who Waited"
+    },
+    "text": "The Girl Who Waited: A köröd végén a bal oldali szomszédja tartósan +3/+2-t kap.",
+    "portrait": "/portraits/95.svg"
+  },
+  {
+    "id": 96,
+    "name": "Rory Williams",
+    "tags": [
+      "Doctor Who"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 3,
+    "ability": {
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1,
+      "health": 2,
+      "name": "Last Centurion"
+    },
+    "text": "Last Centurion: A köröd elején tartósan +1/+2-t kap.",
+    "portrait": "/portraits/96.svg"
+  },
+  {
+    "id": 97,
+    "name": "River Song",
+    "tags": [
+      "Doctor Who"
+    ],
+    "tier": 5,
+    "attack": 7,
+    "health": 6,
+    "ability": {
+      "trigger": "death",
+      "effect": "damage",
+      "target": "enemies",
+      "amount": 5,
+      "name": "Hello Sweetie"
+    },
+    "text": "Hello Sweetie: Halálakor 5 sebzést okoz minden ellenségnek.",
+    "portrait": "/portraits/97.svg"
+  },
+  {
+    "id": 98,
+    "name": "The Master",
+    "tags": [
+      "Doctor Who"
+    ],
+    "tier": 6,
+    "attack": 6,
+    "health": 10,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "left",
+      "attack": 7,
+      "health": 7,
+      "name": "Time Lord Scheme"
+    },
+    "text": "Time Lord Scheme: A köröd végén a bal oldali szomszédja tartósan +7/+7-et kap.",
+    "portrait": "/portraits/98.svg"
+  },
+  {
+    "id": 99,
+    "name": "Misfortune Ramirez Hernandez",
+    "tags": [
+      "Little Misfortune"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Glitter of Happiness"
+    },
+    "text": "Glitter of Happiness: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/99.svg"
+  },
+  {
+    "id": 100,
+    "name": "Benjamin",
+    "tags": [
+      "Little Misfortune"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 4,
+      "health": 4,
+      "name": "Protector"
+    },
+    "text": "Protector: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
+    "portrait": "/portraits/100.svg"
+  },
+  {
+    "id": 101,
+    "name": "Mr. Voice (Morgo)",
+    "tags": [
+      "Little Misfortune"
+    ],
+    "tier": 5,
+    "attack": 7,
+    "health": 6,
+    "ability": {
+      "trigger": "death",
+      "effect": "damage",
+      "target": "enemies",
+      "amount": 5,
+      "name": "Deceptive Narration"
+    },
+    "text": "Deceptive Narration: Halálakor 5 sebzést okoz minden ellenségnek.",
+    "portrait": "/portraits/101.svg"
+  },
+  {
+    "id": 102,
+    "name": "Hiro",
+    "tags": [
+      "Little Misfortune"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "trigger": "death",
+      "effect": "buff",
+      "target": "allies",
+      "attack": 3,
+      "health": 3,
+      "name": "Lost Friend"
+    },
+    "text": "Lost Friend: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/102.svg"
+  },
+  {
+    "id": 103,
+    "name": "Misfortune’s Mother",
+    "tags": [
+      "Little Misfortune"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Eternal Happiness"
+    },
+    "text": "Eternal Happiness: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/103.svg"
+  },
+  {
+    "id": 104,
+    "name": "Puppy",
+    "tags": [
+      "Little Misfortune"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Playful Companion"
+    },
+    "text": "Playful Companion: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/104.svg"
+  },
+  {
+    "id": 105,
+    "name": "Hamster",
+    "tags": [
+      "Little Misfortune"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "death",
+      "effect": "summon",
+      "target": "self",
+      "amount": 1,
+      "name": "Underground Party"
+    },
+    "text": "Underground Party: Halálakor megidéz egy 2/2-es Segítőt.",
+    "portrait": "/portraits/105.svg"
+  },
+  {
+    "id": 106,
+    "name": "Death",
+    "tags": [
+      "Little Misfortune"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Fourth Reality"
+    },
+    "text": "Fourth Reality: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/106.svg"
+  },
+  {
+    "id": 107,
+    "name": "Bruce Wayne / Batman",
+    "tags": [
+      "The Batman (2022)"
+    ],
+    "tier": 3,
+    "attack": 4,
+    "health": 5,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Armored Vigilante"
+    },
+    "text": "Armored Vigilante: Minden támadásakor a két szomszédja +2/+2-t kap erre a harcra.",
+    "portrait": "/portraits/107.svg"
+  },
+  {
+    "id": 108,
+    "name": "Selina Kyle / Catwoman",
+    "tags": [
+      "The Batman (2022)"
+    ],
+    "tier": 3,
+    "attack": 4,
+    "health": 8,
+    "ability": {
+      "name": "Lopakodás",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Lopakodás: Nem támadható, amíg nem támad. Területi sebzés éri. Ha minden ellenfél lopakodik, támadhatóvá válnak.",
+    "portrait": "/portraits/108.svg",
+    "keywords": [
+      "stealth"
+    ]
+  },
+  {
+    "id": 109,
+    "name": "James Gordon",
+    "tags": [
+      "The Batman (2022)"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "name": "Trusted Signal"
+    },
+    "text": "Trusted Signal: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/109.svg"
+  },
+  {
+    "id": 110,
+    "name": "Alfred Pennyworth",
+    "tags": [
+      "The Batman (2022)"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Faithful Butler"
+    },
+    "text": "Faithful Butler: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/110.svg"
+  },
+  {
+    "id": 111,
+    "name": "Oswald Cobblepot / Penguin",
+    "tags": [
+      "The Batman (2022)"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Iceberg Lounge"
+    },
+    "text": "Iceberg Lounge: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/111.svg"
+  },
+  {
+    "id": 112,
+    "name": "Edward Nashton / Riddler",
+    "tags": [
+      "The Batman (2022)"
+    ],
+    "tier": 5,
+    "attack": 7,
+    "health": 6,
+    "ability": {
+      "trigger": "death",
+      "effect": "damage",
+      "target": "enemies",
+      "amount": 5,
+      "name": "Riddle Trap"
+    },
+    "text": "Riddle Trap: Halálakor 5 sebzést okoz minden ellenségnek.",
+    "portrait": "/portraits/112.svg"
+  },
+  {
+    "id": 113,
+    "name": "Carmine Falcone",
+    "tags": [
+      "The Batman (2022)"
+    ],
+    "tier": 5,
+    "attack": 5,
+    "health": 8,
+    "ability": {
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Gotham Connections"
+    },
+    "text": "Gotham Connections: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
+    "portrait": "/portraits/113.svg"
+  },
+  {
+    "id": 114,
+    "name": "Bella Real",
+    "tags": [
+      "The Batman (2022)"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Renewal"
+    },
+    "text": "Renewal: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/114.svg"
+  },
+  {
+    "id": 115,
+    "name": "Seong Gi-hun",
+    "tags": [
+      "Squid Game"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Player 456"
+    },
+    "text": "Player 456: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/115.svg"
+  },
+  {
+    "id": 116,
+    "name": "Cho Sang-woo",
+    "tags": [
+      "Squid Game"
+    ],
+    "tier": 3,
+    "attack": 5,
+    "health": 4,
+    "ability": {
+      "trigger": "attack",
+      "effect": "stealShield",
+      "target": "enemy",
+      "name": "Calculated Risk"
+    },
+    "text": "Calculated Risk: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
+    "portrait": "/portraits/116.svg"
+  },
+  {
+    "id": 117,
+    "name": "Kang Sae-byeok",
+    "tags": [
+      "Squid Game"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "left",
+      "attack": 3,
+      "health": 2,
+      "name": "Quiet Survivor"
+    },
+    "text": "Quiet Survivor: A köröd végén a bal oldali szomszédja tartósan +3/+2-t kap.",
+    "portrait": "/portraits/117.svg"
+  },
+  {
+    "id": 118,
+    "name": "Abdul Ali",
+    "tags": [
+      "Squid Game"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Helping Hand"
+    },
+    "text": "Helping Hand: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/118.svg"
+  },
+  {
+    "id": 119,
+    "name": "Oh Il-nam",
+    "tags": [
+      "Squid Game"
+    ],
+    "tier": 5,
+    "attack": 5,
+    "health": 8,
+    "ability": {
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Old Friends"
+    },
+    "text": "Old Friends: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
+    "portrait": "/portraits/119.svg"
+  },
+  {
+    "id": 120,
+    "name": "Jang Deok-su",
+    "tags": [
+      "Squid Game"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "name": "Intimidation"
+    },
+    "text": "Intimidation: Minden támadásakor +2 támadást kap erre a harcra.",
+    "portrait": "/portraits/120.svg"
+  },
+  {
+    "id": 121,
+    "name": "Han Mi-nyeo",
+    "tags": [
+      "Squid Game"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "trigger": "death",
+      "effect": "buff",
+      "target": "allies",
+      "attack": 3,
+      "health": 3,
+      "name": "Last Bargain"
+    },
+    "text": "Last Bargain: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/121.svg"
+  },
+  {
+    "id": 122,
+    "name": "Hwang Jun-ho",
+    "tags": [
+      "Squid Game"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Undercover Officer"
+    },
+    "text": "Undercover Officer: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/122.svg"
+  },
+  {
+    "id": 123,
+    "name": "Octane",
+    "tags": [
+      "Rocket League"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "name": "Aerial Shot"
+    },
+    "text": "Aerial Shot: Minden támadásakor +2 támadást kap erre a harcra.",
+    "portrait": "/portraits/123.svg"
+  },
+  {
+    "id": 124,
+    "name": "Dominus",
+    "tags": [
+      "Rocket League"
+    ],
+    "tier": 5,
+    "attack": 8,
+    "health": 8,
+    "ability": {
+      "trigger": "start",
+      "effect": "damage",
+      "target": "enemy",
+      "amount": 7,
+      "name": "Power Shot"
+    },
+    "text": "Power Shot: Harc elején 7 sebzést okoz egy véletlen ellenségnek.",
+    "portrait": "/portraits/124.svg"
+  },
+  {
+    "id": 125,
+    "name": "Breakout",
+    "tags": [
+      "Rocket League"
+    ],
+    "tier": 3,
+    "attack": 5,
+    "health": 4,
+    "ability": {
+      "trigger": "attack",
+      "effect": "stealShield",
+      "target": "enemy",
+      "name": "Wall Pinch"
+    },
+    "text": "Wall Pinch: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
+    "portrait": "/portraits/125.svg"
+  },
+  {
+    "id": 126,
+    "name": "Merc",
+    "tags": [
+      "Rocket League"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "death",
+      "effect": "summon",
+      "target": "self",
+      "amount": 1,
+      "name": "Goal Line Defense"
+    },
+    "text": "Goal Line Defense: Halálakor megidéz egy 2/2-es Segítőt.",
+    "portrait": "/portraits/126.svg"
+  },
+  {
+    "id": 127,
+    "name": "Venom (Rocket League)",
+    "tags": [
+      "Rocket League"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Kickoff Boost"
+    },
+    "text": "Kickoff Boost: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/127.svg"
+  },
+  {
+    "id": 128,
+    "name": "X-Devil",
+    "tags": [
+      "Rocket League"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 6,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "self",
+      "name": "Midair Recovery"
+    },
+    "text": "Midair Recovery: Védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/128.svg"
+  },
+  {
+    "id": 129,
+    "name": "Paladin",
+    "tags": [
+      "Rocket League"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 4,
+      "health": 4,
+      "name": "Defensive Rotation"
+    },
+    "text": "Defensive Rotation: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
+    "portrait": "/portraits/129.svg"
+  },
+  {
+    "id": 130,
+    "name": "Backfire",
+    "tags": [
+      "Rocket League"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Centering Pass"
+    },
+    "text": "Centering Pass: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/130.svg"
+  },
+  {
+    "id": 131,
+    "name": "Neo",
+    "tags": [
+      "The Matrix"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 6,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "self",
+      "name": "Bullet Dodge"
+    },
+    "text": "Bullet Dodge: Védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/131.svg"
+  },
+  {
+    "id": 132,
+    "name": "Trinity",
+    "tags": [
+      "The Matrix"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 3,
+    "ability": {
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1,
+      "health": 2,
+      "name": "Rooftop Leap"
+    },
+    "text": "Rooftop Leap: A köröd elején tartósan +1/+2-t kap.",
+    "portrait": "/portraits/132.svg"
+  },
+  {
+    "id": 133,
+    "name": "Morpheus",
+    "tags": [
+      "The Matrix"
+    ],
+    "tier": 5,
+    "attack": 6,
+    "health": 9,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Free Your Mind"
+    },
+    "text": "Free Your Mind: Minden támadásakor a törzséhez tartozó többi szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/133.svg"
+  },
+  {
+    "id": 134,
+    "name": "Agent Smith",
+    "tags": [
+      "The Matrix"
+    ],
+    "tier": 6,
+    "attack": 6,
+    "health": 10,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "left",
+      "attack": 7,
+      "health": 7,
+      "name": "System Override"
+    },
+    "text": "System Override: A köröd végén a bal oldali szomszédja tartósan +7/+7-et kap.",
+    "portrait": "/portraits/134.svg"
+  },
+  {
+    "id": 135,
+    "name": "The Oracle",
+    "tags": [
+      "The Matrix"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Know Thyself"
+    },
+    "text": "Know Thyself: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/135.svg"
+  },
+  {
+    "id": 136,
+    "name": "Cypher",
+    "tags": [
+      "The Matrix"
+    ],
+    "tier": 3,
+    "attack": 5,
+    "health": 4,
+    "ability": {
+      "trigger": "attack",
+      "effect": "stealShield",
+      "target": "enemy",
+      "name": "Betrayal"
+    },
+    "text": "Betrayal: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
+    "portrait": "/portraits/136.svg"
+  },
+  {
+    "id": 137,
+    "name": "Tank",
+    "tags": [
+      "The Matrix"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "name": "Operator Support"
+    },
+    "text": "Operator Support: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/137.svg"
+  },
+  {
+    "id": 138,
+    "name": "Niobe",
+    "tags": [
+      "The Matrix"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Captain of the Logos"
+    },
+    "text": "Captain of the Logos: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/138.svg"
+  },
+  {
+    "id": 139,
+    "name": "Jesus",
+    "tags": [
+      "The Chosen"
+    ],
+    "tier": 5,
+    "attack": 5,
+    "health": 8,
+    "ability": {
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Follow Me"
+    },
+    "text": "Follow Me: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
+    "portrait": "/portraits/139.svg"
+  },
+  {
+    "id": 140,
+    "name": "Simon Peter",
+    "tags": [
+      "The Chosen"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Fisherman’s Resolve"
+    },
+    "text": "Fisherman’s Resolve: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/140.svg"
+  },
+  {
+    "id": 141,
+    "name": "Matthew",
+    "tags": [
+      "The Chosen"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Careful Record"
+    },
+    "text": "Careful Record: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/141.svg"
+  },
+  {
+    "id": 142,
+    "name": "Mary Magdalene",
+    "tags": [
+      "The Chosen"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "New Beginning"
+    },
+    "text": "New Beginning: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/142.svg"
+  },
+  {
+    "id": 143,
+    "name": "Nicodemus",
+    "tags": [
+      "The Chosen"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 4,
+      "health": 4,
+      "name": "Night Conversation"
+    },
+    "text": "Night Conversation: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
+    "portrait": "/portraits/143.svg"
+  },
+  {
+    "id": 144,
+    "name": "Andrew",
+    "tags": [
+      "The Chosen"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Bring a Friend"
+    },
+    "text": "Bring a Friend: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/144.svg"
+  },
+  {
+    "id": 145,
+    "name": "John",
+    "tags": [
+      "The Chosen"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "trigger": "death",
+      "effect": "buff",
+      "target": "allies",
+      "attack": 3,
+      "health": 3,
+      "name": "Faithful Witness"
+    },
+    "text": "Faithful Witness: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/145.svg"
+  },
+  {
+    "id": 146,
+    "name": "Thomas",
+    "tags": [
+      "The Chosen"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 6,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "self",
+      "name": "Steadfast Faith"
+    },
+    "text": "Steadfast Faith: Védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/146.svg"
+  },
+  {
+    "id": 147,
+    "name": "Naked Survivor",
+    "tags": [
+      "Rust"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Fresh Spawn"
+    },
+    "text": "Fresh Spawn: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/147.svg"
+  },
+  {
+    "id": 148,
+    "name": "Hazmat Scientist",
+    "tags": [
+      "Rust"
+    ],
+    "tier": 5,
+    "attack": 1,
+    "health": 12,
+    "ability": {
+      "name": "Méreg",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Méreg: Az első sikeres támadási vagy visszaütési sebzése megöli a célpontot, majd a méreg elfogy. Pajzs nem fogyasztja el.",
+    "portrait": "/portraits/148.svg",
+    "keywords": [
+      "venomous"
+    ]
+  },
+  {
+    "id": 149,
+    "name": "Heavy Scientist",
+    "tags": [
+      "Rust"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Heavy Armor"
+    },
+    "text": "Heavy Armor: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/149.svg"
+  },
+  {
+    "id": 150,
+    "name": "Bandit Camp Guard",
+    "tags": [
+      "Rust"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "name": "Safe Zone"
+    },
+    "text": "Safe Zone: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/150.svg"
+  },
+  {
+    "id": 151,
+    "name": "Outpost Scientist",
+    "tags": [
+      "Rust"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Outpost Supplies"
+    },
+    "text": "Outpost Supplies: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/151.svg"
+  },
+  {
+    "id": 152,
+    "name": "Bear",
+    "tags": [
+      "Rust"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "name": "Territorial Charge"
+    },
+    "text": "Territorial Charge: Minden támadásakor +2 támadást kap erre a harcra.",
+    "portrait": "/portraits/152.svg"
+  },
+  {
+    "id": 153,
+    "name": "Wolf",
+    "tags": [
+      "Rust"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "left",
+      "attack": 3,
+      "health": 2,
+      "name": "Pack Instinct"
+    },
+    "text": "Pack Instinct: A köröd végén a bal oldali szomszédja tartósan +3/+2-t kap.",
+    "portrait": "/portraits/153.svg"
+  },
+  {
+    "id": 154,
+    "name": "Patrol Helicopter",
+    "tags": [
+      "Rust"
+    ],
+    "tier": 6,
+    "attack": 10,
+    "health": 11,
+    "ability": {
+      "trigger": "start",
+      "effect": "damage",
+      "target": "enemies",
+      "amount": 5,
+      "name": "Rocket Barrage"
+    },
+    "text": "Rocket Barrage: Harc elején 5 sebzést okoz minden ellenségnek.",
+    "portrait": "/portraits/154.svg"
+  },
+  {
+    "id": 155,
+    "name": "Sherlock Holmes",
+    "tags": [
+      "Sherlock (BBC)"
+    ],
+    "tier": 3,
+    "attack": 5,
+    "health": 4,
+    "ability": {
+      "trigger": "attack",
+      "effect": "stealShield",
+      "target": "enemy",
+      "name": "Deduction"
+    },
+    "text": "Deduction: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
+    "portrait": "/portraits/155.svg"
+  },
+  {
+    "id": 156,
+    "name": "John Watson",
+    "tags": [
+      "Sherlock (BBC)"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "name": "Army Doctor"
+    },
+    "text": "Army Doctor: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/156.svg"
+  },
+  {
+    "id": 157,
+    "name": "Mycroft Holmes",
+    "tags": [
+      "Sherlock (BBC)"
+    ],
+    "tier": 5,
+    "attack": 5,
+    "health": 8,
+    "ability": {
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Government Connections"
+    },
+    "text": "Government Connections: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
+    "portrait": "/portraits/157.svg"
+  },
+  {
+    "id": 158,
+    "name": "Jim Moriarty",
+    "tags": [
+      "Sherlock (BBC)"
+    ],
+    "tier": 5,
+    "attack": 4,
+    "health": 12,
+    "ability": {
+      "name": "Méreg",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Méreg: Az első sikeres támadási vagy visszaütési sebzése megöli a célpontot, majd a méreg elfogy. Pajzs nem fogyasztja el.",
+    "portrait": "/portraits/158.svg",
+    "keywords": [
+      "venomous"
+    ]
+  },
+  {
+    "id": 159,
+    "name": "Irene Adler",
+    "tags": [
+      "Sherlock (BBC)"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "left",
+      "attack": 3,
+      "health": 2,
+      "name": "The Woman"
+    },
+    "text": "The Woman: A köröd végén a bal oldali szomszédja tartósan +3/+2-t kap.",
+    "portrait": "/portraits/159.svg"
+  },
+  {
+    "id": 160,
+    "name": "Mrs. Hudson",
+    "tags": [
+      "Sherlock (BBC)"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Baker Street Hospitality"
+    },
+    "text": "Baker Street Hospitality: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/160.svg"
+  },
+  {
+    "id": 161,
+    "name": "Greg Lestrade",
+    "tags": [
+      "Sherlock (BBC)"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "death",
+      "effect": "summon",
+      "target": "self",
+      "amount": 1,
+      "name": "Scotland Yard"
+    },
+    "text": "Scotland Yard: Halálakor megidéz egy 2/2-es Segítőt.",
+    "portrait": "/portraits/161.svg"
+  },
+  {
+    "id": 162,
+    "name": "Molly Hooper",
+    "tags": [
+      "Sherlock (BBC)"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Quiet Courage"
+    },
+    "text": "Quiet Courage: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/162.svg"
+  },
+  {
+    "id": 163,
+    "name": "Ashen One",
+    "tags": [
+      "Dark Souls III"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 4,
+    "ability": {
+      "name": "Újjászületés",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Újjászületés: Egyszer visszatér 1 életerővel és alap támadással, bónuszok, pajzs és kulcsszavak nélkül, ha van hely.",
+    "portrait": "/portraits/163.svg",
+    "keywords": [
+      "reborn"
+    ]
+  },
+  {
+    "id": 164,
+    "name": "Fire Keeper",
+    "tags": [
+      "Dark Souls III"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Touch the Darkness"
+    },
+    "text": "Touch the Darkness: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/164.svg"
+  },
+  {
+    "id": 165,
+    "name": "Siegward of Catarina",
+    "tags": [
+      "Dark Souls III"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Onion Armor"
+    },
+    "text": "Onion Armor: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/165.svg"
+  },
+  {
+    "id": 166,
+    "name": "Anri of Astora",
+    "tags": [
+      "Dark Souls III"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 4,
+      "health": 4,
+      "name": "Shared Quest"
+    },
+    "text": "Shared Quest: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
+    "portrait": "/portraits/166.svg"
+  },
+  {
+    "id": 167,
+    "name": "Greirat",
+    "tags": [
+      "Dark Souls III"
+    ],
+    "tier": 3,
+    "attack": 4,
+    "health": 7,
+    "ability": {
+      "name": "Lopakodás",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Lopakodás: Nem támadható, amíg nem támad. Területi sebzés éri. Ha minden ellenfél lopakodik, támadhatóvá válnak.",
+    "portrait": "/portraits/167.svg",
+    "keywords": [
+      "stealth"
+    ]
+  },
+  {
+    "id": 168,
+    "name": "Abyss Watcher",
+    "tags": [
+      "Dark Souls III"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 5,
+    "ability": {
+      "name": "Szélvész",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Szélvész: Kétszer támad a saját támadási körében, ha túléli az első támadást.",
+    "portrait": "/portraits/168.svg",
+    "keywords": [
+      "windfury"
+    ]
+  },
+  {
+    "id": 169,
+    "name": "Pontiff Sulyvahn",
+    "tags": [
+      "Dark Souls III"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 10,
+    "ability": {
+      "name": "Szélvész",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Szélvész: Kétszer támad a saját támadási körében, ha túléli az első támadást.",
+    "portrait": "/portraits/169.svg",
+    "keywords": [
+      "windfury"
+    ]
+  },
+  {
+    "id": 170,
+    "name": "Soul of Cinder",
+    "tags": [
+      "Dark Souls III"
+    ],
+    "tier": 6,
+    "attack": 6,
+    "health": 9,
+    "ability": {
+      "name": "Újjászületés",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Újjászületés: Egyszer visszatér 1 életerővel és alap támadással, bónuszok, pajzs és kulcsszavak nélkül, ha van hely.",
+    "portrait": "/portraits/170.svg",
+    "keywords": [
+      "reborn"
+    ]
+  },
+  {
+    "id": 171,
+    "name": "Jake Sully",
+    "tags": [
+      "Avatar (James Cameron)"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "name": "Toruk Makto"
+    },
+    "text": "Toruk Makto: Minden támadásakor +2 támadást kap erre a harcra.",
+    "portrait": "/portraits/171.svg"
+  },
+  {
+    "id": 172,
+    "name": "Neytiri",
+    "tags": [
+      "Avatar (James Cameron)"
+    ],
+    "tier": 5,
+    "attack": 6,
+    "health": 9,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Forest Archer"
+    },
+    "text": "Forest Archer: Minden támadásakor a törzséhez tartozó többi szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/172.svg"
+  },
+  {
+    "id": 173,
+    "name": "Grace Augustine",
+    "tags": [
+      "Avatar (James Cameron)"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Botanical Knowledge"
+    },
+    "text": "Botanical Knowledge: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/173.svg"
+  },
+  {
+    "id": 174,
+    "name": "Norm Spellman",
+    "tags": [
+      "Avatar (James Cameron)"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Avatar Training"
+    },
+    "text": "Avatar Training: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/174.svg"
+  },
+  {
+    "id": 175,
+    "name": "Trudy Chacon",
+    "tags": [
+      "Avatar (James Cameron)"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 4,
+      "health": 4,
+      "name": "Air Support"
+    },
+    "text": "Air Support: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
+    "portrait": "/portraits/175.svg"
+  },
+  {
+    "id": 176,
+    "name": "Tsu’tey",
+    "tags": [
+      "Avatar (James Cameron)"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Clan Warrior"
+    },
+    "text": "Clan Warrior: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/176.svg"
+  },
+  {
+    "id": 177,
+    "name": "Mo’at",
+    "tags": [
+      "Avatar (James Cameron)"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Voice of Eywa"
+    },
+    "text": "Voice of Eywa: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/177.svg"
+  },
+  {
+    "id": 178,
+    "name": "Miles Quaritch",
+    "tags": [
+      "Avatar (James Cameron)"
+    ],
+    "tier": 6,
+    "attack": 10,
+    "health": 11,
+    "ability": {
+      "trigger": "start",
+      "effect": "damage",
+      "target": "enemies",
+      "amount": 5,
+      "name": "AMP Assault"
+    },
+    "text": "AMP Assault: Harc elején 5 sebzést okoz minden ellenségnek.",
+    "portrait": "/portraits/178.svg"
+  },
+  {
+    "id": 179,
+    "name": "Billy Butcher",
+    "tags": [
+      "The Boys"
+    ],
+    "tier": 3,
+    "attack": 4,
+    "health": 5,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Supe Hunter"
+    },
+    "text": "Supe Hunter: Minden támadásakor a két szomszédja +2/+2-t kap erre a harcra.",
+    "portrait": "/portraits/179.svg"
+  },
+  {
+    "id": 180,
+    "name": "Hughie Campbell",
+    "tags": [
+      "The Boys"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Unexpected Courage"
+    },
+    "text": "Unexpected Courage: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/180.svg"
+  },
+  {
+    "id": 181,
+    "name": "Annie January / Starlight",
+    "tags": [
+      "The Boys"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "name": "Guiding Light"
+    },
+    "text": "Guiding Light: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/181.svg"
+  },
+  {
+    "id": 182,
+    "name": "Mother’s Milk",
+    "tags": [
+      "The Boys"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Hold the Line"
+    },
+    "text": "Hold the Line: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/182.svg"
+  },
+  {
+    "id": 183,
+    "name": "Frenchie",
+    "tags": [
+      "The Boys"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Improvised Gear"
+    },
+    "text": "Improvised Gear: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/183.svg"
+  },
+  {
+    "id": 184,
+    "name": "Kimiko",
+    "tags": [
+      "The Boys"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 3,
+    "ability": {
+      "name": "Újjászületés",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Újjászületés: Egyszer visszatér 1 életerővel és alap támadással, bónuszok, pajzs és kulcsszavak nélkül, ha van hely.",
+    "portrait": "/portraits/184.svg",
+    "keywords": [
+      "reborn"
+    ]
+  },
+  {
+    "id": 185,
+    "name": "Homelander",
+    "tags": [
+      "The Boys"
+    ],
+    "tier": 6,
+    "attack": 10,
+    "health": 11,
+    "ability": {
+      "trigger": "start",
+      "effect": "damage",
+      "target": "enemies",
+      "amount": 5,
+      "name": "Heat Vision"
+    },
+    "text": "Heat Vision: Harc elején 5 sebzést okoz minden ellenségnek.",
+    "portrait": "/portraits/185.svg"
+  },
+  {
+    "id": 186,
+    "name": "Queen Maeve",
+    "tags": [
+      "The Boys"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 6,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "self",
+      "name": "Warrior’s Resolve"
+    },
+    "text": "Warrior’s Resolve: Védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/186.svg"
+  },
+  {
+    "id": 187,
+    "name": "The New Kid",
+    "tags": [
+      "South Park: The Stick of Truth / The Fractured But Whole"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Choose Your Class"
+    },
+    "text": "Choose Your Class: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/187.svg"
+  },
+  {
+    "id": 188,
+    "name": "Eric Cartman",
+    "tags": [
+      "South Park: The Stick of Truth / The Fractured But Whole"
+    ],
+    "tier": 5,
+    "attack": 8,
+    "health": 8,
+    "ability": {
+      "trigger": "start",
+      "effect": "damage",
+      "target": "enemy",
+      "amount": 7,
+      "name": "Grand Wizard"
+    },
+    "text": "Grand Wizard: Harc elején 7 sebzést okoz egy véletlen ellenségnek.",
+    "portrait": "/portraits/188.svg"
+  },
+  {
+    "id": 189,
+    "name": "Stan Marsh",
+    "tags": [
+      "South Park: The Stick of Truth / The Fractured But Whole"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Toolshed"
+    },
+    "text": "Toolshed: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/189.svg"
+  },
+  {
+    "id": 190,
+    "name": "Kyle Broflovski",
+    "tags": [
+      "South Park: The Stick of Truth / The Fractured But Whole"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "name": "Human Kite"
+    },
+    "text": "Human Kite: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/190.svg"
+  },
+  {
+    "id": 191,
+    "name": "Kenny McCormick",
+    "tags": [
+      "South Park: The Stick of Truth / The Fractured But Whole"
+    ],
+    "tier": 4,
+    "attack": 6,
+    "health": 4,
+    "ability": {
+      "name": "Újjászületés",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Újjászületés: Egyszer visszatér 1 életerővel és alap támadással, bónuszok, pajzs és kulcsszavak nélkül, ha van hely.",
+    "portrait": "/portraits/191.svg",
+    "keywords": [
+      "reborn"
+    ]
+  },
+  {
+    "id": 192,
+    "name": "Butters Stotch",
+    "tags": [
+      "South Park: The Stick of Truth / The Fractured But Whole"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Paladin’s Blessing"
+    },
+    "text": "Paladin’s Blessing: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/192.svg"
+  },
+  {
+    "id": 193,
+    "name": "Craig Tucker",
+    "tags": [
+      "South Park: The Stick of Truth / The Fractured But Whole"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "name": "Super Craig"
+    },
+    "text": "Super Craig: Minden támadásakor +2 támadást kap erre a harcra.",
+    "portrait": "/portraits/193.svg"
+  },
+  {
+    "id": 194,
+    "name": "Tweek Tweak",
+    "tags": [
+      "South Park: The Stick of Truth / The Fractured But Whole"
+    ],
+    "tier": 6,
+    "attack": 6,
+    "health": 10,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "left",
+      "attack": 7,
+      "health": 7,
+      "name": "Wonder Tweek"
+    },
+    "text": "Wonder Tweek: A köröd végén a bal oldali szomszédja tartósan +7/+7-et kap.",
+    "portrait": "/portraits/194.svg"
+  },
+  {
+    "id": 195,
+    "name": "Truman Burbank",
+    "tags": [
+      "The Truman Show"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Good Morning"
+    },
+    "text": "Good Morning: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/195.svg"
+  },
+  {
+    "id": 196,
+    "name": "Christof",
+    "tags": [
+      "The Truman Show"
+    ],
+    "tier": 5,
+    "attack": 5,
+    "health": 8,
+    "ability": {
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Cue the Sun"
+    },
+    "text": "Cue the Sun: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
+    "portrait": "/portraits/196.svg"
+  },
+  {
+    "id": 197,
+    "name": "Sylvia / Lauren Garland",
+    "tags": [
+      "The Truman Show"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "name": "Truth Beyond the Set"
+    },
+    "text": "Truth Beyond the Set: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/197.svg"
+  },
+  {
+    "id": 198,
+    "name": "Meryl Burbank",
+    "tags": [
+      "The Truman Show"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Product Placement"
+    },
+    "text": "Product Placement: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/198.svg"
+  },
+  {
+    "id": 199,
+    "name": "Marlon",
+    "tags": [
+      "The Truman Show"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "death",
+      "effect": "summon",
+      "target": "self",
+      "amount": 1,
+      "name": "Best Friend"
+    },
+    "text": "Best Friend: Halálakor megidéz egy 2/2-es Segítőt.",
+    "portrait": "/portraits/199.svg"
+  },
+  {
+    "id": 200,
+    "name": "Kirk Burbank",
+    "tags": [
+      "The Truman Show"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "trigger": "death",
+      "effect": "buff",
+      "target": "allies",
+      "attack": 3,
+      "health": 3,
+      "name": "Father’s Return"
+    },
+    "text": "Father’s Return: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/200.svg"
+  },
+  {
+    "id": 201,
+    "name": "Angela Burbank",
+    "tags": [
+      "The Truman Show"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Family Album"
+    },
+    "text": "Family Album: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/201.svg"
+  },
+  {
+    "id": 202,
+    "name": "Lawrence",
+    "tags": [
+      "The Truman Show"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "left",
+      "attack": 3,
+      "health": 2,
+      "name": "Control Room"
+    },
+    "text": "Control Room: A köröd végén a bal oldali szomszédja tartósan +3/+2-t kap.",
+    "portrait": "/portraits/202.svg"
+  },
+  {
+    "id": 203,
+    "name": "Valery Legasov",
+    "tags": [
+      "Chernobyl (2019)"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Tell the Truth"
+    },
+    "text": "Tell the Truth: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/203.svg"
+  },
+  {
+    "id": 204,
+    "name": "Boris Shcherbina",
+    "tags": [
+      "Chernobyl (2019)"
+    ],
+    "tier": 5,
+    "attack": 5,
+    "health": 8,
+    "ability": {
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Emergency Coordination"
+    },
+    "text": "Emergency Coordination: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
+    "portrait": "/portraits/204.svg"
+  },
+  {
+    "id": 205,
+    "name": "Ulana Khomyuk",
+    "tags": [
+      "Chernobyl (2019)"
+    ],
+    "tier": 3,
+    "attack": 5,
+    "health": 4,
+    "ability": {
+      "trigger": "attack",
+      "effect": "stealShield",
+      "target": "enemy",
+      "name": "Reactor Analysis"
+    },
+    "text": "Reactor Analysis: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
+    "portrait": "/portraits/205.svg"
+  },
+  {
+    "id": 206,
+    "name": "Anatoly Dyatlov",
+    "tags": [
+      "Chernobyl (2019)"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Control Room Orders"
+    },
+    "text": "Control Room Orders: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/206.svg"
+  },
+  {
+    "id": 207,
+    "name": "Vasily Ignatenko",
+    "tags": [
+      "Chernobyl (2019)"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "trigger": "death",
+      "effect": "buff",
+      "target": "allies",
+      "attack": 3,
+      "health": 3,
+      "name": "First Responder"
+    },
+    "text": "First Responder: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/207.svg"
+  },
+  {
+    "id": 208,
+    "name": "Lyudmilla Ignatenko",
+    "tags": [
+      "Chernobyl (2019)"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Unwavering Devotion"
+    },
+    "text": "Unwavering Devotion: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/208.svg"
+  },
+  {
+    "id": 209,
+    "name": "General Pikalov",
+    "tags": [
+      "Chernobyl (2019)"
+    ],
+    "tier": 3,
+    "attack": 4,
+    "health": 5,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Radiation Reconnaissance"
+    },
+    "text": "Radiation Reconnaissance: Minden támadásakor a két szomszédja +2/+2-t kap erre a harcra.",
+    "portrait": "/portraits/209.svg"
+  },
+  {
+    "id": 210,
+    "name": "Mikhail Shchadov",
+    "tags": [
+      "Chernobyl (2019)"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Mobilize the Miners"
+    },
+    "text": "Mobilize the Miners: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/210.svg"
+  },
+  {
+    "id": 211,
+    "name": "Ivy",
+    "tags": [
+      "Deadlock"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "name": "Stone Form"
+    },
+    "text": "Stone Form: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/211.svg"
+  },
+  {
+    "id": 212,
+    "name": "Abrams",
+    "tags": [
+      "Deadlock"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Shoulder Charge"
+    },
+    "text": "Shoulder Charge: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/212.svg"
+  },
+  {
+    "id": 213,
+    "name": "Bebop",
+    "tags": [
+      "Deadlock"
+    ],
+    "tier": 5,
+    "attack": 7,
+    "health": 6,
+    "ability": {
+      "trigger": "death",
+      "effect": "damage",
+      "target": "enemies",
+      "amount": 5,
+      "name": "Exploding Uppercut"
+    },
+    "text": "Exploding Uppercut: Halálakor 5 sebzést okoz minden ellenségnek.",
+    "portrait": "/portraits/213.svg"
+  },
+  {
+    "id": 214,
+    "name": "Dynamo",
+    "tags": [
+      "Deadlock"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Rejuvenating Aurora"
+    },
+    "text": "Rejuvenating Aurora: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/214.svg"
+  },
+  {
+    "id": 215,
+    "name": "Infernus",
+    "tags": [
+      "Deadlock"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "name": "Flame Dash"
+    },
+    "text": "Flame Dash: Minden támadásakor +2 támadást kap erre a harcra.",
+    "portrait": "/portraits/215.svg"
+  },
+  {
+    "id": 216,
+    "name": "Haze",
+    "tags": [
+      "Deadlock"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 11,
+    "ability": {
+      "name": "Lopakodás",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Lopakodás: Nem támadható, amíg nem támad. Területi sebzés éri. Ha minden ellenfél lopakodik, támadhatóvá válnak.",
+    "portrait": "/portraits/216.svg",
+    "keywords": [
+      "stealth"
+    ]
+  },
+  {
+    "id": 217,
+    "name": "Seven",
+    "tags": [
+      "Deadlock"
+    ],
+    "tier": 6,
+    "attack": 10,
+    "health": 11,
+    "ability": {
+      "trigger": "start",
+      "effect": "damage",
+      "target": "enemies",
+      "amount": 5,
+      "name": "Storm Cloud"
+    },
+    "text": "Storm Cloud: Harc elején 5 sebzést okoz minden ellenségnek.",
+    "portrait": "/portraits/217.svg"
+  },
+  {
+    "id": 218,
+    "name": "Vindicta",
+    "tags": [
+      "Deadlock"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Spotter"
+    },
+    "text": "Spotter: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/218.svg"
+  },
+  {
+    "id": 219,
+    "name": "Edward “Teddy” Daniels",
+    "tags": [
+      "Shutter Island"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Marshal’s Investigation"
+    },
+    "text": "Marshal’s Investigation: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/219.svg"
+  },
+  {
+    "id": 220,
+    "name": "Chuck Aule / Dr. Sheehan",
+    "tags": [
+      "Shutter Island"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "name": "Trusted Partner"
+    },
+    "text": "Trusted Partner: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/220.svg"
+  },
+  {
+    "id": 221,
+    "name": "Dr. John Cawley",
+    "tags": [
+      "Shutter Island"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Role-Play Therapy"
+    },
+    "text": "Role-Play Therapy: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/221.svg"
+  },
+  {
+    "id": 222,
+    "name": "Dr. Jeremiah Naehring",
+    "tags": [
+      "Shutter Island"
+    ],
+    "tier": 3,
+    "attack": 4,
+    "health": 5,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Clinical Interview"
+    },
+    "text": "Clinical Interview: Minden támadásakor a két szomszédja +2/+2-t kap erre a harcra.",
+    "portrait": "/portraits/222.svg"
+  },
+  {
+    "id": 223,
+    "name": "Dolores Chanal",
+    "tags": [
+      "Shutter Island"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "trigger": "death",
+      "effect": "buff",
+      "target": "allies",
+      "attack": 3,
+      "health": 3,
+      "name": "Haunting Memory"
+    },
+    "text": "Haunting Memory: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/223.svg"
+  },
+  {
+    "id": 224,
+    "name": "Rachel Solando",
+    "tags": [
+      "Shutter Island"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 6,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "self",
+      "name": "Missing Patient"
+    },
+    "text": "Missing Patient: Védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/224.svg"
+  },
+  {
+    "id": 225,
+    "name": "George Noyce",
+    "tags": [
+      "Shutter Island"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Warning from Ward C"
+    },
+    "text": "Warning from Ward C: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/225.svg"
+  },
+  {
+    "id": 226,
+    "name": "The Warden",
+    "tags": [
+      "Shutter Island"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Island Security"
+    },
+    "text": "Island Security: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/226.svg"
+  },
+  {
+    "id": 227,
+    "name": "Rachel Green",
+    "tags": [
+      "Friends"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Fresh Start"
+    },
+    "text": "Fresh Start: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/227.svg"
+  },
+  {
+    "id": 228,
+    "name": "Monica Geller",
+    "tags": [
+      "Friends"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 3,
+    "ability": {
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1,
+      "health": 2,
+      "name": "Competitive Spirit"
+    },
+    "text": "Competitive Spirit: A köröd elején tartósan +1/+2-t kap.",
+    "portrait": "/portraits/228.svg"
+  },
+  {
+    "id": 229,
+    "name": "Phoebe Buffay",
+    "tags": [
+      "Friends"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "trigger": "death",
+      "effect": "buff",
+      "target": "allies",
+      "attack": 3,
+      "health": 3,
+      "name": "Smelly Cat"
+    },
+    "text": "Smelly Cat: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/229.svg"
+  },
+  {
+    "id": 230,
+    "name": "Joey Tribbiani",
+    "tags": [
+      "Friends"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "name": "How You Doin"
+    },
+    "text": "How You Doin: Minden támadásakor +2 támadást kap erre a harcra.",
+    "portrait": "/portraits/230.svg"
+  },
+  {
+    "id": 231,
+    "name": "Chandler Bing",
+    "tags": [
+      "Friends"
+    ],
+    "tier": 3,
+    "attack": 5,
+    "health": 4,
+    "ability": {
+      "trigger": "attack",
+      "effect": "stealShield",
+      "target": "enemy",
+      "name": "Could I Be Any More"
+    },
+    "text": "Could I Be Any More: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
+    "portrait": "/portraits/231.svg"
+  },
+  {
+    "id": 232,
+    "name": "Ross Geller",
+    "tags": [
+      "Friends"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Unagi"
+    },
+    "text": "Unagi: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/232.svg"
+  },
+  {
+    "id": 233,
+    "name": "Gunther",
+    "tags": [
+      "Friends"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Central Perk"
+    },
+    "text": "Central Perk: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/233.svg"
+  },
+  {
+    "id": 234,
+    "name": "Janice Hosenstein",
+    "tags": [
+      "Friends"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 6,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "self",
+      "name": "Oh My God"
+    },
+    "text": "Oh My God: Védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/234.svg"
+  },
+  {
+    "id": 235,
+    "name": "Lee Dong-chul",
+    "tags": [
+      "East of Eden (2008)"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Protective Brother"
+    },
+    "text": "Protective Brother: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/235.svg"
+  },
+  {
+    "id": 236,
+    "name": "Lee Dong-wook",
+    "tags": [
+      "East of Eden (2008)"
+    ],
+    "tier": 3,
+    "attack": 5,
+    "health": 4,
+    "ability": {
+      "trigger": "attack",
+      "effect": "stealShield",
+      "target": "enemy",
+      "name": "Prosecutor’s Case"
+    },
+    "text": "Prosecutor’s Case: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
+    "portrait": "/portraits/236.svg"
+  },
+  {
+    "id": 237,
+    "name": "Min Hye-rin",
+    "tags": [
+      "East of Eden (2008)"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Careful Counsel"
+    },
+    "text": "Careful Counsel: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/237.svg"
+  },
+  {
+    "id": 238,
+    "name": "Kim Ji-hyun",
+    "tags": [
+      "East of Eden (2008)"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Unbroken Resolve"
+    },
+    "text": "Unbroken Resolve: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/238.svg"
+  },
+  {
+    "id": 239,
+    "name": "Shin Myung-hoon",
+    "tags": [
+      "East of Eden (2008)"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "name": "Rival Heir"
+    },
+    "text": "Rival Heir: Minden támadásakor +2 támadást kap erre a harcra.",
+    "portrait": "/portraits/239.svg"
+  },
+  {
+    "id": 240,
+    "name": "Gook Young-ran",
+    "tags": [
+      "East of Eden (2008)"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 4,
+      "health": 4,
+      "name": "Loyal Heart"
+    },
+    "text": "Loyal Heart: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
+    "portrait": "/portraits/240.svg"
+  },
+  {
+    "id": 241,
+    "name": "Shin Tae-hwan",
+    "tags": [
+      "East of Eden (2008)"
+    ],
+    "tier": 5,
+    "attack": 6,
+    "health": 9,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Taesung Influence"
+    },
+    "text": "Taesung Influence: Minden támadásakor a törzséhez tartozó többi szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/241.svg"
+  },
+  {
+    "id": 242,
+    "name": "Yang Chun-hee",
+    "tags": [
+      "East of Eden (2008)"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Family Bonds"
+    },
+    "text": "Family Bonds: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/242.svg"
+  },
+  {
+    "id": 243,
+    "name": "Frodo Baggins",
+    "tags": [
+      "The Lord of the Rings"
+    ],
+    "tier": 3,
+    "attack": 5,
+    "health": 6,
+    "ability": {
+      "name": "Lopakodás",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Lopakodás: Nem támadható, amíg nem támad. Területi sebzés éri. Ha minden ellenfél lopakodik, támadhatóvá válnak.",
+    "portrait": "/portraits/243.svg",
+    "keywords": [
+      "stealth"
+    ]
+  },
+  {
+    "id": 244,
+    "name": "Samwise Gamgee",
+    "tags": [
+      "The Lord of the Rings"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Carry You"
+    },
+    "text": "Carry You: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/244.svg"
+  },
+  {
+    "id": 245,
+    "name": "Aragorn",
+    "tags": [
+      "The Lord of the Rings"
+    ],
+    "tier": 5,
+    "attack": 6,
+    "health": 9,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Return of the King"
+    },
+    "text": "Return of the King: Minden támadásakor a törzséhez tartozó többi szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/245.svg"
+  },
+  {
+    "id": 246,
+    "name": "Legolas",
+    "tags": [
+      "The Lord of the Rings"
+    ],
+    "tier": 5,
+    "attack": 8,
+    "health": 8,
+    "ability": {
+      "trigger": "start",
+      "effect": "damage",
+      "target": "enemy",
+      "amount": 7,
+      "name": "Elven Bow"
+    },
+    "text": "Elven Bow: Harc elején 7 sebzést okoz egy véletlen ellenségnek.",
+    "portrait": "/portraits/246.svg"
+  },
+  {
+    "id": 247,
+    "name": "Gimli",
+    "tags": [
+      "The Lord of the Rings"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Dwarven Defense"
+    },
+    "text": "Dwarven Defense: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/247.svg"
+  },
+  {
+    "id": 248,
+    "name": "Gandalf",
+    "tags": [
+      "The Lord of the Rings"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 4,
+      "health": 4,
+      "name": "You Shall Not Pass"
+    },
+    "text": "You Shall Not Pass: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
+    "portrait": "/portraits/248.svg"
+  },
+  {
+    "id": 249,
+    "name": "Boromir",
+    "tags": [
+      "The Lord of the Rings"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "trigger": "death",
+      "effect": "buff",
+      "target": "allies",
+      "attack": 3,
+      "health": 3,
+      "name": "Last Stand"
+    },
+    "text": "Last Stand: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/249.svg"
+  },
+  {
+    "id": 250,
+    "name": "Gollum",
+    "tags": [
+      "The Lord of the Rings"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 11,
+    "ability": {
+      "name": "Lopakodás",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Lopakodás: Nem támadható, amíg nem támad. Területi sebzés éri. Ha minden ellenfél lopakodik, támadhatóvá válnak.",
+    "portrait": "/portraits/250.svg",
+    "keywords": [
+      "stealth"
+    ]
+  },
+  {
+    "id": 251,
+    "name": "Klein Moretti",
+    "tags": [
+      "Lord of Mysteries"
+    ],
+    "tier": 3,
+    "attack": 5,
+    "health": 6,
+    "ability": {
+      "name": "Lopakodás",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Lopakodás: Nem támadható, amíg nem támad. Területi sebzés éri. Ha minden ellenfél lopakodik, támadhatóvá válnak.",
+    "portrait": "/portraits/251.svg",
+    "keywords": [
+      "stealth"
+    ]
+  },
+  {
+    "id": 252,
+    "name": "Audrey Hall",
+    "tags": [
+      "Lord of Mysteries"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Spectator"
+    },
+    "text": "Spectator: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/252.svg"
+  },
+  {
+    "id": 253,
+    "name": "Alger Wilson",
+    "tags": [
+      "Lord of Mysteries"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 3,
+    "ability": {
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1,
+      "health": 2,
+      "name": "The Hanged Man"
+    },
+    "text": "The Hanged Man: A köröd elején tartósan +1/+2-t kap.",
+    "portrait": "/portraits/253.svg"
+  },
+  {
+    "id": 254,
+    "name": "Derrick Berg",
+    "tags": [
+      "Lord of Mysteries"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "The Sun"
+    },
+    "text": "The Sun: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/254.svg"
+  },
+  {
+    "id": 255,
+    "name": "Fors Wall",
+    "tags": [
+      "Lord of Mysteries"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "left",
+      "attack": 3,
+      "health": 2,
+      "name": "The Magician"
+    },
+    "text": "The Magician: A köröd végén a bal oldali szomszédja tartósan +3/+2-t kap.",
+    "portrait": "/portraits/255.svg"
+  },
+  {
+    "id": 256,
+    "name": "Xio Derecha",
+    "tags": [
+      "Lord of Mysteries"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "name": "Judgement"
+    },
+    "text": "Judgement: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/256.svg"
+  },
+  {
+    "id": 257,
+    "name": "Leonard Mitchell",
+    "tags": [
+      "Lord of Mysteries"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "The Star"
+    },
+    "text": "The Star: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/257.svg"
+  },
+  {
+    "id": 258,
+    "name": "Amon",
+    "tags": [
+      "Lord of Mysteries"
+    ],
+    "tier": 5,
+    "attack": 7,
+    "health": 6,
+    "ability": {
+      "trigger": "death",
+      "effect": "damage",
+      "target": "enemies",
+      "amount": 5,
+      "name": "Error"
+    },
+    "text": "Error: Halálakor 5 sebzést okoz minden ellenségnek.",
+    "portrait": "/portraits/258.svg"
+  },
+  {
+    "id": 259,
+    "name": "Seraph",
+    "tags": [
+      "Vintage Story"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "name": "Újjászületés",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Újjászületés: Egyszer visszatér 1 életerővel és alap támadással, bónuszok, pajzs és kulcsszavak nélkül, ha van hely.",
+    "portrait": "/portraits/259.svg",
+    "keywords": [
+      "reborn"
+    ]
+  },
+  {
+    "id": 260,
+    "name": "Surface Drifter",
+    "tags": [
+      "Vintage Story"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "death",
+      "effect": "summon",
+      "target": "self",
+      "amount": 1,
+      "name": "Rusty Claws"
+    },
+    "text": "Rusty Claws: Halálakor megidéz egy 2/2-es Segítőt.",
+    "portrait": "/portraits/260.svg"
+  },
+  {
+    "id": 261,
+    "name": "Corrupt Drifter",
+    "tags": [
+      "Vintage Story"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Deep Cave Horror"
+    },
+    "text": "Deep Cave Horror: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/261.svg"
+  },
+  {
+    "id": 262,
+    "name": "Locust",
+    "tags": [
+      "Vintage Story"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "left",
+      "attack": 3,
+      "health": 2,
+      "name": "Clockwork Skitter"
+    },
+    "text": "Clockwork Skitter: A köröd végén a bal oldali szomszédja tartósan +3/+2-t kap.",
+    "portrait": "/portraits/262.svg"
+  },
+  {
+    "id": 263,
+    "name": "Sawblade Locust",
+    "tags": [
+      "Vintage Story"
+    ],
+    "tier": 3,
+    "attack": 4,
+    "health": 5,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Spinning Blade"
+    },
+    "text": "Spinning Blade: Minden támadásakor a két szomszédja +2/+2-t kap erre a harcra.",
+    "portrait": "/portraits/263.svg"
+  },
+  {
+    "id": 264,
+    "name": "Bell",
+    "tags": [
+      "Vintage Story"
+    ],
+    "tier": 5,
+    "attack": 5,
+    "health": 8,
+    "ability": {
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Cave Alarm"
+    },
+    "text": "Cave Alarm: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
+    "portrait": "/portraits/264.svg"
+  },
+  {
+    "id": 265,
+    "name": "Wolf (Vintage Story)",
+    "tags": [
+      "Vintage Story"
+    ],
+    "tier": 5,
+    "attack": 7,
+    "health": 6,
+    "ability": {
+      "trigger": "death",
+      "effect": "damage",
+      "target": "enemies",
+      "amount": 5,
+      "name": "Forest Ambush"
+    },
+    "text": "Forest Ambush: Halálakor 5 sebzést okoz minden ellenségnek.",
+    "portrait": "/portraits/265.svg"
+  },
+  {
+    "id": 266,
+    "name": "Trader",
+    "tags": [
+      "Vintage Story"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Wagon Supplies"
+    },
+    "text": "Wagon Supplies: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/266.svg"
+  },
+  {
+    "id": 267,
+    "name": "Peter Parker / Spider-Man",
+    "tags": [
+      "Spider-Man"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 6,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "self",
+      "name": "Spider-Sense"
+    },
+    "text": "Spider-Sense: Védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/267.svg"
+  },
+  {
+    "id": 268,
+    "name": "Miles Morales",
+    "tags": [
+      "Spider-Man"
+    ],
+    "tier": 3,
+    "attack": 5,
+    "health": 4,
+    "ability": {
+      "trigger": "attack",
+      "effect": "stealShield",
+      "target": "enemy",
+      "name": "Venom Strike"
+    },
+    "text": "Venom Strike: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
+    "portrait": "/portraits/268.svg"
+  },
+  {
+    "id": 269,
+    "name": "Gwen Stacy / Ghost-Spider",
+    "tags": [
+      "Spider-Man"
+    ],
+    "tier": 2,
+    "attack": 4,
+    "health": 3,
+    "ability": {
+      "name": "Szélvész",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Szélvész: Kétszer támad a saját támadási körében, ha túléli az első támadást.",
+    "portrait": "/portraits/269.svg",
+    "keywords": [
+      "windfury"
+    ]
+  },
+  {
+    "id": 270,
+    "name": "Mary Jane Watson",
+    "tags": [
+      "Spider-Man"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Face It Tiger"
+    },
+    "text": "Face It Tiger: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/270.svg"
+  },
+  {
+    "id": 271,
+    "name": "May Parker",
+    "tags": [
+      "Spider-Man"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Great Responsibility"
+    },
+    "text": "Great Responsibility: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/271.svg"
+  },
+  {
+    "id": 272,
+    "name": "Green Goblin",
+    "tags": [
+      "Spider-Man"
+    ],
+    "tier": 5,
+    "attack": 8,
+    "health": 11,
+    "ability": {
+      "name": "Méreg",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Méreg: Az első sikeres támadási vagy visszaütési sebzése megöli a célpontot, majd a méreg elfogy. Pajzs nem fogyasztja el.",
+    "portrait": "/portraits/272.svg",
+    "keywords": [
+      "venomous"
+    ]
+  },
+  {
+    "id": 273,
+    "name": "Doctor Octopus",
+    "tags": [
+      "Spider-Man"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Mechanical Arms"
+    },
+    "text": "Mechanical Arms: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/273.svg"
+  },
+  {
+    "id": 274,
+    "name": "Venom",
+    "tags": [
+      "Spider-Man"
+    ],
+    "tier": 6,
+    "attack": 9,
+    "health": 13,
+    "ability": {
+      "name": "Méreg",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Méreg: Az első sikeres támadási vagy visszaütési sebzése megöli a célpontot, majd a méreg elfogy. Pajzs nem fogyasztja el.",
+    "portrait": "/portraits/274.svg",
+    "keywords": [
+      "venomous"
+    ]
+  },
+  {
+    "id": 275,
+    "name": "Bobby Nash",
+    "tags": [
+      "9-1-1"
+    ],
+    "tier": 5,
+    "attack": 6,
+    "health": 9,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Captain of the 118"
+    },
+    "text": "Captain of the 118: Minden támadásakor a törzséhez tartozó többi szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/275.svg"
+  },
+  {
+    "id": 276,
+    "name": "Athena Grant",
+    "tags": [
+      "9-1-1"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Police Sergeant"
+    },
+    "text": "Police Sergeant: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/276.svg"
+  },
+  {
+    "id": 277,
+    "name": "Evan “Buck” Buckley",
+    "tags": [
+      "9-1-1"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "name": "Ladder Rescue"
+    },
+    "text": "Ladder Rescue: Minden támadásakor +2 támadást kap erre a harcra.",
+    "portrait": "/portraits/277.svg"
+  },
+  {
+    "id": 278,
+    "name": "Henrietta Wilson",
+    "tags": [
+      "9-1-1"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Paramedic Care"
+    },
+    "text": "Paramedic Care: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/278.svg"
+  },
+  {
+    "id": 279,
+    "name": "Howard “Chimney” Han",
+    "tags": [
+      "9-1-1"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "name": "Emergency Support"
+    },
+    "text": "Emergency Support: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/279.svg"
+  },
+  {
+    "id": 280,
+    "name": "Eddie Diaz",
+    "tags": [
+      "9-1-1"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 6,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "self",
+      "name": "Rescue Training"
+    },
+    "text": "Rescue Training: Védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/280.svg"
+  },
+  {
+    "id": 281,
+    "name": "Maddie Buckley",
+    "tags": [
+      "9-1-1"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Dispatch Coordination"
+    },
+    "text": "Dispatch Coordination: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/281.svg"
+  },
+  {
+    "id": 282,
+    "name": "Christopher Diaz",
+    "tags": [
+      "9-1-1"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Brave Steps"
+    },
+    "text": "Brave Steps: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/282.svg"
+  },
+  {
+    "id": 283,
+    "name": "Nameless",
+    "tags": [
+      "Hero (2002)"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 6,
+    "ability": {
+      "name": "Méreg",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Méreg: Az első sikeres támadási vagy visszaütési sebzése megöli a célpontot, majd a méreg elfogy. Pajzs nem fogyasztja el.",
+    "portrait": "/portraits/283.svg",
+    "keywords": [
+      "venomous"
+    ]
+  },
+  {
+    "id": 284,
+    "name": "Broken Sword",
+    "tags": [
+      "Hero (2002)"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Calligraphy of Peace"
+    },
+    "text": "Calligraphy of Peace: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/284.svg"
+  },
+  {
+    "id": 285,
+    "name": "Flying Snow",
+    "tags": [
+      "Hero (2002)"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "name": "Szélvész",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Szélvész: Kétszer támad a saját támadási körében, ha túléli az első támadást.",
+    "portrait": "/portraits/285.svg",
+    "keywords": [
+      "windfury"
+    ]
+  },
+  {
+    "id": 286,
+    "name": "Long Sky",
+    "tags": [
+      "Hero (2002)"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "left",
+      "attack": 3,
+      "health": 2,
+      "name": "Courtyard Duel"
+    },
+    "text": "Courtyard Duel: A köröd végén a bal oldali szomszédja tartósan +3/+2-t kap.",
+    "portrait": "/portraits/286.svg"
+  },
+  {
+    "id": 287,
+    "name": "Moon",
+    "tags": [
+      "Hero (2002)"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Apprentice’s Resolve"
+    },
+    "text": "Apprentice’s Resolve: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/287.svg"
+  },
+  {
+    "id": 288,
+    "name": "King of Qin",
+    "tags": [
+      "Hero (2002)"
+    ],
+    "tier": 5,
+    "attack": 5,
+    "health": 8,
+    "ability": {
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "All Under Heaven"
+    },
+    "text": "All Under Heaven: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
+    "portrait": "/portraits/288.svg"
+  },
+  {
+    "id": 289,
+    "name": "Qin Archer",
+    "tags": [
+      "Hero (2002)"
+    ],
+    "tier": 5,
+    "attack": 7,
+    "health": 6,
+    "ability": {
+      "trigger": "death",
+      "effect": "damage",
+      "target": "enemies",
+      "amount": 5,
+      "name": "Arrow Volley"
+    },
+    "text": "Arrow Volley: Halálakor 5 sebzést okoz minden ellenségnek.",
+    "portrait": "/portraits/289.svg"
+  },
+  {
+    "id": 290,
+    "name": "Qin Palace Guard",
+    "tags": [
+      "Hero (2002)"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "death",
+      "effect": "summon",
+      "target": "self",
+      "amount": 1,
+      "name": "Palace Formation"
+    },
+    "text": "Palace Formation: Halálakor megidéz egy 2/2-es Segítőt.",
+    "portrait": "/portraits/290.svg"
+  },
+  {
+    "id": 291,
+    "name": "Cordelia Cupp",
+    "tags": [
+      "The Residence"
+    ],
+    "tier": 3,
+    "attack": 5,
+    "health": 4,
+    "ability": {
+      "trigger": "attack",
+      "effect": "stealShield",
+      "target": "enemy",
+      "name": "Birdwatcher’s Eye"
+    },
+    "text": "Birdwatcher’s Eye: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
+    "portrait": "/portraits/291.svg"
+  },
+  {
+    "id": 292,
+    "name": "Edwin Park",
+    "tags": [
+      "The Residence"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "name": "Federal Partner"
+    },
+    "text": "Federal Partner: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/292.svg"
+  },
+  {
+    "id": 293,
+    "name": "A.B. Wynter",
+    "tags": [
+      "The Residence"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "trigger": "death",
+      "effect": "buff",
+      "target": "allies",
+      "attack": 3,
+      "health": 3,
+      "name": "Household Protocol"
+    },
+    "text": "Household Protocol: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/293.svg"
+  },
+  {
+    "id": 294,
+    "name": "Jasmine Haney",
+    "tags": [
+      "The Residence"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Assistant Usher"
+    },
+    "text": "Assistant Usher: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/294.svg"
+  },
+  {
+    "id": 295,
+    "name": "Lilly Schumacher",
+    "tags": [
+      "The Residence"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 3,
+    "ability": {
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1,
+      "health": 2,
+      "name": "State Dinner Pressure"
+    },
+    "text": "State Dinner Pressure: A köröd elején tartósan +1/+2-t kap.",
+    "portrait": "/portraits/295.svg"
+  },
+  {
+    "id": 296,
+    "name": "Harry Hollinger",
+    "tags": [
+      "The Residence"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Chief Adviser"
+    },
+    "text": "Chief Adviser: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/296.svg"
+  },
+  {
+    "id": 297,
+    "name": "Perry Morgan",
+    "tags": [
+      "The Residence"
+    ],
+    "tier": 5,
+    "attack": 6,
+    "health": 9,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Presidential Address"
+    },
+    "text": "Presidential Address: Minden támadásakor a törzséhez tartozó többi szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/297.svg"
+  },
+  {
+    "id": 298,
+    "name": "David Rylance",
+    "tags": [
+      "The Residence"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Diplomatic Guest"
+    },
+    "text": "Diplomatic Guest: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/298.svg"
+  },
+  {
+    "id": 299,
+    "name": "Basil Fawlty",
+    "tags": [
+      "Fawlty Towers"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "name": "Hotel Tantrum"
+    },
+    "text": "Hotel Tantrum: Minden támadásakor +2 támadást kap erre a harcra.",
+    "portrait": "/portraits/299.svg"
+  },
+  {
+    "id": 300,
+    "name": "Sybil Fawlty",
+    "tags": [
+      "Fawlty Towers"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 6,
+    "ability": {
+      "trigger": "passive",
+      "effect": "taunt",
+      "target": "self",
+      "name": "Front Desk Authority"
+    },
+    "text": "Front Desk Authority: Őrző: magára vonja az ellenséges támadásokat.",
+    "portrait": "/portraits/300.svg"
+  },
+  {
+    "id": 301,
+    "name": "Polly Sherman",
+    "tags": [
+      "Fawlty Towers"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "left",
+      "name": "Quick Cover Story"
+    },
+    "text": "Quick Cover Story: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/301.svg"
+  },
+  {
+    "id": 302,
+    "name": "Manuel",
+    "tags": [
+      "Fawlty Towers"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Learning the Ropes"
+    },
+    "text": "Learning the Ropes: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/302.svg"
+  },
+  {
+    "id": 303,
+    "name": "Major Gowen",
+    "tags": [
+      "Fawlty Towers"
+    ],
+    "tier": 4,
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2,
+      "name": "Lobby Regular"
+    },
+    "text": "Lobby Regular: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
+    "portrait": "/portraits/303.svg"
+  },
+  {
+    "id": 304,
+    "name": "Terry Hughes",
+    "tags": [
+      "Fawlty Towers"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "Kitchen Service"
+    },
+    "text": "Kitchen Service: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/304.svg"
+  },
+  {
+    "id": 305,
+    "name": "Miss Tibbs",
+    "tags": [
+      "Fawlty Towers"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 6,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "self",
+      "name": "Familiar Routine"
+    },
+    "text": "Familiar Routine: Védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/305.svg"
+  },
+  {
+    "id": 306,
+    "name": "Miss Gatsby",
+    "tags": [
+      "Fawlty Towers"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "trigger": "death",
+      "effect": "buff",
+      "target": "allies",
+      "attack": 3,
+      "health": 3,
+      "name": "Long-Term Guest"
+    },
+    "text": "Long-Term Guest: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/306.svg"
+  },
+  {
+    "id": 307,
+    "name": "Dixit Storyteller",
+    "tags": [
+      "Dixit"
+    ],
+    "tier": 1,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 1,
+      "health": 1,
+      "name": "One Cryptic Clue"
+    },
+    "text": "One Cryptic Clue: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
+    "portrait": "/portraits/307.svg"
+  },
+  {
+    "id": 308,
+    "name": "Dixit Dreamer",
+    "tags": [
+      "Dixit"
+    ],
+    "tier": 1,
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "health": 1,
+      "name": "Dream Journey"
+    },
+    "text": "Dream Journey: Kijátszáskor véglegesen +2/+1 értéket kap.",
+    "portrait": "/portraits/308.svg"
+  },
+  {
+    "id": 309,
+    "name": "Dixit Rabbit",
+    "tags": [
+      "Dixit"
+    ],
+    "tier": 2,
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2,
+      "name": "Scoring Track Hop"
+    },
+    "text": "Scoring Track Hop: Minden támadásakor +2 támadást kap erre a harcra.",
+    "portrait": "/portraits/309.svg"
+  },
+  {
+    "id": 310,
+    "name": "Dixit Guardian",
+    "tags": [
+      "Dixit"
+    ],
+    "tier": 2,
+    "attack": 2,
+    "health": 2,
+    "ability": {
+      "trigger": "death",
+      "effect": "summon",
+      "target": "self",
+      "amount": 1,
+      "name": "Protect the Tale"
+    },
+    "text": "Protect the Tale: Halálakor megidéz egy 2/2-es Segítőt.",
+    "portrait": "/portraits/310.svg"
+  },
+  {
+    "id": 311,
+    "name": "Dixit Wanderer",
+    "tags": [
+      "Dixit"
+    ],
+    "tier": 3,
+    "attack": 3,
+    "health": 6,
+    "ability": {
+      "trigger": "start",
+      "effect": "shield",
+      "target": "self",
+      "name": "Unknown Path"
+    },
+    "text": "Unknown Path: Védőpajzsot kap erre a harcra.",
+    "portrait": "/portraits/311.svg"
+  },
+  {
+    "id": 312,
+    "name": "Dixit Illusionist",
+    "tags": [
+      "Dixit"
+    ],
+    "tier": 3,
+    "attack": 5,
+    "health": 4,
+    "ability": {
+      "trigger": "attack",
+      "effect": "stealShield",
+      "target": "enemy",
+      "name": "Misleading Image"
+    },
+    "text": "Misleading Image: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
+    "portrait": "/portraits/312.svg"
+  },
+  {
+    "id": 313,
+    "name": "Dixit Stargazer",
+    "tags": [
+      "Dixit"
+    ],
+    "tier": 4,
+    "attack": 5,
+    "health": 5,
+    "ability": {
+      "trigger": "play",
+      "effect": "buff",
+      "target": "other",
+      "attack": 4,
+      "health": 4,
+      "name": "Guiding Constellation"
+    },
+    "text": "Guiding Constellation: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
+    "portrait": "/portraits/313.svg"
+  },
+  {
+    "id": 314,
+    "name": "Dixit Muse",
+    "tags": [
+      "Dixit"
+    ],
+    "tier": 5,
+    "attack": 6,
+    "health": 9,
+    "ability": {
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 3,
+      "health": 3,
+      "name": "Shared Imagination"
+    },
+    "text": "Shared Imagination: Minden támadásakor a törzséhez tartozó többi szövetséges +3/+3-at kap erre a harcra.",
+    "portrait": "/portraits/314.svg"
+  },
+  {
+    "id": 315,
+    "name": "Einstein",
+    "tags": [
+      "Back to the Future"
+    ],
+    "tier": 1,
+    "tribe": "neutral",
+    "attack": 2,
+    "health": 3,
+    "ability": {
+      "name": "Gyülekező",
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 1,
+      "health": 0
+    },
+    "text": "A köröd elején a közvetlen szomszédai tartósan +1/+0-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 316,
+    "name": "Verne Brown",
+    "tags": [
+      "Back to the Future"
+    ],
+    "tier": 4,
+    "tribe": "all",
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2
+    },
+    "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 317,
+    "name": "Susan Long",
+    "tags": [
+      "Jake Long: American Dragon"
+    ],
+    "tier": 2,
+    "tribe": "neutral",
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "name": "Gyülekező",
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 1,
+      "health": 0
+    },
+    "text": "A köröd elején a közvetlen szomszédai tartósan +1/+0-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 318,
+    "name": "Haley Long",
+    "tags": [
+      "Jake Long: American Dragon"
+    ],
+    "tier": 5,
+    "tribe": "all",
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 4
+    },
+    "text": "Minden támadásakor a közvetlen szomszédai +4 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 319,
+    "name": "Sophie",
+    "tags": [
+      "Clair Obscur: Expedition 33"
+    ],
+    "tier": 3,
+    "tribe": "neutral",
+    "attack": 4,
+    "health": 5,
+    "ability": {
+      "name": "Napidíj",
+      "trigger": "turnStart",
+      "effect": "gold",
+      "target": "self",
+      "amount": 1
+    },
+    "text": "A köröd elején 1 extra aranyat kapsz.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 320,
+    "name": "The Paintress",
+    "tags": [
+      "Clair Obscur: Expedition 33"
+    ],
+    "tier": 6,
+    "tribe": "all",
+    "attack": 6,
+    "health": 8,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 5
+    },
+    "text": "Minden támadásakor a közvetlen szomszédai +5 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 321,
+    "name": "R2-D2",
+    "tags": [
+      "Star Wars"
+    ],
+    "tier": 4,
+    "tribe": "neutral",
+    "attack": 5,
+    "health": 6,
+    "ability": {
+      "name": "Gyülekező",
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2
+    },
+    "text": "A köröd elején a közvetlen szomszédai tartósan +2/+2-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 322,
+    "name": "Luke Skywalker",
+    "tags": [
+      "Star Wars"
+    ],
+    "tier": 1,
+    "tribe": "all",
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1
+    },
+    "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 323,
+    "name": "Song Chi-Yul",
+    "tags": [
+      "Solo Leveling"
+    ],
+    "tier": 5,
+    "tribe": "neutral",
+    "attack": 6,
+    "health": 7,
+    "ability": {
+      "name": "Gyülekező",
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 3,
+      "health": 2
+    },
+    "text": "A köröd elején a közvetlen szomszédai tartósan +3/+2-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 324,
+    "name": "Sung Il-Hwan",
+    "tags": [
+      "Solo Leveling"
+    ],
+    "tier": 2,
+    "tribe": "all",
+    "attack": 2,
+    "health": 4,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1
+    },
+    "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 325,
+    "name": "Brann Bronzebeard",
+    "tags": [
+      "Hearthstone Battlegrounds"
+    ],
+    "tier": 6,
+    "tribe": "neutral",
+    "attack": 7,
+    "health": 8,
+    "ability": {
+      "name": "Gyülekező",
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 3,
+      "health": 2
+    },
+    "text": "A köröd elején a közvetlen szomszédai tartósan +3/+2-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 326,
+    "name": "Reno Jackson",
+    "tags": [
+      "Hearthstone Battlegrounds"
+    ],
+    "tier": 3,
+    "tribe": "all",
+    "attack": 3,
+    "health": 5,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2
+    },
+    "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 327,
+    "name": "Eddie the Computer",
+    "tags": [
+      "The Hitchhiker's Guide to the Galaxy"
+    ],
+    "tier": 1,
+    "tribe": "neutral",
+    "attack": 2,
+    "health": 3,
+    "ability": {
+      "name": "Utolsó igazítás",
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 0,
+      "health": 1
+    },
+    "text": "A köröd végén a közvetlen szomszédai tartósan +0/+1-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 328,
+    "name": "Heart of Gold",
+    "tags": [
+      "The Hitchhiker's Guide to the Galaxy"
+    ],
+    "tier": 4,
+    "tribe": "all",
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2
+    },
+    "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 329,
+    "name": "Wilfred Mott",
+    "tags": [
+      "Doctor Who"
+    ],
+    "tier": 2,
+    "tribe": "neutral",
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "name": "Utolsó igazítás",
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 0,
+      "health": 1
+    },
+    "text": "A köröd végén a közvetlen szomszédai tartósan +0/+1-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 330,
+    "name": "Captain Jack Harkness",
+    "tags": [
+      "Doctor Who"
+    ],
+    "tier": 5,
+    "tribe": "all",
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 4
+    },
+    "text": "Minden támadásakor a közvetlen szomszédai +4 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 331,
+    "name": "Stone (Misfortune’s Toy)",
+    "tags": [
+      "Little Misfortune"
+    ],
+    "tier": 3,
+    "tribe": "neutral",
+    "attack": 4,
+    "health": 5,
+    "ability": {
+      "name": "Utolsó igazítás",
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2
+    },
+    "text": "A köröd végén a közvetlen szomszédai tartósan +2/+2-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 332,
+    "name": "Unicorn (Misfortune’s Toy)",
+    "tags": [
+      "Little Misfortune"
+    ],
+    "tier": 6,
+    "tribe": "all",
+    "attack": 6,
+    "health": 8,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 5
+    },
+    "text": "Minden támadásakor a közvetlen szomszédai +5 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 333,
+    "name": "Gil Colson",
+    "tags": [
+      "The Batman (2022)"
+    ],
+    "tier": 4,
+    "tribe": "neutral",
+    "attack": 5,
+    "health": 6,
+    "ability": {
+      "name": "Váltás",
+      "trigger": "death",
+      "effect": "summon",
+      "target": "self",
+      "attack": 2,
+      "health": 2
+    },
+    "text": "Ha meghal, megidéz egy 2/2-es Segítőt.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 334,
+    "name": "The Joker (The Batman)",
+    "tags": [
+      "The Batman (2022)"
+    ],
+    "tier": 1,
+    "tribe": "all",
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1
+    },
+    "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 335,
+    "name": "The Recruiter",
+    "tags": [
+      "Squid Game"
+    ],
+    "tier": 5,
+    "tribe": "neutral",
+    "attack": 6,
+    "health": 7,
+    "ability": {
+      "name": "Utánpótlás",
+      "trigger": "turnEnd",
+      "effect": "recruit",
+      "target": "self",
+      "amount": 1
+    },
+    "text": "A köröd végén egy véletlen 1. szintű miniont kapsz a közös készletből, ha elfér a kezedben.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 336,
+    "name": "The Front Man",
+    "tags": [
+      "Squid Game"
+    ],
+    "tier": 2,
+    "tribe": "all",
+    "attack": 2,
+    "health": 4,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1
+    },
+    "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 337,
+    "name": "Fennec",
+    "tags": [
+      "Rocket League"
+    ],
+    "tier": 6,
+    "tribe": "neutral",
+    "attack": 7,
+    "health": 8,
+    "ability": {
+      "name": "Utolsó igazítás",
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 3
+    },
+    "text": "A köröd végén a közvetlen szomszédai tartósan +2/+3-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 338,
+    "name": "Takumi",
+    "tags": [
+      "Rocket League"
+    ],
+    "tier": 3,
+    "tribe": "all",
+    "attack": 3,
+    "health": 5,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2
+    },
+    "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 339,
+    "name": "Mouse",
+    "tags": [
+      "The Matrix"
+    ],
+    "tier": 1,
+    "tribe": "neutral",
+    "attack": 2,
+    "health": 3,
+    "ability": {
+      "name": "Gyülekező",
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 1,
+      "health": 0
+    },
+    "text": "A köröd elején a közvetlen szomszédai tartósan +1/+0-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 340,
+    "name": "The Architect",
+    "tags": [
+      "The Matrix"
+    ],
+    "tier": 4,
+    "tribe": "all",
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2
+    },
+    "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 341,
+    "name": "Zebedee",
+    "tags": [
+      "The Chosen"
+    ],
+    "tier": 2,
+    "tribe": "neutral",
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "name": "Gyülekező",
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 1,
+      "health": 0
+    },
+    "text": "A köröd elején a közvetlen szomszédai tartósan +1/+0-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 342,
+    "name": "Philip",
+    "tags": [
+      "The Chosen"
+    ],
+    "tier": 5,
+    "tribe": "all",
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 4
+    },
+    "text": "Minden támadásakor a közvetlen szomszédai +4 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 343,
+    "name": "Boar",
+    "tags": [
+      "Rust"
+    ],
+    "tier": 3,
+    "tribe": "neutral",
+    "attack": 4,
+    "health": 5,
+    "ability": {
+      "name": "Napidíj",
+      "trigger": "turnStart",
+      "effect": "gold",
+      "target": "self",
+      "amount": 1
+    },
+    "text": "A köröd elején 1 extra aranyat kapsz.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 344,
+    "name": "Bradley APC",
+    "tags": [
+      "Rust"
+    ],
+    "tier": 6,
+    "tribe": "all",
+    "attack": 6,
+    "health": 8,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 5
+    },
+    "text": "Minden támadásakor a közvetlen szomszédai +5 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 345,
+    "name": "Philip Anderson",
+    "tags": [
+      "Sherlock (BBC)"
+    ],
+    "tier": 4,
+    "tribe": "neutral",
+    "attack": 5,
+    "health": 6,
+    "ability": {
+      "name": "Gyülekező",
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2
+    },
+    "text": "A köröd elején a közvetlen szomszédai tartósan +2/+2-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 346,
+    "name": "Mary Morstan",
+    "tags": [
+      "Sherlock (BBC)"
+    ],
+    "tier": 1,
+    "tribe": "all",
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1
+    },
+    "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 347,
+    "name": "Andre of Astora",
+    "tags": [
+      "Dark Souls III"
+    ],
+    "tier": 5,
+    "tribe": "neutral",
+    "attack": 6,
+    "health": 7,
+    "ability": {
+      "name": "Gyülekező",
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 3,
+      "health": 2
+    },
+    "text": "A köröd elején a közvetlen szomszédai tartósan +3/+2-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 348,
+    "name": "Unbreakable Patches",
+    "tags": [
+      "Dark Souls III"
+    ],
+    "tier": 2,
+    "tribe": "all",
+    "attack": 2,
+    "health": 4,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1
+    },
+    "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 349,
+    "name": "Tuktirey",
+    "tags": [
+      "Avatar (James Cameron)"
+    ],
+    "tier": 6,
+    "tribe": "neutral",
+    "attack": 7,
+    "health": 8,
+    "ability": {
+      "name": "Gyülekező",
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 3,
+      "health": 2
+    },
+    "text": "A köröd elején a közvetlen szomszédai tartósan +3/+2-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 350,
+    "name": "Kiri",
+    "tags": [
+      "Avatar (James Cameron)"
+    ],
+    "tier": 3,
+    "tribe": "all",
+    "attack": 3,
+    "health": 5,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2
+    },
+    "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 351,
+    "name": "Ashley Barrett",
+    "tags": [
+      "The Boys"
+    ],
+    "tier": 1,
+    "tribe": "neutral",
+    "attack": 2,
+    "health": 3,
+    "ability": {
+      "name": "Utolsó igazítás",
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 0,
+      "health": 1
+    },
+    "text": "A köröd végén a közvetlen szomszédai tartósan +0/+1-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 352,
+    "name": "Soldier Boy",
+    "tags": [
+      "The Boys"
+    ],
+    "tier": 4,
+    "tribe": "all",
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2
+    },
+    "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 353,
+    "name": "Jimmy Valmer",
+    "tags": [
+      "South Park: The Stick of Truth / The Fractured But Whole"
+    ],
+    "tier": 2,
+    "tribe": "neutral",
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "name": "Utolsó igazítás",
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 0,
+      "health": 1
+    },
+    "text": "A köröd végén a közvetlen szomszédai tartósan +0/+1-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 354,
+    "name": "Timmy Burch",
+    "tags": [
+      "South Park: The Stick of Truth / The Fractured But Whole"
+    ],
+    "tier": 5,
+    "tribe": "all",
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 4
+    },
+    "text": "Minden támadásakor a közvetlen szomszédai +4 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 355,
+    "name": "Vivian",
+    "tags": [
+      "The Truman Show"
+    ],
+    "tier": 3,
+    "tribe": "neutral",
+    "attack": 4,
+    "health": 5,
+    "ability": {
+      "name": "Utolsó igazítás",
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2
+    },
+    "text": "A köröd végén a közvetlen szomszédai tartósan +2/+2-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 356,
+    "name": "Mike Michaelson",
+    "tags": [
+      "The Truman Show"
+    ],
+    "tier": 6,
+    "tribe": "all",
+    "attack": 6,
+    "health": 8,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 5
+    },
+    "text": "Minden támadásakor a közvetlen szomszédai +5 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 357,
+    "name": "Andrei Glukhov",
+    "tags": [
+      "Chernobyl (2019)"
+    ],
+    "tier": 4,
+    "tribe": "neutral",
+    "attack": 5,
+    "health": 6,
+    "ability": {
+      "name": "Váltás",
+      "trigger": "death",
+      "effect": "summon",
+      "target": "self",
+      "attack": 2,
+      "health": 2
+    },
+    "text": "Ha meghal, megidéz egy 2/2-es Segítőt.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 358,
+    "name": "Nikolai Tarakanov",
+    "tags": [
+      "Chernobyl (2019)"
+    ],
+    "tier": 1,
+    "tribe": "all",
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1
+    },
+    "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 359,
+    "name": "Kelvin",
+    "tags": [
+      "Deadlock"
+    ],
+    "tier": 5,
+    "tribe": "neutral",
+    "attack": 6,
+    "health": 7,
+    "ability": {
+      "name": "Utánpótlás",
+      "trigger": "turnEnd",
+      "effect": "recruit",
+      "target": "self",
+      "amount": 1
+    },
+    "text": "A köröd végén egy véletlen 1. szintű miniont kapsz a közös készletből, ha elfér a kezedben.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 360,
+    "name": "Paradox",
+    "tags": [
+      "Deadlock"
+    ],
+    "tier": 2,
+    "tribe": "all",
+    "attack": 2,
+    "health": 4,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1
+    },
+    "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 361,
+    "name": "Ashecliffe Orderly",
+    "tags": [
+      "Shutter Island"
+    ],
+    "tier": 6,
+    "tribe": "neutral",
+    "attack": 7,
+    "health": 8,
+    "ability": {
+      "name": "Utolsó igazítás",
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 3
+    },
+    "text": "A köröd végén a közvetlen szomszédai tartósan +2/+3-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 362,
+    "name": "Deputy Warden McPherson",
+    "tags": [
+      "Shutter Island"
+    ],
+    "tier": 3,
+    "tribe": "all",
+    "attack": 3,
+    "health": 5,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2
+    },
+    "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 363,
+    "name": "Mike Hannigan",
+    "tags": [
+      "Friends"
+    ],
+    "tier": 1,
+    "tribe": "neutral",
+    "attack": 2,
+    "health": 3,
+    "ability": {
+      "name": "Gyülekező",
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 1,
+      "health": 0
+    },
+    "text": "A köröd elején a közvetlen szomszédai tartósan +1/+0-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 364,
+    "name": "Richard Burke",
+    "tags": [
+      "Friends"
+    ],
+    "tier": 4,
+    "tribe": "all",
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2
+    },
+    "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 365,
+    "name": "Lee Ki-chul",
+    "tags": [
+      "East of Eden (2008)"
+    ],
+    "tier": 2,
+    "tribe": "neutral",
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "name": "Gyülekező",
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 1,
+      "health": 0
+    },
+    "text": "A köröd elején a közvetlen szomszédai tartósan +1/+0-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 366,
+    "name": "Gook Dae-hwa",
+    "tags": [
+      "East of Eden (2008)"
+    ],
+    "tier": 5,
+    "tribe": "all",
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 4
+    },
+    "text": "Minden támadásakor a közvetlen szomszédai +4 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 367,
+    "name": "Bilbo Baggins",
+    "tags": [
+      "The Lord of the Rings"
+    ],
+    "tier": 3,
+    "tribe": "neutral",
+    "attack": 4,
+    "health": 5,
+    "ability": {
+      "name": "Napidíj",
+      "trigger": "turnStart",
+      "effect": "gold",
+      "target": "self",
+      "amount": 1
+    },
+    "text": "A köröd elején 1 extra aranyat kapsz.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 368,
+    "name": "Galadriel",
+    "tags": [
+      "The Lord of the Rings"
+    ],
+    "tier": 6,
+    "tribe": "all",
+    "attack": 6,
+    "health": 8,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 5
+    },
+    "text": "Minden támadásakor a közvetlen szomszédai +5 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 369,
+    "name": "Melissa Moretti",
+    "tags": [
+      "Lord of Mysteries"
+    ],
+    "tier": 4,
+    "tribe": "neutral",
+    "attack": 5,
+    "health": 6,
+    "ability": {
+      "name": "Gyülekező",
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2
+    },
+    "text": "A köröd elején a közvetlen szomszédai tartósan +2/+2-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 370,
+    "name": "Azik Eggers",
+    "tags": [
+      "Lord of Mysteries"
+    ],
+    "tier": 1,
+    "tribe": "all",
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1
+    },
+    "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 371,
+    "name": "Raccoon",
+    "tags": [
+      "Vintage Story"
+    ],
+    "tier": 5,
+    "tribe": "neutral",
+    "attack": 6,
+    "health": 7,
+    "ability": {
+      "name": "Gyülekező",
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 3,
+      "health": 2
+    },
+    "text": "A köröd elején a közvetlen szomszédai tartósan +3/+2-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 372,
+    "name": "Temporal Storm Drifter",
+    "tags": [
+      "Vintage Story"
+    ],
+    "tier": 2,
+    "tribe": "all",
+    "attack": 2,
+    "health": 4,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1
+    },
+    "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 373,
+    "name": "J. Jonah Jameson",
+    "tags": [
+      "Spider-Man"
+    ],
+    "tier": 6,
+    "tribe": "neutral",
+    "attack": 7,
+    "health": 8,
+    "ability": {
+      "name": "Gyülekező",
+      "trigger": "turnStart",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 3,
+      "health": 2
+    },
+    "text": "A köröd elején a közvetlen szomszédai tartósan +3/+2-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 374,
+    "name": "Felicia Hardy / Black Cat",
+    "tags": [
+      "Spider-Man"
+    ],
+    "tier": 3,
+    "tribe": "all",
+    "attack": 3,
+    "health": 5,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2
+    },
+    "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 375,
+    "name": "Josh Russo",
+    "tags": [
+      "9-1-1"
+    ],
+    "tier": 1,
+    "tribe": "neutral",
+    "attack": 2,
+    "health": 3,
+    "ability": {
+      "name": "Utolsó igazítás",
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 0,
+      "health": 1
+    },
+    "text": "A köröd végén a közvetlen szomszédai tartósan +0/+1-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 376,
+    "name": "Karen Wilson",
+    "tags": [
+      "9-1-1"
+    ],
+    "tier": 4,
+    "tribe": "all",
+    "attack": 4,
+    "health": 6,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 2
+    },
+    "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 377,
+    "name": "Court Musician",
+    "tags": [
+      "Hero (2002)"
+    ],
+    "tier": 2,
+    "tribe": "neutral",
+    "attack": 3,
+    "health": 4,
+    "ability": {
+      "name": "Utolsó igazítás",
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 0,
+      "health": 1
+    },
+    "text": "A köröd végén a közvetlen szomszédai tartósan +0/+1-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 378,
+    "name": "Qin Cavalry Rider",
+    "tags": [
+      "Hero (2002)"
+    ],
+    "tier": 5,
+    "tribe": "all",
+    "attack": 5,
+    "health": 7,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 4
+    },
+    "text": "Minden támadásakor a közvetlen szomszédai +4 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 379,
+    "name": "Nan Cox",
+    "tags": [
+      "The Residence"
+    ],
+    "tier": 3,
+    "tribe": "neutral",
+    "attack": 4,
+    "health": 5,
+    "ability": {
+      "name": "Utolsó igazítás",
+      "trigger": "turnEnd",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 2,
+      "health": 2
+    },
+    "text": "A köröd végén a közvetlen szomszédai tartósan +2/+2-t kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 380,
+    "name": "Didier Gotthard",
+    "tags": [
+      "The Residence"
+    ],
+    "tier": 6,
+    "tribe": "all",
+    "attack": 6,
+    "health": 8,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 5
+    },
+    "text": "Minden támadásakor a közvetlen szomszédai +5 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 381,
+    "name": "Mr. Hutchinson",
+    "tags": [
+      "Fawlty Towers"
+    ],
+    "tier": 4,
+    "tribe": "neutral",
+    "attack": 5,
+    "health": 6,
+    "ability": {
+      "name": "Váltás",
+      "trigger": "death",
+      "effect": "summon",
+      "target": "self",
+      "attack": 2,
+      "health": 2
+    },
+    "text": "Ha meghal, megidéz egy 2/2-es Segítőt.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 382,
+    "name": "Mr. O’Reilly",
+    "tags": [
+      "Fawlty Towers"
+    ],
+    "tier": 1,
+    "tribe": "all",
+    "attack": 1,
+    "health": 3,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1
+    },
+    "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 383,
+    "name": "Dixit Voting Rabbit",
+    "tags": [
+      "Dixit"
+    ],
+    "tier": 5,
+    "tribe": "neutral",
+    "attack": 6,
+    "health": 7,
+    "ability": {
+      "name": "Utánpótlás",
+      "trigger": "turnEnd",
+      "effect": "recruit",
+      "target": "self",
+      "amount": 1
+    },
+    "text": "A köröd végén egy véletlen 1. szintű miniont kapsz a közös készletből, ha elfér a kezedben.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 384,
+    "name": "Dixit Dreamweaver",
+    "tags": [
+      "Dixit"
+    ],
+    "tier": 2,
+    "tribe": "all",
+    "attack": 2,
+    "health": 4,
+    "ability": {
+      "name": "Sokoldalúság",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "self",
+      "attack": 1
+    },
+    "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 385,
+    "name": "Darth Maul",
+    "tags": [
+      "Star Wars"
+    ],
+    "tier": 6,
+    "tribe": "warriors",
+    "attack": 12,
+    "health": 15,
+    "ability": {
+      "name": "Szélvész",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Szélvész: Kétszer támad a saját támadási körében, ha túléli az első támadást.",
+    "portrait": "/portraits/1.svg",
+    "keywords": [
+      "windfury"
+    ]
+  },
+  {
+    "id": 386,
+    "name": "Eomer",
+    "tags": [
+      "The Lord of the Rings"
+    ],
+    "tier": 6,
+    "tribe": "warriors",
+    "attack": 8,
+    "health": 9,
+    "ability": {
+      "name": "Törzsi összefogás",
+      "trigger": "play",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 5,
+      "health": 5
+    },
+    "text": "Kijátszáskor a közvetlen szomszédai tartósan +5/+5-öt kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 387,
+    "name": "Ned Leeds",
+    "tags": [
+      "Spider-Man"
+    ],
+    "tier": 6,
+    "tribe": "guardians",
+    "attack": 8,
+    "health": 9,
+    "ability": {
+      "name": "Törzsi összefogás",
+      "trigger": "play",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 5,
+      "health": 5
+    },
+    "text": "Kijátszáskor a közvetlen szomszédai tartósan +5/+5-öt kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 388,
+    "name": "Dave McFly",
+    "tags": [
+      "Back to the Future"
+    ],
+    "tier": 6,
+    "tribe": "survivors",
+    "attack": 8,
+    "health": 9,
+    "ability": {
+      "name": "Törzsi összefogás",
+      "trigger": "play",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 5,
+      "health": 5
+    },
+    "text": "Kijátszáskor a közvetlen szomszédai tartósan +5/+5-öt kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 389,
+    "name": "Linda McFly",
+    "tags": [
+      "Back to the Future"
+    ],
+    "tier": 6,
+    "tribe": "survivors",
+    "attack": 8,
+    "health": 9,
+    "ability": {
+      "name": "Törzsi összefogás",
+      "trigger": "play",
+      "effect": "buff",
+      "target": "neighbors",
+      "attack": 5,
+      "health": 5
+    },
+    "text": "Kijátszáskor a közvetlen szomszédai tartósan +5/+5-öt kapnak.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 390,
+    "name": "Thanator",
+    "tags": [
+      "Avatar (James Cameron)"
+    ],
+    "tier": 3,
+    "tribe": "beasts",
+    "attack": 5,
+    "health": 6,
+    "ability": {
+      "name": "Falkavezér",
+      "trigger": "rally",
+      "effect": "buff",
+      "target": "tribe",
+      "attack": 2,
+      "health": 1
+    },
+    "text": "Minden támadásakor a többi Vad és minden típusú szövetséges +2/+1-et kap erre a harcra.",
+    "portrait": "/portraits/1.svg"
+  },
+  {
+    "id": 391,
+    "name": "Yuria of Londor",
+    "tags": [
+      "Dark Souls III"
+    ],
+    "tier": 6,
+    "tribe": "undead",
+    "attack": 8,
+    "health": 13,
+    "ability": {
+      "name": "Méreg",
+      "trigger": "passive",
+      "effect": "buff",
+      "target": "self"
+    },
+    "text": "Méreg: Az első sikeres támadási vagy visszaütési sebzése megöli a célpontot, majd a méreg elfogy. Pajzs nem fogyasztja el.",
+    "portrait": "/portraits/1.svg",
+    "keywords": [
+      "venomous"
+    ]
+  },
+  {
+    "id": 392,
+    "name": "A műsorvezető",
+    "tier": 5,
+    "attack": 3,
+    "health": 7,
+    "portrait": "/portraits/sketch/18.png",
+    "tags": [
+      "Utolsó pad"
+    ],
+    "tribe": "neutral",
+    "ability": {
+      "name": "A műsorvezető",
+      "trigger": "passive",
+      "effect": "amplify",
+      "target": "self",
+      "amplifies": "play"
+    },
+    "text": "Amíg a tábládon van, a saját Battlecry hatásaid kétszer futnak le. Arany változatban háromszor."
+  },
+  {
+    "id": 393,
+    "name": "Visszhangőr",
+    "tier": 5,
+    "attack": 2,
+    "health": 9,
+    "portrait": "/portraits/sketch/14.png",
+    "tags": [
+      "Utolsó pad"
+    ],
+    "tribe": "neutral",
+    "ability": {
+      "name": "Visszhangőr",
+      "trigger": "passive",
+      "effect": "amplify",
+      "target": "self",
+      "amplifies": "death"
+    },
+    "text": "Amíg a tábládon van, a saját Deathrattle hatásaid kétszer futnak le. Arany változatban háromszor."
+  },
+  {
+    "id": 394,
+    "name": "Záróra mestere",
+    "tier": 6,
+    "attack": 5,
+    "health": 7,
+    "portrait": "/portraits/sketch/26.png",
+    "tags": [
+      "Utolsó pad"
+    ],
+    "tribe": "neutral",
+    "ability": {
+      "name": "Záróra mestere",
+      "trigger": "passive",
+      "effect": "amplify",
+      "target": "self",
+      "amplifies": "turnEnd"
+    },
+    "text": "Amíg a tábládon van, a saját kör végi hatásaid kétszer futnak le. Arany változatban háromszor."
+  }
+]

@@ -2,24 +2,47 @@
 
 Az Utolsó pad böngészős stratégiai kártyajáték. Egyedül hét bot ellen vagy meghívókódos szobában játszható. A katalógusban 360 toborozható lap és 35 hős van, közülük 24 saját képességgel. A hősöket ceruzarajzok, a minionok törzsét színes kártyakeretek, a képességük időzítését ikonok jelölik. [Hősképességek](docs/hero-powers-spec.md) · [Kártyakatalógus és balanszmérés](docs/card-pool.md)
 
-## Indítás Windows alatt
+## Helyi indítás
 
-Node.js 22.12+ vagy 24 szükséges. A projektmappában:
+A React kliens és a Socket.IO játékszerver Node.js 22.12+ alatt fut. A fiókokat, szobákat és eredményeket a Laravel 13 kezeli. A backendhez PHP 8.4, Composer 2, PDO MySQL és egy üres, utf8mb4 kódolású MySQL vagy MariaDB adatbázis szükséges.
 
-```powershell
-.\Start-Demo.ps1
-```
+1. A projekt gyökerében futtasd az npm ci parancsot. A backend könyvtárban futtasd a composer install parancsot, majd másold a .env.example fájlt .env néven.
+2. A backend/.env fájlban állítsd be a DB_HOST, DB_PORT, DB_DATABASE, DB_USERNAME és DB_PASSWORD értékeket. Az alapértelmezett adatbázisnév battleground. Az első adminhoz ugyanitt add meg az ADMIN_EMAIL és ADMIN_PASSWORD értékeket (legalább 12 karakter).
+3. A GAME_SERVER_SECRET értéke mindkét szerveren egyezzen. Generáld a projekt gyökerében a Node paranccsal, majd másold az értéket a backend/.env és a gyökérben létrehozott .env fájlba. A gyökérben a LARAVEL_URL alapértelmezése http://127.0.0.1:8000.
 
-Ez szükség esetén telepíti a függőségeket, majd elindítja a demót: **http://localhost:5173**. Leállítás: Ctrl+C.
+~~~sh
+node -e "console.log(require('node:crypto').randomBytes(32).toString('hex'))"
+~~~
 
-Szokásos npm-parancsokkal is működik:
+A backend könyvtárban inicializáld az alkalmazáskulcsot, a táblákat és a kezdő karakterkatalógust.
 
-```sh
-npm install
-npm run dev
-```
+~~~sh
+php artisan key:generate
+php artisan migrate --seed
+~~~
 
-Ha a gépen az npm PowerShell-indítója hibás, a mellékelt indítószkript közvetlenül a Node mellett található npm-programot használja.
+Három külön terminálban indítsd a Laravel API-t, a megszakadt meccseket lezáró ütemezőt és a játékszervert.
+
+| Könyvtár | Parancs |
+| --- | --- |
+| backend | php artisan serve --host=127.0.0.1 --port=8000 |
+| backend | php artisan schedule:work |
+| Projektgyökér | npm run dev |
+
+Nyisd meg a [kezdőlapot](http://127.0.0.1:5173). Ugyanezen a címen működik a kliens, az API-proxy és a socketkapcsolat. A Windowsos Start-Demo.ps1 a Node folyamatot indítja, és a botok elleni gyakorlás önállóan is használható.
+
+## A kód felépítése
+
+- A src/App.tsx útvonalfája a regisztrációt, belépést, profilokat, ranglistát, lobbit, játékot és az admin gyermekoldalait kapcsolja össze. A src/pages könyvtár tartalmazza az oldalakat, a src/api.ts a közös HTTP-klienst.
+- A backend/routes/web.php a böngésző session- és CSRF-védett API-ja. A controllerek a backend/app/Http/Controllers mappában találhatók. A backend/routes/internal.php végpontjait a Node játékszerver használja.
+- A server/persistent-games.ts az adatbázisban elindított meccsekhez rendeli a játékmotort és a hitelesített játékoshelyeket. A szerver meccsenként külön karakterkatalógust kap. A shared könyvtárban vannak a közös játékszabályok.
+- A privát szobában 2–8 játékos jelzi a készenlétét. A rangsorolt várólistáról a nyolcadik ember érkezésekor indul a meccs. Csak a lezárt rangsorolt meccsek módosítanak pontot. Frissítés után a játékos új egyszer használható jeggyel kapja vissza a saját helyét.
+
+## Ellenőrzés
+
+A gyökérben az npm test futtatja a motor- és socketteszteket, az npm run build ellenőrzi a TypeScriptet és elkészíti a klienst. A backend könyvtárban a php artisan test futtatja az API-teszteket SQLite memóriában (pdo_sqlite szükséges).
+
+A teljes integrációs próba nyolc tesztfiókot és két meccset hoz létre az általad megadott elkülönített helyi adatbázisban. A PLATFORM_TEST_URL legyen a futó Node szerver címe. Az npm run test:online végigjátssza a privát és rangsorolt meccset, ellenőrzi az eredményeket és két képernyőméretben megnyitja a profilokat. A BROWSER_EXECUTABLE változóval választhatsz Chromium-alapú böngészőt.
 
 ## Egy mérkőzés
 
@@ -96,5 +119,3 @@ Készítők: **Kovács Kevin és Csillag Gergő Zsolt**.
 A 360 lapos katalógusból egy meccsben 83 különböző lap és 965 fizikai példány érhető el. Öt aktív törzs egyenként 12 lapot ad. A készlethez 12 forgó semleges, három állandó semleges erősítő és nyolc minden típusú lap tartozik. A teljes készlet szövegeit és az egyensúlymérést a [kártyakatalógus](docs/card-pool.md) tartalmazza.
 
 Combat keywords: 24 recruitable cards now use Stealth, Windfury, Venomous or Reborn. See [keyword rules](docs/keywords.md) and the [measured balance report](docs/keyword-balance.md). Run `npm run test:keyword-balance` to reproduce the benchmark. Restart the development server and begin a new match after this rules/catalog update.
-
-Online teszt: https://utolso-pad-production.up.railway.app — [meghívókódos használat és korlátok](docs/online-testing.md).

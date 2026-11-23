@@ -23,14 +23,16 @@
     "test:arena-redesign": "tsx tests/arena-redesign-browser.ts",
     "test:media": "tsx tests/media-browser.ts",
     "test:hero-powers": "tsx tests/hero-powers-browser.ts",
-    "test:online": "tsx tests/online-browser.ts",
+    "test:online": "tsx tests/platform-e2e.ts",
     "test:bugfixes": "tsx tests/bugfixes-browser.ts"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
     "express": "^5.1.0",
+    "http-proxy-middleware": "^3.0.11",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-router": "^7.18.6",
     "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1",
     "vite": "^7.2.0"

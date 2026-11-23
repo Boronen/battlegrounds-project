@@ -1,12 +1,30 @@
-import {test} from 'node:test';
-import assert from 'node:assert/strict';
-import {io} from 'socket.io-client';
-import {createApp} from '../server/index';
-import type {Snapshot} from '../shared/types';
-const tick=()=>new Promise(r=>setTimeout(r,45));
-async function fixture(){const server=await createApp(true);await new Promise<void>(r=>server.http.listen(0,'127.0.0.1',r));const {port}=server.http.address() as {port:number};const make=(token?:string)=>io(`http://127.0.0.1:${port}`,{transports:['websocket'],autoConnect:false,auth:{token}});const a=make(),b=make();let sa:Snapshot|undefined,sb:Snapshot|undefined,room:any;a.on('snapshot',s=>sa=s);b.on('snapshot',s=>sb=s);a.on('onlineRoom',r=>room=r);const connect=async(s:typeof a)=>{const ready=new Promise<void>(r=>s.once('connect',()=>r()));s.connect();await ready;};await connect(a);await connect(b);const host=await a.timeout(2000).emitWithAck('onlineJoin',{name:'Host'});await tick();const guest=await b.timeout(2000).emitWithAck('onlineJoin',{name:'Guest',code:room.code});await a.timeout(2000).emitWithAck('onlineLaunch',{});await tick();const command=(socket:typeof a,state:Snapshot,action:any)=>socket.timeout(2000).emitWithAck('command',{commandId:crypto.randomUUID(),expectedVersion:state.version,action});const play=async()=>{await command(a,sa!,{type:'chooseHero',heroId:sa!.you.heroOffers[0]});await tick();await command(b,sb!,{type:'chooseHero',heroId:sb!.you.heroOffers[0]});await tick();await command(a,sa!,{type:'ready'});await tick();await command(b,sb!,{type:'ready'});await tick();assert.equal(sa!.phase,'combat');};return{a,b,server,host,guest,make,connect,command,play,get sa(){return sa!;},get sb(){return sb!;},get room(){return room;},close:async()=>{a.disconnect();b.disconnect();await server.close();}};}
-test('a disconnected voter cannot block combat, and reconnect restores their own seat',async()=>{const f=await fixture();try{await f.play();await f.a.timeout(2000).emitWithAck('control','finishCombat');f.b.disconnect();await tick();assert.ok(['recruit','finished'].includes(f.sa.phase));assert.equal(f.room.members.find((m:any)=>m.id==='p1').connected,false);f.b.auth={token:f.guest.token};await f.connect(f.b);await tick();assert.equal(f.sb.you.id,'p1');assert.equal(f.sb.you.bot,false);}finally{await f.close();}});
-test('explicit leave revokes membership and does not block the remaining vote',async()=>{const f=await fixture();try{await f.play();assert.ok((await f.b.timeout(2000).emitWithAck('onlineLeave')).ok);await tick();assert.equal(f.room.members.length,1);await f.a.timeout(2000).emitWithAck('control','finishCombat');await tick();assert.ok(['recruit','finished'].includes(f.sa.phase));}finally{await f.close();}});
-test('reroll works for both online seats before choosing heroes',async()=>{const f=await fixture();try{for(const [socket,state] of [[f.a,f.sa],[f.b,f.sb]] as const){const old=state.you.heroOffers;assert.ok((await f.command(socket,state,{type:'rerollHeroes'})).ok);await tick();const next=socket===f.a?f.sa:f.sb;assert.equal(next.you.heroRerolls,2);assert.ok(next.you.heroOffers.every(id=>!old.includes(id)));}}finally{await f.close();}});
-test('disconnecting one of two tabs does not remove an otherwise connected voter',async()=>{const f=await fixture();const extra=f.make(f.host.token);try{await f.play();await f.connect(extra);extra.disconnect();await tick();await f.b.timeout(2000).emitWithAck('control','finishCombat');await tick();assert.equal(f.sa.phase,'combat');await f.a.timeout(2000).emitWithAck('control','finishCombat');await tick();assert.ok(['recruit','finished'].includes(f.sa.phase));}finally{extra.disconnect();await f.close();}});
-test('a player disconnected during hero selection is auto-picked after the reconnect grace period',async()=>{const f=await fixture();try{f.a.disconnect();await f.command(f.b,f.sb,{type:'chooseHero',heroId:f.sb.you.heroOffers[0]});await tick();assert.equal(f.sb.phase,'hero');await new Promise(r=>setTimeout(r,10300));assert.equal(f.sb.phase,'recruit');assert.ok(f.sb.standings.find(p=>p.id==='p0')!.heroId);}finally{await f.close();}});
+import { test } from "node:test";
+import assert from "node:assert/strict";
+import { fixture } from "./match-fixture";
+
+test("reconnection requires a fresh ticket and restores the original seat and hero", async () => {
+  const f = await fixture();
+  try {
+    const a = await f.seat(1, "1-original");
+    const heroId = a.state.you.heroOffers[0];
+    await a.command({ type: "chooseHero", heroId });
+    a.socket.disconnect();
+    await assert.rejects(f.seat(1, "1-original"));
+    const resumed = await f.seat(1);
+    assert.equal(resumed.state.you.id, "p0");
+    assert.equal(resumed.state.you.heroId, heroId);
+  } finally {
+    await f.close();
+  }
+});
+test("suspension rejects commands on open sockets and new tickets", async () => {
+  const f = await fixture();
+  try {
+    const b = await f.seat(2);
+    f.blocked.add(2);
+    assert.equal((await b.command({ type: "rerollHeroes" })).ok, false);
+    await assert.rejects(f.seat(2));
+  } finally {
+    await f.close();
+  }
+});

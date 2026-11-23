@@ -1,0 +1,92 @@
+.site-nav,
+.site-page nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+}
+.site-nav {
+  padding: 0.75rem clamp(1rem, 5vw, 4rem);
+  background: #151820;
+  border-bottom: 1px solid #4e4950;
+  color: #fff;
+}
+.site-page {
+  width: min(100% - 2rem, 56rem);
+  margin: 2rem auto;
+  padding: clamp(1rem, 3vw, 2rem);
+  background: #1c202b;
+  color: #f4f2ed;
+  border-radius: 0.65rem;
+  line-height: 1.55;
+}
+.site-page a,
+.site-nav a,
+.site-notice {
+  color: #f1d595;
+}
+.site-nav .active,
+.site-page nav .active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.site-page form {
+  margin: 1rem 0;
+}
+.site-page fieldset {
+  display: grid;
+  gap: 0.85rem;
+  max-width: 30rem;
+  border: 0;
+  padding: 0;
+}
+.site-page label {
+  display: grid;
+  gap: 0.25rem;
+}
+.site-page input,
+.site-page select,
+.site-page textarea {
+  width: 100%;
+  padding: 0.55rem;
+  font: inherit;
+  color: #f8f5ef;
+  background: #252c38;
+  border: 1px solid #767d89;
+  border-radius: 0.3rem;
+}
+.site-page button {
+  justify-self: start;
+  padding: 0.55rem 1rem;
+}
+.site-page section {
+  border-top: 1px solid #555c69;
+  padding: 0.6rem 0;
+}
+.site-page li {
+  margin: 0.5rem 0;
+}
+.site-notice {
+  margin: 0.5rem 1rem;
+}
+body:has(.site-page) {
+  overflow: auto;
+  height: auto;
+}
+.site-page h1,
+.site-page h2 {
+  line-height: 1.2;
+}
+html:has(.site-page) {
+  overflow-x: clip;
+}
+body:has(.site-page) {
+  min-width: 0;
+}
+.site-page,
+.site-nav {
+  overflow-wrap: anywhere;
+}
+.site-page li {
+  padding-inline-end: 0.5rem;
+}

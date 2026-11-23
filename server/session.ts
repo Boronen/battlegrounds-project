@@ -8,7 +8,7 @@ const factory=new MatchFactory(),controller=new MatchController(),rounds=new Rou
 export class Session {
  token=randomUUID(); match:Match; entries:Replay['actions']=[]; receipts=new Map<string,{payload:string;ack:Ack}>();
  deadline:number|null=null; paused=false; touched=Date.now();
- constructor(seed:number,mode:Match['mode']){this.match=factory.create(seed,mode);this.match.id=`match-${randomUUID()}`;this.setDeadline();}
+ constructor(seed:number,mode:Match['mode'],humanNames?:string[]){this.match=factory.create(seed,mode,false,humanNames);this.match.id=`match-${randomUUID()}`;this.setDeadline();}
  setDeadline(){this.deadline=this.match.mode==='timed'&&!this.paused&&this.match.phase==='recruit'?Date.now()+RULES.recruitMs:null;}
  command(cmd:Command,playerId='p0',concurrent=false):Ack{
   const m=this.match;const payload=JSON.stringify({playerId,cmd});const receiptKey=playerId+':'+cmd?.commandId;const existing=this.receipts.get(receiptKey);

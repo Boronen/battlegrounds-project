@@ -11,11 +11,11 @@ export class RuleError extends Error { constructor(public code:string,message:st
 function ensure(ok:unknown,code:string,message:string):asserts ok{if(!ok)throw new RuleError(code,message);}
 const alive=(p:Player)=>p.hp>0;
 export function makeUnit(m:Match,id:number,golden=false):Unit{const c=character(id);return{uid:`u${m.nextUid++}`,characterId:id,attack:c.attack*(golden?2:1),health:c.health*(golden?2:1),golden,keywords:[...(c.keywords||[])],shield:false,taunt:c.ability.effect==='taunt',copies:golden?3:1};}
-export function createMatch(seed=20261103,mode:Match['mode']='manual',allBots=false):Match{
+export function createMatch(seed=20261103,mode:Match['mode']='manual',allBots=false,humanNames?:string[]):Match{
  const m:Match={id:`match-${seed}`,seed,rng:(seed>>>0)||1,nextUid:1,version:0,phase:'hero',round:0,mode,players:[],pool:{},activeTribes:[],activeCardIds:[],pairings:[],battles:[],log:[],pendingDamage:{},roundLimit:RULES.maxRounds};
  Object.assign(m,selectMatchPool(m));
  for(const c of CHARACTERS)m.pool[c.id]=m.activeCardIds.includes(c.id)?RULES.poolCopies[c.tier]:0;
- for(let i=0;i<8;i++)m.players.push({id:`p${i}`,name:i===0?'Te':['','A Hátsó Sor','Kávészünet','Ctrl + Alt','Krétapor','Késői Befutó','A Büfés','Utolsó Csengő'][i],bot:allBots||i>0,heroId:null,heroOffers:shuffle(m,HEROES).slice(0,RULES.heroChoices).map(h=>h.id),heroSeen:[],heroRerolls:RULES.heroRerolls,hp:RULES.startHealth,armor:0,tier:1,upgradeCost:RULES.upgradeCosts[1],gold:0,board:[],hand:[],shop:[],frozen:false,ready:false,powerUsed:false,discover:[],rewards:[],opponents:[],place:null,lastBoard:[]});
+ for(let i=0;i<(humanNames?.length??8);i++)m.players.push({id:`p${i}`,name:humanNames?.[i]??(i===0?'Te':['','A Hátsó Sor','Kávészünet','Ctrl + Alt','Krétapor','Késői Befutó','A Büfés','Utolsó Csengő'][i]),bot:humanNames?false:allBots||i>0,heroId:null,heroOffers:shuffle(m,HEROES).slice(0,RULES.heroChoices).map(h=>h.id),heroSeen:[],heroRerolls:RULES.heroRerolls,hp:RULES.startHealth,armor:0,tier:1,upgradeCost:RULES.upgradeCosts[1],gold:0,board:[],hand:[],shop:[],frozen:false,ready:false,powerUsed:false,discover:[],rewards:[],opponents:[],place:null,lastBoard:[]});
  for(const p of m.players)p.heroSeen=[...p.heroOffers];
  for(const p of m.players.filter(p=>p.bot))assignHero(p,p.heroOffers[0]);
  if(allBots)beginRecruit(m);return m;

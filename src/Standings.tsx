@@ -1,5 +1,5 @@
 import type {Snapshot} from '../shared/types';
-import type {OnlineRoom} from './OnlineLobby';
+interface OnlineRoom {members:{id:string;connected?:boolean}[]}
 import {HeroPortrait} from './HeroPortrait';
 import {HeroMediaBadges} from './HeroMediaBadges';
 
