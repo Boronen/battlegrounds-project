@@ -8,4 +8,9 @@ design-md
 .agents
 .codex
 
-backend/
+**/.env
+**/.env.*
+backend/vendor
+backend/storage/logs/*.log
+backend/database/*.sqlite*
+backend/bootstrap/cache/*.php
