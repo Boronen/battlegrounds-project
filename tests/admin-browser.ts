@@ -16,7 +16,7 @@ try{
   const name='Vizsgakártya '+Date.now();
   await page.getByLabel('Név',{exact:true}).fill(name);
   await page.getByRole('button',{name:'Verzió publikálása'}).click();
-  await page.getByLabel('Karakter',{exact:true}).selectOption({label:name});
+  await page.getByRole('combobox',{name:/^Karakter/}).selectOption({label:name});
   await page.getByRole('button',{name:'Letiltás új meccsekben'}).click();
   await page.getByRole('button',{name:'Engedélyezés'}).waitFor();
   await page.getByRole('link',{name:'Napló'}).click();
