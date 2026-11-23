@@ -35,7 +35,7 @@ export function GameIcon({
       className="game-icon"
       width={size}
       height={size}
-      src={"/art/icons/" + name + ".webp"}
+      src={"/art/icons/" + name + ".png"}
       alt=""
       draggable={false}
     />

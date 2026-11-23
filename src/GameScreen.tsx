@@ -1,3 +1,5 @@
+import { CombatPlayback } from "./CombatPlayback";
+import "./combat-preview.css";
 import { useGameConnection } from "./useGameConnection";
 import { UnitCard } from "./UnitCard";
 import { Link, useNavigate } from "react-router";
@@ -312,12 +314,14 @@ export function GameScreen({ matchId }: { matchId?: number }) {
   const you = state?.you;
   const h = hero(you?.heroId || null);
   const ownBattleLeft = battle?.leftId === you?.id;
-  const frame = beat?.after;
+  const [impactKey, setImpactKey] = useState("");
+  const impact = impactKey === beatKey;
+  const frame = impact ? beat?.after : beat?.before;
   const leftUnits = beat
-    ? displayedUnits(beat.before.left, beat.after.left, true)
+    ? displayedUnits(beat.before.left, beat.after.left, impact)
     : [];
   const rightUnits = beat
-    ? displayedUnits(beat.before.right, beat.after.right, true)
+    ? displayedUnits(beat.before.right, beat.after.right, impact)
     : [];
   const ownChampion = (ownBattleLeft ? leftUnits : rightUnits).find(
     (u) => u.heroFighter,
@@ -338,7 +342,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
   const visibleEvents = beats
     .slice(0, step)
     .flatMap((b) => b.events)
-    .concat(beat?.events ?? []);
+    .concat(impact ? (beat?.events ?? []) : []);
   const selectedUnit = you
     ? [...you.board, ...you.hand].find((u) => u.uid === selected)
     : undefined;
@@ -476,6 +480,11 @@ export function GameScreen({ matchId }: { matchId?: number }) {
         selected={selected === unit.uid}
         active={
           beat?.events[0].type === "attack" && beat.events[0].actor === unit.uid
+        }
+        shopMatch={
+          state?.phase === "recruit" &&
+          ["board", "hand"].includes(area) &&
+          !!you?.shop.some((card) => card?.characterId === unit.characterId)
         }
         visibleEvents={state?.phase === "combat" ? visibleEvents : []}
         canAct={!!canAct}
@@ -852,7 +861,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
                       <div className="round-actions">
                         {state.phase === "recruit" ? (
                           <button
-                            className="primary"
+                            className="primary fight-start"
                             onClick={async () => {
                               if (you!.hp <= 0) {
                                 await control("step");
@@ -1038,16 +1047,15 @@ export function GameScreen({ matchId }: { matchId?: number }) {
                     </div>
                   </div>
                 )}
-                {state?.phase === "combat" &&
-                  beat?.events.some((event) => event.type === "attack") && (
-                    <picture key={beatKey} className="combat-cue">
-                      <source
-                        media="(prefers-reduced-motion: reduce)"
-                        srcSet="/art/icons/swords.webp"
-                      />
-                      <img src="/art/impact.gif" alt="" />
-                    </picture>
-                  )}
+                {state?.phase === "combat" && beat && (
+                  <CombatPlayback
+                    key={beatKey}
+                    beat={beat}
+                    speed={speed}
+                    onImpact={setImpactKey}
+                    beatKey={beatKey}
+                  />
+                )}
                 {state && state.phase !== "hero" && (
                   <>
                     <div className="board-resource-ribbon">

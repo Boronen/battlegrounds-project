@@ -1,3 +1,4 @@
+import { CardPreview } from "./CardPreview";
 import type { CombatEvent, Player, Unit } from "../shared/types";
 import { unitDefinition } from "../shared/catalog";
 import { minionPrice, powerState } from "../shared/hero-powers";
@@ -15,6 +16,7 @@ interface CardProps {
   area: string;
   you: Player;
   active: boolean;
+  shopMatch?: boolean;
   selected: boolean;
   inspectMode: boolean;
   canAct: boolean;
@@ -27,6 +29,7 @@ export function UnitCard({
   area,
   you,
   active,
+  shopMatch,
   selected,
   inspectMode,
   canAct,
@@ -50,6 +53,7 @@ export function UnitCard({
     <div
       key={u.uid}
       data-unit-id={u.uid}
+      data-shop-match={shopMatch || undefined}
       className={`unit-wrap ${area} ${selected ? "selected" : ""} ${active ? "attacking" : ""} ${u.health <= 0 ? "dying" : ""} ${temporary ? "combat-buffed" : ""} ${permanent ? "permanent-buffed" : ""}`}
     >
       <button
@@ -118,7 +122,8 @@ export function UnitCard({
           </span>
         )}
       </button>
-      <div className="unit-tooltip">
+      <CardPreview>
+        <TribeSurface tribe={tribeFor(c)} />
         <strong>
           {c.name}
           {u.golden ? " • Arany" : ""}
@@ -157,7 +162,7 @@ export function UnitCard({
             ? " • Kétszeres hatáserő"
             : ""}
         </small>
-      </div>
+      </CardPreview>
     </div>
   );
 }

@@ -242,7 +242,6 @@
   .arena.has-match .unit-row .stat {min-width:18px; height:18px; bottom:-3px; font-size:14px}
   .arena.has-match .stat.attack {left:-3px} .arena.has-match .stat.health {right:-3px}
   .arena.has-match .unit-tribe {display:none}
-  .arena.has-match .unit-tooltip {display:none}
   .arena.has-match .empty-board {width:min(70cqw,290px); padding:8px; margin:0}
   .arena.has-match>.table-controls {display:grid; grid-row:5; grid-template-columns:minmax(0,3fr) minmax(83px,1.2fr); gap:5px; padding:0}
   .arena.has-match .shop-actions,.arena.has-match .round-actions {position:relative; inset:auto; width:100%; height:100%; padding:0; gap:3px}

@@ -27,6 +27,8 @@ try{
  const session=[...server.sessions.values()][0],m=session.match;
  // Real buy, drag/play, reorder and mounted sell target, with snapshots and ACKs.
  await page.setViewportSize({width:1440,height:1100});
+ await page.locator('.shop .unit').first().hover();
+ await page.locator('.card-preview:visible .tribe-surface').waitFor();
  await page.locator('.shop .unit').first().dragTo(page.locator('.hand-dock'));
  await page.locator('.hand .unit').waitFor();await page.locator('.hand .unit').dragTo(page.locator('.board-zone'));
  await page.locator('.board .unit').waitFor();await page.locator('.board .unit').click();
@@ -83,10 +85,10 @@ try{
  const beats=combatBeats(events);
  for(let i=1;i<beats.length;i++){
   await page.getByRole('button',{name:'Esemény léptetése'}).click();
-  if(beats[i].events.some(e=>e.type==='attack')) await page.locator('.combat-cue img').waitFor();
+  if(beats[i].events.some(e=>e.type==='damage')) await page.locator('.card-hit').first().waitFor();
  }
  await page.getByRole('button',{name:'Következő kör'}).click();await page.locator('.shop .unit').first().waitFor();await page.waitForTimeout(700);
- assert.equal(await page.locator('[data-effect]').count(),0);assert.equal(await page.locator('.arena,.unit-wrap').evaluateAll(nodes=>nodes.flatMap(n=>n.getAnimations()).filter(a=>a.playState==='running').length),0);
+ assert.equal(await page.locator('.card-hit').count(),0);assert.equal(await page.locator('.arena,.unit-wrap').evaluateAll(nodes=>nodes.flatMap(n=>n.getAnimations()).filter(a=>a.playState==='running').length),0);
  assert.deepEqual(errors,[]);
  await writeFile(`${path}/report.json`,JSON.stringify({arenas:10,screenshots:sheet.length,controlHitAreas:true,keyboardFocusAndActivation:true,touchActivation:true,dragDropAndSell:true,phoneBoardFits:true,missingArtworkFallback:true,combatMedia:true,interruptionCleanup:true,browserErrors:errors},null,2));
  await page.setViewportSize({width:1200,height:1100});
