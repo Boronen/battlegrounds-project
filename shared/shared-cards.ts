@@ -52,7 +52,7 @@ function card(id:number,name:string,franchise:string,tier:number,tribe:CardType)
   ability={name:'Közös segítség',trigger:'play',effect:'buff',target:'other',attack:Math.ceil(tier/2),health:Math.floor(tier/2)};
   text=`Közös segítség: egy választott másik szövetséges véglegesen +${ability.attack}/+${ability.health} értéket kap.`;
  }
- return {id,name,tags:[franchise],tier,tribe,attack:tier+(tribe==='all'?0:1),health:tier+2,ability,text,portrait:'/portraits/1.svg'};
+ return {id,name,tags:[franchise],tier,tribe,attack:tier+(tribe==='all'?0:1),health:tier+2,ability,text,portrait:'/art/tribes/'+tribe+'.webp'};
 }
 
 export const SHARED_CARDS:Character[]=SHARED_ROSTERS.flatMap(([franchise,neutral,all],index)=>{

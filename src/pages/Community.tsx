@@ -1,7 +1,14 @@
+import { GameIcon, type IconName } from "../GameIcon";
 import { useState } from "react";
 import { Link, useParams } from "react-router";
 import { useResource, type Page, type Player } from "../api";
 import { Pager } from "./forms";
+
+const avatarIcons: Record<string, IconName> = {
+  default_01: "swords",
+  default_02: "shield",
+  default_03: "crown",
+};
 
 interface Result {
   id: number;
@@ -62,11 +69,7 @@ export function PublicProfile() {
       {p && (
         <>
           <p>
-            {
-              { default_01: "⚔", default_02: "🛡", default_03: "♛" }[
-                p.avatar_key
-              ]
-            }{" "}
+            <GameIcon name={avatarIcons[p.avatar_key] || "swords"} size={36} />{" "}
             {p.rating} rangpont
           </p>
           <p>{p.bio}</p>

@@ -1,0 +1,36 @@
+.hero-media-badges{display:inline-flex;gap:5px;vertical-align:middle;margin-left:5px}.hero-media-badges>span,.series-audio-badge{display:inline-grid;place-items:center;min-width:23px;height:23px;padding:2px 4px;background:#253240;border:1px solid #c5ab71;border-radius:6px;color:#ffe5a7;font-size:14px;font-style:normal}
+.series-audio-badge{position:absolute;right:5px;top:27px;z-index:4;min-width:18px;height:18px;font-size:11px}
+.hero-music-player{display:flex;gap:18px;align-items:center;justify-content:space-between;margin:12px 0;padding:16px;background:#161c26;border:1px solid #39404d;border-radius:12px}.hero-music-player p{font-size:12px;color:#b4bac6}.hero-music-player a{font-size:12px;color:#e7cc91}.youtube-host{width:320px;height:200px;flex-shrink:0}.youtube-host iframe{width:100%;height:100%;border:0;border-radius:8px}
+@media(max-width:600px){.hero-music-player{flex-direction:column;align-items:stretch}.youtube-host{width:100%;max-width:100%;height:200px}}
+.hero-abilities{max-width:1400px;margin:16px auto;padding:20px;display:grid;grid-template-columns:1fr 1fr;gap:24px;border:1px solid #665637;border-radius:12px;background:#171b23;color:#eee2c4}.hero-abilities h2{font-size:20px}.hero-abilities p{font-size:14px;line-height:1.6;max-width:65ch}.hero-abilities h3{font-size:14px}.hero-abilities button{margin:6px 6px 6px 0;padding:12px;min-height:44px}.hero-abilities label{display:block;margin:8px 0}.hero-abilities select{display:block;max-width:100%;padding:9px;margin-top:5px;background:#232b36;color:#fff}.hero-power>small{display:block;max-width:150px;font-size:11px;line-height:1.35}.hero-abilities strong{color:#f5d37f}@media(max-width:700px){.hero-abilities{margin:12px 8px;padding:14px;grid-template-columns:1fr;min-width:0}.hero-abilities>*{min-width:0}.hero-abilities button{max-width:100%;white-space:normal}}
+.power-choice small{display:block;font-size:12px;font-weight:400;line-height:1.5;margin-top:8px}.power-choice{display:grid;grid-template-columns:1fr 1fr;gap:10px}.power-choice h3{grid-column:1/-1}.hero-power-summary{display:none}.hero-abilities .guess-choice button{min-width:160px}@media(max-width:600px){.power-choice{grid-template-columns:1fr}}
+.champion-attack-badge{position:absolute;left:-18px;bottom:35px;z-index:12;padding:5px 8px;border-radius:18px;background:#46391d;border:2px solid #e6bf67;color:#ffe7a9;font-weight:900;white-space:nowrap}
+.has-match .player-hero>.champion-attack-badge,.has-match .keeper-avatar>.champion-attack-badge{font:900 14px/1.1 'Nunito Sans',sans-serif;text-shadow:none;color:#ffe7a9;width:auto;height:auto;min-width:0;left:-28px;right:auto;top:auto;bottom:35px;padding:5px 8px;border-radius:18px}
+.hero-selection .hero-reroll{position:sticky;top:8px;z-index:30;margin:12px auto 18px;padding:10px 14px;max-width:480px;background:#171b24f5;border:1px solid #b79b5d;border-radius:10px;box-shadow:0 5px 18px #0007}.hero-selection .hero-reroll button{min-height:44px;width:100%;font-size:16px}
+.hero-abilities .ability-control {
+ position:relative;
+ isolation:isolate;
+ display:inline-flex;
+ align-items:center;
+ justify-content:center;
+ width:min(100%, 320px);
+ min-height:54px;
+ margin:6px 0 10px;
+ padding:10px clamp(28px, 9vw, 54px);
+ border:1px solid var(--arena-metal,#a48f68);
+ border-radius:8px;
+ background:#29242a;
+ font:700 15px/1.2 'Alegreya', Georgia, serif;
+ color:#fff0d2;
+ text-align:center;
+ text-shadow:0 2px 2px #000;
+ white-space:normal;
+}
+
+.hero-abilities .ability-control:hover:enabled { filter:brightness(1.16); }
+.hero-abilities .ability-control:active:enabled { transform:translateY(2px); }
+.hero-abilities .ability-control:disabled { opacity:1; color:#c8beb0; filter:saturate(.45); }
+.hero-abilities .ability-control:focus-visible { outline:2px solid var(--arena-glow); outline-offset:2px; }
+.hero-abilities h2.ability-passive { width:min(100%, 240px); padding:8px 36px; }
+.hero-abilities .ability-passive small { display:block; color:var(--arena-glow); font:600 11px/1.25 system-ui, sans-serif; }
+.hero-abilities .power-choice button { padding-inline:clamp(28px, 5vw, 42px); }

@@ -1,5 +1,5 @@
 import {type ReactNode} from 'react';
-import {Sword} from '@phosphor-icons/react';
+import {GameIcon} from "./GameIcon";
 
 interface LobbyProps {
  seed:string;
@@ -23,7 +23,7 @@ export function Lobby({seed,setSeed,mode,setMode,connected,start,online}:LobbyPr
       <label>Játékmód<select value={mode} onChange={e=>setMode(e.target.value as typeof mode)}><option value="manual">Kézi körök</option><option value="timed">Időzített körök</option></select></label>
       <label>Kezdőérték (opcionális)<input value={seed} onChange={e=>setSeed(e.target.value)} placeholder="Véletlen" inputMode="numeric"/></label>
      </div>
-     <button className="primary start-button" onClick={start} disabled={!connected}><Sword size={17} aria-hidden="true"/> Mérkőzés indítása</button>
+     <button className="primary start-button" onClick={start} disabled={!connected}><GameIcon name="swords" size={17} /> Mérkőzés indítása</button>
     </section>
     {online}
    </div>

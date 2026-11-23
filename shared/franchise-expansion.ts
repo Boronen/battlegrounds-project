@@ -1,3 +1,4 @@
+import {tribeFor} from './tribes';
 import type { Ability, Character } from './types';
 
 // Shared, engine-supported mechanics keep this first balance pass easy to tune.
@@ -235,6 +236,6 @@ export const FRANCHISE_EXPANSION:Character[] = REMAINING_ROSTERS.flatMap((roster
   const id=51+group*8+index;
   const mechanic=mechanics[role];
   return {id, name, tags:[roster.name], tier:mechanic.tier, attack:mechanic.attack, health:mechanic.health,
-   ability:{...mechanic.ability, name:abilityName}, text:`${abilityName}: ${mechanic.text}`, portrait:`/portraits/${id}.svg`};
+   ability:{...mechanic.ability, name:abilityName}, text:`${abilityName}: ${mechanic.text}`, portrait:'/art/tribes/'+tribeFor({name,tags:[roster.name]})+'.webp'};
  })
 );

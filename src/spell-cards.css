@@ -1,9 +1,9 @@
 .has-match .top-row:has(.spell-offer){--spell-width:clamp(46px,5.3vw,77px);padding-right:calc(var(--spell-width) + 6px);box-sizing:border-box}
 .spell-offer{position:absolute;right:2px;top:50%;transform:translateY(-50%);width:var(--spell-width)}
 .spell-in-hand{flex:0 0 clamp(47px,5vw,66px)}
-.spell-card{width:100%;height:clamp(61px,9vh,96px);padding:3px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;touch-action:none;user-select:none;cursor:pointer;color:#e5fff9;border:2px solid #71caba;border-radius:12px 12px 6px 6px;background:radial-gradient(ellipse at top,#308e91,#164750 62%,#102b36);box-shadow:inset 0 0 0 2px #24424b,0 2px 4px #140d0c}
+.spell-card{width:100%;height:clamp(61px,9vh,96px);padding:3px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;touch-action:none;user-select:none;cursor:pointer;color:#e5fff9;border:2px solid #71caba;border-radius:12px 12px 6px 6px;background:#308e91;box-shadow:inset 0 0 0 2px #24424b,0 2px 4px #140d0c}
 .spell-card:disabled{cursor:default;filter:saturate(.73)}
-.spell-card svg{width:clamp(15px,2.8vh,28px);height:auto;color:#adffec}
+.spell-card .game-icon{width:clamp(15px,2.8vh,28px);height:auto;color:#adffec}
 .spell-card strong{font-size:clamp(8px,.8vw,12px);line-height:1.05;overflow-wrap:anywhere}
 .spell-card small{font-weight:800;color:#ffe299;font-size:10px}
 .spell-targets{display:grid;gap:8px}

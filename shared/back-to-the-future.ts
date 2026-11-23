@@ -22,7 +22,7 @@ export const BACK_TO_THE_FUTURE: Character[] = [
       "repeats": 1
     },
     "text": "Gördeszkás lendület: Az első támadásától +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/35.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 36,
@@ -44,7 +44,7 @@ export const BACK_TO_THE_FUTURE: Character[] = [
       "repeats": 1
     },
     "text": "Időpajzs: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/36.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 37,
@@ -66,7 +66,7 @@ export const BACK_TO_THE_FUTURE: Character[] = [
       "repeats": 1
     },
     "text": "Útban vagy!: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/37.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 38,
@@ -88,7 +88,7 @@ export const BACK_TO_THE_FUTURE: Character[] = [
       "repeats": 1
     },
     "text": "Bátorságpróba: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/38.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 39,
@@ -110,7 +110,7 @@ export const BACK_TO_THE_FUTURE: Character[] = [
       "repeats": 1
     },
     "text": "Bátorító szó: Egy választott másik szövetséges véglegesen +2/+2 értéket kap.",
-    "portrait": "/portraits/39.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 40,
@@ -132,7 +132,7 @@ export const BACK_TO_THE_FUTURE: Character[] = [
       "repeats": 1
     },
     "text": "Közös jövő: A közvetlen szomszédok +3 életerőt kapnak erre a harcra.",
-    "portrait": "/portraits/40.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 41,
@@ -154,7 +154,7 @@ export const BACK_TO_THE_FUTURE: Character[] = [
       "repeats": 1
     },
     "text": "Biztonságos utazás: Védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/41.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 42,
@@ -176,6 +176,6 @@ export const BACK_TO_THE_FUTURE: Character[] = [
       "repeats": 1
     },
     "text": "Párbaj délben: 4 sebzést okoz egy véletlen ellenségnek.",
-    "portrait": "/portraits/42.svg"
+    "portrait": "/art/tribes/technologists.webp"
   }
 ];

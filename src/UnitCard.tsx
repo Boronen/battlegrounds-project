@@ -3,7 +3,7 @@ import { unitDefinition } from "../shared/catalog";
 import { minionPrice, powerState } from "../shared/hero-powers";
 import { TRIGGER_LABELS, minionAbility } from "../shared/minion-effects";
 import { tribeFor, tribeName } from "../shared/tribes";
-import { MusicNote } from "@phosphor-icons/react";
+import { GameIcon } from "./GameIcon";
 import { statLayers } from "./combat-presentation";
 import { TribeSurface } from "./TribeSurface";
 import { TimingIcon } from "./TimingIcon";
@@ -77,7 +77,7 @@ export function UnitCard({
             title="Franchise-hang kijátszáskor"
             aria-label="Hangbejátszás kijátszáskor"
           >
-            <MusicNote size={10} weight="bold" />
+            <GameIcon name="music" size={10} />
           </span>
         )}
         <span className="tier-stars" aria-label={`${c.tier}. szint`}>

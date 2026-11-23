@@ -16,21 +16,7 @@ import {
 } from "../shared/hero-powers";
 import { SpellTile } from "./SpellTile";
 import type { SpellCard } from "../shared/types";
-import {
-  SpeakerHigh,
-  SpeakerSlash,
-  SlidersHorizontal,
-  ArrowClockwise,
-  Snowflake,
-  Sword,
-  Books,
-  UsersThree,
-  GearSix,
-  Sparkle,
-  Eye,
-  SignOut,
-  X,
-} from "@phosphor-icons/react";
+import { GameIcon } from "./GameIcon";
 import React, { useEffect, useRef, useState, useMemo } from "react";
 
 import { character, hero, unitDefinition } from "../shared/catalog";
@@ -44,11 +30,9 @@ import type {
   Snapshot,
   Unit,
 } from "../shared/types";
-import { BattleEffects } from "./BattleEffects";
 import { combatBeats, displayedUnits } from "./combat-presentation";
 import "./style.css";
 import "./arena-polish.css";
-import { BoardSocket } from "./BoardSocket";
 import { Lobby } from "./Lobby";
 import { gameAudio } from "./audio";
 
@@ -66,7 +50,7 @@ import "./card-templates.css";
 import "./hero-cards.css";
 import "./arena-layout.css";
 import "./web-shell.css";
-import "./battle-effects.css";
+import "./hero-controls.css";
 import "./game-screen.css";
 import "./spell-cards.css";
 
@@ -97,20 +81,6 @@ export function GameScreen({ matchId }: { matchId?: number }) {
     () => matchMedia("(max-width: 1050px), (max-height: 580px)").matches,
   );
   const [poolOpen, setPoolOpen] = useState(false);
-  const [smoke, setSmoke] = useState<{ x: number; y: number } | null>(null);
-  useEffect(() => {
-    if (!smoke) return;
-    const timer = setTimeout(() => setSmoke(null), 950);
-    return () => clearTimeout(timer);
-  }, [smoke]);
-  useEffect(() => setSmoke(null), [state?.phase, state?.matchId]);
-  const [motion, setMotion] = useState(
-    localStorage.getItem("battleMotion") !== "reduced",
-  );
-  useEffect(() => {
-    document.documentElement.dataset.motion = motion ? "full" : "reduced";
-    localStorage.setItem("battleMotion", motion ? "full" : "reduced");
-  }, [motion]);
   const [sound, setSound] = useState(gameAudio.isEnabled());
   useEffect(() => {
     const failed = (event: Event) =>
@@ -128,8 +98,6 @@ export function GameScreen({ matchId }: { matchId?: number }) {
     [running, setRunning] = useState(false),
     [now, setNow] = useState(Date.now());
   const lastSeed = useRef<number | null>(null);
-  const arenaRef = useRef<HTMLElement | null>(null);
-  const [impactKey, setImpactKey] = useState("");
   const [replayResult, setReplayResult] = useState("");
   const current = useRef(state);
   current.current = state;
@@ -182,7 +150,15 @@ export function GameScreen({ matchId }: { matchId?: number }) {
   const total = beats.length;
   const beat = beats[Math.min(step, total - 1)];
   const beatKey = `${state?.matchId}:${state?.round}:${step}`;
-  const impact = impactKey === beatKey;
+  useEffect(() => {
+    if (state?.phase !== "combat" || !beat) return;
+    if (beat.events.some((event) => event.type === "shield"))
+      gameAudio.play("shield");
+    else if (beat.events.some((event) => event.type === "damage"))
+      gameAudio.play("hit");
+    else if (beat.events.some((event) => event.type === "buff"))
+      gameAudio.play("buff");
+  }, [beat, state?.phase]);
   useEffect(() => {
     if (state?.phase !== "combat" || paused || step >= total - 1) return;
     const t = setTimeout(
@@ -204,23 +180,6 @@ export function GameScreen({ matchId }: { matchId?: number }) {
     if (!connected || !current.current || busy) return false;
     setError("");
     setBusy(true);
-    const smokeNode =
-      action.type === "power" &&
-      effectivePowerId(current.current.you) === "original-9"
-        ? Array.from(
-            arenaRef.current?.querySelectorAll<HTMLElement>("[data-unit-id]") ||
-              [],
-          ).find((n) => n.dataset.unitId === action.targetUid)
-        : undefined;
-    const smokeRect = smokeNode?.getBoundingClientRect(),
-      arenaRect = arenaRef.current?.getBoundingClientRect();
-    const smokePoint =
-      smokeRect && arenaRect
-        ? {
-            x: smokeRect.left + smokeRect.width / 2 - arenaRect.left,
-            y: smokeRect.top + smokeRect.height / 2 - arenaRect.top,
-          }
-        : undefined;
     const playedTags =
       action.type === "play"
         ? current.current.you.hand.find((u) => u.uid === action.uid)
@@ -244,7 +203,6 @@ export function GameScreen({ matchId }: { matchId?: number }) {
             );
         }
       }
-      if (ack?.ok && smokePoint) setSmoke(smokePoint);
       if (!ack?.ok) setError(ack?.message || "A művelet sikertelen.");
       else if (action.type === "buy") gameAudio.play("buy");
       else if (action.type === "play") {
@@ -354,12 +312,12 @@ export function GameScreen({ matchId }: { matchId?: number }) {
   const you = state?.you;
   const h = hero(you?.heroId || null);
   const ownBattleLeft = battle?.leftId === you?.id;
-  const frame = beat ? (impact ? beat.after : beat.before) : undefined;
+  const frame = beat?.after;
   const leftUnits = beat
-    ? displayedUnits(beat.before.left, beat.after.left, impact)
+    ? displayedUnits(beat.before.left, beat.after.left, true)
     : [];
   const rightUnits = beat
-    ? displayedUnits(beat.before.right, beat.after.right, impact)
+    ? displayedUnits(beat.before.right, beat.after.right, true)
     : [];
   const ownChampion = (ownBattleLeft ? leftUnits : rightUnits).find(
     (u) => u.heroFighter,
@@ -380,7 +338,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
   const visibleEvents = beats
     .slice(0, step)
     .flatMap((b) => b.events)
-    .concat(beat ? (impact ? beat.events : []) : []);
+    .concat(beat?.events ?? []);
   const selectedUnit = you
     ? [...you.board, ...you.hand].find((u) => u.uid === selected)
     : undefined;
@@ -557,7 +515,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
               aria-haspopup="dialog"
               onClick={() => setPanel("standings")}
             >
-              <UsersThree size={20} />
+              <GameIcon name="players" size={20} />
             </button>
           )}
           <button
@@ -568,7 +526,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
             aria-expanded={poolOpen}
             onClick={() => setPoolOpen(true)}
           >
-            <Books size={19} />
+            <GameIcon name="book" size={19} />
             <span>Katalógus</span>
           </button>
           <button
@@ -580,7 +538,11 @@ export function GameScreen({ matchId }: { matchId?: number }) {
               setSound(!sound);
             }}
           >
-            {sound ? <SpeakerHigh size={19} /> : <SpeakerSlash size={19} />}
+            {sound ? (
+              <GameIcon name="speaker" size={19} />
+            ) : (
+              <GameIcon name="mute" size={19} />
+            )}
           </button>
           {!matchId && (
             <button
@@ -590,7 +552,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
               onClick={() => setTools(!tools)}
               aria-expanded={tools}
             >
-              <SlidersHorizontal size={19} />
+              <GameIcon name="sliders" size={19} />
               <span>Tesztpad</span>
             </button>
           )}
@@ -601,7 +563,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
             aria-haspopup="dialog"
             onClick={() => setPanel("settings")}
           >
-            <GearSix size={19} />
+            <GameIcon name="gear" size={19} />
           </button>
           {onlineRoom && (
             <button
@@ -610,7 +572,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
               title="Kilépés a szobából"
               onClick={() => navigate("/")}
             >
-              <SignOut size={19} />
+              <GameIcon name="exit" size={19} />
             </button>
           )}
         </nav>
@@ -657,7 +619,6 @@ export function GameScreen({ matchId }: { matchId?: number }) {
           <div className="game-stage">
             <div className="board-viewport">
               <section
-                ref={arenaRef}
                 style={{ backgroundImage: `url("${arena.image}")` }}
                 data-arena={arena.id}
                 data-material={arena.material}
@@ -735,7 +696,6 @@ export function GameScreen({ matchId }: { matchId?: number }) {
                           aria-label={`Fogadó fejlesztése, ${you!.upgradeCost} arany`}
                           title="A következő körben 1 arannyal olcsóbb."
                         >
-                          <BoardSocket />
                           <i aria-hidden="true">↑</i>
                           <span>Fejlesztés</span>{" "}
                           <b>
@@ -750,8 +710,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
                           onClick={() => send({ type: "refresh" })}
                           disabled={!canAct || you!.gold < 1}
                         >
-                          <BoardSocket dial />
-                          <ArrowClockwise size={20} aria-hidden="true" />{" "}
+                          <GameIcon name="refresh" size={20} />{" "}
                           <span>Frissítés</span> <b>1 ◉</b>
                         </button>
                         <button
@@ -765,8 +724,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
                           onClick={() => send({ type: "freeze" })}
                           disabled={!canAct}
                         >
-                          <BoardSocket dial />
-                          <Snowflake size={20} aria-hidden="true" />
+                          <GameIcon name="snowflake" size={20} />
                           <span>
                             {you!.frozen ? "Befagyasztva" : "Fagyasztás"}
                           </span>
@@ -858,7 +816,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
                       {state.phase === "combat" ? (
                         <strong>⚔</strong>
                       ) : (
-                        <strong>✦</strong>
+                        <GameIcon name="spark" />
                       )}
                       <span />
                     </div>
@@ -892,10 +850,6 @@ export function GameScreen({ matchId }: { matchId?: number }) {
                     </div>
                     <div className="table-controls">
                       <div className="round-actions">
-                        <span className="furniture-emblem" aria-hidden="true">
-                          {arena.emblem}
-                        </span>
-                        <BoardSocket />
                         {state.phase === "recruit" ? (
                           <button
                             className="primary"
@@ -916,11 +870,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
                             {you!.hp <= 0
                               ? "Harc megtekintése"
                               : "Harc indítása"}{" "}
-                            <Sword
-                              size={17}
-                              weight="duotone"
-                              aria-hidden="true"
-                            />
+                            <GameIcon name="swords" size={17} />
                           </button>
                         ) : state.phase === "combat" ? (
                           <button
@@ -973,7 +923,10 @@ export function GameScreen({ matchId }: { matchId?: number }) {
                           ⚔ {ownChampion.attack}
                         </span>
                       )}
-                      <b className="hero-hp">{Math.max(0, you!.hp)} ♥</b>
+                      <b className="hero-hp">
+                        {Math.max(0, you!.hp)}{" "}
+                        <GameIcon name="heart" size={13} />
+                      </b>
                       <b className="armor">{you!.armor} ◈</b>
                     </div>
                     <div className="hero-power">
@@ -989,7 +942,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
                           aria-haspopup="dialog"
                           onClick={() => setPanel("powers")}
                         >
-                          <Sparkle size={16} weight="fill" />
+                          <GameIcon name="spark" size={16} />
                           <span>Hősképesség</span>
                         </button>
                       )}
@@ -1004,7 +957,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
                           {Math.min(10, state.round + 2) +
                             (powerState(you!).maxGold - 10)}
                         </small>{" "}
-                        <i>◉</i>
+                        <GameIcon name="coin" size={16} />
                       </strong>
                     </div>
                   </div>
@@ -1085,42 +1038,23 @@ export function GameScreen({ matchId }: { matchId?: number }) {
                     </div>
                   </div>
                 )}
-                {smoke && (
-                  <div
-                    className="drain-smoke"
-                    aria-label="A minion füstté vált"
-                    style={{ left: smoke.x, top: smoke.y }}
-                  >
-                    <i />
-                    <i />
-                    <i />
-                    <i />
-                  </div>
-                )}
-                <BattleEffects
-                  beat={state?.phase === "combat" ? beat : undefined}
-                  beatKey={beatKey}
-                  speed={speed}
-                  arena={arenaRef}
-                  onImpact={setImpactKey}
-                  ownBattleLeft={ownBattleLeft}
-                  motion={motion}
-                  ownHeroId={you?.heroId}
-                  opponentHeroId={
-                    state?.standings.find(
-                      (p) =>
-                        p.id ===
-                        (ownBattleLeft ? battle?.rightId : battle?.leftId),
-                    )?.heroId
-                  }
-                />
+                {state?.phase === "combat" &&
+                  beat?.events.some((event) => event.type === "attack") && (
+                    <picture key={beatKey} className="combat-cue">
+                      <source
+                        media="(prefers-reduced-motion: reduce)"
+                        srcSet="/art/icons/swords.webp"
+                      />
+                      <img src="/art/impact.gif" alt="" />
+                    </picture>
+                  )}
                 {state && state.phase !== "hero" && (
                   <>
                     <div className="board-resource-ribbon">
-                      {you!.gold}/{powerState(you!).maxGold} ◉
+                      {you!.gold}/{powerState(you!).maxGold}{" "}
+                      <GameIcon name="coin" size={14} />
                     </div>
                     <div className="board-round-plaque">
-                      <BoardSocket />
                       <small>
                         {state.phase === "combat" ? "Harc" : "Kör / Idő"}
                       </small>
@@ -1152,7 +1086,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
                     onClick={() => setInspectMode(!inspectMode)}
                     title="Válassz egy lapot a részletekhez"
                   >
-                    <Eye size={15} />
+                    <GameIcon name="eye" size={15} />
                     {inspectMode ? "Válassz lapot" : "Lapinfó"}
                   </button>
                 </div>
@@ -1219,7 +1153,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
                           aria-label="Kijelölés megszüntetése"
                           onClick={() => setSelected(null)}
                         >
-                          <X size={16} />
+                          <GameIcon name="close" size={16} />
                         </button>
                       </div>
                     </div>
@@ -1250,7 +1184,7 @@ export function GameScreen({ matchId }: { matchId?: number }) {
                 aria-label="Tesztpad bezárása"
                 onClick={() => setTools(false)}
               >
-                <X size={16} />
+                <GameIcon name="close" size={16} />
               </button>
             </div>
             <dl>
@@ -1397,13 +1331,6 @@ export function GameScreen({ matchId }: { matchId?: number }) {
         title="Beállítások és zene"
         onClose={() => setPanel(null)}
       >
-        <button
-          className="motion-toggle"
-          aria-pressed={motion}
-          onClick={() => setMotion(!motion)}
-        >
-          {motion ? "Animációk be" : "Animációk ki"}
-        </button>
         <p className={`connection ${connected ? "online" : ""}`}>
           {connected ? "Kapcsolódva a szerverhez" : "Kapcsolódás…"}
         </p>

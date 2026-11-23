@@ -1,5 +1,5 @@
 import {useEffect,useId,useRef,type ReactNode} from 'react';
-import {X} from '@phosphor-icons/react';
+import {GameIcon} from "./GameIcon";
 
 export function GameDialog({open,title,onClose,children}:{open:boolean;title:string;onClose:()=>void;children:ReactNode}){
  const ref=useRef<HTMLDialogElement>(null);
@@ -13,7 +13,7 @@ export function GameDialog({open,title,onClose,children}:{open:boolean;title:str
   onCancel={event=>{event.preventDefault();onClose();}}
   onClick={event=>{if(event.target===ref.current)onClose();}}>
   <div className="dialog-frame">
-   <header><h2 id={id}>{title}</h2><button type="button" aria-label={title+' bezárása'} onClick={onClose}><X size={20}/></button></header>
+   <header><h2 id={id}>{title}</h2><button type="button" aria-label={title+' bezárása'} onClick={onClose}><GameIcon name="close" size={20} /></button></header>
    <div className="dialog-content">{children}</div>
   </div>
  </dialog>;

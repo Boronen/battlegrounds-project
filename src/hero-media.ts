@@ -1,4 +1,3 @@
-export type AttackStyle='tire'|'dumbbell'|'volleyball';
 export interface HeroMusic { label:string; videoId?:string; playlistId?:string; url:string }
 const youtube=(videoId:string):HeroMusic=>({label:'Az űrlapban választott zene',videoId,url:`https://www.youtube.com/watch?v=${videoId}`});
 export const HERO_MUSIC:Record<string,HeroMusic>={
@@ -16,9 +15,4 @@ export const HERO_MUSIC:Record<string,HeroMusic>={
  'original-26':{...youtube('1ZlRihc3bw4'),label:'Palya Bea – Szabadon (előadói válaszból választva)'},
  'original-10':{...youtube('EGXPAoyP_cg'),label:'Chris Christodoulou – The Rain Formerly Known as Purple'},
  'original-14':{label:'Slipknot – The Devil in I',videoId:'XEEasR7hVhA',url:'https://www.youtube.com/watch?v=XEEasR7hVhA'},
-};
-export const HERO_ATTACKS:Record<string,{style:AttackStyle;label:string}>={
- 'original-2':{style:'tire',label:'Motoros guminyom'},
- 'original-12':{style:'dumbbell',label:'Repülő súlyzó'},
- 'original-1':{style:'volleyball',label:'Röplabda'},
 };

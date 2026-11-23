@@ -60,7 +60,7 @@ A teljes integrációs próba nyolc tesztfiókot és két meccset hoz létre az 
 
 A fejléc **Kártyakatalógus** gombja csak az aktuális meccs 80 aktív kártyáját mutatja, szintek szerint. Minden meccs 8 törzsből 5 véletlen törzset választ; a bolt és a tripla jutalma ugyanebből a rögzített készletből dolgozik. Törzsre és szintre szűrhetsz, valamint névre, franchise-ra vagy képességre kereshetsz. A katalógus a kifogyott kártyatípusokat is megtartja. Bezárás: Bezárás gomb vagy Escape. Meccs előtt a katalógus indítást kér.
 
-A támadások célpont felé történő nekilendüléssel, rövid találati rázkódással és lebegő sebzésszámokkal jelennek meg. A zöld stat és ↑ jel végleges, a kék stat és ✦ jel csak az adott harcra szóló erősítést mutat. A sérült életerő piros; a kártya részletei az alapértéket és a bónuszokat külön felsorolják. A csökkentett mozgás rendszerbeállítás kikapcsolja az utazó animációkat és a rázkódást.
+A kártyatípusok illusztrációi és a kezelőikonok helyi WebP képek. A támadást előre elkészített GIF jelzi, csökkentett mozgásnál állókép jelenik meg. A statisztikák és az eseménysorrend továbbra is a meccs állapotából származnak.
 
 A fejlécben nyitható meg. Harcszünet, eseményenkénti léptetés és 0,5–8× animációs sebesség áll rendelkezésre. A szünet az időzített szakaszváltást is megállítja; folytatáskor a szakasz teljes ideje újraindul.
 
@@ -107,7 +107,7 @@ A rövid harci hangok és a sorozatokhoz tartozó bejátszások helyi hangfájlo
 
 A támadó a célpont közepéig mozdul, majd visszatér a saját helyére. Az ütközéshez irányított visszalökés, rövid rázkódás, szikrák és sebzésszámok tartoznak. A mozgás sebessége a tesztpadon állítható, a csökkentett mozgás beállítása továbbra is támogatott.
 
-A betűtípusok helyben vannak a `public/fonts/` mappában, a hozzájuk tartozó OFL-licencekkel. Az SVG-kezelőikonokat a Phosphor biztosítja.
+A betűtípusok helyben vannak a `public/fonts/` mappában, a hozzájuk tartozó OFL-licencekkel. A játékgrafikák a public/art könyvtárban találhatók, a Higgsfieldben készültek.
 
 ## Projektterv
 

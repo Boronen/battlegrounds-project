@@ -90,7 +90,7 @@ try{
  await page.setViewportSize({width:390,height:844});
  await page.locator('.power-launch').click();await page.getByRole('dialog',{name:'Hősképesség'}).waitFor();await shot('powers-phone');await page.keyboard.press('Escape');
  await page.getByRole('button',{name:'Tabella',exact:true}).click();assert.equal(await page.locator('dialog[open] .standing').count(),8);await page.keyboard.press('Escape');
- await page.locator('.settings-toggle').click();await page.locator('.motion-toggle').click();await page.keyboard.press('Escape');
+ await page.locator('.settings-toggle').click();await page.getByRole('dialog').waitFor();await page.keyboard.press('Escape');
  await page.locator('.card-pool-toggle').click();await page.locator('.pool-card').first().waitFor();await page.keyboard.press('Escape');
  await page.locator('.inspect-toggle').click();await page.locator('.shop .unit').last().tap();await page.getByRole('dialog',{name:character(p.shop[5]!.characterId).name}).waitFor();await page.keyboard.press('Escape');
  await page.locator('.inspect-toggle').click();await page.locator('.hand .unit').nth(9).scrollIntoViewIfNeeded();await page.locator('.hand .unit').nth(9).tap();await page.locator('.card-inspection').waitFor();await page.keyboard.press('Escape');

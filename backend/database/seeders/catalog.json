@@ -19,7 +19,7 @@
       "repeats": 1
     },
     "text": "Gördeszkás lendület: Az első támadásától +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/35.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 36,
@@ -41,7 +41,7 @@
       "repeats": 1
     },
     "text": "Időpajzs: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/36.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 37,
@@ -63,7 +63,7 @@
       "repeats": 1
     },
     "text": "Útban vagy!: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/37.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 38,
@@ -85,7 +85,7 @@
       "repeats": 1
     },
     "text": "Bátorságpróba: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/38.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 39,
@@ -107,7 +107,7 @@
       "repeats": 1
     },
     "text": "Bátorító szó: Egy választott másik szövetséges véglegesen +2/+2 értéket kap.",
-    "portrait": "/portraits/39.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 40,
@@ -129,7 +129,7 @@
       "repeats": 1
     },
     "text": "Közös jövő: A közvetlen szomszédok +3 életerőt kapnak erre a harcra.",
-    "portrait": "/portraits/40.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 41,
@@ -151,7 +151,7 @@
       "repeats": 1
     },
     "text": "Biztonságos utazás: Védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/41.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 42,
@@ -173,7 +173,7 @@
       "repeats": 1
     },
     "text": "Párbaj délben: 4 sebzést okoz egy véletlen ellenségnek.",
-    "portrait": "/portraits/42.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 43,
@@ -192,7 +192,7 @@
       "attack": 3
     },
     "text": "Sárkányerő: Az első támadásától +3 támadást kap erre a harcra.",
-    "portrait": "/portraits/43.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 44,
@@ -211,7 +211,7 @@
       "amount": 3
     },
     "text": "Vadászcsapás: 3 sebzést okoz egy véletlen ellenségnek a harc kezdetén.",
-    "portrait": "/portraits/44.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 45,
@@ -231,7 +231,7 @@
       "health": 4
     },
     "text": "A mester tanítása: A köröd végén a bal oldali szomszédja tartósan +4/+4-et kap.",
-    "portrait": "/portraits/45.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 46,
@@ -249,7 +249,7 @@
       "target": "left"
     },
     "text": "Mágikus védelem: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/46.svg"
+    "portrait": "/art/tribes/beasts.webp"
   },
   {
     "id": 47,
@@ -268,7 +268,7 @@
       "attack": 1
     },
     "text": "Baráti biztatás: Egy választott másik szövetséges véglegesen +1 támadást kap.",
-    "portrait": "/portraits/47.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 48,
@@ -286,7 +286,7 @@
       "target": "self"
     },
     "text": "Szerencsés kitérés: Védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/48.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 49,
@@ -304,7 +304,7 @@
       "target": "self"
     },
     "text": "A vadászat vezetője: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/49.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 50,
@@ -323,7 +323,7 @@
       "amount": 3
     },
     "text": "Sötét sárkánytűz: 3 sebzést okoz minden ellenséges egységnek a harc kezdetén.",
-    "portrait": "/portraits/50.svg"
+    "portrait": "/art/tribes/beasts.webp"
   },
   {
     "id": 51,
@@ -342,7 +342,7 @@
       "name": "Overcharge"
     },
     "text": "Overcharge: Minden támadásakor +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/51.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 52,
@@ -362,7 +362,7 @@
       "name": "Virtuose"
     },
     "text": "Virtuose: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/52.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 53,
@@ -380,7 +380,7 @@
       "name": "Elemental Genesis"
     },
     "text": "Elemental Genesis: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/53.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 54,
@@ -400,7 +400,7 @@
       "name": "Foretell"
     },
     "text": "Foretell: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/54.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 55,
@@ -420,7 +420,7 @@
       "name": "Perfection"
     },
     "text": "Perfection: Minden támadásakor a két szomszédja +2/+2-t kap erre a harcra.",
-    "portrait": "/portraits/55.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 56,
@@ -438,7 +438,7 @@
       "name": "Bestial Wheel"
     },
     "text": "Bestial Wheel: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/56.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 57,
@@ -458,7 +458,7 @@
       "name": "Expedition Guide"
     },
     "text": "Expedition Guide: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/57.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 58,
@@ -478,7 +478,7 @@
       "name": "Chroma Surge"
     },
     "text": "Chroma Surge: A köröd végén a bal oldali szomszédja tartósan +7/+7-et kap.",
-    "portrait": "/portraits/58.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 59,
@@ -497,7 +497,7 @@
       "name": "Chosen One"
     },
     "text": "Chosen One: Minden támadásakor +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/59.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 60,
@@ -515,7 +515,7 @@
       "name": "High Ground"
     },
     "text": "High Ground: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/60.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 61,
@@ -535,7 +535,7 @@
       "name": "Senate Appeal"
     },
     "text": "Senate Appeal: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/61.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 62,
@@ -555,7 +555,7 @@
       "name": "Jedi Wisdom"
     },
     "text": "Jedi Wisdom: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
-    "portrait": "/portraits/62.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 63,
@@ -575,7 +575,7 @@
       "name": "Vaapad"
     },
     "text": "Vaapad: Minden támadásakor a két szomszédja +2/+2-t kap erre a harcra.",
-    "portrait": "/portraits/63.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 64,
@@ -595,7 +595,7 @@
       "name": "Padawan Courage"
     },
     "text": "Padawan Courage: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/64.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 65,
@@ -613,7 +613,7 @@
       "target": "self"
     },
     "text": "Szélvész: Kétszer támad a saját támadási körében, ha túléli az első támadást.",
-    "portrait": "/portraits/65.svg",
+    "portrait": "/art/tribes/technologists.webp",
     "keywords": [
       "windfury"
     ]
@@ -635,7 +635,7 @@
       "name": "Force Lightning"
     },
     "text": "Force Lightning: Harc elején 5 sebzést okoz minden ellenségnek.",
-    "portrait": "/portraits/66.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 67,
@@ -655,7 +655,7 @@
       "name": "Shadow Monarch"
     },
     "text": "Shadow Monarch: Minden támadásakor a törzséhez tartozó többi szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/67.svg"
+    "portrait": "/art/tribes/undead.webp"
   },
   {
     "id": 68,
@@ -675,7 +675,7 @@
       "name": "Sword Dance"
     },
     "text": "Sword Dance: A köröd elején tartósan +1/+2-t kap.",
-    "portrait": "/portraits/68.svg"
+    "portrait": "/art/tribes/undead.webp"
   },
   {
     "id": 69,
@@ -695,7 +695,7 @@
       "name": "Loyal Companion"
     },
     "text": "Loyal Companion: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/69.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 70,
@@ -715,7 +715,7 @@
       "name": "Family Resolve"
     },
     "text": "Family Resolve: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/70.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 71,
@@ -733,7 +733,7 @@
       "name": "Blood-Red Commander"
     },
     "text": "Blood-Red Commander: Védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/71.svg"
+    "portrait": "/art/tribes/undead.webp"
   },
   {
     "id": 72,
@@ -752,7 +752,7 @@
       "name": "Iron Wall"
     },
     "text": "Iron Wall: Halálakor megidéz egy 2/2-es Segítőt.",
-    "portrait": "/portraits/72.svg"
+    "portrait": "/art/tribes/undead.webp"
   },
   {
     "id": 73,
@@ -771,7 +771,7 @@
       "name": "Ant King"
     },
     "text": "Ant King: Harc elején 7 sebzést okoz egy véletlen ellenségnek.",
-    "portrait": "/portraits/73.svg"
+    "portrait": "/art/tribes/undead.webp"
   },
   {
     "id": 74,
@@ -791,7 +791,7 @@
       "name": "Hunters Association"
     },
     "text": "Hunters Association: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/74.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 75,
@@ -811,7 +811,7 @@
       "name": "Friendly Advice"
     },
     "text": "Friendly Advice: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/75.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 76,
@@ -830,7 +830,7 @@
       "name": "Pirate Charge"
     },
     "text": "Pirate Charge: Minden támadásakor +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/76.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 77,
@@ -848,7 +848,7 @@
       "name": "Menagerie Keeper"
     },
     "text": "Menagerie Keeper: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/77.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 78,
@@ -866,7 +866,7 @@
       "name": "Divine Protection"
     },
     "text": "Divine Protection: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/78.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 79,
@@ -886,7 +886,7 @@
       "name": "Patient Return"
     },
     "text": "Patient Return: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/79.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 80,
@@ -904,7 +904,7 @@
       "name": "Arcane Trick"
     },
     "text": "Arcane Trick: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
-    "portrait": "/portraits/80.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 81,
@@ -923,7 +923,7 @@
       "name": "By Fire Be Purged"
     },
     "text": "By Fire Be Purged: Harc elején 7 sebzést okoz egy véletlen ellenségnek.",
-    "portrait": "/portraits/81.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 82,
@@ -943,7 +943,7 @@
       "name": "Frozen Legacy"
     },
     "text": "Frozen Legacy: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/82.svg"
+    "portrait": "/art/tribes/undead.webp"
   },
   {
     "id": 83,
@@ -963,7 +963,7 @@
       "name": "Do Not Panic"
     },
     "text": "Do Not Panic: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/83.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 84,
@@ -983,7 +983,7 @@
       "name": "Guide Entry"
     },
     "text": "Guide Entry: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/84.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 85,
@@ -1002,7 +1002,7 @@
       "name": "Two Heads"
     },
     "text": "Two Heads: Minden támadásakor +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/85.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 86,
@@ -1022,7 +1022,7 @@
       "name": "Astrophysics"
     },
     "text": "Astrophysics: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
-    "portrait": "/portraits/86.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 87,
@@ -1040,7 +1040,7 @@
       "name": "Brain the Size of a Planet"
     },
     "text": "Brain the Size of a Planet: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/87.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 88,
@@ -1060,7 +1060,7 @@
       "name": "Award-Winning Fjords"
     },
     "text": "Award-Winning Fjords: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/88.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 89,
@@ -1078,7 +1078,7 @@
       "name": "Point of View"
     },
     "text": "Point of View: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
-    "portrait": "/portraits/89.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 90,
@@ -1098,7 +1098,7 @@
       "name": "Forty-Two"
     },
     "text": "Forty-Two: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
-    "portrait": "/portraits/90.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 91,
@@ -1116,7 +1116,7 @@
       "target": "self"
     },
     "text": "Újjászületés: Egyszer visszatér 1 életerővel és alap támadással, bónuszok, pajzs és kulcsszavak nélkül, ha van hely.",
-    "portrait": "/portraits/91.svg",
+    "portrait": "/art/tribes/guardians.webp",
     "keywords": [
       "reborn"
     ]
@@ -1139,7 +1139,7 @@
       "name": "Bad Wolf"
     },
     "text": "Bad Wolf: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/92.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 93,
@@ -1159,7 +1159,7 @@
       "name": "Medical Training"
     },
     "text": "Medical Training: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/93.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 94,
@@ -1179,7 +1179,7 @@
       "name": "Best Friend"
     },
     "text": "Best Friend: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/94.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 95,
@@ -1199,7 +1199,7 @@
       "name": "The Girl Who Waited"
     },
     "text": "The Girl Who Waited: A köröd végén a bal oldali szomszédja tartósan +3/+2-t kap.",
-    "portrait": "/portraits/95.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 96,
@@ -1219,7 +1219,7 @@
       "name": "Last Centurion"
     },
     "text": "Last Centurion: A köröd elején tartósan +1/+2-t kap.",
-    "portrait": "/portraits/96.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 97,
@@ -1238,7 +1238,7 @@
       "name": "Hello Sweetie"
     },
     "text": "Hello Sweetie: Halálakor 5 sebzést okoz minden ellenségnek.",
-    "portrait": "/portraits/97.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 98,
@@ -1258,7 +1258,7 @@
       "name": "Time Lord Scheme"
     },
     "text": "Time Lord Scheme: A köröd végén a bal oldali szomszédja tartósan +7/+7-et kap.",
-    "portrait": "/portraits/98.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 99,
@@ -1278,7 +1278,7 @@
       "name": "Glitter of Happiness"
     },
     "text": "Glitter of Happiness: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/99.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 100,
@@ -1298,7 +1298,7 @@
       "name": "Protector"
     },
     "text": "Protector: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
-    "portrait": "/portraits/100.svg"
+    "portrait": "/art/tribes/beasts.webp"
   },
   {
     "id": 101,
@@ -1317,7 +1317,7 @@
       "name": "Deceptive Narration"
     },
     "text": "Deceptive Narration: Halálakor 5 sebzést okoz minden ellenségnek.",
-    "portrait": "/portraits/101.svg"
+    "portrait": "/art/tribes/undead.webp"
   },
   {
     "id": 102,
@@ -1337,7 +1337,7 @@
       "name": "Lost Friend"
     },
     "text": "Lost Friend: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/102.svg"
+    "portrait": "/art/tribes/undead.webp"
   },
   {
     "id": 103,
@@ -1357,7 +1357,7 @@
       "name": "Eternal Happiness"
     },
     "text": "Eternal Happiness: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/103.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 104,
@@ -1377,7 +1377,7 @@
       "name": "Playful Companion"
     },
     "text": "Playful Companion: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/104.svg"
+    "portrait": "/art/tribes/beasts.webp"
   },
   {
     "id": 105,
@@ -1396,7 +1396,7 @@
       "name": "Underground Party"
     },
     "text": "Underground Party: Halálakor megidéz egy 2/2-es Segítőt.",
-    "portrait": "/portraits/105.svg"
+    "portrait": "/art/tribes/beasts.webp"
   },
   {
     "id": 106,
@@ -1414,7 +1414,7 @@
       "name": "Fourth Reality"
     },
     "text": "Fourth Reality: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/106.svg"
+    "portrait": "/art/tribes/undead.webp"
   },
   {
     "id": 107,
@@ -1434,7 +1434,7 @@
       "name": "Armored Vigilante"
     },
     "text": "Armored Vigilante: Minden támadásakor a két szomszédja +2/+2-t kap erre a harcra.",
-    "portrait": "/portraits/107.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 108,
@@ -1452,7 +1452,7 @@
       "target": "self"
     },
     "text": "Lopakodás: Nem támadható, amíg nem támad. Területi sebzés éri. Ha minden ellenfél lopakodik, támadhatóvá válnak.",
-    "portrait": "/portraits/108.svg",
+    "portrait": "/art/tribes/tricksters.webp",
     "keywords": [
       "stealth"
     ]
@@ -1473,7 +1473,7 @@
       "name": "Trusted Signal"
     },
     "text": "Trusted Signal: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/109.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 110,
@@ -1493,7 +1493,7 @@
       "name": "Faithful Butler"
     },
     "text": "Faithful Butler: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/110.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 111,
@@ -1511,7 +1511,7 @@
       "name": "Iceberg Lounge"
     },
     "text": "Iceberg Lounge: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/111.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 112,
@@ -1530,7 +1530,7 @@
       "name": "Riddle Trap"
     },
     "text": "Riddle Trap: Halálakor 5 sebzést okoz minden ellenségnek.",
-    "portrait": "/portraits/112.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 113,
@@ -1550,7 +1550,7 @@
       "name": "Gotham Connections"
     },
     "text": "Gotham Connections: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
-    "portrait": "/portraits/113.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 114,
@@ -1570,7 +1570,7 @@
       "name": "Renewal"
     },
     "text": "Renewal: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/114.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 115,
@@ -1590,7 +1590,7 @@
       "name": "Player 456"
     },
     "text": "Player 456: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/115.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 116,
@@ -1608,7 +1608,7 @@
       "name": "Calculated Risk"
     },
     "text": "Calculated Risk: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
-    "portrait": "/portraits/116.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 117,
@@ -1628,7 +1628,7 @@
       "name": "Quiet Survivor"
     },
     "text": "Quiet Survivor: A köröd végén a bal oldali szomszédja tartósan +3/+2-t kap.",
-    "portrait": "/portraits/117.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 118,
@@ -1646,7 +1646,7 @@
       "name": "Helping Hand"
     },
     "text": "Helping Hand: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/118.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 119,
@@ -1666,7 +1666,7 @@
       "name": "Old Friends"
     },
     "text": "Old Friends: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
-    "portrait": "/portraits/119.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 120,
@@ -1685,7 +1685,7 @@
       "name": "Intimidation"
     },
     "text": "Intimidation: Minden támadásakor +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/120.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 121,
@@ -1705,7 +1705,7 @@
       "name": "Last Bargain"
     },
     "text": "Last Bargain: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/121.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 122,
@@ -1725,7 +1725,7 @@
       "name": "Undercover Officer"
     },
     "text": "Undercover Officer: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/122.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 123,
@@ -1744,7 +1744,7 @@
       "name": "Aerial Shot"
     },
     "text": "Aerial Shot: Minden támadásakor +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/123.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 124,
@@ -1763,7 +1763,7 @@
       "name": "Power Shot"
     },
     "text": "Power Shot: Harc elején 7 sebzést okoz egy véletlen ellenségnek.",
-    "portrait": "/portraits/124.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 125,
@@ -1781,7 +1781,7 @@
       "name": "Wall Pinch"
     },
     "text": "Wall Pinch: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
-    "portrait": "/portraits/125.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 126,
@@ -1800,7 +1800,7 @@
       "name": "Goal Line Defense"
     },
     "text": "Goal Line Defense: Halálakor megidéz egy 2/2-es Segítőt.",
-    "portrait": "/portraits/126.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 127,
@@ -1820,7 +1820,7 @@
       "name": "Kickoff Boost"
     },
     "text": "Kickoff Boost: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/127.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 128,
@@ -1838,7 +1838,7 @@
       "name": "Midair Recovery"
     },
     "text": "Midair Recovery: Védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/128.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 129,
@@ -1858,7 +1858,7 @@
       "name": "Defensive Rotation"
     },
     "text": "Defensive Rotation: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
-    "portrait": "/portraits/129.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 130,
@@ -1878,7 +1878,7 @@
       "name": "Centering Pass"
     },
     "text": "Centering Pass: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/130.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 131,
@@ -1896,7 +1896,7 @@
       "name": "Bullet Dodge"
     },
     "text": "Bullet Dodge: Védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/131.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 132,
@@ -1916,7 +1916,7 @@
       "name": "Rooftop Leap"
     },
     "text": "Rooftop Leap: A köröd elején tartósan +1/+2-t kap.",
-    "portrait": "/portraits/132.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 133,
@@ -1936,7 +1936,7 @@
       "name": "Free Your Mind"
     },
     "text": "Free Your Mind: Minden támadásakor a törzséhez tartozó többi szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/133.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 134,
@@ -1956,7 +1956,7 @@
       "name": "System Override"
     },
     "text": "System Override: A köröd végén a bal oldali szomszédja tartósan +7/+7-et kap.",
-    "portrait": "/portraits/134.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 135,
@@ -1976,7 +1976,7 @@
       "name": "Know Thyself"
     },
     "text": "Know Thyself: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/135.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 136,
@@ -1994,7 +1994,7 @@
       "name": "Betrayal"
     },
     "text": "Betrayal: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
-    "portrait": "/portraits/136.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 137,
@@ -2012,7 +2012,7 @@
       "name": "Operator Support"
     },
     "text": "Operator Support: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/137.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 138,
@@ -2030,7 +2030,7 @@
       "name": "Captain of the Logos"
     },
     "text": "Captain of the Logos: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/138.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 139,
@@ -2050,7 +2050,7 @@
       "name": "Follow Me"
     },
     "text": "Follow Me: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
-    "portrait": "/portraits/139.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 140,
@@ -2068,7 +2068,7 @@
       "name": "Fisherman’s Resolve"
     },
     "text": "Fisherman’s Resolve: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/140.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 141,
@@ -2088,7 +2088,7 @@
       "name": "Careful Record"
     },
     "text": "Careful Record: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/141.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 142,
@@ -2108,7 +2108,7 @@
       "name": "New Beginning"
     },
     "text": "New Beginning: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/142.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 143,
@@ -2128,7 +2128,7 @@
       "name": "Night Conversation"
     },
     "text": "Night Conversation: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
-    "portrait": "/portraits/143.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 144,
@@ -2148,7 +2148,7 @@
       "name": "Bring a Friend"
     },
     "text": "Bring a Friend: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/144.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 145,
@@ -2168,7 +2168,7 @@
       "name": "Faithful Witness"
     },
     "text": "Faithful Witness: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/145.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 146,
@@ -2186,7 +2186,7 @@
       "name": "Steadfast Faith"
     },
     "text": "Steadfast Faith: Védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/146.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 147,
@@ -2206,7 +2206,7 @@
       "name": "Fresh Spawn"
     },
     "text": "Fresh Spawn: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/147.svg"
+    "portrait": "/art/tribes/beasts.webp"
   },
   {
     "id": 148,
@@ -2224,7 +2224,7 @@
       "target": "self"
     },
     "text": "Méreg: Az első sikeres támadási vagy visszaütési sebzése megöli a célpontot, majd a méreg elfogy. Pajzs nem fogyasztja el.",
-    "portrait": "/portraits/148.svg",
+    "portrait": "/art/tribes/technologists.webp",
     "keywords": [
       "venomous"
     ]
@@ -2245,7 +2245,7 @@
       "name": "Heavy Armor"
     },
     "text": "Heavy Armor: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/149.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 150,
@@ -2263,7 +2263,7 @@
       "name": "Safe Zone"
     },
     "text": "Safe Zone: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/150.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 151,
@@ -2283,7 +2283,7 @@
       "name": "Outpost Supplies"
     },
     "text": "Outpost Supplies: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/151.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 152,
@@ -2302,7 +2302,7 @@
       "name": "Territorial Charge"
     },
     "text": "Territorial Charge: Minden támadásakor +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/152.svg"
+    "portrait": "/art/tribes/beasts.webp"
   },
   {
     "id": 153,
@@ -2322,7 +2322,7 @@
       "name": "Pack Instinct"
     },
     "text": "Pack Instinct: A köröd végén a bal oldali szomszédja tartósan +3/+2-t kap.",
-    "portrait": "/portraits/153.svg"
+    "portrait": "/art/tribes/beasts.webp"
   },
   {
     "id": 154,
@@ -2341,7 +2341,7 @@
       "name": "Rocket Barrage"
     },
     "text": "Rocket Barrage: Harc elején 5 sebzést okoz minden ellenségnek.",
-    "portrait": "/portraits/154.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 155,
@@ -2359,7 +2359,7 @@
       "name": "Deduction"
     },
     "text": "Deduction: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
-    "portrait": "/portraits/155.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 156,
@@ -2377,7 +2377,7 @@
       "name": "Army Doctor"
     },
     "text": "Army Doctor: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/156.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 157,
@@ -2397,7 +2397,7 @@
       "name": "Government Connections"
     },
     "text": "Government Connections: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
-    "portrait": "/portraits/157.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 158,
@@ -2415,7 +2415,7 @@
       "target": "self"
     },
     "text": "Méreg: Az első sikeres támadási vagy visszaütési sebzése megöli a célpontot, majd a méreg elfogy. Pajzs nem fogyasztja el.",
-    "portrait": "/portraits/158.svg",
+    "portrait": "/art/tribes/tricksters.webp",
     "keywords": [
       "venomous"
     ]
@@ -2438,7 +2438,7 @@
       "name": "The Woman"
     },
     "text": "The Woman: A köröd végén a bal oldali szomszédja tartósan +3/+2-t kap.",
-    "portrait": "/portraits/159.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 160,
@@ -2458,7 +2458,7 @@
       "name": "Baker Street Hospitality"
     },
     "text": "Baker Street Hospitality: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/160.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 161,
@@ -2477,7 +2477,7 @@
       "name": "Scotland Yard"
     },
     "text": "Scotland Yard: Halálakor megidéz egy 2/2-es Segítőt.",
-    "portrait": "/portraits/161.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 162,
@@ -2497,7 +2497,7 @@
       "name": "Quiet Courage"
     },
     "text": "Quiet Courage: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/162.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 163,
@@ -2515,7 +2515,7 @@
       "target": "self"
     },
     "text": "Újjászületés: Egyszer visszatér 1 életerővel és alap támadással, bónuszok, pajzs és kulcsszavak nélkül, ha van hely.",
-    "portrait": "/portraits/163.svg",
+    "portrait": "/art/tribes/undead.webp",
     "keywords": [
       "reborn"
     ]
@@ -2538,7 +2538,7 @@
       "name": "Touch the Darkness"
     },
     "text": "Touch the Darkness: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/164.svg"
+    "portrait": "/art/tribes/undead.webp"
   },
   {
     "id": 165,
@@ -2556,7 +2556,7 @@
       "name": "Onion Armor"
     },
     "text": "Onion Armor: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/165.svg"
+    "portrait": "/art/tribes/undead.webp"
   },
   {
     "id": 166,
@@ -2576,7 +2576,7 @@
       "name": "Shared Quest"
     },
     "text": "Shared Quest: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
-    "portrait": "/portraits/166.svg"
+    "portrait": "/art/tribes/undead.webp"
   },
   {
     "id": 167,
@@ -2594,7 +2594,7 @@
       "target": "self"
     },
     "text": "Lopakodás: Nem támadható, amíg nem támad. Területi sebzés éri. Ha minden ellenfél lopakodik, támadhatóvá válnak.",
-    "portrait": "/portraits/167.svg",
+    "portrait": "/art/tribes/undead.webp",
     "keywords": [
       "stealth"
     ]
@@ -2615,7 +2615,7 @@
       "target": "self"
     },
     "text": "Szélvész: Kétszer támad a saját támadási körében, ha túléli az első támadást.",
-    "portrait": "/portraits/168.svg",
+    "portrait": "/art/tribes/undead.webp",
     "keywords": [
       "windfury"
     ]
@@ -2636,7 +2636,7 @@
       "target": "self"
     },
     "text": "Szélvész: Kétszer támad a saját támadási körében, ha túléli az első támadást.",
-    "portrait": "/portraits/169.svg",
+    "portrait": "/art/tribes/undead.webp",
     "keywords": [
       "windfury"
     ]
@@ -2657,7 +2657,7 @@
       "target": "self"
     },
     "text": "Újjászületés: Egyszer visszatér 1 életerővel és alap támadással, bónuszok, pajzs és kulcsszavak nélkül, ha van hely.",
-    "portrait": "/portraits/170.svg",
+    "portrait": "/art/tribes/undead.webp",
     "keywords": [
       "reborn"
     ]
@@ -2679,7 +2679,7 @@
       "name": "Toruk Makto"
     },
     "text": "Toruk Makto: Minden támadásakor +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/171.svg"
+    "portrait": "/art/tribes/beasts.webp"
   },
   {
     "id": 172,
@@ -2699,7 +2699,7 @@
       "name": "Forest Archer"
     },
     "text": "Forest Archer: Minden támadásakor a törzséhez tartozó többi szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/172.svg"
+    "portrait": "/art/tribes/beasts.webp"
   },
   {
     "id": 173,
@@ -2719,7 +2719,7 @@
       "name": "Botanical Knowledge"
     },
     "text": "Botanical Knowledge: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/173.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 174,
@@ -2739,7 +2739,7 @@
       "name": "Avatar Training"
     },
     "text": "Avatar Training: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/174.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 175,
@@ -2759,7 +2759,7 @@
       "name": "Air Support"
     },
     "text": "Air Support: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
-    "portrait": "/portraits/175.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 176,
@@ -2777,7 +2777,7 @@
       "name": "Clan Warrior"
     },
     "text": "Clan Warrior: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/176.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 177,
@@ -2797,7 +2797,7 @@
       "name": "Voice of Eywa"
     },
     "text": "Voice of Eywa: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/177.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 178,
@@ -2816,7 +2816,7 @@
       "name": "AMP Assault"
     },
     "text": "AMP Assault: Harc elején 5 sebzést okoz minden ellenségnek.",
-    "portrait": "/portraits/178.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 179,
@@ -2836,7 +2836,7 @@
       "name": "Supe Hunter"
     },
     "text": "Supe Hunter: Minden támadásakor a két szomszédja +2/+2-t kap erre a harcra.",
-    "portrait": "/portraits/179.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 180,
@@ -2856,7 +2856,7 @@
       "name": "Unexpected Courage"
     },
     "text": "Unexpected Courage: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/180.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 181,
@@ -2874,7 +2874,7 @@
       "name": "Guiding Light"
     },
     "text": "Guiding Light: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/181.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 182,
@@ -2892,7 +2892,7 @@
       "name": "Hold the Line"
     },
     "text": "Hold the Line: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/182.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 183,
@@ -2912,7 +2912,7 @@
       "name": "Improvised Gear"
     },
     "text": "Improvised Gear: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/183.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 184,
@@ -2930,7 +2930,7 @@
       "target": "self"
     },
     "text": "Újjászületés: Egyszer visszatér 1 életerővel és alap támadással, bónuszok, pajzs és kulcsszavak nélkül, ha van hely.",
-    "portrait": "/portraits/184.svg",
+    "portrait": "/art/tribes/warriors.webp",
     "keywords": [
       "reborn"
     ]
@@ -2952,7 +2952,7 @@
       "name": "Heat Vision"
     },
     "text": "Heat Vision: Harc elején 5 sebzést okoz minden ellenségnek.",
-    "portrait": "/portraits/185.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 186,
@@ -2970,7 +2970,7 @@
       "name": "Warrior’s Resolve"
     },
     "text": "Warrior’s Resolve: Védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/186.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 187,
@@ -2990,7 +2990,7 @@
       "name": "Choose Your Class"
     },
     "text": "Choose Your Class: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/187.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 188,
@@ -3009,7 +3009,7 @@
       "name": "Grand Wizard"
     },
     "text": "Grand Wizard: Harc elején 7 sebzést okoz egy véletlen ellenségnek.",
-    "portrait": "/portraits/188.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 189,
@@ -3027,7 +3027,7 @@
       "name": "Toolshed"
     },
     "text": "Toolshed: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/189.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 190,
@@ -3045,7 +3045,7 @@
       "name": "Human Kite"
     },
     "text": "Human Kite: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/190.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 191,
@@ -3063,7 +3063,7 @@
       "target": "self"
     },
     "text": "Újjászületés: Egyszer visszatér 1 életerővel és alap támadással, bónuszok, pajzs és kulcsszavak nélkül, ha van hely.",
-    "portrait": "/portraits/191.svg",
+    "portrait": "/art/tribes/undead.webp",
     "keywords": [
       "reborn"
     ]
@@ -3086,7 +3086,7 @@
       "name": "Paladin’s Blessing"
     },
     "text": "Paladin’s Blessing: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/192.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 193,
@@ -3105,7 +3105,7 @@
       "name": "Super Craig"
     },
     "text": "Super Craig: Minden támadásakor +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/193.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 194,
@@ -3125,7 +3125,7 @@
       "name": "Wonder Tweek"
     },
     "text": "Wonder Tweek: A köröd végén a bal oldali szomszédja tartósan +7/+7-et kap.",
-    "portrait": "/portraits/194.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 195,
@@ -3145,7 +3145,7 @@
       "name": "Good Morning"
     },
     "text": "Good Morning: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/195.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 196,
@@ -3165,7 +3165,7 @@
       "name": "Cue the Sun"
     },
     "text": "Cue the Sun: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
-    "portrait": "/portraits/196.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 197,
@@ -3183,7 +3183,7 @@
       "name": "Truth Beyond the Set"
     },
     "text": "Truth Beyond the Set: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/197.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 198,
@@ -3203,7 +3203,7 @@
       "name": "Product Placement"
     },
     "text": "Product Placement: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/198.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 199,
@@ -3222,7 +3222,7 @@
       "name": "Best Friend"
     },
     "text": "Best Friend: Halálakor megidéz egy 2/2-es Segítőt.",
-    "portrait": "/portraits/199.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 200,
@@ -3242,7 +3242,7 @@
       "name": "Father’s Return"
     },
     "text": "Father’s Return: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/200.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 201,
@@ -3262,7 +3262,7 @@
       "name": "Family Album"
     },
     "text": "Family Album: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/201.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 202,
@@ -3282,7 +3282,7 @@
       "name": "Control Room"
     },
     "text": "Control Room: A köröd végén a bal oldali szomszédja tartósan +3/+2-t kap.",
-    "portrait": "/portraits/202.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 203,
@@ -3302,7 +3302,7 @@
       "name": "Tell the Truth"
     },
     "text": "Tell the Truth: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/203.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 204,
@@ -3322,7 +3322,7 @@
       "name": "Emergency Coordination"
     },
     "text": "Emergency Coordination: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
-    "portrait": "/portraits/204.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 205,
@@ -3340,7 +3340,7 @@
       "name": "Reactor Analysis"
     },
     "text": "Reactor Analysis: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
-    "portrait": "/portraits/205.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 206,
@@ -3358,7 +3358,7 @@
       "name": "Control Room Orders"
     },
     "text": "Control Room Orders: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/206.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 207,
@@ -3378,7 +3378,7 @@
       "name": "First Responder"
     },
     "text": "First Responder: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/207.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 208,
@@ -3398,7 +3398,7 @@
       "name": "Unwavering Devotion"
     },
     "text": "Unwavering Devotion: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/208.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 209,
@@ -3418,7 +3418,7 @@
       "name": "Radiation Reconnaissance"
     },
     "text": "Radiation Reconnaissance: Minden támadásakor a két szomszédja +2/+2-t kap erre a harcra.",
-    "portrait": "/portraits/209.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 210,
@@ -3438,7 +3438,7 @@
       "name": "Mobilize the Miners"
     },
     "text": "Mobilize the Miners: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/210.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 211,
@@ -3456,7 +3456,7 @@
       "name": "Stone Form"
     },
     "text": "Stone Form: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/211.svg"
+    "portrait": "/art/tribes/beasts.webp"
   },
   {
     "id": 212,
@@ -3474,7 +3474,7 @@
       "name": "Shoulder Charge"
     },
     "text": "Shoulder Charge: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/212.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 213,
@@ -3493,7 +3493,7 @@
       "name": "Exploding Uppercut"
     },
     "text": "Exploding Uppercut: Halálakor 5 sebzést okoz minden ellenségnek.",
-    "portrait": "/portraits/213.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 214,
@@ -3513,7 +3513,7 @@
       "name": "Rejuvenating Aurora"
     },
     "text": "Rejuvenating Aurora: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/214.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 215,
@@ -3532,7 +3532,7 @@
       "name": "Flame Dash"
     },
     "text": "Flame Dash: Minden támadásakor +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/215.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 216,
@@ -3550,7 +3550,7 @@
       "target": "self"
     },
     "text": "Lopakodás: Nem támadható, amíg nem támad. Területi sebzés éri. Ha minden ellenfél lopakodik, támadhatóvá válnak.",
-    "portrait": "/portraits/216.svg",
+    "portrait": "/art/tribes/tricksters.webp",
     "keywords": [
       "stealth"
     ]
@@ -3572,7 +3572,7 @@
       "name": "Storm Cloud"
     },
     "text": "Storm Cloud: Harc elején 5 sebzést okoz minden ellenségnek.",
-    "portrait": "/portraits/217.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 218,
@@ -3592,7 +3592,7 @@
       "name": "Spotter"
     },
     "text": "Spotter: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/218.svg"
+    "portrait": "/art/tribes/undead.webp"
   },
   {
     "id": 219,
@@ -3612,7 +3612,7 @@
       "name": "Marshal’s Investigation"
     },
     "text": "Marshal’s Investigation: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/219.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 220,
@@ -3630,7 +3630,7 @@
       "name": "Trusted Partner"
     },
     "text": "Trusted Partner: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/220.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 221,
@@ -3650,7 +3650,7 @@
       "name": "Role-Play Therapy"
     },
     "text": "Role-Play Therapy: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/221.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 222,
@@ -3670,7 +3670,7 @@
       "name": "Clinical Interview"
     },
     "text": "Clinical Interview: Minden támadásakor a két szomszédja +2/+2-t kap erre a harcra.",
-    "portrait": "/portraits/222.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 223,
@@ -3690,7 +3690,7 @@
       "name": "Haunting Memory"
     },
     "text": "Haunting Memory: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/223.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 224,
@@ -3708,7 +3708,7 @@
       "name": "Missing Patient"
     },
     "text": "Missing Patient: Védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/224.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 225,
@@ -3728,7 +3728,7 @@
       "name": "Warning from Ward C"
     },
     "text": "Warning from Ward C: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/225.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 226,
@@ -3746,7 +3746,7 @@
       "name": "Island Security"
     },
     "text": "Island Security: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/226.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 227,
@@ -3766,7 +3766,7 @@
       "name": "Fresh Start"
     },
     "text": "Fresh Start: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/227.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 228,
@@ -3786,7 +3786,7 @@
       "name": "Competitive Spirit"
     },
     "text": "Competitive Spirit: A köröd elején tartósan +1/+2-t kap.",
-    "portrait": "/portraits/228.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 229,
@@ -3806,7 +3806,7 @@
       "name": "Smelly Cat"
     },
     "text": "Smelly Cat: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/229.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 230,
@@ -3825,7 +3825,7 @@
       "name": "How You Doin"
     },
     "text": "How You Doin: Minden támadásakor +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/230.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 231,
@@ -3843,7 +3843,7 @@
       "name": "Could I Be Any More"
     },
     "text": "Could I Be Any More: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
-    "portrait": "/portraits/231.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 232,
@@ -3863,7 +3863,7 @@
       "name": "Unagi"
     },
     "text": "Unagi: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/232.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 233,
@@ -3883,7 +3883,7 @@
       "name": "Central Perk"
     },
     "text": "Central Perk: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/233.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 234,
@@ -3901,7 +3901,7 @@
       "name": "Oh My God"
     },
     "text": "Oh My God: Védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/234.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 235,
@@ -3919,7 +3919,7 @@
       "name": "Protective Brother"
     },
     "text": "Protective Brother: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/235.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 236,
@@ -3937,7 +3937,7 @@
       "name": "Prosecutor’s Case"
     },
     "text": "Prosecutor’s Case: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
-    "portrait": "/portraits/236.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 237,
@@ -3957,7 +3957,7 @@
       "name": "Careful Counsel"
     },
     "text": "Careful Counsel: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/237.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 238,
@@ -3977,7 +3977,7 @@
       "name": "Unbroken Resolve"
     },
     "text": "Unbroken Resolve: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/238.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 239,
@@ -3996,7 +3996,7 @@
       "name": "Rival Heir"
     },
     "text": "Rival Heir: Minden támadásakor +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/239.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 240,
@@ -4016,7 +4016,7 @@
       "name": "Loyal Heart"
     },
     "text": "Loyal Heart: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
-    "portrait": "/portraits/240.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 241,
@@ -4036,7 +4036,7 @@
       "name": "Taesung Influence"
     },
     "text": "Taesung Influence: Minden támadásakor a törzséhez tartozó többi szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/241.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 242,
@@ -4056,7 +4056,7 @@
       "name": "Family Bonds"
     },
     "text": "Family Bonds: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/242.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 243,
@@ -4074,7 +4074,7 @@
       "target": "self"
     },
     "text": "Lopakodás: Nem támadható, amíg nem támad. Területi sebzés éri. Ha minden ellenfél lopakodik, támadhatóvá válnak.",
-    "portrait": "/portraits/243.svg",
+    "portrait": "/art/tribes/warriors.webp",
     "keywords": [
       "stealth"
     ]
@@ -4097,7 +4097,7 @@
       "name": "Carry You"
     },
     "text": "Carry You: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/244.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 245,
@@ -4117,7 +4117,7 @@
       "name": "Return of the King"
     },
     "text": "Return of the King: Minden támadásakor a törzséhez tartozó többi szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/245.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 246,
@@ -4136,7 +4136,7 @@
       "name": "Elven Bow"
     },
     "text": "Elven Bow: Harc elején 7 sebzést okoz egy véletlen ellenségnek.",
-    "portrait": "/portraits/246.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 247,
@@ -4154,7 +4154,7 @@
       "name": "Dwarven Defense"
     },
     "text": "Dwarven Defense: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/247.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 248,
@@ -4174,7 +4174,7 @@
       "name": "You Shall Not Pass"
     },
     "text": "You Shall Not Pass: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
-    "portrait": "/portraits/248.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 249,
@@ -4194,7 +4194,7 @@
       "name": "Last Stand"
     },
     "text": "Last Stand: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/249.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 250,
@@ -4212,7 +4212,7 @@
       "target": "self"
     },
     "text": "Lopakodás: Nem támadható, amíg nem támad. Területi sebzés éri. Ha minden ellenfél lopakodik, támadhatóvá válnak.",
-    "portrait": "/portraits/250.svg",
+    "portrait": "/art/tribes/tricksters.webp",
     "keywords": [
       "stealth"
     ]
@@ -4233,7 +4233,7 @@
       "target": "self"
     },
     "text": "Lopakodás: Nem támadható, amíg nem támad. Területi sebzés éri. Ha minden ellenfél lopakodik, támadhatóvá válnak.",
-    "portrait": "/portraits/251.svg",
+    "portrait": "/art/tribes/mystics.webp",
     "keywords": [
       "stealth"
     ]
@@ -4256,7 +4256,7 @@
       "name": "Spectator"
     },
     "text": "Spectator: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/252.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 253,
@@ -4276,7 +4276,7 @@
       "name": "The Hanged Man"
     },
     "text": "The Hanged Man: A köröd elején tartósan +1/+2-t kap.",
-    "portrait": "/portraits/253.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 254,
@@ -4294,7 +4294,7 @@
       "name": "The Sun"
     },
     "text": "The Sun: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/254.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 255,
@@ -4314,7 +4314,7 @@
       "name": "The Magician"
     },
     "text": "The Magician: A köröd végén a bal oldali szomszédja tartósan +3/+2-t kap.",
-    "portrait": "/portraits/255.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 256,
@@ -4332,7 +4332,7 @@
       "name": "Judgement"
     },
     "text": "Judgement: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/256.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 257,
@@ -4352,7 +4352,7 @@
       "name": "The Star"
     },
     "text": "The Star: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/257.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 258,
@@ -4371,7 +4371,7 @@
       "name": "Error"
     },
     "text": "Error: Halálakor 5 sebzést okoz minden ellenségnek.",
-    "portrait": "/portraits/258.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 259,
@@ -4389,7 +4389,7 @@
       "target": "self"
     },
     "text": "Újjászületés: Egyszer visszatér 1 életerővel és alap támadással, bónuszok, pajzs és kulcsszavak nélkül, ha van hely.",
-    "portrait": "/portraits/259.svg",
+    "portrait": "/art/tribes/survivors.webp",
     "keywords": [
       "reborn"
     ]
@@ -4411,7 +4411,7 @@
       "name": "Rusty Claws"
     },
     "text": "Rusty Claws: Halálakor megidéz egy 2/2-es Segítőt.",
-    "portrait": "/portraits/260.svg"
+    "portrait": "/art/tribes/undead.webp"
   },
   {
     "id": 261,
@@ -4429,7 +4429,7 @@
       "name": "Deep Cave Horror"
     },
     "text": "Deep Cave Horror: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/261.svg"
+    "portrait": "/art/tribes/undead.webp"
   },
   {
     "id": 262,
@@ -4449,7 +4449,7 @@
       "name": "Clockwork Skitter"
     },
     "text": "Clockwork Skitter: A köröd végén a bal oldali szomszédja tartósan +3/+2-t kap.",
-    "portrait": "/portraits/262.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 263,
@@ -4469,7 +4469,7 @@
       "name": "Spinning Blade"
     },
     "text": "Spinning Blade: Minden támadásakor a két szomszédja +2/+2-t kap erre a harcra.",
-    "portrait": "/portraits/263.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 264,
@@ -4489,7 +4489,7 @@
       "name": "Cave Alarm"
     },
     "text": "Cave Alarm: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
-    "portrait": "/portraits/264.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 265,
@@ -4508,7 +4508,7 @@
       "name": "Forest Ambush"
     },
     "text": "Forest Ambush: Halálakor 5 sebzést okoz minden ellenségnek.",
-    "portrait": "/portraits/265.svg"
+    "portrait": "/art/tribes/beasts.webp"
   },
   {
     "id": 266,
@@ -4528,7 +4528,7 @@
       "name": "Wagon Supplies"
     },
     "text": "Wagon Supplies: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/266.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 267,
@@ -4546,7 +4546,7 @@
       "name": "Spider-Sense"
     },
     "text": "Spider-Sense: Védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/267.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 268,
@@ -4564,7 +4564,7 @@
       "name": "Venom Strike"
     },
     "text": "Venom Strike: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
-    "portrait": "/portraits/268.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 269,
@@ -4582,7 +4582,7 @@
       "target": "self"
     },
     "text": "Szélvész: Kétszer támad a saját támadási körében, ha túléli az első támadást.",
-    "portrait": "/portraits/269.svg",
+    "portrait": "/art/tribes/guardians.webp",
     "keywords": [
       "windfury"
     ]
@@ -4605,7 +4605,7 @@
       "name": "Face It Tiger"
     },
     "text": "Face It Tiger: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/270.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 271,
@@ -4625,7 +4625,7 @@
       "name": "Great Responsibility"
     },
     "text": "Great Responsibility: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/271.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 272,
@@ -4643,7 +4643,7 @@
       "target": "self"
     },
     "text": "Méreg: Az első sikeres támadási vagy visszaütési sebzése megöli a célpontot, majd a méreg elfogy. Pajzs nem fogyasztja el.",
-    "portrait": "/portraits/272.svg",
+    "portrait": "/art/tribes/tricksters.webp",
     "keywords": [
       "venomous"
     ]
@@ -4664,7 +4664,7 @@
       "name": "Mechanical Arms"
     },
     "text": "Mechanical Arms: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/273.svg"
+    "portrait": "/art/tribes/technologists.webp"
   },
   {
     "id": 274,
@@ -4682,7 +4682,7 @@
       "target": "self"
     },
     "text": "Méreg: Az első sikeres támadási vagy visszaütési sebzése megöli a célpontot, majd a méreg elfogy. Pajzs nem fogyasztja el.",
-    "portrait": "/portraits/274.svg",
+    "portrait": "/art/tribes/beasts.webp",
     "keywords": [
       "venomous"
     ]
@@ -4705,7 +4705,7 @@
       "name": "Captain of the 118"
     },
     "text": "Captain of the 118: Minden támadásakor a törzséhez tartozó többi szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/275.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 276,
@@ -4723,7 +4723,7 @@
       "name": "Police Sergeant"
     },
     "text": "Police Sergeant: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/276.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 277,
@@ -4742,7 +4742,7 @@
       "name": "Ladder Rescue"
     },
     "text": "Ladder Rescue: Minden támadásakor +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/277.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 278,
@@ -4762,7 +4762,7 @@
       "name": "Paramedic Care"
     },
     "text": "Paramedic Care: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/278.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 279,
@@ -4780,7 +4780,7 @@
       "name": "Emergency Support"
     },
     "text": "Emergency Support: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/279.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 280,
@@ -4798,7 +4798,7 @@
       "name": "Rescue Training"
     },
     "text": "Rescue Training: Védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/280.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 281,
@@ -4818,7 +4818,7 @@
       "name": "Dispatch Coordination"
     },
     "text": "Dispatch Coordination: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/281.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 282,
@@ -4838,7 +4838,7 @@
       "name": "Brave Steps"
     },
     "text": "Brave Steps: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/282.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 283,
@@ -4856,7 +4856,7 @@
       "target": "self"
     },
     "text": "Méreg: Az első sikeres támadási vagy visszaütési sebzése megöli a célpontot, majd a méreg elfogy. Pajzs nem fogyasztja el.",
-    "portrait": "/portraits/283.svg",
+    "portrait": "/art/tribes/warriors.webp",
     "keywords": [
       "venomous"
     ]
@@ -4879,7 +4879,7 @@
       "name": "Calligraphy of Peace"
     },
     "text": "Calligraphy of Peace: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/284.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 285,
@@ -4897,7 +4897,7 @@
       "target": "self"
     },
     "text": "Szélvész: Kétszer támad a saját támadási körében, ha túléli az első támadást.",
-    "portrait": "/portraits/285.svg",
+    "portrait": "/art/tribes/warriors.webp",
     "keywords": [
       "windfury"
     ]
@@ -4920,7 +4920,7 @@
       "name": "Courtyard Duel"
     },
     "text": "Courtyard Duel: A köröd végén a bal oldali szomszédja tartósan +3/+2-t kap.",
-    "portrait": "/portraits/286.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 287,
@@ -4940,7 +4940,7 @@
       "name": "Apprentice’s Resolve"
     },
     "text": "Apprentice’s Resolve: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/287.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 288,
@@ -4960,7 +4960,7 @@
       "name": "All Under Heaven"
     },
     "text": "All Under Heaven: A köröd elején a törzséhez tartozó többi szövetséges tartósan +3/+3-at kap.",
-    "portrait": "/portraits/288.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 289,
@@ -4979,7 +4979,7 @@
       "name": "Arrow Volley"
     },
     "text": "Arrow Volley: Halálakor 5 sebzést okoz minden ellenségnek.",
-    "portrait": "/portraits/289.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 290,
@@ -4998,7 +4998,7 @@
       "name": "Palace Formation"
     },
     "text": "Palace Formation: Halálakor megidéz egy 2/2-es Segítőt.",
-    "portrait": "/portraits/290.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 291,
@@ -5016,7 +5016,7 @@
       "name": "Birdwatcher’s Eye"
     },
     "text": "Birdwatcher’s Eye: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
-    "portrait": "/portraits/291.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 292,
@@ -5034,7 +5034,7 @@
       "name": "Federal Partner"
     },
     "text": "Federal Partner: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/292.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 293,
@@ -5054,7 +5054,7 @@
       "name": "Household Protocol"
     },
     "text": "Household Protocol: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/293.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 294,
@@ -5074,7 +5074,7 @@
       "name": "Assistant Usher"
     },
     "text": "Assistant Usher: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/294.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 295,
@@ -5094,7 +5094,7 @@
       "name": "State Dinner Pressure"
     },
     "text": "State Dinner Pressure: A köröd elején tartósan +1/+2-t kap.",
-    "portrait": "/portraits/295.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 296,
@@ -5112,7 +5112,7 @@
       "name": "Chief Adviser"
     },
     "text": "Chief Adviser: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/296.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 297,
@@ -5132,7 +5132,7 @@
       "name": "Presidential Address"
     },
     "text": "Presidential Address: Minden támadásakor a törzséhez tartozó többi szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/297.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 298,
@@ -5152,7 +5152,7 @@
       "name": "Diplomatic Guest"
     },
     "text": "Diplomatic Guest: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/298.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 299,
@@ -5171,7 +5171,7 @@
       "name": "Hotel Tantrum"
     },
     "text": "Hotel Tantrum: Minden támadásakor +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/299.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 300,
@@ -5189,7 +5189,7 @@
       "name": "Front Desk Authority"
     },
     "text": "Front Desk Authority: Őrző: magára vonja az ellenséges támadásokat.",
-    "portrait": "/portraits/300.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 301,
@@ -5207,7 +5207,7 @@
       "name": "Quick Cover Story"
     },
     "text": "Quick Cover Story: A bal oldali szomszéd védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/301.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 302,
@@ -5227,7 +5227,7 @@
       "name": "Learning the Ropes"
     },
     "text": "Learning the Ropes: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/302.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 303,
@@ -5247,7 +5247,7 @@
       "name": "Lobby Regular"
     },
     "text": "Lobby Regular: A köröd végén mindkét szomszédja tartósan +2/+2-t kap.",
-    "portrait": "/portraits/303.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 304,
@@ -5267,7 +5267,7 @@
       "name": "Kitchen Service"
     },
     "text": "Kitchen Service: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/304.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 305,
@@ -5285,7 +5285,7 @@
       "name": "Familiar Routine"
     },
     "text": "Familiar Routine: Védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/305.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 306,
@@ -5305,7 +5305,7 @@
       "name": "Long-Term Guest"
     },
     "text": "Long-Term Guest: Halálakor a többi élő szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/306.svg"
+    "portrait": "/art/tribes/tricksters.webp"
   },
   {
     "id": 307,
@@ -5325,7 +5325,7 @@
       "name": "One Cryptic Clue"
     },
     "text": "One Cryptic Clue: Kijátszáskor egy választott szövetséges tartósan +1/+1-et kap.",
-    "portrait": "/portraits/307.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 308,
@@ -5345,7 +5345,7 @@
       "name": "Dream Journey"
     },
     "text": "Dream Journey: Kijátszáskor véglegesen +2/+1 értéket kap.",
-    "portrait": "/portraits/308.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 309,
@@ -5364,7 +5364,7 @@
       "name": "Scoring Track Hop"
     },
     "text": "Scoring Track Hop: Minden támadásakor +2 támadást kap erre a harcra.",
-    "portrait": "/portraits/309.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 310,
@@ -5383,7 +5383,7 @@
       "name": "Protect the Tale"
     },
     "text": "Protect the Tale: Halálakor megidéz egy 2/2-es Segítőt.",
-    "portrait": "/portraits/310.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 311,
@@ -5401,7 +5401,7 @@
       "name": "Unknown Path"
     },
     "text": "Unknown Path: Védőpajzsot kap erre a harcra.",
-    "portrait": "/portraits/311.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 312,
@@ -5419,7 +5419,7 @@
       "name": "Misleading Image"
     },
     "text": "Misleading Image: Az első támadásakor eltávolítja a célpont pajzsát, és maga védőpajzsot kap.",
-    "portrait": "/portraits/312.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 313,
@@ -5439,7 +5439,7 @@
       "name": "Guiding Constellation"
     },
     "text": "Guiding Constellation: Kijátszáskor egy választott szövetséges tartósan +4/+4-et kap.",
-    "portrait": "/portraits/313.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 314,
@@ -5459,7 +5459,7 @@
       "name": "Shared Imagination"
     },
     "text": "Shared Imagination: Minden támadásakor a törzséhez tartozó többi szövetséges +3/+3-at kap erre a harcra.",
-    "portrait": "/portraits/314.svg"
+    "portrait": "/art/tribes/mystics.webp"
   },
   {
     "id": 315,
@@ -5480,7 +5480,7 @@
       "health": 0
     },
     "text": "A köröd elején a közvetlen szomszédai tartósan +1/+0-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 316,
@@ -5500,7 +5500,7 @@
       "attack": 2
     },
     "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 317,
@@ -5521,7 +5521,7 @@
       "health": 0
     },
     "text": "A köröd elején a közvetlen szomszédai tartósan +1/+0-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 318,
@@ -5541,7 +5541,7 @@
       "attack": 4
     },
     "text": "Minden támadásakor a közvetlen szomszédai +4 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 319,
@@ -5561,7 +5561,7 @@
       "amount": 1
     },
     "text": "A köröd elején 1 extra aranyat kapsz.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 320,
@@ -5581,7 +5581,7 @@
       "attack": 5
     },
     "text": "Minden támadásakor a közvetlen szomszédai +5 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 321,
@@ -5602,7 +5602,7 @@
       "health": 2
     },
     "text": "A köröd elején a közvetlen szomszédai tartósan +2/+2-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 322,
@@ -5622,7 +5622,7 @@
       "attack": 1
     },
     "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 323,
@@ -5643,7 +5643,7 @@
       "health": 2
     },
     "text": "A köröd elején a közvetlen szomszédai tartósan +3/+2-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 324,
@@ -5663,7 +5663,7 @@
       "attack": 1
     },
     "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 325,
@@ -5684,7 +5684,7 @@
       "health": 2
     },
     "text": "A köröd elején a közvetlen szomszédai tartósan +3/+2-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 326,
@@ -5704,7 +5704,7 @@
       "attack": 2
     },
     "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 327,
@@ -5725,7 +5725,7 @@
       "health": 1
     },
     "text": "A köröd végén a közvetlen szomszédai tartósan +0/+1-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 328,
@@ -5745,7 +5745,7 @@
       "attack": 2
     },
     "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 329,
@@ -5766,7 +5766,7 @@
       "health": 1
     },
     "text": "A köröd végén a közvetlen szomszédai tartósan +0/+1-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 330,
@@ -5786,7 +5786,7 @@
       "attack": 4
     },
     "text": "Minden támadásakor a közvetlen szomszédai +4 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 331,
@@ -5807,7 +5807,7 @@
       "health": 2
     },
     "text": "A köröd végén a közvetlen szomszédai tartósan +2/+2-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 332,
@@ -5827,7 +5827,7 @@
       "attack": 5
     },
     "text": "Minden támadásakor a közvetlen szomszédai +5 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 333,
@@ -5848,7 +5848,7 @@
       "health": 2
     },
     "text": "Ha meghal, megidéz egy 2/2-es Segítőt.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 334,
@@ -5868,7 +5868,7 @@
       "attack": 1
     },
     "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 335,
@@ -5888,7 +5888,7 @@
       "amount": 1
     },
     "text": "A köröd végén egy véletlen 1. szintű miniont kapsz a közös készletből, ha elfér a kezedben.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 336,
@@ -5908,7 +5908,7 @@
       "attack": 1
     },
     "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 337,
@@ -5929,7 +5929,7 @@
       "health": 3
     },
     "text": "A köröd végén a közvetlen szomszédai tartósan +2/+3-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 338,
@@ -5949,7 +5949,7 @@
       "attack": 2
     },
     "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 339,
@@ -5970,7 +5970,7 @@
       "health": 0
     },
     "text": "A köröd elején a közvetlen szomszédai tartósan +1/+0-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 340,
@@ -5990,7 +5990,7 @@
       "attack": 2
     },
     "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 341,
@@ -6011,7 +6011,7 @@
       "health": 0
     },
     "text": "A köröd elején a közvetlen szomszédai tartósan +1/+0-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 342,
@@ -6031,7 +6031,7 @@
       "attack": 4
     },
     "text": "Minden támadásakor a közvetlen szomszédai +4 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 343,
@@ -6051,7 +6051,7 @@
       "amount": 1
     },
     "text": "A köröd elején 1 extra aranyat kapsz.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 344,
@@ -6071,7 +6071,7 @@
       "attack": 5
     },
     "text": "Minden támadásakor a közvetlen szomszédai +5 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 345,
@@ -6092,7 +6092,7 @@
       "health": 2
     },
     "text": "A köröd elején a közvetlen szomszédai tartósan +2/+2-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 346,
@@ -6112,7 +6112,7 @@
       "attack": 1
     },
     "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 347,
@@ -6133,7 +6133,7 @@
       "health": 2
     },
     "text": "A köröd elején a közvetlen szomszédai tartósan +3/+2-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 348,
@@ -6153,7 +6153,7 @@
       "attack": 1
     },
     "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 349,
@@ -6174,7 +6174,7 @@
       "health": 2
     },
     "text": "A köröd elején a közvetlen szomszédai tartósan +3/+2-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 350,
@@ -6194,7 +6194,7 @@
       "attack": 2
     },
     "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 351,
@@ -6215,7 +6215,7 @@
       "health": 1
     },
     "text": "A köröd végén a közvetlen szomszédai tartósan +0/+1-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 352,
@@ -6235,7 +6235,7 @@
       "attack": 2
     },
     "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 353,
@@ -6256,7 +6256,7 @@
       "health": 1
     },
     "text": "A köröd végén a közvetlen szomszédai tartósan +0/+1-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 354,
@@ -6276,7 +6276,7 @@
       "attack": 4
     },
     "text": "Minden támadásakor a közvetlen szomszédai +4 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 355,
@@ -6297,7 +6297,7 @@
       "health": 2
     },
     "text": "A köröd végén a közvetlen szomszédai tartósan +2/+2-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 356,
@@ -6317,7 +6317,7 @@
       "attack": 5
     },
     "text": "Minden támadásakor a közvetlen szomszédai +5 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 357,
@@ -6338,7 +6338,7 @@
       "health": 2
     },
     "text": "Ha meghal, megidéz egy 2/2-es Segítőt.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 358,
@@ -6358,7 +6358,7 @@
       "attack": 1
     },
     "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 359,
@@ -6378,7 +6378,7 @@
       "amount": 1
     },
     "text": "A köröd végén egy véletlen 1. szintű miniont kapsz a közös készletből, ha elfér a kezedben.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 360,
@@ -6398,7 +6398,7 @@
       "attack": 1
     },
     "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 361,
@@ -6419,7 +6419,7 @@
       "health": 3
     },
     "text": "A köröd végén a közvetlen szomszédai tartósan +2/+3-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 362,
@@ -6439,7 +6439,7 @@
       "attack": 2
     },
     "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 363,
@@ -6460,7 +6460,7 @@
       "health": 0
     },
     "text": "A köröd elején a közvetlen szomszédai tartósan +1/+0-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 364,
@@ -6480,7 +6480,7 @@
       "attack": 2
     },
     "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 365,
@@ -6501,7 +6501,7 @@
       "health": 0
     },
     "text": "A köröd elején a közvetlen szomszédai tartósan +1/+0-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 366,
@@ -6521,7 +6521,7 @@
       "attack": 4
     },
     "text": "Minden támadásakor a közvetlen szomszédai +4 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 367,
@@ -6541,7 +6541,7 @@
       "amount": 1
     },
     "text": "A köröd elején 1 extra aranyat kapsz.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 368,
@@ -6561,7 +6561,7 @@
       "attack": 5
     },
     "text": "Minden támadásakor a közvetlen szomszédai +5 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 369,
@@ -6582,7 +6582,7 @@
       "health": 2
     },
     "text": "A köröd elején a közvetlen szomszédai tartósan +2/+2-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 370,
@@ -6602,7 +6602,7 @@
       "attack": 1
     },
     "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 371,
@@ -6623,7 +6623,7 @@
       "health": 2
     },
     "text": "A köröd elején a közvetlen szomszédai tartósan +3/+2-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 372,
@@ -6643,7 +6643,7 @@
       "attack": 1
     },
     "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 373,
@@ -6664,7 +6664,7 @@
       "health": 2
     },
     "text": "A köröd elején a közvetlen szomszédai tartósan +3/+2-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 374,
@@ -6684,7 +6684,7 @@
       "attack": 2
     },
     "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 375,
@@ -6705,7 +6705,7 @@
       "health": 1
     },
     "text": "A köröd végén a közvetlen szomszédai tartósan +0/+1-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 376,
@@ -6725,7 +6725,7 @@
       "attack": 2
     },
     "text": "Minden támadásakor +2 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 377,
@@ -6746,7 +6746,7 @@
       "health": 1
     },
     "text": "A köröd végén a közvetlen szomszédai tartósan +0/+1-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 378,
@@ -6766,7 +6766,7 @@
       "attack": 4
     },
     "text": "Minden támadásakor a közvetlen szomszédai +4 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 379,
@@ -6787,7 +6787,7 @@
       "health": 2
     },
     "text": "A köröd végén a közvetlen szomszédai tartósan +2/+2-t kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 380,
@@ -6807,7 +6807,7 @@
       "attack": 5
     },
     "text": "Minden támadásakor a közvetlen szomszédai +5 támadást kapnak erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 381,
@@ -6828,7 +6828,7 @@
       "health": 2
     },
     "text": "Ha meghal, megidéz egy 2/2-es Segítőt.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 382,
@@ -6848,7 +6848,7 @@
       "attack": 1
     },
     "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 383,
@@ -6868,7 +6868,7 @@
       "amount": 1
     },
     "text": "A köröd végén egy véletlen 1. szintű miniont kapsz a közös készletből, ha elfér a kezedben.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/neutral.webp"
   },
   {
     "id": 384,
@@ -6888,7 +6888,7 @@
       "attack": 1
     },
     "text": "Minden támadásakor +1 támadást kap erre a harcra. Minden törzs tagjának számít.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/all.webp"
   },
   {
     "id": 385,
@@ -6907,7 +6907,7 @@
       "target": "self"
     },
     "text": "Szélvész: Kétszer támad a saját támadási körében, ha túléli az első támadást.",
-    "portrait": "/portraits/1.svg",
+    "portrait": "/art/tribes/warriors.webp",
     "keywords": [
       "windfury"
     ]
@@ -6931,7 +6931,7 @@
       "health": 5
     },
     "text": "Kijátszáskor a közvetlen szomszédai tartósan +5/+5-öt kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/warriors.webp"
   },
   {
     "id": 387,
@@ -6952,7 +6952,7 @@
       "health": 5
     },
     "text": "Kijátszáskor a közvetlen szomszédai tartósan +5/+5-öt kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/guardians.webp"
   },
   {
     "id": 388,
@@ -6973,7 +6973,7 @@
       "health": 5
     },
     "text": "Kijátszáskor a közvetlen szomszédai tartósan +5/+5-öt kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 389,
@@ -6994,7 +6994,7 @@
       "health": 5
     },
     "text": "Kijátszáskor a közvetlen szomszédai tartósan +5/+5-öt kapnak.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/survivors.webp"
   },
   {
     "id": 390,
@@ -7015,7 +7015,7 @@
       "health": 1
     },
     "text": "Minden támadásakor a többi Vad és minden típusú szövetséges +2/+1-et kap erre a harcra.",
-    "portrait": "/portraits/1.svg"
+    "portrait": "/art/tribes/beasts.webp"
   },
   {
     "id": 391,
@@ -7034,7 +7034,7 @@
       "target": "self"
     },
     "text": "Méreg: Az első sikeres támadási vagy visszaütési sebzése megöli a célpontot, majd a méreg elfogy. Pajzs nem fogyasztja el.",
-    "portrait": "/portraits/1.svg",
+    "portrait": "/art/tribes/undead.webp",
     "keywords": [
       "venomous"
     ]

@@ -31,18 +31,8 @@ try{
  const card=CHARACTERS.find(c=>c.tags.includes('Star Wars'))!;m.activeCardIds.push(card.id);p.hand=[makeUnit(m,card.id)];p.board=[];p.gold=10;await page.reload();await page.locator('.hand .unit').waitFor();
  const audioRequests:string[]=[];page.on('request',r=>{if(r.url().includes('/audio/'))audioRequests.push(r.url());});
  await page.locator('.hand .unit').click();await page.locator('.board .unit').waitFor();await page.waitForTimeout(200);assert.ok(audioRequests.some(u=>u.includes('hello-there')),'series quote requested on successful play');
- // The hero belonging to either battle side chooses that side's signature.
- p=m.players[0];enemy=m.players[1];const id=m.activeCardIds[0];p.board=[makeUnit(m,id)];enemy.board=[makeUnit(m,id)];
- for(const [heroId,style] of [['original-2','tire'],['original-12','dumbbell'],['original-1','volleyball']]){
-  p.heroId=heroId;enemy.heroId=heroId;m.phase='combat';session.paused=true;m.battles=[{leftId:'p0',rightId:enemy.id,ghost:false,events:fight(p.board,enemy.board,42).events,winner:null,damage:0}];
-  await page.reload();await page.locator('.arena.in-combat').waitFor();await page.locator('.tools-toggle').click();await page.locator('.test-panel select').selectOption('0.5');
-  for(let i=0;i<5&&!(await page.locator(`[data-attack-style="${style}"]`).count());i++){await page.getByRole('button',{name:'Esemény léptetése'}).click();await page.waitForTimeout(50);}
-  await page.locator(`[data-attack-style="${style}"]`).waitFor({state:'attached'});await page.waitForTimeout(390);await page.screenshot({path:`test-results/media/${style}-flight.png`,fullPage:true});await page.waitForTimeout(250);assert.ok(await page.locator('.impact-shockwave').count());await page.screenshot({path:`test-results/media/${style}.png`,fullPage:true});
- }
- await page.locator('.settings-toggle').click();await page.getByRole('button',{name:'Animációk ki'}).or(page.getByRole('button',{name:'Animációk be'})).click();await page.keyboard.press('Escape');
- await page.getByRole('button',{name:'Következő kör'}).click();await page.locator('.shop .unit').first().waitFor();assert.equal(await page.locator('.signature-attack').count(),0);
  p=m.players[0];p.heroId='original-35';await page.reload();await page.locator('.youtube-host iframe').waitFor({state:'attached'});assert.ok((await calls()).some(c=>c[0]==='create'&&c[1]===HERO_MUSIC['original-35'].playlistId));
  await page.setViewportSize({width:390,height:844});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));await page.screenshot({path:'test-results/media/mobile.png',fullPage:true});
- assert.deepEqual(errors,[]);await writeFile('test-results/media/report.json',JSON.stringify({decodedFiles:urls.length,seriesPlay:true,signatures:3,musicMapping:true,playlist:true,mute:true,mobile:true,errors},null,2));console.log('Media checks passed: downloaded files decode, series play, three signatures, music, mute, mobile.');
+ assert.deepEqual(errors,[]);await writeFile('test-results/media/report.json',JSON.stringify({decodedFiles:urls.length,seriesPlay:true,musicMapping:true,playlist:true,mute:true,mobile:true,errors},null,2));console.log('Media checks passed: downloaded files decode, series play, music, mute, mobile.');
 }finally{await browser.close();await server.close();}
 

@@ -1,9 +1,10 @@
+import {tribeFor} from './tribes';
 import type { Ability, Character } from './types';
 
 // Initial balance pass, using the existing combat and recruitment effects.
 function card(id:number, name:string, tier:number, attack:number, health:number, ability:Ability, description:string):Character {
  return {id, name, tags:['Jake Long: American Dragon'], tier, attack, health,
-  ability, text:`${ability.name}: ${description}`, portrait:`/portraits/${id}.svg`};
+  ability, text:`${ability.name}: ${description}`, portrait:'/art/tribes/'+tribeFor({name,tags:['Jake Long: American Dragon']})+'.webp'};
 }
 
 export const AMERICAN_DRAGON:Character[] = [

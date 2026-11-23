@@ -10,10 +10,16 @@ import { Server } from 'socket.io';
 import { createServer as createVite } from 'vite';
 import { Session, replayMatch } from './session';
 import type { Command, Control } from '../shared/types';
+import { CHARACTERS } from '../shared/catalog';
 
 export async function createApp(production=false){
  const app=express();const http=createServer(app);const io=new Server(http,{maxHttpBufferSize:100000,serveClient:false});const sessions=new Map<string,Session>();
  const closeGames=attachPersistentGames(io);
+ // Older character versions stored these portrait URLs in match snapshots.
+ app.get(/^\/portraits\/(\d+)\.svg$/, (req,res) => {
+   const card = CHARACTERS.find(character => character.id === Number(req.params[0]));
+   res.redirect(301, card?.portrait ?? '/art/tribes/neutral.webp');
+ });
  app.use(createProxyMiddleware({
    target: process.env.LARAVEL_URL || 'http://127.0.0.1:8000',
    pathFilter: path => path.startsWith('/sanctum/') || (path.startsWith('/api/') && !['/api/health','/api/replays/verify'].includes(path)),

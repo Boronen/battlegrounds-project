@@ -6,7 +6,6 @@ import {makeUnit} from '../shared/engine';
 import {fight} from '../shared/combat';
 import {ARENAS,arenaForMatch} from '../src/arenas';
 import {combatBeats} from '../src/combat-presentation';
-import {combatVisuals} from '../src/combat-visuals';
 
 await mkdir('test-results/arena-redesign',{recursive:true});
 const server=await createApp(true);
@@ -81,20 +80,15 @@ try{
  m.phase='combat';session.paused=true;m.battles=[{leftId:'p0',rightId:enemy.id,ghost:false,events,winner:null,damage:0}];
  await page.setViewportSize({width:1440,height:1100});await page.emulateMedia({reducedMotion:'no-preference'});await page.reload();await page.locator('.arena.in-combat').waitFor();
  await page.locator('.tools-toggle').click();await page.locator('.test-panel select').selectOption('0.5');
- const seen=new Set<string>();
  const beats=combatBeats(events);
  for(let i=1;i<beats.length;i++){
   await page.getByRole('button',{name:'Esemény léptetése'}).click();
-  await page.waitForTimeout(beats[i].events[0].type==='attack'?680:90);
-  for(const kind of await page.locator('[data-effect]').evaluateAll(nodes=>nodes.map(n=>(n as HTMLElement).dataset.effect!)))seen.add(kind);
-  if(await page.locator('[data-effect="venom"]').count())await page.screenshot({path:`${path}/venom-impact.png`,fullPage:true});
+  if(beats[i].events.some(e=>e.type==='attack')) await page.locator('.combat-cue img').waitFor();
  }
- for(const kind of ['shield-break','venom','reborn','stealth','windfury'])assert.ok(seen.has(kind),`Missing ${kind}`);
- assert.ok(combatVisuals(beats.find(b=>b.events.some(e=>e.type==='shield'))!).every(v=>v.kind!=='venom'));
  await page.getByRole('button',{name:'Következő kör'}).click();await page.locator('.shop .unit').first().waitFor();await page.waitForTimeout(700);
  assert.equal(await page.locator('[data-effect]').count(),0);assert.equal(await page.locator('.arena,.unit-wrap').evaluateAll(nodes=>nodes.flatMap(n=>n.getAnimations()).filter(a=>a.playState==='running').length),0);
  assert.deepEqual(errors,[]);
- await writeFile(`${path}/report.json`,JSON.stringify({arenas:10,screenshots:sheet.length,controlHitAreas:true,keyboardFocusAndActivation:true,touchActivation:true,dragDropAndSell:true,phoneBoardFits:true,missingArtworkFallback:true,combatEffects:[...seen],interruptionCleanup:true,browserErrors:errors},null,2));
+ await writeFile(`${path}/report.json`,JSON.stringify({arenas:10,screenshots:sheet.length,controlHitAreas:true,keyboardFocusAndActivation:true,touchActivation:true,dragDropAndSell:true,phoneBoardFits:true,missingArtworkFallback:true,combatMedia:true,interruptionCleanup:true,browserErrors:errors},null,2));
  await page.setViewportSize({width:1200,height:1100});
  await page.setContent(`<html><style>body{background:#101218;color:#ddd;font:14px sans-serif;margin:20px}main{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}figure{margin:0}img{width:100%}figcaption{padding:5px}</style><main>${sheet.map(s=>`<figure><img src="data:image/png;base64,${s.image}"><figcaption>${s.label}</figcaption></figure>`).join('')}</main></html>`);
  await page.screenshot({path:`${path}/all-arenas-contact-sheet.jpg`,type:'jpeg',quality:65,fullPage:true});

@@ -46,7 +46,7 @@ const overrides:Record<string,Tribe> = {
  'Gwen Stacy / Ghost-Spider':'guardians','May Parker':'survivors','Mary Jane Watson':'survivors',
  'Doctor Octopus':'technologists','Venom':'beasts',
 };
-export function tribeFor(c:Character):CardType {
+export function tribeFor(c:Pick<Character,"tribe"|"name"|"tags">):CardType {
  if(c.tribe)return c.tribe;
  const tribe=overrides[c.name]||TRIBES.find(t=>groups[t.id].includes(c.tags[0]))?.id;
  if(!tribe)throw new Error(`Missing tribe for ${c.name}`);
